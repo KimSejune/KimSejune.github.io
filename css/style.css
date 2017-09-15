@@ -44,7 +44,7 @@
 }
 .widget hr,
 .article-entry hr {
-  border: 1px dashed #ddd;
+  border: 1px dashed #a2aab0;
 }
 .widget strong,
 .article-entry strong {
@@ -657,7 +657,7 @@ code {
   display: block;
   color: #aaa;
   padding: 16px 40px 24px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #a2aab0;
   -webkit-transition: 0.2s ease-in;
   -moz-transition: 0.2s ease-in;
   -ms-transition: 0.2s ease-in;
@@ -805,7 +805,7 @@ code {
 }
 #recent-post li {
   padding: 10px 0 10px 94px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #a2aab0;
 }
 #recent-post li:before,
 #recent-post li:after {
@@ -1170,11 +1170,11 @@ a.article-title:hover {
 }
 .article-entry th {
   font-weight: 600;
-  border-bottom: 3px solid #ddd;
+  border-bottom: 3px solid #a2aab0;
   padding-bottom: 0.5em;
 }
 .article-entry td {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #a2aab0;
   padding: 10px 0;
 }
 .article-entry blockquote {
@@ -1261,7 +1261,7 @@ a.article-title:hover {
 .article-footer {
   font-size: 14px;
   line-height: 1.6em;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #a2aab0;
   padding-top: 1.6em;
 }
 .article-footer:before,
@@ -1315,7 +1315,7 @@ a.article-title:hover {
   padding: 0 15px;
   color: #555;
   outline: none;
-  border: 1px solid #ddd;
+  border: 1px solid #a2aab0;
   border-radius: 3px 3px 0 0;
   height: 36px;
   line-height: 36px;
@@ -1586,7 +1586,7 @@ a.article-title:hover {
   display: inline;
   margin: 0 2px;
   text-decoration: none;
-  border-bottom: 3px solid #ddd;
+  border-bottom: 3px solid #a2aab0;
   border-top: 1px solid #f1f1f1;
   font-weight: 600;
   -webkit-transition: 0.2s ease-in;
@@ -1605,7 +1605,7 @@ a.article-title:hover {
   border-top: 1px solid #f1f1f1;
 }
 #page-nav .space {
-  color: #ddd;
+  color: #a2aab0;
 }
 #footer {
   background: #3e3e3b;
@@ -1946,7 +1946,7 @@ i.icon:before {
   .main-body-inner #sidebar .sidebar-top {
     padding: 10px 30px;
     background: none;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #a2aab0;
   }
   .main-body-inner #sidebar .sidebar-top p,
   .main-body-inner #sidebar .sidebar-top a,
