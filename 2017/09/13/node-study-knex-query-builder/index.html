@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Node-DataModeling | KimSejune Start Study</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Node.js,DataModeling" />
+    
+    <meta name="description" content="DataBase Modeling 회원 =&amp;gt; 회원번호, 아이디, 패스워드, 이름, 전화번호,  성별, 생년월일, 가입일자, 탈퇴일자, 주소, 연령대   로그인 =&amp;gt; 로그인 일시,  IP, 회원번호   장바구니 =&amp;gt; 장바구니 번호, 상품번호, 담은시간, 회원번호   상품 =&amp;gt; 상품번호, 상품명, 가격, 사이즈   구매 =&amp;gt; 회원번호">
+<meta name="keywords" content="Node.js,DataModeling">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node-DataModeling">
+<meta property="og:url" content="http://yoursite.com/2017/09/13/node-study-knex-query-builder/index.html">
+<meta property="og:site_name" content="KimSejune Start Study">
+<meta property="og:description" content="DataBase Modeling 회원 =&amp;gt; 회원번호, 아이디, 패스워드, 이름, 전화번호,  성별, 생년월일, 가입일자, 탈퇴일자, 주소, 연령대   로그인 =&amp;gt; 로그인 일시,  IP, 회원번호   장바구니 =&amp;gt; 장바구니 번호, 상품번호, 담은시간, 회원번호   상품 =&amp;gt; 상품번호, 상품명, 가격, 사이즈   구매 =&amp;gt; 회원번호">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/images/nodejs.png">
+<meta property="og:updated_time" content="2017-09-30T13:02:57.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Node-DataModeling">
+<meta name="twitter:description" content="DataBase Modeling 회원 =&amp;gt; 회원번호, 아이디, 패스워드, 이름, 전화번호,  성별, 생년월일, 가입일자, 탈퇴일자, 주소, 연령대   로그인 =&amp;gt; 로그인 일시,  IP, 회원번호   장바구니 =&amp;gt; 장바구니 번호, 상품번호, 담은시간, 회원번호   상품 =&amp;gt; 상품번호, 상품명, 가격, 사이즈   구매 =&amp;gt; 회원번호">
+<meta name="twitter:image" content="http://yoursite.com/images/nodejs.png">
+    
+
+    
+
+    
+        <link rel="icon" href="/images/logo.png" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Node.js JavaScript</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/">Node.js</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Ajax/">Ajax</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/CORS/">CORS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Cookie/">Cookie</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/DataModeling/">DataModeling</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Database/">Database</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Express/">Express</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Express-Middlware/">Express-Middlware</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Fetch/">Fetch</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/GraphQL/">GraphQL</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Http/">Http</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/JWT/">JWT</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Rest-API/">Rest-API</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/SPA/">SPA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Service-Develop/">Service Develop</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Session/">Session</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Template-Language/">Template Language</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Web-Form/">Web Form</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/http-cache/">http-cache</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/knex/">knex</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="https://github.com/KimSejune">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Node-js/DataModeling/">DataModeling</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-node-study-knex-query-builder" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Node-DataModeling
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/09/13/node-study-knex-query-builder/" class="article-date">
+            <time datetime="2017-09-13T03:54:00.000Z" itemprop="datePublished">2017-09-13</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/DataModeling/">DataModeling</a>, <a class="tag-link" href="/tags/Node-js/">Node.js</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="/images/nodejs.png" alt="DB"></p>
+<h1 id="DataBase-Modeling"><a href="#DataBase-Modeling" class="headerlink" title="DataBase Modeling"></a>DataBase Modeling</h1><ol>
+<li>회원 =&gt; 회원번호, 아이디, 패스워드, 이름, 전화번호,  성별, 생년월일, 가입일자, 탈퇴일자, 주소, 연령대  </li>
+<li>로그인 =&gt; 로그인 일시,  IP, 회원번호  </li>
+<li>장바구니 =&gt; 장바구니 번호, 상품번호, 담은시간, 회원번호  </li>
+<li>상품 =&gt; 상품번호, 상품명, 가격, 사이즈  </li>
+<li>구매 =&gt; 회원번호, 구매시간, 상품번호  </li>
+<li>생일쿠폰 =&gt; 쿠폰번호, 회원번호  </li>
+</ol>
+<h2 id="시나리오"><a href="#시나리오" class="headerlink" title="시나리오"></a>시나리오</h2><ul>
+<li>회원가입을 통하여 이 쇼핑몰 사이트를 이용할 수 있다.   </li>
+<li>회원은 로그인을 할 때마다 로그인정보(로그인 일시, 아이디, IP, 회원번호)가 기록된다.  </li>
+<li>회원가입시 필요한 정보는 (회원번호, 아이디, 패스워드, 가입일자, 탈퇴일자, 주소, 전화번호, 연령대, 성별)이다.  </li>
+<li>회원은 물품을 검색할 수 있다.  </li>
+<li>검색된 물품은 (상품명, 가격, 사이즈)가 보여진다.  </li>
+<li>회원은 물품을 장바구니에 담을 수 있다.  </li>
+<li>회원은 물건을 구매할 경우 (구매시간, 회원번호, 상품번호) pk로 가지게 된다.  </li>
+<li>회원은 생일이면 생일 쿠폰을 받는다.  </li>
+</ul>
+<p>￼</p>
+<h2 id="ERD"><a href="#ERD" class="headerlink" title="ERD"></a>ERD</h2><p><img src="../images/ERD.png" alt="Shopping ERD"></p>
+<h2 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">-- MySQL Workbench Synchronization</span></div><div class="line"><span class="comment">-- Generated: 2017-09-13 19:19</span></div><div class="line"><span class="comment">-- Model: New Model</span></div><div class="line"><span class="comment">-- Version: 1.0</span></div><div class="line"><span class="comment">-- Project: Name of the project</span></div><div class="line"><span class="comment">-- Author: 김세준</span></div><div class="line"></div><div class="line"><span class="keyword">SET</span> @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=<span class="number">0</span>;</div><div class="line"><span class="keyword">SET</span> @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=<span class="number">0</span>;</div><div class="line"><span class="keyword">SET</span> @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE=<span class="string">'TRADITIONAL,ALLOW_INVALID_DATES'</span>;</div><div class="line"></div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">SCHEMA</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> <span class="string">`mydb`</span> <span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8 ;</div><div class="line"></div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> <span class="string">`mydb`</span>.<span class="string">`User`</span> (</div><div class="line">  <span class="string">`u-number`</span> <span class="built_in">INT</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'	\n'</span>,</div><div class="line">  <span class="string">`id`</span> <span class="built_in">VARCHAR</span>(<span class="number">45</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'		'</span>,</div><div class="line">  <span class="string">`pwd`</span> <span class="built_in">VARCHAR</span>(<span class="number">45</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</div><div class="line">  <span class="string">`name`</span> <span class="built_in">VARCHAR</span>(<span class="number">45</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</div><div class="line">  <span class="string">`call`</span> <span class="built_in">INT</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</div><div class="line">  <span class="string">`gender`</span> <span class="built_in">VARCHAR</span>(<span class="number">45</span>) <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</div><div class="line">  <span class="string">`birth`</span> <span class="built_in">INT</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</div><div class="line">  <span class="string">`join-date`</span> DATETIME <span class="keyword">NOT</span> <span class="literal">NULL</span>,</div><div class="line">  <span class="string">`session-date`</span> DATETIME <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</div><div class="line">  <span class="string">`address`</span> <span class="built_in">VARCHAR</span>(<span class="number">45</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</div><div class="line">  <span class="string">`ages`</span> <span class="built_in">VARCHAR</span>(<span class="number">45</span>) <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</div><div class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`u-number`</span>))</div><div class="line"><span class="keyword">ENGINE</span> = <span class="keyword">InnoDB</span></div><div class="line"><span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> = utf8;</div><div class="line"></div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> <span class="string">`mydb`</span>.<span class="string">`Login`</span> (</div><div class="line">  <span class="string">`login-date`</span> DATETIME <span class="keyword">NOT</span> <span class="literal">NULL</span>,</div><div class="line">  <span class="string">`IP`</span> <span class="built_in">VARCHAR</span>(<span class="number">45</span>) <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</div><div class="line">  <span class="string">`User_u-number`</span> <span class="built_in">INT</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</div><div class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`login-date`</span>, <span class="string">`User_u-number`</span>),</div><div class="line">  <span class="keyword">INDEX</span> <span class="string">`fk_Login_User1_idx`</span> (<span class="string">`User_u-number`</span> <span class="keyword">ASC</span>),</div><div class="line">  <span class="keyword">CONSTRAINT</span> <span class="string">`fk_Login_User1`</span></div><div class="line">    FOREIGN <span class="keyword">KEY</span> (<span class="string">`User_u-number`</span>)</div><div class="line">    <span class="keyword">REFERENCES</span> <span class="string">`mydb`</span>.<span class="string">`User`</span> (<span class="string">`u-number`</span>)</div><div class="line">    <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span></div><div class="line">    <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span>)</div><div class="line"><span class="keyword">ENGINE</span> = <span class="keyword">InnoDB</span></div><div class="line"><span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> = utf8;</div><div class="line"></div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> <span class="string">`mydb`</span>.<span class="string">`Basket`</span> (</div><div class="line">  <span class="string">`basket-number`</span> <span class="built_in">INT</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</div><div class="line">  <span class="string">`select-date`</span> DATETIME <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</div><div class="line">  <span class="string">`User_u-number`</span> <span class="built_in">INT</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</div><div class="line">  <span class="string">`Product_product-number`</span> <span class="built_in">INT</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</div><div class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`basket-number`</span>, <span class="string">`User_u-number`</span>, <span class="string">`Product_product-number`</span>),</div><div class="line">  <span class="keyword">INDEX</span> <span class="string">`fk_Basket_User1_idx`</span> (<span class="string">`User_u-number`</span> <span class="keyword">ASC</span>),</div><div class="line">  <span class="keyword">INDEX</span> <span class="string">`fk_Basket_Product1_idx`</span> (<span class="string">`Product_product-number`</span> <span class="keyword">ASC</span>),</div><div class="line">  <span class="keyword">CONSTRAINT</span> <span class="string">`fk_Basket_User1`</span></div><div class="line">    FOREIGN <span class="keyword">KEY</span> (<span class="string">`User_u-number`</span>)</div><div class="line">    <span class="keyword">REFERENCES</span> <span class="string">`mydb`</span>.<span class="string">`User`</span> (<span class="string">`u-number`</span>)</div><div class="line">    <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span></div><div class="line">    <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span>,</div><div class="line">  <span class="keyword">CONSTRAINT</span> <span class="string">`fk_Basket_Product1`</span></div><div class="line">    FOREIGN <span class="keyword">KEY</span> (<span class="string">`Product_product-number`</span>)</div><div class="line">    <span class="keyword">REFERENCES</span> <span class="string">`mydb`</span>.<span class="string">`Product`</span> (<span class="string">`product-number`</span>)</div><div class="line">    <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span></div><div class="line">    <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span>)</div><div class="line"><span class="keyword">ENGINE</span> = <span class="keyword">InnoDB</span></div><div class="line"><span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> = utf8;</div><div class="line"></div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> <span class="string">`mydb`</span>.<span class="string">`Product`</span> (</div><div class="line">  <span class="string">`product-number`</span> <span class="built_in">INT</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</div><div class="line">  <span class="string">`product-name`</span> <span class="built_in">VARCHAR</span>(<span class="number">45</span>) <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</div><div class="line">  <span class="string">`price`</span> <span class="built_in">VARCHAR</span>(<span class="number">45</span>) <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</div><div class="line">  <span class="string">`size`</span> <span class="built_in">VARCHAR</span>(<span class="number">45</span>) <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</div><div class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`product-number`</span>))</div><div class="line"><span class="keyword">ENGINE</span> = <span class="keyword">InnoDB</span></div><div class="line"><span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> = utf8;</div><div class="line"></div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> <span class="string">`mydb`</span>.<span class="string">`Buy`</span> (</div><div class="line">  <span class="string">`buy-date`</span> DATETIME <span class="keyword">NOT</span> <span class="literal">NULL</span>,</div><div class="line">  <span class="string">`Product_product-number`</span> <span class="built_in">INT</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</div><div class="line">  <span class="string">`User_u-number`</span> <span class="built_in">INT</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</div><div class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`buy-date`</span>, <span class="string">`Product_product-number`</span>, <span class="string">`User_u-number`</span>),</div><div class="line">  <span class="keyword">INDEX</span> <span class="string">`fk_Buy_Product1_idx`</span> (<span class="string">`Product_product-number`</span> <span class="keyword">ASC</span>),</div><div class="line">  <span class="keyword">INDEX</span> <span class="string">`fk_Buy_User1_idx`</span> (<span class="string">`User_u-number`</span> <span class="keyword">ASC</span>),</div><div class="line">  <span class="keyword">CONSTRAINT</span> <span class="string">`fk_Buy_Product1`</span></div><div class="line">    FOREIGN <span class="keyword">KEY</span> (<span class="string">`Product_product-number`</span>)</div><div class="line">    <span class="keyword">REFERENCES</span> <span class="string">`mydb`</span>.<span class="string">`Product`</span> (<span class="string">`product-number`</span>)</div><div class="line">    <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span></div><div class="line">    <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span>,</div><div class="line">  <span class="keyword">CONSTRAINT</span> <span class="string">`fk_Buy_User1`</span></div><div class="line">    FOREIGN <span class="keyword">KEY</span> (<span class="string">`User_u-number`</span>)</div><div class="line">    <span class="keyword">REFERENCES</span> <span class="string">`mydb`</span>.<span class="string">`User`</span> (<span class="string">`u-number`</span>)</div><div class="line">    <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span></div><div class="line">    <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span>)</div><div class="line"><span class="keyword">ENGINE</span> = <span class="keyword">InnoDB</span></div><div class="line"><span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> = utf8;</div><div class="line"></div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> <span class="string">`mydb`</span>.<span class="string">`Coupon`</span> (</div><div class="line">  <span class="string">`coupon-number`</span> <span class="built_in">INT</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</div><div class="line">  <span class="string">`User_u-number`</span> <span class="built_in">INT</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</div><div class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`coupon-number`</span>, <span class="string">`User_u-number`</span>),</div><div class="line">  <span class="keyword">INDEX</span> <span class="string">`fk_생일쿠폰_User_idx`</span> (<span class="string">`User_u-number`</span> <span class="keyword">ASC</span>),</div><div class="line">  <span class="keyword">CONSTRAINT</span> <span class="string">`fk_생일쿠폰_User`</span></div><div class="line">    FOREIGN <span class="keyword">KEY</span> (<span class="string">`User_u-number`</span>)</div><div class="line">    <span class="keyword">REFERENCES</span> <span class="string">`mydb`</span>.<span class="string">`User`</span> (<span class="string">`u-number`</span>)</div><div class="line">    <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span></div><div class="line">    <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span>)</div><div class="line"><span class="keyword">ENGINE</span> = <span class="keyword">InnoDB</span></div><div class="line"><span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> = utf8;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">SET</span> SQL_MODE=@OLD_SQL_MODE;</div><div class="line"><span class="keyword">SET</span> FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;</div><div class="line"><span class="keyword">SET</span> UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">use</span> mydb;</div><div class="line"></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="keyword">user</span>;</div><div class="line"></div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span>  <span class="keyword">user</span> <span class="keyword">VALUES</span> (<span class="number">1</span>,<span class="string">'sejune'</span>,<span class="string">'kim'</span>,<span class="string">'kimsejune'</span>,<span class="string">'01045401088'</span>,<span class="string">'men'</span>,<span class="string">'930907'</span>,<span class="string">'170913'</span>, <span class="literal">null</span>, <span class="string">'경기도 시흥시 정왕동'</span>, <span class="string">'25'</span>);</div><div class="line"></div><div class="line"><span class="keyword">SELECT</span>*<span class="keyword">FROM</span> login;</div><div class="line"></div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> login <span class="keyword">VALUES</span>(<span class="keyword">now</span>(), <span class="string">'192.168.0.1'</span>, <span class="number">1</span>);</div><div class="line"></div><div class="line"><span class="keyword">SELECT</span>*<span class="keyword">FROM</span> coupon;</div><div class="line"></div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> coupon <span class="keyword">VALUES</span>(<span class="number">1</span>, <span class="number">1</span>);</div><div class="line"></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> Product;</div><div class="line"></div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> product <span class="keyword">VALUES</span>(<span class="number">1</span>, <span class="string">'슬렉스(검정)'</span>, <span class="string">'200000'</span>, <span class="string">'29'</span>);</div><div class="line"></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> buy;</div><div class="line"></div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> buy <span class="keyword">VALUES</span> (<span class="keyword">now</span>(), <span class="number">1</span>, <span class="number">1</span>);</div><div class="line"></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> Basket;</div><div class="line"></div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> basket <span class="keyword">VALUES</span>(<span class="number">1</span>, <span class="keyword">now</span>(), <span class="number">1</span>, <span class="number">1</span>);</div></pre></td></tr></table></figure>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2017/09/13/node-study-knex-query-builder/" data-id="cj87bxrdz000k1d6fsiagr6ju" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/tpwns1088@gmail.com" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/KimSejune" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/09/13/node-study-datamodeling/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Node-DataModeling</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/09/13/node-study-knex-query-builder/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/nodejs.png)" alt="Node-DataModeling" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/DataModeling/">DataModeling</a></p>
+                            <p class="item-title"><a href="/2017/09/13/node-study-knex-query-builder/" class="title">Node-DataModeling</a></p>
+                            <p class="item-date"><time datetime="2017-09-13T03:54:00.000Z" itemprop="datePublished">2017-09-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/09/13/node-study-datamodeling/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/nodejs.png)" alt="Node-DataModeling" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/DataModeling/">DataModeling</a></p>
+                            <p class="item-title"><a href="/2017/09/13/node-study-datamodeling/" class="title">Node-DataModeling</a></p>
+                            <p class="item-date"><time datetime="2017-09-13T03:54:00.000Z" itemprop="datePublished">2017-09-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/09/13/node-study-knex/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/knex.png)" alt="Node-Knex" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/knex/">knex</a></p>
+                            <p class="item-title"><a href="/2017/09/13/node-study-knex/" class="title">Node-Knex</a></p>
+                            <p class="item-date"><time datetime="2017-09-13T03:54:00.000Z" itemprop="datePublished">2017-09-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/09/13/node-study-knex-schema/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/nodejs.png)" alt="Node-DataModeling" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/DataModeling/">DataModeling</a></p>
+                            <p class="item-title"><a href="/2017/09/13/node-study-knex-schema/" class="title">Node-DataModeling</a></p>
+                            <p class="item-date"><time datetime="2017-09-13T03:54:00.000Z" itemprop="datePublished">2017-09-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/09/11/node-study-database/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/nodejs.png)" alt="Node-Database" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/Database/">Database</a></p>
+                            <p class="item-title"><a href="/2017/09/11/node-study-database/" class="title">Node-Database</a></p>
+                            <p class="item-date"><time datetime="2017-09-11T03:54:00.000Z" itemprop="datePublished">2017-09-11</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a><span class="category-list-count">21</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Ajax/">Ajax</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/CORS/">CORS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Cookie/">Cookie</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/DataModeling/">DataModeling</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Database/">Database</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Express/">Express</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Express-Middlware/">Express-Middlware</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Fetch/">Fetch</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/GraphQL/">GraphQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Http/">Http</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/JWT/">JWT</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Rest-API/">Rest-API</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/SPA/">SPA</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Service-Develop/">Service Develop</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Session/">Session</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Template-Language/">Template Language</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Web-Form/">Web Form</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/http-cache/">http-cache</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/knex/">knex</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">6</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CORS/">CORS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cookie/">Cookie</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataModeling/">DataModeling</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/">Database</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/">Express</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fetch/">Fetch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GraphQL/">GraphQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/">Http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JWT/">JWT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Middleware/">Middleware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a><span class="tag-list-count">21</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RestAPI/">RestAPI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SPA/">SPA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Service-Develop/">Service Develop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Session/">Session</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web-Form/">Web Form</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http/">http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kenx/">kenx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/template-Language/">template Language</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/CORS/" style="font-size: 10px;">CORS</a> <a href="/tags/Cookie/" style="font-size: 10px;">Cookie</a> <a href="/tags/DataModeling/" style="font-size: 16.67px;">DataModeling</a> <a href="/tags/Database/" style="font-size: 10px;">Database</a> <a href="/tags/Express/" style="font-size: 13.33px;">Express</a> <a href="/tags/Fetch/" style="font-size: 10px;">Fetch</a> <a href="/tags/GraphQL/" style="font-size: 10px;">GraphQL</a> <a href="/tags/Http/" style="font-size: 10px;">Http</a> <a href="/tags/JWT/" style="font-size: 10px;">JWT</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Middleware/" style="font-size: 10px;">Middleware</a> <a href="/tags/Node-js/" style="font-size: 20px;">Node.js</a> <a href="/tags/RestAPI/" style="font-size: 10px;">RestAPI</a> <a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/Service-Develop/" style="font-size: 10px;">Service Develop</a> <a href="/tags/Session/" style="font-size: 10px;">Session</a> <a href="/tags/Web-Form/" style="font-size: 10px;">Web Form</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/kenx/" style="font-size: 10px;">kenx</a> <a href="/tags/template-Language/" style="font-size: 10px;">template Language</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Sejune kim</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://yoursite.com/2017/09/13/node-study-knex-query-builder/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
