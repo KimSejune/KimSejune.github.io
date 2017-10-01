@@ -149,17 +149,69 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/09/14/node-study-knex-query-builder/" class="thumbnail">
+        <a href="/2017/09/15/node-study-knex-migration/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/knex.png)" alt="Node-Knex-Query-builder" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/knex.png)" alt="Node-Knex-Migration" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/14/node-study-knex-query-builder/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/15/node-study-knex-migration/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/knex/">knex</a>
+            </div>
+            <div class="date"><time datetime="2017-09-15T03:54:00.000Z" itemprop="datePublished">2017-09-15</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/09/15/node-study-knex-migration/">Node-Knex-Migration</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            
+Node knex MigrationSchema AlterMigration하는 방법  
+123$ npm install knex -g$ knex init
+
+knexfile.js가 생성된다 이것으로 앞으로 migration을 한다.(초기모습)
+
+12345678910111213141516171819202122232425262728293031323334353637
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/09/14/node-study-knex-schema/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/knex.png)" alt="Node-Knex-Schema" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/14/node-study-knex-schema/">0</span>
     
 </span>
 
@@ -177,22 +229,26 @@
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/09/14/node-study-knex-query-builder/">Node-Knex-Query-builder</a>
+        <a href="/2017/09/14/node-study-knex-schema/">Node-Knex-Schema</a>
         </h1>
     
 
         <p class="article-excerpt">
             
-Node KnexKnex - Query BuilderKnex 인스턴스 생성Knex를 이용해 MySQL 서버에 접속하기 위해서는 일단 아래와 같이 Knex 인스턴스를 만들어야 합니다.  
-123456789module.exports = require('knex')(&#123;  client: 'mysql',  connection: &#123;    host:
+Node knex SchemaKnex - Schema BuilderKnex는 데이터를 읽어오고 조작하는 쿼리(DML, Data Manipulation Language) 뿐만 아니라 테이블을 생성하고 조작하는 쿼리(DDL, Data Definition Language)도 지원합니다.  
+knex.schema로 반환되는 객체를 이용해 테이블을 만들고, 수정하
         </p>
     </div>
 </article>
+    
+        </div>
     
 
     
     
     
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -240,29 +296,25 @@ ORM(Object Relational Mapping)을 통해서 쿼리 실행 (Sequelize,
     </div>
 </article>
     
-        </div>
-    
 
     
     
     
     
-        <div class="article-row">
-    
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/09/14/node-study-knex-schema/" class="thumbnail">
+        <a href="/2017/09/14/node-study-knex-query-builder/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/knex.png)" alt="Node-Knex-Schema" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/knex.png)" alt="Node-Knex-Query-builder" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/14/node-study-knex-schema/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/14/node-study-knex-query-builder/">0</span>
     
 </span>
 
@@ -280,22 +332,26 @@ ORM(Object Relational Mapping)을 통해서 쿼리 실행 (Sequelize,
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/09/14/node-study-knex-schema/">Node-Knex-Schema</a>
+        <a href="/2017/09/14/node-study-knex-query-builder/">Node-Knex-Query-builder</a>
         </h1>
     
 
         <p class="article-excerpt">
             
-Node knex SchemaKnex - Schema BuilderKnex는 데이터를 읽어오고 조작하는 쿼리(DML, Data Manipulation Language) 뿐만 아니라 테이블을 생성하고 조작하는 쿼리(DDL, Data Definition Language)도 지원합니다.  
-knex.schema로 반환되는 객체를 이용해 테이블을 만들고, 수정하
+Node KnexKnex - Query BuilderKnex 인스턴스 생성Knex를 이용해 MySQL 서버에 접속하기 위해서는 일단 아래와 같이 Knex 인스턴스를 만들어야 합니다.  
+123456789module.exports = require('knex')(&#123;  client: 'mysql',  connection: &#123;    host:
         </p>
     </div>
 </article>
+    
+        </div>
     
 
     
     
     
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -344,14 +400,10 @@ DataBase Modeling
     </div>
 </article>
     
-        </div>
-    
 
     
     
     
-    
-        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -396,10 +448,14 @@ CREATE TABLE은 테이블을 만드는 명령입니
     </div>
 </article>
     
+        </div>
+    
 
     
     
     
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -451,14 +507,10 @@ npm으로 설치한 module은 경로지정이 없어도 불러와 지지만 직�
     </div>
 </article>
     
-        </div>
-    
 
     
     
     
-    
-        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -509,10 +561,14 @@ Fa
     </div>
 </article>
     
+        </div>
+    
 
     
     
     
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -554,61 +610,6 @@ Fa
 HTTP CacheCache컴퓨터 분야에서의 캐시는(주로 접근 속도의 개선을 위해) 데이터를 미리 복사해 놓는 임시 저장소, 혹은 그 임시 저장소에 데이터를 저장하는 행위를 가리킴
 cache 혹은 caching이라는 용어 자체는 특정 기술을 가리키는 것이 아니라,접근 속도를 개선하기 위해 따로 저장소를 두는 ‘방법’을 가리킴
 컴퓨터의 아주 많은 부분(CP
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/09/05/node-study-ajax/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/ajax.jpg)" alt="Node-Ajax" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/05/node-study-ajax/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/Ajax/">Ajax</a>
-            </div>
-            <div class="date"><time datetime="2017-09-05T03:54:00.000Z" itemprop="datePublished">2017-09-05</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/09/05/node-study-ajax/">Node-Ajax</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-Node AjaxAjax비동기적인 웹 어플리케이션의 제작을 위한 클라리언트 측 웹 개발 기법요즈음은 의미가 변형되어 웹 브라우저에서 XMLHttpRequest 혹은 fetch를 이용해서 보내는 HTTP 요청을 통칭하기도 함
-Ajax Model
-Ajax의 장점
-화면 전체를 다시 로드하지 않고도 내용을 갱신할 수 있어 더 나은 사용자 경험 제공  
-서버의 응
         </p>
     </div>
 </article>
@@ -718,10 +719,10 @@ Token Based Auth
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2017/09/14/node-study-knex-query-builder/" class="thumbnail">
+                            <a href="/2017/09/15/node-study-knex-migration/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/knex.png)" alt="Node-Knex-Query-builder" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/knex.png)" alt="Node-Knex-Migration" class="thumbnail-image"></span>
     
     
 </a>
@@ -730,7 +731,27 @@ Token Based Auth
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/knex/">knex</a></p>
-                            <p class="item-title"><a href="/2017/09/14/node-study-knex-query-builder/" class="title">Node-Knex-Query-builder</a></p>
+                            <p class="item-title"><a href="/2017/09/15/node-study-knex-migration/" class="title">Node-Knex-Migration</a></p>
+                            <p class="item-date"><time datetime="2017-09-15T03:54:00.000Z" itemprop="datePublished">2017-09-15</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/09/14/node-study-knex-schema/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/knex.png)" alt="Node-Knex-Schema" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/knex/">knex</a></p>
+                            <p class="item-title"><a href="/2017/09/14/node-study-knex-schema/" class="title">Node-Knex-Schema</a></p>
                             <p class="item-date"><time datetime="2017-09-14T03:54:00.000Z" itemprop="datePublished">2017-09-14</time></p>
                         </div>
                     </li>
@@ -758,10 +779,10 @@ Token Based Auth
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2017/09/14/node-study-knex-schema/" class="thumbnail">
+                            <a href="/2017/09/14/node-study-knex-query-builder/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/knex.png)" alt="Node-Knex-Schema" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/knex.png)" alt="Node-Knex-Query-builder" class="thumbnail-image"></span>
     
     
 </a>
@@ -770,7 +791,7 @@ Token Based Auth
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/knex/">knex</a></p>
-                            <p class="item-title"><a href="/2017/09/14/node-study-knex-schema/" class="title">Node-Knex-Schema</a></p>
+                            <p class="item-title"><a href="/2017/09/14/node-study-knex-query-builder/" class="title">Node-Knex-Query-builder</a></p>
                             <p class="item-date"><time datetime="2017-09-14T03:54:00.000Z" itemprop="datePublished">2017-09-14</time></p>
                         </div>
                     </li>
@@ -795,26 +816,6 @@ Token Based Auth
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2017/09/11/node-study-database/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/nodejs.png)" alt="Node-Database" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/Database/">Database</a></p>
-                            <p class="item-title"><a href="/2017/09/11/node-study-database/" class="title">Node-Database</a></p>
-                            <p class="item-date"><time datetime="2017-09-11T03:54:00.000Z" itemprop="datePublished">2017-09-11</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -824,7 +825,7 @@ Token Based Auth
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a><span class="category-list-count">21</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Ajax/">Ajax</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/CORS/">CORS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Cookie/">Cookie</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/DataModeling/">DataModeling</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Database/">Database</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Express/">Express</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Express-Middlware/">Express-Middlware</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Fetch/">Fetch</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/GraphQL/">GraphQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Http/">Http</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/JWT/">JWT</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Rest-API/">Rest-API</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/SPA/">SPA</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Service-Develop/">Service Develop</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Session/">Session</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Template-Language/">Template Language</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Web-Form/">Web Form</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/http-cache/">http-cache</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/knex/">knex</a><span class="category-list-count">3</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a><span class="category-list-count">22</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Ajax/">Ajax</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/CORS/">CORS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Cookie/">Cookie</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/DataModeling/">DataModeling</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Database/">Database</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Express/">Express</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Express-Middlware/">Express-Middlware</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Fetch/">Fetch</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/GraphQL/">GraphQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Http/">Http</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/JWT/">JWT</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Rest-API/">Rest-API</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/SPA/">SPA</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Service-Develop/">Service Develop</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Session/">Session</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Template-Language/">Template Language</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Web-Form/">Web Form</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/http-cache/">http-cache</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/knex/">knex</a><span class="category-list-count">4</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -834,7 +835,7 @@ Token Based Auth
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">6</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">6</span></li></ul>
         </div>
     </div>
 
@@ -844,7 +845,7 @@ Token Based Auth
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CORS/">CORS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cookie/">Cookie</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataModeling/">DataModeling</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/">Database</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/">Express</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fetch/">Fetch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GraphQL/">GraphQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/">Http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JWT/">JWT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Middleware/">Middleware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a><span class="tag-list-count">21</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RestAPI/">RestAPI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SPA/">SPA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Service-Develop/">Service Develop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Session/">Session</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web-Form/">Web Form</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http/">http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kenx/">kenx</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/template-Language/">template Language</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CORS/">CORS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cookie/">Cookie</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataModeling/">DataModeling</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/">Database</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/">Express</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fetch/">Fetch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GraphQL/">GraphQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/">Http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JWT/">JWT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Middleware/">Middleware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a><span class="tag-list-count">22</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RestAPI/">RestAPI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SPA/">SPA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Service-Develop/">Service Develop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Session/">Session</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web-Form/">Web Form</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http/">http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kenx/">kenx</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/template-Language/">template Language</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
