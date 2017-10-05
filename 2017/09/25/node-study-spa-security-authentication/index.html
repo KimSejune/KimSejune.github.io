@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Node-SPA-security-authentication | KimSejune Start Study</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Node.js,SPA" />
+    
+    <meta name="description" content="170925 WPSN SPA Security &amp;amp; AuthenticationSPA SecuritySPA(Single-Page Application)은 사용자 경험이 좋은 만큼 프론트엔드와 백엔드의 코드가 복잡해지는 경우가 많습니다.   SPA와 API 서버의 출처가 같은 경우, 보안과 인증을 위해 전통적 방식대로 쿠키를 쓸 수 있습니다. 다만 쿠키를">
+<meta name="keywords" content="Node.js,SPA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node-SPA-security-authentication">
+<meta property="og:url" content="http://yoursite.com/2017/09/25/node-study-spa-security-authentication/index.html">
+<meta property="og:site_name" content="KimSejune Start Study">
+<meta property="og:description" content="170925 WPSN SPA Security &amp;amp; AuthenticationSPA SecuritySPA(Single-Page Application)은 사용자 경험이 좋은 만큼 프론트엔드와 백엔드의 코드가 복잡해지는 경우가 많습니다.   SPA와 API 서버의 출처가 같은 경우, 보안과 인증을 위해 전통적 방식대로 쿠키를 쓸 수 있습니다. 다만 쿠키를">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/images/spa.png">
+<meta property="og:updated_time" content="2017-10-05T02:38:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Node-SPA-security-authentication">
+<meta name="twitter:description" content="170925 WPSN SPA Security &amp;amp; AuthenticationSPA SecuritySPA(Single-Page Application)은 사용자 경험이 좋은 만큼 프론트엔드와 백엔드의 코드가 복잡해지는 경우가 많습니다.   SPA와 API 서버의 출처가 같은 경우, 보안과 인증을 위해 전통적 방식대로 쿠키를 쓸 수 있습니다. 다만 쿠키를">
+<meta name="twitter:image" content="http://yoursite.com/images/spa.png">
+    
+
+    
+
+    
+        <link rel="icon" href="/images/logo.png" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Node.js JavaScript</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/">Node.js</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Ajax/">Ajax</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/CORS/">CORS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/CSRF/">CSRF</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Cookie/">Cookie</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/DataModeling/">DataModeling</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Database/">Database</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Express/">Express</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Express-Middlware/">Express-Middlware</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Fetch/">Fetch</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/GraphQL/">GraphQL</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Http/">Http</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/JWT/">JWT</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/OAuth/">OAuth</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Passport/">Passport</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Rest-API/">Rest-API</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/SPA/">SPA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Service-Develop/">Service Develop</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Session/">Session</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/SocketIO/">SocketIO</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Template-Language/">Template Language</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Web-Form/">Web Form</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/http-cache/">http-cache</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/knex/">knex</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/kue/">kue</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/mongoDB/">mongoDB</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="https://github.com/KimSejune">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Node-js/SPA/">SPA</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-node-study-spa-security-authentication" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Node-SPA-security-authentication
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/09/25/node-study-spa-security-authentication/" class="article-date">
+            <time datetime="2017-09-25T03:54:00.000Z" itemprop="datePublished">2017-09-25</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Node-js/">Node.js</a>, <a class="tag-link" href="/tags/SPA/">SPA</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="/images/spa.png" alt="SPA"></p>
+<p>170925</p>
+<h1 id="WPSN-SPA-Security-amp-Authentication"><a href="#WPSN-SPA-Security-amp-Authentication" class="headerlink" title="WPSN SPA Security &amp; Authentication"></a>WPSN SPA Security &amp; Authentication</h1><h2 id="SPA-Security"><a href="#SPA-Security" class="headerlink" title="SPA Security"></a>SPA Security</h2><p>SPA(Single-Page Application)은 사용자 경험이 좋은 만큼 프론트엔드와 백엔드의 코드가 복잡해지는 경우가 많습니다.  </p>
+<p>SPA와 API 서버의 출처가 같은 경우, 보안과 인증을 위해 전통적 방식대로 쿠키를 쓸 수 있습니다. 다만 쿠키를 위한 보안 정책<code>(CSRF 등)</code>은 당연히 적용해야 합니다.  </p>
+<p>SPA와 API 서버의 출처가 다른 경우에도 쿠키를 사용할 수 있지만, 여러가지 문제(구현 상 불편함, 보안의 취약함)때문에 보통 쿠키 대신 JWT와 같은 토큰을 사용하는 경우가 많습니다. 일단은 출처가 다르므로 CORS 보안 정책에 대한 구현이 필요한데, 이 때 설정을 통해서 특정 출처의 Ajax 요청에 대해서만 API 서버에 접근 가능하도록 <a href="https://www.npmjs.com/package/cors#configuring-cors" target="_blank" rel="external">제한을 둘 수 있습니다.</a>  </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">app.use(cors(&#123;</div><div class="line">  origin: <span class="string">'http://example.com'</span>,</div><div class="line">  optionsSuccessStatus: <span class="number">200</span> <span class="comment">// some legacy browsers (IE11, various SmartTVs) choke on 204 </span></div><div class="line">&#125;))</div></pre></td></tr></table></figure>
+<p>기존 page : window.open(‘http:google.com’)<br>열린 page : window.opener // 나를 연 page를 참조<br>          window.opener.postMessage(‘send message’, ‘*’)</p>
+<p>기존 page : window.addEventListerner(‘message’, e =&gt; {<br>  console.log(e.data)<br>})</p>
+<h2 id="SPA-Authentication"><a href="#SPA-Authentication" class="headerlink" title="SPA Authentication"></a>SPA Authentication</h2><p>SPA의 인증을 위해 단순하게 인증을 위한 REST API를 둘 수도 있을 것입니다. 하지만 회원가입과 로그인은 누구나 할 수 있어야 한다는 특성때문에 REST API가 공격을 받을 위험이 커지게 됩니다.  </p>
+<p>그래서 회원가입과 로그인 만큼은 SPA + REST API를 통해서 하는 것이 아니라, CSRF와 Captcha 등의 보안 정책을 적용한 별도의 웹 페이지를 통해 해주는 것이 좋습니다. 이런 전략을 사용하면 SPA와 웹 페이지 간에 토큰을 주고 받을 필요가 있는데, 이를 위해 팝업(<code>window.open</code>)과 윈도우 간 메시지 통신(<code>window.postMessage</code>)을 사용합니다.</p>
+<ol>
+<li>redirect 로그인, 회원가입을 하면 토큰을 포함 시킨 경로를 가지고 spa로 redirect 시킬 수 있다.  </li>
+<li>popup =&gt; window.open, window.postMessage사용  </li>
+</ol>
+<p>아래의 두 프로젝트를 통해 직접 SPA 인증 절차를 시험해 볼 수 있습니다.  </p>
+<p><code>api</code> 프로젝트는 passport를 이용해서 Github OAuth 로그인을 구현한 프로젝트입니다.  </p>
+<p><code>spa</code> 프로젝트는 React를 이용해서 API 서버에 접속할 수 있는 프로젝트입니다.  </p>
+<p>인증 절차는 다음과 같이 구현되었습니다.</p>
+<ol>
+<li>SPA에서 API 서버의 /auth/ 경로에 대해 팝업을 열고 message 이벤트에 대한 핸들러를 등록합니다.  </li>
+<li>사용자는 API 서버에 대해 열린 팝업에서 로그인을 시도합니다.  </li>
+<li>로그인이 성공하면, 팝업에서 window.opener.postMessage(…)를 통해 SPA에 토큰을 전달합니다.  </li>
+<li>이제부터 SPA에서 토큰을 통해 인증된 요청을 보낼 수 있게 됩니다.  </li>
+</ol>
+<p>인증 절차에 대한 자세한 사항은 코드를 참고해주세요.</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2017/09/25/node-study-spa-security-authentication/" data-id="cj8dusy3u00283x6f32xdwp45" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/tpwns1088@gmail.com" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/KimSejune" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2017/09/25/node-study-restapi2/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Node-Rest-API
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2017/09/21/node-study-kue/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Node-kue</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/09/25/node-study-restapi2/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/restapi.jpeg)" alt="Node-Rest-API" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/Rest-API/">Rest-API</a></p>
+                            <p class="item-title"><a href="/2017/09/25/node-study-restapi2/" class="title">Node-Rest-API</a></p>
+                            <p class="item-date"><time datetime="2017-09-25T03:54:00.000Z" itemprop="datePublished">2017-09-25</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/09/25/node-study-spa-security-authentication/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/spa.png)" alt="Node-SPA-security-authentication" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/SPA/">SPA</a></p>
+                            <p class="item-title"><a href="/2017/09/25/node-study-spa-security-authentication/" class="title">Node-SPA-security-authentication</a></p>
+                            <p class="item-date"><time datetime="2017-09-25T03:54:00.000Z" itemprop="datePublished">2017-09-25</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/09/21/node-study-kue/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/nodejs.png)" alt="Node-kue" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/kue/">kue</a></p>
+                            <p class="item-title"><a href="/2017/09/21/node-study-kue/" class="title">Node-kue</a></p>
+                            <p class="item-date"><time datetime="2017-09-21T03:54:00.000Z" itemprop="datePublished">2017-09-21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/09/19/node-study-oauth/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/nodejs.png)" alt="Node-OAuth" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/OAuth/">OAuth</a></p>
+                            <p class="item-title"><a href="/2017/09/19/node-study-oauth/" class="title">Node-OAuth</a></p>
+                            <p class="item-date"><time datetime="2017-09-19T03:54:00.000Z" itemprop="datePublished">2017-09-19</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/09/19/node-study-passport/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/passport.png)" alt="Node-Passport" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/Passport/">Passport</a></p>
+                            <p class="item-title"><a href="/2017/09/19/node-study-passport/" class="title">Node-Passport</a></p>
+                            <p class="item-date"><time datetime="2017-09-19T03:54:00.000Z" itemprop="datePublished">2017-09-19</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a><span class="category-list-count">31</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Ajax/">Ajax</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/CORS/">CORS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/CSRF/">CSRF</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Cookie/">Cookie</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/DataModeling/">DataModeling</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Database/">Database</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Express/">Express</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Express-Middlware/">Express-Middlware</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Fetch/">Fetch</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/GraphQL/">GraphQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Http/">Http</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/JWT/">JWT</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/OAuth/">OAuth</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Passport/">Passport</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Rest-API/">Rest-API</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/SPA/">SPA</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Service-Develop/">Service Develop</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Session/">Session</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/SocketIO/">SocketIO</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Template-Language/">Template Language</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Web-Form/">Web Form</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/http-cache/">http-cache</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/knex/">knex</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/kue/">kue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/mongoDB/">mongoDB</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">25</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">6</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CORS/">CORS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSRF/">CSRF</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cookie/">Cookie</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataModeling/">DataModeling</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/">Database</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/">Express</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fetch/">Fetch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GraphQL/">GraphQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/">Http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JWT/">JWT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Middleware/">Middleware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OAuth/">OAuth</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Passport/">Passport</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RestAPI/">RestAPI</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SPA/">SPA</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Service-Develop/">Service Develop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Session/">Session</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SocketIO/">SocketIO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web-Form/">Web Form</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http/">http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kenx/">kenx</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kue/">kue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongoDB/">mongoDB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/template-Language/">template Language</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/CORS/" style="font-size: 10px;">CORS</a> <a href="/tags/CSRF/" style="font-size: 10px;">CSRF</a> <a href="/tags/Cookie/" style="font-size: 10px;">Cookie</a> <a href="/tags/DataModeling/" style="font-size: 10px;">DataModeling</a> <a href="/tags/Database/" style="font-size: 10px;">Database</a> <a href="/tags/Express/" style="font-size: 13.33px;">Express</a> <a href="/tags/Fetch/" style="font-size: 10px;">Fetch</a> <a href="/tags/GraphQL/" style="font-size: 10px;">GraphQL</a> <a href="/tags/Http/" style="font-size: 10px;">Http</a> <a href="/tags/JWT/" style="font-size: 10px;">JWT</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Middleware/" style="font-size: 10px;">Middleware</a> <a href="/tags/Node-js/" style="font-size: 20px;">Node.js</a> <a href="/tags/OAuth/" style="font-size: 10px;">OAuth</a> <a href="/tags/Passport/" style="font-size: 10px;">Passport</a> <a href="/tags/RestAPI/" style="font-size: 13.33px;">RestAPI</a> <a href="/tags/SPA/" style="font-size: 13.33px;">SPA</a> <a href="/tags/Service-Develop/" style="font-size: 10px;">Service Develop</a> <a href="/tags/Session/" style="font-size: 10px;">Session</a> <a href="/tags/SocketIO/" style="font-size: 10px;">SocketIO</a> <a href="/tags/Web-Form/" style="font-size: 10px;">Web Form</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/kenx/" style="font-size: 16.67px;">kenx</a> <a href="/tags/kue/" style="font-size: 10px;">kue</a> <a href="/tags/mongoDB/" style="font-size: 10px;">mongoDB</a> <a href="/tags/template-Language/" style="font-size: 10px;">template Language</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Sejune kim</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://yoursite.com/2017/09/25/node-study-spa-security-authentication/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
