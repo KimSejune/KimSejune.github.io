@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="Node.js,GraphQL" />
     
-    <meta name="description" content="Node GraphQLREST API의 단점 각각의 자원마다 경로가 따로 있음. 즉, 여러 자원이 동시에 필요한 경우에는 요청을 여러 번 보내야 함 (요청의 횟수 면에서 비효율적)    (보통의 경우) 자원의 필요한 속성만 얻어올 수 없음. 즉, 일부 속성의 필요하더라도 전체 속성을 가져와야만 함 (요청의 용량 면에서 비효율적)     GraphQL Fa">
+    <meta name="description" content="Node GraphQL REST API의 단점   각각의 자원마다 경로가 따로 있음. 즉, 여러 자원이 동시에 필요한 경우에는 요청을 여러 번 보내야 함 (요청의 횟수 면에서 비효율적)   (보통의 경우) 자원의 필요한 속성만 얻어올 수 없음. 즉, 일부 속성의 필요하더라도 전체 속성을 가져와야만 함 (요청의 용량 면에서 비효율적)   GraphQL  F">
 <meta name="keywords" content="Node.js,GraphQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node-GraphQL">
 <meta property="og:url" content="http://yoursite.com/2017/09/06/node-study-graphql/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="Node GraphQLREST API의 단점 각각의 자원마다 경로가 따로 있음. 즉, 여러 자원이 동시에 필요한 경우에는 요청을 여러 번 보내야 함 (요청의 횟수 면에서 비효율적)    (보통의 경우) 자원의 필요한 속성만 얻어올 수 없음. 즉, 일부 속성의 필요하더라도 전체 속성을 가져와야만 함 (요청의 용량 면에서 비효율적)     GraphQL Fa">
+<meta property="og:description" content="Node GraphQL REST API의 단점   각각의 자원마다 경로가 따로 있음. 즉, 여러 자원이 동시에 필요한 경우에는 요청을 여러 번 보내야 함 (요청의 횟수 면에서 비효율적)   (보통의 경우) 자원의 필요한 속성만 얻어올 수 없음. 즉, 일부 속성의 필요하더라도 전체 속성을 가져와야만 함 (요청의 용량 면에서 비효율적)   GraphQL  F">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/graphql.png">
 <meta property="og:updated_time" content="2017-09-21T02:17:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node-GraphQL">
-<meta name="twitter:description" content="Node GraphQLREST API의 단점 각각의 자원마다 경로가 따로 있음. 즉, 여러 자원이 동시에 필요한 경우에는 요청을 여러 번 보내야 함 (요청의 횟수 면에서 비효율적)    (보통의 경우) 자원의 필요한 속성만 얻어올 수 없음. 즉, 일부 속성의 필요하더라도 전체 속성을 가져와야만 함 (요청의 용량 면에서 비효율적)     GraphQL Fa">
+<meta name="twitter:description" content="Node GraphQL REST API의 단점   각각의 자원마다 경로가 따로 있음. 즉, 여러 자원이 동시에 필요한 경우에는 요청을 여러 번 보내야 함 (요청의 횟수 면에서 비효율적)   (보통의 경우) 자원의 필요한 속성만 얻어올 수 없음. 즉, 일부 속성의 필요하더라도 전체 속성을 가져와야만 함 (요청의 용량 면에서 비효율적)   GraphQL  F">
 <meta name="twitter:image" content="http://yoursite.com/images/graphql.png">
     
 
@@ -172,27 +172,35 @@
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/graphql.png" alt="graphQL"></p>
-<h1 id="Node-GraphQL"><a href="#Node-GraphQL" class="headerlink" title="Node GraphQL"></a>Node GraphQL</h1><h2 id="REST-API의-단점"><a href="#REST-API의-단점" class="headerlink" title="REST API의 단점"></a>REST API의 단점</h2><ul>
-<li><p>각각의 자원마다 경로가 따로 있음. 즉, 여러 자원이 동시에 필요한 경우에는 <code>요청을 여러 번 보내야 함</code> (요청의 횟수 면에서 비효율적)  </p>
+<h1>Node GraphQL</h1>
+<h2>REST API의 단점</h2>
+<ul>
+<li>
+<p>각각의 자원마다 경로가 따로 있음. 즉, 여러 자원이 동시에 필요한 경우에는 <code>요청을 여러 번 보내야 함</code> (요청의 횟수 면에서 비효율적)</p>
 </li>
-<li><p>(보통의 경우) 자원의 필요한 속성만 얻어올 수 없음. 즉, <code>일부 속성의 필요하더라도 전체 속성을 가져와야만 함</code> (요청의 용량 면에서 비효율적)  </p>
+<li>
+<p>(보통의 경우) 자원의 필요한 속성만 얻어올 수 없음. 즉, <code>일부 속성의 필요하더라도 전체 속성을 가져와야만 함</code> (요청의 용량 면에서 비효율적)</p>
 </li>
 </ul>
-<h2 id="GraphQL"><a href="#GraphQL" class="headerlink" title="GraphQL"></a>GraphQL</h2><ul>
-<li>Facebook에서 2015년 공개한 <code>데이터 질의 언어</code>  </li>
-<li>REST API를 대체하기 위해 만들어짐  </li>
-<li>클라이언트에서 필요한 <code>데이터의 구조</code>를 GraphQL 언어로 정의한 후 질의할 수 있고, 서버는 그에 맞게 <code>구조화된 데이터를 응답</code>  </li>
-<li>서버에서는 GraphQL 질의를 해석하기 위해 별도의 해석기가 필요하며, <a href="http://graphql.org/code/" target="_blank" rel="external"><code>여러 언어의 구현체</code></a>가 나와있는 상태  </li>
+<h2>GraphQL</h2>
+<ul>
+<li>Facebook에서 2015년 공개한 <code>데이터 질의 언어</code></li>
+<li>REST API를 대체하기 위해 만들어짐</li>
+<li>클라이언트에서 필요한 <code>데이터의 구조</code>를 GraphQL 언어로 정의한 후 질의할 수 있고, 서버는 그에 맞게 <code>구조화된 데이터를 응답</code></li>
+<li>서버에서는 GraphQL 질의를 해석하기 위해 별도의 해석기가 필요하며, <a href="http://graphql.org/code/" target="_blank" rel="external"><code>여러 언어의 구현체</code></a>가 나와있는 상태</li>
 </ul>
-<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// request</span></div><div class="line">&#123;</div><div class="line">  human(id:<span class="string">"1000"</span>)&#123;</div><div class="line">    name</div><div class="line">    height</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//response</span></div><div class="line">&#123;</div><div class="line">  <span class="string">"data"</span>: &#123;</div><div class="line">    <span class="string">"human"</span>:&#123;</div><div class="line">      <span class="string">"name"</span>: <span class="string">"Luke Skywalker"</span>,</div><div class="line">      <span class="string">"height"</span>:<span class="number">1.72</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2>Example</h2>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// request</span></div><div class="line">&#123;</div><div class="line">  human(id:<span class="string">"1000"</span>)&#123;</div><div class="line">    name</div><div class="line">    height</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//response</span></div><div class="line">&#123;</div><div class="line">  <span class="string">"data"</span>: &#123;</div><div class="line">    <span class="string">"human"</span>:&#123;</div><div class="line">      <span class="string">"name"</span>: <span class="string">"Luke Skywalker"</span>,</div><div class="line">      <span class="string">"height"</span>:<span class="number">1.72</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <ul>
 <li>내가 원하는 자료만 받아 올 수 있다.</li>
 </ul>
-<h2 id="Github-Graph-API-실습"><a href="#Github-Graph-API-실습" class="headerlink" title="Github Graph API 실습"></a>Github Graph API 실습</h2><p><a href="https://developer.github.com/v4/explorer/" target="_blank" rel="external">Link</a></p>
-<h2 id="참고-링크"><a href="#참고-링크" class="headerlink" title="참고 링크"></a>참고 링크</h2><ul>
-<li><a href="https://dev-blog.apollodata.com/graphql-vs-rest-5d425123e34b" target="_blank" rel="external">https://dev-blog.apollodata.com/graphql-vs-rest-5d425123e34b</a>  </li>
-<li><a href="http://graphql.org/learn/" target="_blank" rel="external">http://graphql.org/learn/</a>  </li>
+<h2>Github Graph API 실습</h2>
+<p><a href="https://developer.github.com/v4/explorer/" target="_blank" rel="external">Link</a></p>
+<h2>참고 링크</h2>
+<ul>
+<li>https://dev-blog.apollodata.com/graphql-vs-rest-5d425123e34b</li>
+<li>http://graphql.org/learn/</li>
 </ul>
 
         </div>
@@ -201,7 +209,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/09/06/node-study-graphql/" data-id="cj8sq8d7e000np46fj4fr6zy5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/09/06/node-study-graphql/" data-id="cj99v5ypq000jip6fh5rxygbq" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -306,20 +314,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/09/11/node-study-database/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2017/09/06/node-study-spa/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            Node-Database
+            Node-SPA(Single Page Application)
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2017/09/06/node-study-spa/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/09/05/node-study-jwt/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Node-SPA(Single Page Application)</p>
+        <p class="article-nav-title">Node-jwt</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -341,7 +349,7 @@
                             <a href="/2017/10/08/node-project-dada/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(/images/wire-frame-1.png)" alt="Node-Project" class="thumbnail-image"></span>
     
     
 </a>

@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="Node.js,CSRF" />
     
-    <meta name="description" content="CSRF 예제CSRF(Cross-site Request Forgery, 사이트 간 요청 위조)는 사용자가 악의적인 웹 페이지에 접속했을 때 해당 웹 페이지에서 다른 서버로 요청을 보내어 정보를 조작하는 공격 기법입니다. 전통적인 웹 개발에서 자주 일어나는 보안 사고입니다. (2008년 옥션 개인정보 유출 사건을 참고하세요.)   URL shotener 서">
+    <meta name="description" content="CSRF 예제 CSRF(Cross-site Request Forgery, 사이트 간 요청 위조)는 사용자가 악의적인 웹 페이지에 접속했을 때 해당 웹 페이지에서 다른 서버로 요청을 보내어 정보를 조작하는 공격 기법입니다. 전통적인 웹 개발에서 자주 일어나는 보안 사고입니다. (2008년 옥션 개인정보 유출 사건을 참고하세요.) URL shotener 서버">
 <meta name="keywords" content="Node.js,CSRF">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node-CSRF">
 <meta property="og:url" content="http://yoursite.com/2017/09/18/node-study-csrf/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="CSRF 예제CSRF(Cross-site Request Forgery, 사이트 간 요청 위조)는 사용자가 악의적인 웹 페이지에 접속했을 때 해당 웹 페이지에서 다른 서버로 요청을 보내어 정보를 조작하는 공격 기법입니다. 전통적인 웹 개발에서 자주 일어나는 보안 사고입니다. (2008년 옥션 개인정보 유출 사건을 참고하세요.)   URL shotener 서">
+<meta property="og:description" content="CSRF 예제 CSRF(Cross-site Request Forgery, 사이트 간 요청 위조)는 사용자가 악의적인 웹 페이지에 접속했을 때 해당 웹 페이지에서 다른 서버로 요청을 보내어 정보를 조작하는 공격 기법입니다. 전통적인 웹 개발에서 자주 일어나는 보안 사고입니다. (2008년 옥션 개인정보 유출 사건을 참고하세요.) URL shotener 서버">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/nodejs.png">
 <meta property="og:updated_time" content="2017-10-01T09:59:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node-CSRF">
-<meta name="twitter:description" content="CSRF 예제CSRF(Cross-site Request Forgery, 사이트 간 요청 위조)는 사용자가 악의적인 웹 페이지에 접속했을 때 해당 웹 페이지에서 다른 서버로 요청을 보내어 정보를 조작하는 공격 기법입니다. 전통적인 웹 개발에서 자주 일어나는 보안 사고입니다. (2008년 옥션 개인정보 유출 사건을 참고하세요.)   URL shotener 서">
+<meta name="twitter:description" content="CSRF 예제 CSRF(Cross-site Request Forgery, 사이트 간 요청 위조)는 사용자가 악의적인 웹 페이지에 접속했을 때 해당 웹 페이지에서 다른 서버로 요청을 보내어 정보를 조작하는 공격 기법입니다. 전통적인 웹 개발에서 자주 일어나는 보안 사고입니다. (2008년 옥션 개인정보 유출 사건을 참고하세요.) URL shotener 서버">
 <meta name="twitter:image" content="http://yoursite.com/images/nodejs.png">
     
 
@@ -172,14 +172,15 @@
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/nodejs.png" alt="knex"></p>
-<h2 id="CSRF-예제"><a href="#CSRF-예제" class="headerlink" title="CSRF 예제"></a>CSRF 예제</h2><p>CSRF(Cross-site Request Forgery, 사이트 간 요청 위조)는 사용자가 악의적인 웹 페이지에 접속했을 때 해당 웹 페이지에서 다른 서버로 요청을 보내어 정보를 조작하는 공격 기법입니다. 전통적인 웹 개발에서 자주 일어나는 보안 사고입니다. (2008년 옥션 개인정보 유출 사건을 참고하세요.)  </p>
-<p>URL shotener 서버로 CSRF 공격을 시험해볼 수 있습니다. 로컬 서버를 켜고 상단의 Show 버튼으로 웹 페이지를 열어 요청을 보내보세요.  </p>
-<p>CSRF 공격이 가능한 이유는 웹 서버로 오는 요청이 어떤 웹 페이지에서 출발했던 간에 <code>쿠키가 자동으로 포함</code>되어 오기 때문입니다. (Ajax 요청은 제외) 이렇게 쿠키는 편하긴 하지만 잘못 다루었을 경우에 보안에 심각한 위협이 될 수 있습니다.  </p>
-<p>CSRF 공격을 방어하기 위해서는, <code>사용자가 우리 웹 페이지에 접속하지 않고는 데이터를 조작하는 요청(POST)을 보낼 수 없게</code>만들어야 합니다. 이를 위해 우리 웹 페이지에 접속해야만 받을 수 있는 정보(이를 <code>CSRF 토큰</code>이라 부릅니다)를 요청에 포함시켜 보냄으로써 CSRF 공격을 방어할 수 있습니다.  </p>
-<p>express 기반 웹 사이트에서는 csurf 미들웨어를 사용해 CSRF 공격을 방어할 수 있습니다.  </p>
-<p><a href="https://www.npmjs.com/package/csurf" target="_blank" rel="external">CRURF</a>  </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> cookieParser = <span class="built_in">require</span>(<span class="string">'cookie-parser'</span>)</div><div class="line"><span class="keyword">var</span> csrf = <span class="built_in">require</span>(<span class="string">'csurf'</span>)</div><div class="line"><span class="keyword">var</span> bodyParser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>)</div><div class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</div><div class="line"> </div><div class="line"><span class="comment">// setup route middlewares </span></div><div class="line"><span class="keyword">var</span> csrfProtection = csrf(&#123; <span class="attr">cookie</span>: <span class="literal">true</span> &#125;)</div><div class="line"><span class="keyword">var</span> parseForm = bodyParser.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;)</div><div class="line"> </div><div class="line"><span class="comment">// create express app </span></div><div class="line"><span class="keyword">var</span> app = express()</div><div class="line"> </div><div class="line"><span class="comment">// parse cookies </span></div><div class="line"><span class="comment">// we need this because "cookie" is true in csrfProtection </span></div><div class="line">app.use(cookieParser())</div><div class="line"> </div><div class="line">app.get(<span class="string">'/form'</span>, csrfProtection, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</div><div class="line">  <span class="comment">// pass the csrfToken to the view </span></div><div class="line">  res.render(<span class="string">'send'</span>, &#123; <span class="attr">csrfToken</span>: req.csrfToken() &#125;)</div><div class="line">&#125;)</div><div class="line"> </div><div class="line">app.post(<span class="string">'/process'</span>, parseForm, csrfProtection, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</div><div class="line">  res.send(<span class="string">'data is being processed'</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"/process"</span> <span class="attr">method</span>=<span class="string">"POST"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">name</span>=<span class="string">"_csrf"</span> <span class="attr">value</span>=<span class="string">"&lt;%= csrfToken %&gt;"</span>&gt;</span></div><div class="line">  </div><div class="line">  Favorite color: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"favoriteColor"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2>CSRF 예제</h2>
+<p>CSRF(Cross-site Request Forgery, 사이트 간 요청 위조)는 사용자가 악의적인 웹 페이지에 접속했을 때 해당 웹 페이지에서 다른 서버로 요청을 보내어 정보를 조작하는 공격 기법입니다. 전통적인 웹 개발에서 자주 일어나는 보안 사고입니다. (2008년 옥션 개인정보 유출 사건을 참고하세요.)</p>
+<p>URL shotener 서버로 CSRF 공격을 시험해볼 수 있습니다. 로컬 서버를 켜고 상단의 Show 버튼으로 웹 페이지를 열어 요청을 보내보세요.</p>
+<p>CSRF 공격이 가능한 이유는 웹 서버로 오는 요청이 어떤 웹 페이지에서 출발했던 간에 <code>쿠키가 자동으로 포함</code>되어 오기 때문입니다. (Ajax 요청은 제외) 이렇게 쿠키는 편하긴 하지만 잘못 다루었을 경우에 보안에 심각한 위협이 될 수 있습니다.</p>
+<p>CSRF 공격을 방어하기 위해서는, <code>사용자가 우리 웹 페이지에 접속하지 않고는 데이터를 조작하는 요청(POST)을 보낼 수 없게</code>만들어야 합니다. 이를 위해 우리 웹 페이지에 접속해야만 받을 수 있는 정보(이를 <code>CSRF 토큰</code>이라 부릅니다)를 요청에 포함시켜 보냄으로써 CSRF 공격을 방어할 수 있습니다.</p>
+<p>express 기반 웹 사이트에서는 csurf 미들웨어를 사용해 CSRF 공격을 방어할 수 있습니다.</p>
+<p><a href="https://www.npmjs.com/package/csurf" target="_blank" rel="external">CRURF</a></p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> cookieParser = <span class="built_in">require</span>(<span class="string">'cookie-parser'</span>)</div><div class="line"><span class="keyword">var</span> csrf = <span class="built_in">require</span>(<span class="string">'csurf'</span>)</div><div class="line"><span class="keyword">var</span> bodyParser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>)</div><div class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</div><div class="line"> </div><div class="line"><span class="comment">// setup route middlewares </span></div><div class="line"><span class="keyword">var</span> csrfProtection = csrf(&#123; <span class="attr">cookie</span>: <span class="literal">true</span> &#125;)</div><div class="line"><span class="keyword">var</span> parseForm = bodyParser.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;)</div><div class="line"> </div><div class="line"><span class="comment">// create express app </span></div><div class="line"><span class="keyword">var</span> app = express()</div><div class="line"> </div><div class="line"><span class="comment">// parse cookies </span></div><div class="line"><span class="comment">// we need this because "cookie" is true in csrfProtection </span></div><div class="line">app.use(cookieParser())</div><div class="line"> </div><div class="line">app.get(<span class="string">'/form'</span>, csrfProtection, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</div><div class="line">  <span class="comment">// pass the csrfToken to the view </span></div><div class="line">  res.render(<span class="string">'send'</span>, &#123; <span class="attr">csrfToken</span>: req.csrfToken() &#125;)</div><div class="line">&#125;)</div><div class="line"> </div><div class="line">app.post(<span class="string">'/process'</span>, parseForm, csrfProtection, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</div><div class="line">  res.send(<span class="string">'data is being processed'</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"/process"</span> <span class="attr">method</span>=<span class="string">"POST"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">name</span>=<span class="string">"_csrf"</span> <span class="attr">value</span>=<span class="string">"&lt;%= csrfToken %&gt;"</span>&gt;</span></div><div class="line">  </div><div class="line">  Favorite color: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"favoriteColor"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>csrf는 cookie session을 사용할때 문제가 된다.</p>
 <p>jwt를 사용할때는 csrf는 필요가 없다.</p>
 
@@ -189,7 +190,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/09/18/node-study-csrf/" data-id="cj8sq8d77000ap46fu3wkton0" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/09/18/node-study-csrf/" data-id="cj99v5ypl0009ip6f7mi2cs46" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -294,20 +295,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/09/19/node-study-oauth/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2017/09/18/node-study-socketio/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            Node-OAuth
+            Node-CSRF
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2017/09/18/node-study-knex-seed/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/09/17/node-study-mongodb/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Node-Knex-Seed</p>
+        <p class="article-nav-title">Node-MongoDB</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -329,7 +330,7 @@
                             <a href="/2017/10/08/node-project-dada/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(/images/wire-frame-1.png)" alt="Node-Project" class="thumbnail-image"></span>
     
     
 </a>

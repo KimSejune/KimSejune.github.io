@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="Node.js,Testablility" />
     
-    <meta name="description" content="Testablility테스트 용이성(Testability)는 소프트웨어에 대한 테스트가 얼마나 쉬운지를 말하는 용어입니다. 테스트 용이성이 높을 수록 소프트웨어의 설계가 유연하고 컴포넌트 간 결합도가 낮기 때문에, 좋은 설계라고 할 수 있습니다.   이번 프로젝트에서는 Node.js 기반 소프트웨어를 테스트하는 방법과, Testability를 고려한 설계">
+    <meta name="description" content="Testablility 테스트 용이성(Testability)는 소프트웨어에 대한 테스트가 얼마나 쉬운지를 말하는 용어입니다. 테스트 용이성이 높을 수록 소프트웨어의 설계가 유연하고 컴포넌트 간 결합도가 낮기 때문에, 좋은 설계라고 할 수 있습니다. 이번 프로젝트에서는 Node.js 기반 소프트웨어를 테스트하는 방법과, Testability를 고려한 설계">
 <meta name="keywords" content="Node.js,Testablility">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node-Testablility">
 <meta property="og:url" content="http://yoursite.com/2017/09/27/node-study-testablility/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="Testablility테스트 용이성(Testability)는 소프트웨어에 대한 테스트가 얼마나 쉬운지를 말하는 용어입니다. 테스트 용이성이 높을 수록 소프트웨어의 설계가 유연하고 컴포넌트 간 결합도가 낮기 때문에, 좋은 설계라고 할 수 있습니다.   이번 프로젝트에서는 Node.js 기반 소프트웨어를 테스트하는 방법과, Testability를 고려한 설계">
+<meta property="og:description" content="Testablility 테스트 용이성(Testability)는 소프트웨어에 대한 테스트가 얼마나 쉬운지를 말하는 용어입니다. 테스트 용이성이 높을 수록 소프트웨어의 설계가 유연하고 컴포넌트 간 결합도가 낮기 때문에, 좋은 설계라고 할 수 있습니다. 이번 프로젝트에서는 Node.js 기반 소프트웨어를 테스트하는 방법과, Testability를 고려한 설계">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/nodejs.png">
 <meta property="og:updated_time" content="2017-10-07T08:46:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node-Testablility">
-<meta name="twitter:description" content="Testablility테스트 용이성(Testability)는 소프트웨어에 대한 테스트가 얼마나 쉬운지를 말하는 용어입니다. 테스트 용이성이 높을 수록 소프트웨어의 설계가 유연하고 컴포넌트 간 결합도가 낮기 때문에, 좋은 설계라고 할 수 있습니다.   이번 프로젝트에서는 Node.js 기반 소프트웨어를 테스트하는 방법과, Testability를 고려한 설계">
+<meta name="twitter:description" content="Testablility 테스트 용이성(Testability)는 소프트웨어에 대한 테스트가 얼마나 쉬운지를 말하는 용어입니다. 테스트 용이성이 높을 수록 소프트웨어의 설계가 유연하고 컴포넌트 간 결합도가 낮기 때문에, 좋은 설계라고 할 수 있습니다. 이번 프로젝트에서는 Node.js 기반 소프트웨어를 테스트하는 방법과, Testability를 고려한 설계">
 <meta name="twitter:image" content="http://yoursite.com/images/nodejs.png">
     
 
@@ -172,26 +172,29 @@
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/nodejs.png" alt="testablility"></p>
-<h1 id="Testablility"><a href="#Testablility" class="headerlink" title="Testablility"></a>Testablility</h1><p>테스트 용이성(Testability)는 소프트웨어에 대한 테스트가 얼마나 쉬운지를 말하는 용어입니다. 테스트 용이성이 높을 수록 소프트웨어의 설계가 유연하고 컴포넌트 간 결합도가 낮기 때문에, 좋은 설계라고 할 수 있습니다.  </p>
-<p>이번 프로젝트에서는 Node.js 기반 소프트웨어를 테스트하는 방법과, Testability를 고려한 설계 방법, 지속적인 통합(Continuous Integration, CI)를 다룹니다.  </p>
+<h1>Testablility</h1>
+<p>테스트 용이성(Testability)는 소프트웨어에 대한 테스트가 얼마나 쉬운지를 말하는 용어입니다. 테스트 용이성이 높을 수록 소프트웨어의 설계가 유연하고 컴포넌트 간 결합도가 낮기 때문에, 좋은 설계라고 할 수 있습니다.</p>
+<p>이번 프로젝트에서는 Node.js 기반 소프트웨어를 테스트하는 방법과, Testability를 고려한 설계 방법, 지속적인 통합(Continuous Integration, CI)를 다룹니다.</p>
 <ul>
-<li><a href="https://nodejs.org/api/assert.html" target="_blank" rel="external">assert 내장 모듈</a>  <ul>
-<li>assert.ok(true) true로 들어오면 true이다.  =&gt; !! 뒤에 값을 붙여서 확인가능하다.  </li>
-<li>assert.equal(a, b) a == b가 같은지 확인   </li>
-<li>assert.strictEqual(a, b) a === b 가 같은지 확인  </li>
-<li>assert.deepEqual([1,2,3], [1,2,3]) 배열, 객체까지도 같은지를 확인한다.  </li>
-<li>assert.throws(() =&gt; {throw new Error() } ) 나의 의도대로 에러가 발생하는지 테스트 할 때 사용  <ul>
-<li>ex) assert.throws(() =&gt; {throw new MyError()}, MyError)  </li>
+<li><a href="https://nodejs.org/api/assert.html" target="_blank" rel="external">assert 내장 모듈</a>
+<ul>
+<li>assert.ok(true) true로 들어오면 true이다.  =&gt; !! 뒤에 값을 붙여서 확인가능하다.</li>
+<li>assert.equal(a, b) a == b가 같은지 확인</li>
+<li>assert.strictEqual(a, b) a === b 가 같은지 확인</li>
+<li>assert.deepEqual([1,2,3], [1,2,3]) 배열, 객체까지도 같은지를 확인한다.</li>
+<li>assert.throws(() =&gt; {throw new Error() } ) 나의 의도대로 에러가 발생하는지 테스트 할 때 사용
+<ul>
+<li>ex) assert.throws(() =&gt; {throw new MyError()}, MyError)</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 <ul>
-<li><a href="https://mochajs.org/" target="_blank" rel="external">Mocha test framework</a>  </li>
-<li><a href="http://visionmedia.github.io/superagent/" target="_blank" rel="external">SuperAgent</a> &amp; <a href="https://github.com/visionmedia/supertest" target="_blank" rel="external">SuperTest</a>  </li>
-<li><a href="https://en.wikipedia.org/wiki/Software_testability" target="_blank" rel="external">Testability</a>를 높이기 위한 <a href="https://ko.wikipedia.org/wiki/%EC%9D%98%EC%A1%B4%EC%84%B1_%EC%A3%BC%EC%9E%85" target="_blank" rel="external">의존성 주입</a>과 <a href="http://sinonjs.org/" target="_blank" rel="external">Sinon</a>  </li>
-<li><a href="https://ko.wikipedia.org/wiki/%EC%A7%80%EC%86%8D%EC%A0%81_%ED%86%B5%ED%95%A9" target="_blank" rel="external">지속적인 통합</a> &amp; <a href="https://travis-ci.org/" target="_blank" rel="external">Travis CI</a>  </li>
+<li><a href="https://mochajs.org/" target="_blank" rel="external">Mocha test framework</a></li>
+<li><a href="http://visionmedia.github.io/superagent/" target="_blank" rel="external">SuperAgent</a> &amp; <a href="https://github.com/visionmedia/supertest" target="_blank" rel="external">SuperTest</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Software_testability" target="_blank" rel="external">Testability</a>를 높이기 위한 <a href="https://ko.wikipedia.org/wiki/%EC%9D%98%EC%A1%B4%EC%84%B1_%EC%A3%BC%EC%9E%85" target="_blank" rel="external">의존성 주입</a>과 <a href="http://sinonjs.org/" target="_blank" rel="external">Sinon</a></li>
+<li><a href="https://ko.wikipedia.org/wiki/%EC%A7%80%EC%86%8D%EC%A0%81_%ED%86%B5%ED%95%A9" target="_blank" rel="external">지속적인 통합</a> &amp; <a href="https://travis-ci.org/" target="_blank" rel="external">Travis CI</a></li>
 </ul>
 
         </div>
@@ -200,7 +203,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/09/27/node-study-testablility/" data-id="cj8sq8d8g002fp46fk0i1lpk9" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/09/27/node-study-testablility/" data-id="cj99v5yqu002jip6fkpye48cj" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -340,7 +343,7 @@
                             <a href="/2017/10/08/node-project-dada/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(/images/wire-frame-1.png)" alt="Node-Project" class="thumbnail-image"></span>
     
     
 </a>
