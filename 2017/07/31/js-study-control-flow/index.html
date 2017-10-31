@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>JavaScript-Control-Flow | KimSejune Start Study</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="JavaScript,Control Flow" />
+    
+    <meta name="description" content="Javascript Control Flow 1. 블록 구문(Block statement) 중괄호로 범위가 정해진 구문을 블록 구문이라고 한다.  1234567891011121314151617181920// 함수function foo() &amp;#123;  var x = 1, y = 2;  console.log(x + y);&amp;#125;foo();// 객체리터럴va">
+<meta name="keywords" content="JavaScript,Control Flow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript-Control-Flow">
+<meta property="og:url" content="http://yoursite.com/2017/07/31/js-study-control-flow/index.html">
+<meta property="og:site_name" content="KimSejune Start Study">
+<meta property="og:description" content="Javascript Control Flow 1. 블록 구문(Block statement) 중괄호로 범위가 정해진 구문을 블록 구문이라고 한다.  1234567891011121314151617181920// 함수function foo() &amp;#123;  var x = 1, y = 2;  console.log(x + y);&amp;#125;foo();// 객체리터럴va">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/images/js.jpeg">
+<meta property="og:updated_time" content="2017-10-31T13:24:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript-Control-Flow">
+<meta name="twitter:description" content="Javascript Control Flow 1. 블록 구문(Block statement) 중괄호로 범위가 정해진 구문을 블록 구문이라고 한다.  1234567891011121314151617181920// 함수function foo() &amp;#123;  var x = 1, y = 2;  console.log(x + y);&amp;#125;foo();// 객체리터럴va">
+<meta name="twitter:image" content="http://yoursite.com/images/js.jpeg">
+    
+
+    
+
+    
+        <link rel="icon" href="/images/logo.png" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Node.js JavaScript</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/CSS/">CSS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/CSS/Selector/">Selector</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/CSS/Syntax/">Syntax</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Control-Flow/">Control Flow</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Introduction/">Introduction</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Syntax/">Syntax</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/">Node.js</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Ajax/">Ajax</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/CORS/">CORS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/CSRF/">CSRF</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Cookie/">Cookie</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/DataModeling/">DataModeling</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Database/">Database</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Elasticache/">Elasticache</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Express/">Express</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Express-Middlware/">Express-Middlware</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Fetch/">Fetch</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/GraphQL/">GraphQL</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Http/">Http</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/JWT/">JWT</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Linux/">Linux</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/OAuth/">OAuth</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Passport/">Passport</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Rest-API/">Rest-API</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/SPA/">SPA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Service-Develop/">Service Develop</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Session/">Session</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/SocketIO/">SocketIO</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Template-Language/">Template Language</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Testablility/">Testablility</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/Web-Form/">Web Form</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/http-cache/">http-cache</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/knex/">knex</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/kue/">kue</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Node-js/mongoDB/">mongoDB</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Project/">Project</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Project/ReadMe/">ReadMe</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Project/redis/">redis</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="https://github.com/KimSejune">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/JavaScript/Control-Flow/">Control Flow</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-js-study-control-flow" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        JavaScript-Control-Flow
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/07/31/js-study-control-flow/" class="article-date">
+            <time datetime="2017-07-31T03:54:00.000Z" itemprop="datePublished">2017-07-31</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Control-Flow/">Control Flow</a>, <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="Javascript-Control-Flow"><a href="#Javascript-Control-Flow" class="headerlink" title="Javascript Control Flow"></a>Javascript Control Flow</h1><p><img src="/images/js.jpeg" alt="js"></p>
+<h2 id="1-블록-구문-Block-statement"><a href="#1-블록-구문-Block-statement" class="headerlink" title="1. 블록 구문(Block statement)"></a>1. 블록 구문(Block statement)</h2><ul>
+<li>중괄호로 범위가 정해진 구문을 블록 구문이라고 한다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 함수</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> x = <span class="number">1</span>, y = <span class="number">2</span>;</div><div class="line">  <span class="built_in">console</span>.log(x + y);</div><div class="line">&#125;</div><div class="line">foo();</div><div class="line"></div><div class="line"><span class="comment">// 객체리터럴</span></div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">  x: <span class="number">1</span>,</div><div class="line">  y: <span class="number">2</span></div><div class="line">&#125;;</div><div class="line"><span class="built_in">console</span>.log(obj.x + obj.y);</div><div class="line"></div><div class="line"><span class="comment">// 흐름 제어 구문(control flow statement)</span></div><div class="line"><span class="keyword">var</span> x = <span class="number">0</span>;</div><div class="line"><span class="keyword">while</span> (x &lt; <span class="number">10</span>) &#123;</div><div class="line">  x++;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(x);</div></pre></td></tr></table></figure>
+<h2 id="2-조건문-Conditional-statement"><a href="#2-조건문-Conditional-statement" class="headerlink" title="2. 조건문 (Conditional statement)"></a>2. 조건문 (Conditional statement)</h2><ul>
+<li>조건식을 가지고 코드블럭을 실행할지 않할지에 대한 의사결정을 하는 것이다.</li>
+<li>프로그래밍은 요구사항의 집합을 분석하여 적절한 자료구조와 함수의 집합으로 변환한 후 그 흐름을 제어하는 것이다.</li>
+</ul>
+<h3 id="2-1-if-문"><a href="#2-1-if-문" class="headerlink" title="2.1 if 문"></a>2.1 if 문</h3><ul>
+<li>if문을 통하여 논리적 참, 거짓을 구별한다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(조건문) &#123;</div><div class="line">  <span class="comment">// 조건식이 참이면 이 코드블록이 실행된다.</span></div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">  <span class="comment">// 조건식이 거짓이면 이 코드블록이 실행된다.</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> hour = <span class="number">20</span>;</div><div class="line"><span class="keyword">var</span> greeting;</div><div class="line"></div><div class="line"><span class="comment">// if 문</span></div><div class="line"><span class="keyword">if</span> (hour &lt; <span class="number">18</span>) &#123;</div><div class="line">  greeting = <span class="string">'Good day'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(greeting);</div><div class="line"></div><div class="line"><span class="comment">// if-else 문</span></div><div class="line"><span class="keyword">if</span> (hour &lt; <span class="number">18</span>) &#123;</div><div class="line">  greeting = <span class="string">'Good day'</span>;</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">  greeting = <span class="string">'Good evening'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(greeting);</div><div class="line"></div><div class="line"><span class="comment">// if-else if 문</span></div><div class="line"><span class="keyword">if</span> (hour &lt; <span class="number">10</span>) &#123;</div><div class="line">  greeting = <span class="string">'Good morning'</span>;</div><div class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (hour &lt; <span class="number">20</span>) &#123;</div><div class="line">  greeting = <span class="string">'Good day'</span>;</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">  greeting = <span class="string">'Good evening'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(greeting);</div></pre></td></tr></table></figure>
+<h3 id="2-2-switch-문"><a href="#2-2-switch-문" class="headerlink" title="2.2 switch 문"></a>2.2 switch 문</h3><ul>
+<li>switch변수의 값과 일치되는 case문으로 실행 순서가 이동하게 된다. 일치하는 값이 없다면 default로 이동한다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> color = <span class="string">'red'</span>;</div><div class="line"></div><div class="line"><span class="comment">// color = switch 변수</span></div><div class="line"><span class="keyword">switch</span> (color) &#123;</div><div class="line">  <span class="comment">// color == 'yellow'인 경우</span></div><div class="line">  <span class="keyword">case</span> <span class="string">'yellow'</span>:</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'yellow color'</span>);</div><div class="line">  <span class="comment">// color == 'red'인 경우</span></div><div class="line">  <span class="keyword">case</span> <span class="string">'red'</span>:</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'red color'</span>);</div><div class="line">  <span class="comment">// color == 'blue'인 경우</span></div><div class="line">  <span class="keyword">case</span> <span class="string">'blue'</span>:</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'blue color'</span>);</div><div class="line">  <span class="comment">// 그외의 경우</span></div><div class="line">  <span class="keyword">default</span>:</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'unknown color'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>이렇게 하면 break를 선언하지 않았기 때문에 red,blue,unknown까지 출력이된다.</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> color = <span class="string">'red'</span>;</div><div class="line"></div><div class="line"><span class="keyword">switch</span> (color) &#123;</div><div class="line">  <span class="keyword">case</span> <span class="string">'yellow'</span>:</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'yellow color'</span>);</div><div class="line">    <span class="keyword">break</span>;</div><div class="line">  <span class="keyword">case</span> <span class="string">'red'</span>:</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'red color'</span>);</div><div class="line">    <span class="keyword">break</span>;</div><div class="line">  <span class="keyword">case</span> <span class="string">'blue'</span>:</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'blue color'</span>);</div><div class="line">    <span class="keyword">break</span>;</div><div class="line">  <span class="keyword">default</span>:</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'unknown color'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="3-반복문-Loop"><a href="#3-반복문-Loop" class="headerlink" title="3. 반복문(Loop)"></a>3. 반복문(Loop)</h2><ul>
+<li>주어진 조건식이 참인 경우 코드 블록을 반복해서 실행한다.</li>
+</ul>
+<h3 id="3-1-for-문"><a href="#3-1-for-문" class="headerlink" title="3.1 for 문"></a>3.1 for 문</h3><ul>
+<li>for문은 특정 조건이 거짓으로 판별될 때까지 반복한다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> ([초기문]; [조건문]; [증감문]) &#123;</div><div class="line">  구문;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>여러 종류의 for문이 존재한다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> array = [<span class="string">'one'</span>, <span class="string">'two'</span>, <span class="string">'three'</span>, <span class="string">'four'</span>];</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</div><div class="line">  <span class="comment">// console.log(array[i]);</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'['</span> + i + <span class="string">'] = '</span> + array[i]);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// for-in</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> index <span class="keyword">in</span> array) &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'['</span> + index + <span class="string">'] = '</span> + array[index]);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// foreach</span></div><div class="line">array.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">element, index, arr</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'['</span> + index + <span class="string">'] = '</span> + element);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// for-of (ES6)</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">const</span> element <span class="keyword">of</span> array) &#123;</div><div class="line">  <span class="built_in">console</span>.log(element);</div><div class="line">&#125;</div><div class="line"><span class="comment">// array.entries(): 배열의 key/value의 쌍을 반환하는 iterator를 반환</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">const</span> [index, value] <span class="keyword">of</span> array.entries()) &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'['</span> + index + <span class="string">'] = '</span> + value);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>for문에 어떤 식도 선언하지 않으면 무한루프가 된다.</li>
+</ul>
+<h3 id="3-2-while-문"><a href="#3-2-while-문" class="headerlink" title="3.2 while 문"></a>3.2 while 문</h3><ul>
+<li>조건문이 거짓이 되면 실행을 종료하고 반복문을 빠져나간다.</li>
+<li>조건문이 언제나 참이면 무한루프가 된다.</li>
+<li>무한루프를 탈출하기 위해서는 break문을 사용한다. break문을 감싸는 반복문 하나를 탈출한다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> i = <span class="number">0</span>;</div><div class="line"><span class="comment">// 무한루프</span></div><div class="line"><span class="keyword">while</span> (<span class="literal">true</span>) &#123;</div><div class="line">  <span class="built_in">console</span>.log(i);</div><div class="line">  i++;</div><div class="line">  <span class="comment">// i가 10이면 exit!</span></div><div class="line">  <span class="keyword">if</span> (i === <span class="number">10</span>) <span class="keyword">break</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="3-3-do-while-문"><a href="#3-3-do-while-문" class="headerlink" title="3.3 do-while 문"></a>3.3 do-while 문</h3><ul>
+<li>코드블록은 조건문을 확인하기 전에 무조건 1회 실행된다. 그후 조건문을 확인한다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> i = <span class="number">0</span>;</div><div class="line"><span class="keyword">do</span> &#123;</div><div class="line">  <span class="built_in">console</span>.log(i);</div><div class="line">  i++;</div><div class="line">&#125; <span class="keyword">while</span> (i &lt; <span class="number">3</span>);</div></pre></td></tr></table></figure>
+<h3 id="3-4-continue"><a href="#3-4-continue" class="headerlink" title="3.4 continue"></a>3.4 continue</h3><ul>
+<li>continue문은 이후 구문의 <code>실행을 스킵</code>하고 반복문의 조건문으로 이동한다.<ul>
+<li>예참조 -&gt;  짝수에서는 console.log를 안한다.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</div><div class="line">    <span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>) <span class="keyword">continue</span>;</div><div class="line">    <span class="built_in">console</span>.log(i);</div><div class="line">    <span class="comment">// 홀수만 출력</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-평가-Evaluating"><a href="#4-평가-Evaluating" class="headerlink" title="4. 평가(Evaluating)"></a>4. 평가(Evaluating)</h2><ul>
+<li>일반적 표현식외에도 문자열, 숫자, 변수, 내장값등을 조건식으로 사용할 수 있다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="number">1</span>) &#123; <span class="comment">// true</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'1'</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (<span class="string">'str'</span>) &#123; <span class="comment">// true</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'2'</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123; <span class="comment">//true</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'3'</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (<span class="literal">null</span>) &#123; <span class="comment">// false</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'4'</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> x = <span class="string">''</span>;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (x) &#123; <span class="comment">// false</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'5'</span>);  </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (!x) &#123; <span class="comment">//true</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'6'</span>);  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="4-1-암묵적-강제-형-변환-Type-coercion"><a href="#4-1-암묵적-강제-형-변환-Type-coercion" class="headerlink" title="4.1 암묵적 강제 형 변환(Type coercion)"></a>4.1 암묵적 강제 형 변환(Type coercion)</h3><ul>
+<li>context를 고려하여 내부적으로 자료형을 강제 형변환시킨다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">'1'</span> &gt; <span class="number">0</span>);            <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="number">1</span> + <span class="string">'2'</span>);            <span class="comment">// '12'</span></div><div class="line"><span class="built_in">console</span>.log(<span class="number">2</span> - <span class="string">'1'</span>);            <span class="comment">// 1</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'10'</span> == <span class="number">10</span>);         <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'10'</span> === <span class="number">10</span>);        <span class="comment">// false -&gt; type이 다르다.</span></div><div class="line"><span class="built_in">console</span>.log(<span class="literal">undefined</span> == <span class="literal">null</span>);  <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="literal">undefined</span> === <span class="literal">null</span>); <span class="comment">// false -&gt; type이 다르다.</span></div></pre></td></tr></table></figure>
+<h3 id="4-2-Type-Conversion-Table"><a href="#4-2-Type-Conversion-Table" class="headerlink" title="4.2 Type Conversion Table"></a>4.2 Type Conversion Table</h3><ul>
+<li>부정적 값은 = 0, false, undefined 등으로 나타내진다.</li>
+<li>긍정적 값은 = 1, true 등으로 나타내진다.</li>
+</ul>
+<h3 id="4-3-Data-type-conversion"><a href="#4-3-Data-type-conversion" class="headerlink" title="4.3 Data type conversion"></a>4.3 Data type conversion</h3><ul>
+<li>형 변환시 편리하다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> val = <span class="string">'123'</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> val + <span class="string">': '</span> + val); <span class="comment">// string: 123</span></div><div class="line"></div><div class="line"><span class="comment">// sting -&gt; number</span></div><div class="line">val *= <span class="number">1</span>;   <span class="comment">// string에 수를 곱하면 type이 number로 변환된다.</span></div><div class="line"><span class="comment">// val = Number(val);</span></div><div class="line"><span class="comment">// val = parseInt(val);</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> val + <span class="string">': '</span> + val); <span class="comment">// number: 123</span></div><div class="line"></div><div class="line"><span class="comment">// number -&gt; sting </span></div><div class="line">val += <span class="string">''</span>;  <span class="comment">// 숫자에 빈문자열을 더해준다.</span></div><div class="line"><span class="comment">// val = String(val);</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> val + <span class="string">': '</span> + val); <span class="comment">// string: 123</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>val *= 1;   // string에 수를 곱하면 type이 number로 변환된다.<br>string-&gt;number</p>
+<p>val += ‘’;  // 숫자에 빈문자열을 더해준다. number-&gt;string</p>
+</blockquote>
+<h3 id="4-4-Truthy-amp-Falsy-values"><a href="#4-4-Truthy-amp-Falsy-values" class="headerlink" title="4.4 Truthy &amp; Falsy values"></a>4.4 Truthy &amp; Falsy values</h3><ul>
+<li>아래 값들은 Boolean context에서 false로 평가된다.<ul>
+<li>false</li>
+<li>undefined</li>
+<li>null</li>
+<li>0</li>
+<li>NaN (Not a Number)</li>
+<li>‘’ (빈문자열)</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-5-Checking-equality"><a href="#4-5-Checking-equality" class="headerlink" title="4.5 Checking equality"></a>4.5 Checking equality</h3><ul>
+<li>동등비교시 (==, !=)이 아닌 일치연산자(===, !==)을 사용해야한다.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// logs false !!!</span></div><div class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> == <span class="literal">false</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="literal">undefined</span> == <span class="literal">false</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> == <span class="number">0</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="literal">undefined</span> == <span class="number">0</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="literal">undefined</span> === <span class="literal">null</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="literal">NaN</span> == <span class="literal">null</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="literal">NaN</span> == <span class="literal">NaN</span>);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="4-6-Checking-existence"><a href="#4-6-Checking-existence" class="headerlink" title="4.6 Checking existence"></a>4.6 Checking existence</h3><ul>
+<li>객체나 배열(배열도 객체이다)이 값을 가지고 있으면 truthy value로 취급된다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="built_in">document</span>.getElementById(<span class="string">'header'</span>)) &#123;</div><div class="line">  <span class="comment">// 요소가 존재함 : 필요한 작업을 수행</span></div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">  <span class="comment">// 요소가 존재하지 않음 : 필요한 작업을 수행</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>객체의 존재를 boolean으로 비교하면 안된다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="built_in">document</span>.getElementById(<span class="string">'header'</span>) == <span class="literal">true</span>) <span class="comment">// false</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>주의 사항 : b가 false라는 값을 가진 객체가 된다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> b = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">false</span>);</div><div class="line"><span class="keyword">if</span> (b) <span class="comment">// true</span></div></pre></td></tr></table></figure></li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2017/07/31/js-study-control-flow/" data-id="cj9fnc3v50000756f0o3jkmgb" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/tpwns1088@gmail.com" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/KimSejune" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2017/08/28/node-study-restapi/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Node-Rest-API
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2017/07/28/js-study-introduction/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">JavaScript-Introduction</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/10/27/node-study-elasticache/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/nodejs.png)" alt="Node-kue" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/Elasticache/">Elasticache</a></p>
+                            <p class="item-title"><a href="/2017/10/27/node-study-elasticache/" class="title">Node-kue</a></p>
+                            <p class="item-date"><time datetime="2017-10-27T03:54:00.000Z" itemprop="datePublished">2017-10-27</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/10/08/node-project-dada-redis/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Project/">Project</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Project/redis/">redis</a></p>
+                            <p class="item-title"><a href="/2017/10/08/node-project-dada-redis/" class="title">Node-Project</a></p>
+                            <p class="item-date"><time datetime="2017-10-08T03:54:00.000Z" itemprop="datePublished">2017-10-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/10/08/node-project-dada/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/wire-frame-1.png)" alt="Node-Project" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Project/">Project</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Project/ReadMe/">ReadMe</a></p>
+                            <p class="item-title"><a href="/2017/10/08/node-project-dada/" class="title">Node-Project</a></p>
+                            <p class="item-date"><time datetime="2017-10-08T03:54:00.000Z" itemprop="datePublished">2017-10-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/09/27/node-study-testablility/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/nodejs.png)" alt="Node-Testablility" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/Testablility/">Testablility</a></p>
+                            <p class="item-title"><a href="/2017/09/27/node-study-testablility/" class="title">Node-Testablility</a></p>
+                            <p class="item-date"><time datetime="2017-09-27T03:54:00.000Z" itemprop="datePublished">2017-09-27</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/09/26/node-linux-awsEC2/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/aws.png)" alt="Node-Linux-AWS(EC2)" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/Linux/">Linux</a></p>
+                            <p class="item-title"><a href="/2017/09/26/node-linux-awsEC2/" class="title">Node-Linux-AWS(EC2)</a></p>
+                            <p class="item-date"><time datetime="2017-09-26T03:54:00.000Z" itemprop="datePublished">2017-09-26</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/Selector/">Selector</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/Syntax/">Syntax</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Control-Flow/">Control Flow</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Introduction/">Introduction</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Syntax/">Syntax</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a><span class="category-list-count">34</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Ajax/">Ajax</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/CORS/">CORS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/CSRF/">CSRF</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Cookie/">Cookie</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/DataModeling/">DataModeling</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Database/">Database</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Elasticache/">Elasticache</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Express/">Express</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Express-Middlware/">Express-Middlware</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Fetch/">Fetch</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/GraphQL/">GraphQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Http/">Http</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/JWT/">JWT</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Linux/">Linux</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Linux/AWS/">AWS</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/OAuth/">OAuth</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Passport/">Passport</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Rest-API/">Rest-API</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/SPA/">SPA</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Service-Develop/">Service Develop</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Session/">Session</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/SocketIO/">SocketIO</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Template-Language/">Template Language</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Testablility/">Testablility</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/Web-Form/">Web Form</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/http-cache/">http-cache</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/knex/">knex</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/kue/">kue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/mongoDB/">mongoDB</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Project/">Project</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Project/ReadMe/">ReadMe</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Project/redis/">redis</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">27</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">6</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CORS/">CORS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSRF/">CSRF</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Control-Flow/">Control Flow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cookie/">Cookie</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataModeling/">DataModeling</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/">Database</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Elasticache/">Elasticache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/">Express</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fetch/">Fetch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GraphQL/">GraphQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/">Http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Introduction/">Introduction</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JWT/">JWT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Knex/">Knex</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Middleware/">Middleware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a><span class="tag-list-count">36</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OAuth/">OAuth</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Passport/">Passport</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RestAPI/">RestAPI</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SPA/">SPA</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Selector/">Selector</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Service-Develop/">Service Develop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Session/">Session</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SocketIO/">SocketIO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Syntax/">Syntax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Testablility/">Testablility</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web-Form/">Web Form</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http/">http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kenx/">kenx</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kue/">kue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongoDB/">mongoDB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/template-Language/">template Language</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/AWS/" style="font-size: 12.5px;">AWS</a> <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/CORS/" style="font-size: 10px;">CORS</a> <a href="/tags/CSRF/" style="font-size: 10px;">CSRF</a> <a href="/tags/CSS/" style="font-size: 12.5px;">CSS</a> <a href="/tags/Control-Flow/" style="font-size: 10px;">Control Flow</a> <a href="/tags/Cookie/" style="font-size: 10px;">Cookie</a> <a href="/tags/DataModeling/" style="font-size: 10px;">DataModeling</a> <a href="/tags/Database/" style="font-size: 10px;">Database</a> <a href="/tags/Elasticache/" style="font-size: 10px;">Elasticache</a> <a href="/tags/Express/" style="font-size: 12.5px;">Express</a> <a href="/tags/Fetch/" style="font-size: 10px;">Fetch</a> <a href="/tags/GraphQL/" style="font-size: 10px;">GraphQL</a> <a href="/tags/Http/" style="font-size: 10px;">Http</a> <a href="/tags/Introduction/" style="font-size: 10px;">Introduction</a> <a href="/tags/JWT/" style="font-size: 10px;">JWT</a> <a href="/tags/JavaScript/" style="font-size: 17.5px;">JavaScript</a> <a href="/tags/Knex/" style="font-size: 12.5px;">Knex</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Middleware/" style="font-size: 10px;">Middleware</a> <a href="/tags/Node-js/" style="font-size: 20px;">Node.js</a> <a href="/tags/OAuth/" style="font-size: 10px;">OAuth</a> <a href="/tags/Passport/" style="font-size: 10px;">Passport</a> <a href="/tags/RestAPI/" style="font-size: 12.5px;">RestAPI</a> <a href="/tags/SPA/" style="font-size: 12.5px;">SPA</a> <a href="/tags/Selector/" style="font-size: 10px;">Selector</a> <a href="/tags/Service-Develop/" style="font-size: 10px;">Service Develop</a> <a href="/tags/Session/" style="font-size: 10px;">Session</a> <a href="/tags/SocketIO/" style="font-size: 10px;">SocketIO</a> <a href="/tags/Syntax/" style="font-size: 15px;">Syntax</a> <a href="/tags/Testablility/" style="font-size: 10px;">Testablility</a> <a href="/tags/Web-Form/" style="font-size: 10px;">Web Form</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/kenx/" style="font-size: 17.5px;">kenx</a> <a href="/tags/kue/" style="font-size: 10px;">kue</a> <a href="/tags/mongoDB/" style="font-size: 10px;">mongoDB</a> <a href="/tags/template-Language/" style="font-size: 10px;">template Language</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Sejune kim</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://yoursite.com/2017/07/31/js-study-control-flow/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
