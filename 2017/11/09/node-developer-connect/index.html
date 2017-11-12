@@ -9,18 +9,18 @@
     
         <meta name="keywords" content="PlayNode" />
     
-    <meta name="description" content="GraphQL + Relay + Serverless필요한 리소스만 요청하고 사용하는 API 만들기장바구니 개발시 Component : cart, proudectlist, productdata 등등단점 : 모바일에서 네트워크 콜을 4가지를 해야하는데 이것이 네트워크가 안좋을때 받기가 힘들다.해결법 : queryString? =&amp;gt; 장기적 개발이 힘들다.해">
+    <meta name="description" content="Play Node 발표내용 정리GraphQL + Relay + Serverless필요한 리소스만 요청하고 사용하는 API 만들기장바구니 개발시 Component : cart, proudectlist, productdata 등등단점 : 모바일에서 네트워크 콜을 4가지를 해야하는데 이것이 네트워크가 안좋을때 받기가 힘들다.해결법 : queryString? =&amp;">
 <meta name="keywords" content="PlayNode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node Developer Connect">
 <meta property="og:url" content="http://yoursite.com/2017/11/09/node-developer-connect/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="GraphQL + Relay + Serverless필요한 리소스만 요청하고 사용하는 API 만들기장바구니 개발시 Component : cart, proudectlist, productdata 등등단점 : 모바일에서 네트워크 콜을 4가지를 해야하는데 이것이 네트워크가 안좋을때 받기가 힘들다.해결법 : queryString? =&amp;gt; 장기적 개발이 힘들다.해">
+<meta property="og:description" content="Play Node 발표내용 정리GraphQL + Relay + Serverless필요한 리소스만 요청하고 사용하는 API 만들기장바구니 개발시 Component : cart, proudectlist, productdata 등등단점 : 모바일에서 네트워크 콜을 4가지를 해야하는데 이것이 네트워크가 안좋을때 받기가 힘들다.해결법 : queryString? =&amp;">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-09T11:54:02.000Z">
+<meta property="og:updated_time" content="2017-11-12T12:04:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node Developer Connect">
-<meta name="twitter:description" content="GraphQL + Relay + Serverless필요한 리소스만 요청하고 사용하는 API 만들기장바구니 개발시 Component : cart, proudectlist, productdata 등등단점 : 모바일에서 네트워크 콜을 4가지를 해야하는데 이것이 네트워크가 안좋을때 받기가 힘들다.해결법 : queryString? =&amp;gt; 장기적 개발이 힘들다.해">
+<meta name="twitter:description" content="Play Node 발표내용 정리GraphQL + Relay + Serverless필요한 리소스만 요청하고 사용하는 API 만들기장바구니 개발시 Component : cart, proudectlist, productdata 등등단점 : 모바일에서 네트워크 콜을 4가지를 해야하는데 이것이 네트워크가 안좋을때 받기가 힘들다.해결법 : queryString? =&amp;">
     
 
     
@@ -169,7 +169,7 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="GraphQL-Relay-Serverless"><a href="#GraphQL-Relay-Serverless" class="headerlink" title="GraphQL + Relay + Serverless"></a>GraphQL + Relay + Serverless</h1><h2 id="필요한-리소스만-요청하고-사용하는-API-만들기"><a href="#필요한-리소스만-요청하고-사용하는-API-만들기" class="headerlink" title="필요한 리소스만 요청하고 사용하는 API 만들기"></a>필요한 리소스만 요청하고 사용하는 API 만들기</h2><p>장바구니 개발시 Component : cart, proudectlist, productdata 등등<br>단점 : 모바일에서 네트워크 콜을 4가지를 해야하는데 이것이 네트워크가 안좋을때 받기가 힘들다.<br>해결법 : queryString? =&gt; 장기적 개발이 힘들다.<br>해결법 : custom된 endpoint를 생성한다 기기별로(모바일, 웹 등등) =&gt; 여러개의 엔드포인트를 만들기에는 문제가 있다.<br>해결법 : BFF(soundcloud) 모바일을 위해 최적화된 endpoint를 만들어준다. =&gt; 고객마다 needs가 달라서 어렵다.  </p>
+            <h1 id="Play-Node-발표내용-정리"><a href="#Play-Node-발표내용-정리" class="headerlink" title="Play Node 발표내용 정리"></a>Play Node 발표내용 정리</h1><h1 id="GraphQL-Relay-Serverless"><a href="#GraphQL-Relay-Serverless" class="headerlink" title="GraphQL + Relay + Serverless"></a>GraphQL + Relay + Serverless</h1><h2 id="필요한-리소스만-요청하고-사용하는-API-만들기"><a href="#필요한-리소스만-요청하고-사용하는-API-만들기" class="headerlink" title="필요한 리소스만 요청하고 사용하는 API 만들기"></a>필요한 리소스만 요청하고 사용하는 API 만들기</h2><p>장바구니 개발시 Component : cart, proudectlist, productdata 등등<br>단점 : 모바일에서 네트워크 콜을 4가지를 해야하는데 이것이 네트워크가 안좋을때 받기가 힘들다.<br>해결법 : queryString? =&gt; 장기적 개발이 힘들다.<br>해결법 : custom된 endpoint를 생성한다 기기별로(모바일, 웹 등등) =&gt; 여러개의 엔드포인트를 만들기에는 문제가 있다.<br>해결법 : BFF(soundcloud) 모바일을 위해 최적화된 endpoint를 만들어준다. =&gt; 고객마다 needs가 달라서 어렵다.  </p>
 <blockquote>
 <p>BFF? 프론트엔드를 중심으로 백엔드가 들어간다.  </p>
 </blockquote>
@@ -214,7 +214,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/11/09/node-developer-connect/" data-id="cj9twkmzy000nfl6fizjpjzws" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/11/09/node-developer-connect/" data-id="cj9wppizb000vf06fizh77iyt" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -381,26 +381,6 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2017/10/08/node-project-dada-redis/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Project/">Project</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Project/redis/">redis</a></p>
-                            <p class="item-title"><a href="/2017/10/08/node-project-dada-redis/" class="title">Node-Project</a></p>
-                            <p class="item-date"><time datetime="2017-10-08T03:54:00.000Z" itemprop="datePublished">2017-10-08</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
                             <a href="/2017/10/08/node-project-dada/" class="thumbnail">
     
     
@@ -414,6 +394,26 @@
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/Project/">Project</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Project/ReadMe/">ReadMe</a></p>
                             <p class="item-title"><a href="/2017/10/08/node-project-dada/" class="title">Node-Project</a></p>
+                            <p class="item-date"><time datetime="2017-10-08T03:54:00.000Z" itemprop="datePublished">2017-10-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/10/08/node-project-dada-redis/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Project/">Project</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Project/redis/">redis</a></p>
+                            <p class="item-title"><a href="/2017/10/08/node-project-dada-redis/" class="title">Node-Project</a></p>
                             <p class="item-date"><time datetime="2017-10-08T03:54:00.000Z" itemprop="datePublished">2017-10-08</time></p>
                         </div>
                     </li>
