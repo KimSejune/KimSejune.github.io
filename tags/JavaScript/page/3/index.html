@@ -149,17 +149,17 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/08/09/js-study-date/" class="thumbnail">
+        <a href="/2017/08/09/js-study-array/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Date" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/reduce.png)" alt="JavaScript Array" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/09/js-study-date/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/09/js-study-array/">0</span>
     
 </span>
 
@@ -170,129 +170,28 @@
         
         <div class="article-meta">
             <div class="category">
-            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Date/">Date</a>
+            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Array/">Array</a>
             </div>
             <div class="date"><time datetime="2017-08-09T03:54:00.000Z" itemprop="datePublished">2017-08-09</time></div>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/09/js-study-date/">JavaScript Date</a>
+        <a href="/2017/08/09/js-study-array/">JavaScript Array</a>
         </h1>
     
 
         <p class="article-excerpt">
-            JavaScript Date
+            JavaScript Array1. 배열의 생성1var arr = [1,2,3]; // 리터럴 방식으로 만들수 있다.
 
-생성자 함수로 반드시 생성해야한다 리터럴 방식이 없다.
-
-1. Date Constructor
-Date 생성자를 사용하여 날짜와 시간을 가지는 인스턴스를 생성한다. 
-
-1234new Date()new Date(milliseconds)new Date(dateString)new Date(year, month[, day, hour, 
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/08/08/js-study-standard-built-in-object/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Standard Built In Object" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/08/js-study-standard-built-in-object/">0</span>
-    
-</span>
+프로퍼티가 없고 값만 존재한다.
+index를 사용하여서 순회가 가능하다.
+Array() // Array 생성자로 생성하며 prototype관계가 성립한다.
+주의: Array는 object type이다.
 
 
-    
-</a>
 
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Built-In-Object/">Built In Object</a>
-            </div>
-            <div class="date"><time datetime="2017-08-08T03:54:00.000Z" itemprop="datePublished">2017-08-08</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/08/js-study-standard-built-in-object/">JavaScript Standard Built In Object</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            JavaScript Standard Built In Object
-1. Global Object
-전역 객체(Global Object)는 모든 객체의 유일한 최상위 객체를 의미하며 일반적으로 Browser-side에서는 window, Server-side(Node.js)에서는 global 객체를 의미한다.
-
-123456// in browser consoleth
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/08/08/js-study-built-in-object/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/BOM.png)" alt="JavaScript Built In Object" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/08/js-study-built-in-object/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Built-In-Object/">Built In Object</a>
-            </div>
-            <div class="date"><time datetime="2017-08-08T03:54:00.000Z" itemprop="datePublished">2017-08-08</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/08/js-study-built-in-object/">JavaScript Built In Object</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            JavaScript Built In ObjectBuilt-in Object(내장 객체)는 웹페이지 등을 표현하기 위한 공통의 기능을 제공한다.
-
-Standard Built-in Objects (or Global Objects) 기본적으로 적용되어있는 객체들 (string, array 등등)
-BOM (Browser Object Model) size, hist
+1.1 배열 리터럴12345678
         </p>
     </div>
 </article>
@@ -363,17 +262,17 @@ PI 값(π ≈ 3
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/08/08/js-study-Number/" class="thumbnail">
+        <a href="/2017/08/08/js-study-standard-built-in-object/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Number" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Standard Built In Object" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/08/js-study-Number/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/08/js-study-standard-built-in-object/">0</span>
     
 </span>
 
@@ -384,23 +283,23 @@ PI 값(π ≈ 3
         
         <div class="article-meta">
             <div class="category">
-            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Number/">Number</a>
+            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Built-In-Object/">Built In Object</a>
             </div>
             <div class="date"><time datetime="2017-08-08T03:54:00.000Z" itemprop="datePublished">2017-08-08</time></div>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/08/js-study-Number/">JavaScript Number</a>
+        <a href="/2017/08/08/js-study-standard-built-in-object/">JavaScript Standard Built In Object</a>
         </h1>
     
 
         <p class="article-excerpt">
-            JavaScript Number
-1. Number Constructor
-Number 객체는 Number() 생성자 함수를 통해 생성할 수 있다.
+            JavaScript Standard Built In Object
+1. Global Object
+전역 객체(Global Object)는 모든 객체의 유일한 최상위 객체를 의미하며 일반적으로 Browser-side에서는 window, Server-side(Node.js)에서는 global 객체를 의미한다.
 
-123456789new Number(value);var x = new Number(123);var y = new Number('123');var z = new Number('str');console.log(x);
+123456// in browser consoleth
         </p>
     </div>
 </article>
@@ -409,6 +308,59 @@ Number 객체는 Number() 생성자 함수를 통해 생성할 수 있다.
     
     
     
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/08/08/js-study-built-in-object/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/BOM.png)" alt="JavaScript Built In Object" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/08/js-study-built-in-object/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Built-In-Object/">Built In Object</a>
+            </div>
+            <div class="date"><time datetime="2017-08-08T03:54:00.000Z" itemprop="datePublished">2017-08-08</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/08/08/js-study-built-in-object/">JavaScript Built In Object</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            JavaScript Built In ObjectBuilt-in Object(내장 객체)는 웹페이지 등을 표현하기 위한 공통의 기능을 제공한다.
+
+Standard Built-in Objects (or Global Objects) 기본적으로 적용되어있는 객체들 (string, array 등등)
+BOM (Browser Object Model) size, hist
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -456,6 +408,56 @@ Number 객체는 Number() 생성자 함수를 통해 생성할 수 있다.
     </div>
 </article>
     
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/08/08/js-study-Number/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Number" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/08/js-study-Number/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Number/">Number</a>
+            </div>
+            <div class="date"><time datetime="2017-08-08T03:54:00.000Z" itemprop="datePublished">2017-08-08</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/08/08/js-study-Number/">JavaScript Number</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            JavaScript Number
+1. Number Constructor
+Number 객체는 Number() 생성자 함수를 통해 생성할 수 있다.
+
+123456789new Number(value);var x = new Number(123);var y = new Number('123');var z = new Number('str');console.log(x);
+        </p>
+    </div>
+</article>
+    
         </div>
     
 
@@ -464,6 +466,54 @@ Number 객체는 Number() 생성자 함수를 통해 생성할 수 있다.
     
     
         <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/08/07/js-study-closure/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/closure.png)" alt="JavaScript Closure" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/07/js-study-closure/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Closure/">Closure</a>
+            </div>
+            <div class="date"><time datetime="2017-08-07T03:54:00.000Z" itemprop="datePublished">2017-08-07</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/08/07/js-study-closure/">JavaScript Closure</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            Javascript Closure1. 클로저의 개념
+클로저는 자바스크립트 고유의 개념이 아니라 함수를 일급 객체로 취급하는 함수형 언어(Functional language: Python, Haskell, Erlang, Perl, D, R…)에서 사용되는 중요한 특성이다.
+클로저는 내부함수를 위한 외부함수의 지역변수가 외부함수에 의해 내부함수가 반환된 이후에
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -513,54 +563,6 @@ Function Code : 함수 내에 존재하는 코드
     </div>
 </article>
     
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/08/07/js-study-closure/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/closure.png)" alt="JavaScript Closure" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/07/js-study-closure/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Closure/">Closure</a>
-            </div>
-            <div class="date"><time datetime="2017-08-07T03:54:00.000Z" itemprop="datePublished">2017-08-07</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/07/js-study-closure/">JavaScript Closure</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Javascript Closure1. 클로저의 개념
-클로저는 자바스크립트 고유의 개념이 아니라 함수를 일급 객체로 취급하는 함수형 언어(Functional language: Python, Haskell, Erlang, Perl, D, R…)에서 사용되는 중요한 특성이다.
-클로저는 내부함수를 위한 외부함수의 지역변수가 외부함수에 의해 내부함수가 반환된 이후에
-        </p>
-    </div>
-</article>
-    
         </div>
     
 
@@ -569,55 +571,6 @@ Function Code : 함수 내에 존재하는 코드
     
     
         <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/08/03/js-study-this/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/prototype_metthod_invocation_pattern.png)" alt="JavaScript This" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/03/js-study-this/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/This/">This</a>
-            </div>
-            <div class="date"><time datetime="2017-08-03T03:54:00.000Z" itemprop="datePublished">2017-08-03</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/03/js-study-this/">JavaScript This</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Javascript this
-자바스크립트의 함수는 호출될 때, 매개변수로 전달되는 인자값 이외에, arguments 객체와 this를 암묵적으로 전달 받는다.
-
-12345678910function square(number) &#123;  console.log(arguments);  console.log(this);  // browser에서는 window로 
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -670,6 +623,55 @@ Function Code : 함수 내에 존재하는 코드
 변수의 Scope 종류
 
 전역 변수 (Global variabl
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/08/03/js-study-this/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/prototype_metthod_invocation_pattern.png)" alt="JavaScript This" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/03/js-study-this/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/This/">This</a>
+            </div>
+            <div class="date"><time datetime="2017-08-03T03:54:00.000Z" itemprop="datePublished">2017-08-03</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/08/03/js-study-this/">JavaScript This</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            Javascript this
+자바스크립트의 함수는 호출될 때, 매개변수로 전달되는 인자값 이외에, arguments 객체와 this를 암묵적으로 전달 받는다.
+
+12345678910function square(number) &#123;  console.log(arguments);  console.log(this);  // browser에서는 window로 
         </p>
     </div>
 </article>
@@ -766,26 +768,6 @@ Function Code : 함수 내에 존재하는 코드
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2017/10/08/node-project-dada/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/wire-frame-1.png)" alt="Node-Project" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Project/">Project</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Project/ReadMe/">ReadMe</a></p>
-                            <p class="item-title"><a href="/2017/10/08/node-project-dada/" class="title">Node-Project</a></p>
-                            <p class="item-date"><time datetime="2017-10-08T03:54:00.000Z" itemprop="datePublished">2017-10-08</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
                             <a href="/2017/10/08/node-project-dada-redis/" class="thumbnail">
     
     
@@ -799,6 +781,26 @@ Function Code : 함수 내에 존재하는 코드
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/Project/">Project</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Project/redis/">redis</a></p>
                             <p class="item-title"><a href="/2017/10/08/node-project-dada-redis/" class="title">Node-Project</a></p>
+                            <p class="item-date"><time datetime="2017-10-08T03:54:00.000Z" itemprop="datePublished">2017-10-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/10/08/node-project-dada/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/wire-frame-1.png)" alt="Node-Project" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Project/">Project</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Project/ReadMe/">ReadMe</a></p>
+                            <p class="item-title"><a href="/2017/10/08/node-project-dada/" class="title">Node-Project</a></p>
                             <p class="item-date"><time datetime="2017-10-08T03:54:00.000Z" itemprop="datePublished">2017-10-08</time></p>
                         </div>
                     </li>
