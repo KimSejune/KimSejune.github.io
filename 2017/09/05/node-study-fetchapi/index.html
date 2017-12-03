@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="Node.js,Fetch" />
     
-    <meta name="description" content="Node Fetch APIFetch API 웹 브라우저의 XMLHttpRequest를 대체하기 위해 만들어진 새로운 HTTP client 표준   비교적 최근에 도입되어 IE 및 구형 안드로이드 브라우저(4.x)는 지원하지 않음   Fetch Polyfill   최신기술로써 지원하지 않는 브라우저가 많지만 Fetch Polyfill을 사용하면 사용가능하다">
+    <meta name="description" content="Node Fetch API Fetch API  웹 브라우저의 XMLHttpRequest를 대체하기 위해 만들어진 새로운 HTTP client 표준 비교적 최근에 도입되어 IE 및 구형 안드로이드 브라우저(4.x)는 지원하지 않음 Fetch Polyfill  최신기술로써 지원하지 않는 브라우저가 많지만 Fetch Polyfill을 사용하면 사용가능하다.">
 <meta name="keywords" content="Node.js,Fetch">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node-fetchApi">
 <meta property="og:url" content="http://yoursite.com/2017/09/05/node-study-fetchapi/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="Node Fetch APIFetch API 웹 브라우저의 XMLHttpRequest를 대체하기 위해 만들어진 새로운 HTTP client 표준   비교적 최근에 도입되어 IE 및 구형 안드로이드 브라우저(4.x)는 지원하지 않음   Fetch Polyfill   최신기술로써 지원하지 않는 브라우저가 많지만 Fetch Polyfill을 사용하면 사용가능하다">
+<meta property="og:description" content="Node Fetch API Fetch API  웹 브라우저의 XMLHttpRequest를 대체하기 위해 만들어진 새로운 HTTP client 표준 비교적 최근에 도입되어 IE 및 구형 안드로이드 브라우저(4.x)는 지원하지 않음 Fetch Polyfill  최신기술로써 지원하지 않는 브라우저가 많지만 Fetch Polyfill을 사용하면 사용가능하다.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/fetch.jpeg">
 <meta property="og:updated_time" content="2017-09-21T02:17:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node-fetchApi">
-<meta name="twitter:description" content="Node Fetch APIFetch API 웹 브라우저의 XMLHttpRequest를 대체하기 위해 만들어진 새로운 HTTP client 표준   비교적 최근에 도입되어 IE 및 구형 안드로이드 브라우저(4.x)는 지원하지 않음   Fetch Polyfill   최신기술로써 지원하지 않는 브라우저가 많지만 Fetch Polyfill을 사용하면 사용가능하다">
+<meta name="twitter:description" content="Node Fetch API Fetch API  웹 브라우저의 XMLHttpRequest를 대체하기 위해 만들어진 새로운 HTTP client 표준 비교적 최근에 도입되어 IE 및 구형 안드로이드 브라우저(4.x)는 지원하지 않음 Fetch Polyfill  최신기술로써 지원하지 않는 브라우저가 많지만 Fetch Polyfill을 사용하면 사용가능하다.">
 <meta name="twitter:image" content="http://yoursite.com/images/fetch.jpeg">
     
 
@@ -172,24 +172,30 @@
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/fetch.jpeg" alt="fetchapi"></p>
-<h1 id="Node-Fetch-API"><a href="#Node-Fetch-API" class="headerlink" title="Node Fetch API"></a>Node Fetch API</h1><h2 id="Fetch-API"><a href="#Fetch-API" class="headerlink" title="Fetch API"></a>Fetch API</h2><ul>
-<li>웹 브라우저의 XMLHttpRequest를 대체하기 위해 만들어진 새로운 HTTP client 표준  </li>
-<li>비교적 최근에 도입되어 IE 및 구형 안드로이드 브라우저(4.x)는 지원하지 않음  </li>
-<li><a href="https://github.com/github/fetch" target="_blank" rel="external">Fetch Polyfill</a>  <ul>
+<h1>Node Fetch API</h1>
+<h2>Fetch API</h2>
+<ul>
+<li>웹 브라우저의 XMLHttpRequest를 대체하기 위해 만들어진 새로운 HTTP client 표준</li>
+<li>비교적 최근에 도입되어 IE 및 구형 안드로이드 브라우저(4.x)는 지원하지 않음</li>
+<li><a href="https://github.com/github/fetch" target="_blank" rel="external">Fetch Polyfill</a>
+<ul>
 <li>최신기술로써 지원하지 않는 브라우저가 많지만 Fetch Polyfill을 사용하면 사용가능하다.</li>
 </ul>
 </li>
-<li><a href="https://www.npmjs.com/package/isomorphic-fetch" target="_blank" rel="external">isomorphic-fetch</a>  <ul>
-<li>npm library이다.  </li>
+<li><a href="https://www.npmjs.com/package/isomorphic-fetch" target="_blank" rel="external">isomorphic-fetch</a>
+<ul>
+<li>npm library이다.</li>
 </ul>
 </li>
 </ul>
-<h2 id="Axios-vs-Fetch-API"><a href="#Axios-vs-Fetch-API" class="headerlink" title="Axios vs Fetch API"></a>Axios vs Fetch API</h2><ul>
-<li>Instance와 같이 설정을 재사용하거나 요청중인 연결을 취소하는 등의 <code>편의기능</code>이 Fetch API에는 없음  </li>
-<li><code>현재로서는 Axios를 사용하는 것이 좋은 선택</code>  </li>
-<li>다만, Axios는 내부적으로 XMLHttpRequest를 사용하고 있는데 <code>Service Worker 등의 웹 최신 기술이 XMLHttpRequest를 지원하지 않으므로</code>, Service Worker를 사용할 예정에 있는 프로젝트에서는 Axios를 사용할 수 없음  </li>
+<h2>Axios vs Fetch API</h2>
+<ul>
+<li>Instance와 같이 설정을 재사용하거나 요청중인 연결을 취소하는 등의 <code>편의기능</code>이 Fetch API에는 없음</li>
+<li><code>현재로서는 Axios를 사용하는 것이 좋은 선택</code></li>
+<li>다만, Axios는 내부적으로 XMLHttpRequest를 사용하고 있는데 <code>Service Worker 등의 웹 최신 기술이 XMLHttpRequest를 지원하지 않으므로</code>, Service Worker를 사용할 예정에 있는 프로젝트에서는 Axios를 사용할 수 없음</li>
 </ul>
-<h2 id="Fetch-API-1"><a href="#Fetch-API-1" class="headerlink" title="Fetch API"></a>Fetch API</h2><p><a href="http://hacks.mozilla.or.kr/2015/05/this-api-is-so-fetching/" target="_blank" rel="external">Fetch API</a></p>
+<h2>Fetch API</h2>
+<p><a href="http://hacks.mozilla.or.kr/2015/05/this-api-is-so-fetching/" target="_blank" rel="external">Fetch API</a></p>
 
         </div>
         <footer class="article-footer">
@@ -197,7 +203,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/09/05/node-study-fetchapi/" data-id="cjaqqdj21004qxh6fjjjqk5yt" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/09/05/node-study-fetchapi/" data-id="cjaqqf4kz004q7q6fmewhx705" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="Algorithm,서울에서 김서방 찾기" />
     
-    <meta name="description" content="서울에서 김서방 찾기 서울에서 김서방 찾아라  입력된 배열에서 “Kim”이 어디에 존재하는지 찾아라. 어디 = index를 나타낸다.    12345678910111213141516171819202122package findkim;import java.util.Arrays;public class FindKim &amp;#123;		public String find">
+    <meta name="description" content="서울에서 김서방 찾기  서울에서 김서방 찾아라  입력된 배열에서 &amp;quot;Kim&amp;quot;이 어디에 존재하는지 찾아라.  어디 = index를 나타낸다.    12345678910111213141516171819202122package findkim;import java.util.Arrays;public class FindKim &amp;#123;		public">
 <meta name="keywords" content="Algorithm,서울에서 김서방 찾기">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Algorithm 서울에서 김서방 찾기">
 <meta property="og:url" content="http://yoursite.com/2017/12/01/algorithm-study-findkim/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="서울에서 김서방 찾기 서울에서 김서방 찾아라  입력된 배열에서 “Kim”이 어디에 존재하는지 찾아라. 어디 = index를 나타낸다.    12345678910111213141516171819202122package findkim;import java.util.Arrays;public class FindKim &amp;#123;		public String find">
+<meta property="og:description" content="서울에서 김서방 찾기  서울에서 김서방 찾아라  입력된 배열에서 &amp;quot;Kim&amp;quot;이 어디에 존재하는지 찾아라.  어디 = index를 나타낸다.    12345678910111213141516171819202122package findkim;import java.util.Arrays;public class FindKim &amp;#123;		public">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/algo.jpeg">
 <meta property="og:updated_time" content="2017-12-01T06:03:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Algorithm 서울에서 김서방 찾기">
-<meta name="twitter:description" content="서울에서 김서방 찾기 서울에서 김서방 찾아라  입력된 배열에서 “Kim”이 어디에 존재하는지 찾아라. 어디 = index를 나타낸다.    12345678910111213141516171819202122package findkim;import java.util.Arrays;public class FindKim &amp;#123;		public String find">
+<meta name="twitter:description" content="서울에서 김서방 찾기  서울에서 김서방 찾아라  입력된 배열에서 &amp;quot;Kim&amp;quot;이 어디에 존재하는지 찾아라.  어디 = index를 나타낸다.    12345678910111213141516171819202122package findkim;import java.util.Arrays;public class FindKim &amp;#123;		public">
 <meta name="twitter:image" content="http://yoursite.com/images/algo.jpeg">
     
 
@@ -171,20 +171,23 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="서울에서-김서방-찾기"><a href="#서울에서-김서방-찾기" class="headerlink" title="서울에서 김서방 찾기"></a>서울에서 김서방 찾기</h1><p><img src="/images/algo.jpeg" alt="algo"></p>
+            <h1>서울에서 김서방 찾기</h1>
+<p><img src="/images/algo.jpeg" alt="algo"></p>
 <p>서울에서 김서방 찾아라</p>
 <ul>
-<li>입력된 배열에서 “Kim”이 어디에 존재하는지 찾아라.<ul>
+<li>입력된 배열에서 &quot;Kim&quot;이 어디에 존재하는지 찾아라.
+<ul>
 <li>어디 = index를 나타낸다.</li>
 </ul>
 </li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> findkim;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.util.Arrays;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FindKim</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">findKim</span><span class="params">(String[] seoul)</span> </span>&#123;</div><div class="line">		<span class="comment">// x에 김서방의 위치를 저장하세요.</span></div><div class="line">		<span class="keyword">int</span> x = <span class="number">0</span>;</div><div class="line">		</div><div class="line">		x = Arrays.asList(seoul).indexOf(<span class="string">"Kim"</span>);</div><div class="line"></div><div class="line">		<span class="keyword">return</span> <span class="string">"김서방은 "</span> + x + <span class="string">"에 있다"</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 실행을 위한 테스트코드입니다.</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		FindKim kim = <span class="keyword">new</span> FindKim();</div><div class="line">		String[] names = &#123; <span class="string">"Queen"</span>, <span class="string">"Tod"</span>, <span class="string">"Kim"</span> &#125;;</div><div class="line">		System.out.println(kim.findKim(names));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Arrays.asList()는 Arrays의 지정된 배열을 기본으로하는 고정 사이즈의리스트를 돌려줍니다.<br>java.util.ArrayList 와는 다른 클래스이다. <code>get(), set(), contains() method는 존재하지만 값을 추가할 수는 없다.</code></p>
+<p><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> findkim;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.util.Arrays;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FindKim</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">findKim</span><span class="params">(String[] seoul)</span> </span>&#123;</div><div class="line">		<span class="comment">// x에 김서방의 위치를 저장하세요.</span></div><div class="line">		<span class="keyword">int</span> x = <span class="number">0</span>;</div><div class="line">		</div><div class="line">		x = Arrays.asList(seoul).indexOf(<span class="string">"Kim"</span>);</div><div class="line"></div><div class="line">		<span class="keyword">return</span> <span class="string">"김서방은 "</span> + x + <span class="string">"에 있다"</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 실행을 위한 테스트코드입니다.</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		FindKim kim = <span class="keyword">new</span> FindKim();</div><div class="line">		String[] names = &#123; <span class="string">"Queen"</span>, <span class="string">"Tod"</span>, <span class="string">"Kim"</span> &#125;;</div><div class="line">		System.out.println(kim.findKim(names));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Arrays.asList()는 Arrays의 지정된 배열을 기본으로하는 고정 사이즈의리스트를 돌려줍니다.
+java.util.ArrayList 와는 다른 클래스이다. <code>get(), set(), contains() method는 존재하지만 값을 추가할 수는 없다.</code></p>
 <blockquote>
-<p>ArrayList로 변환하고 싶을떄 </p>
+<p>ArrayList로 변환하고 싶을떄</p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ArrayList&lt;String&gt; arrList = <span class="keyword">new</span> ArrayList&lt;String&gt;(Arrays.asList(arr));</div></pre></td></tr></table></figure>
+<p><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ArrayList&lt;String&gt; arrList = <span class="keyword">new</span> ArrayList&lt;String&gt;(Arrays.asList(arr));</div></pre></td></tr></table></figure></p>
 
         </div>
         <footer class="article-footer">
@@ -192,7 +195,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/12/01/algorithm-study-findkim/" data-id="cjaqqdiy20001xh6fh7lgxwyz" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/12/01/algorithm-study-findkim/" data-id="cjaqqf4if00017q6f2pa5q6mb" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

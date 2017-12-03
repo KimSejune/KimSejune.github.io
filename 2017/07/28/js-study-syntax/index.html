@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="Syntax,JavaScript" />
     
-    <meta name="description" content="Javascript Syntax basics 1. Hello world 정적인 HTML을 동적으로 변경할 수 있는 유일한 방법은 js를 사용하는 것이다.  1234function myFunction() &amp;#123;  var myHeader = document.getElementById(&apos;demo&apos;);  myHeader.innerHTML = &apos;Hello wo">
+    <meta name="description" content="Javascript Syntax basics  1. Hello world  정적인 HTML을 동적으로 변경할 수 있는 유일한 방법은 js를 사용하는 것이다.  1234function myFunction() &amp;#123;  var myHeader = document.getElementById(&apos;demo&apos;);  myHeader.innerHTML = &apos;Hello">
 <meta name="keywords" content="Syntax,JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript-Syntax">
 <meta property="og:url" content="http://yoursite.com/2017/07/28/js-study-syntax/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="Javascript Syntax basics 1. Hello world 정적인 HTML을 동적으로 변경할 수 있는 유일한 방법은 js를 사용하는 것이다.  1234function myFunction() &amp;#123;  var myHeader = document.getElementById(&apos;demo&apos;);  myHeader.innerHTML = &apos;Hello wo">
+<meta property="og:description" content="Javascript Syntax basics  1. Hello world  정적인 HTML을 동적으로 변경할 수 있는 유일한 방법은 js를 사용하는 것이다.  1234function myFunction() &amp;#123;  var myHeader = document.getElementById(&apos;demo&apos;);  myHeader.innerHTML = &apos;Hello">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/js.jpeg">
 <meta property="og:updated_time" content="2017-10-31T11:56:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript-Syntax">
-<meta name="twitter:description" content="Javascript Syntax basics 1. Hello world 정적인 HTML을 동적으로 변경할 수 있는 유일한 방법은 js를 사용하는 것이다.  1234function myFunction() &amp;#123;  var myHeader = document.getElementById(&apos;demo&apos;);  myHeader.innerHTML = &apos;Hello wo">
+<meta name="twitter:description" content="Javascript Syntax basics  1. Hello world  정적인 HTML을 동적으로 변경할 수 있는 유일한 방법은 js를 사용하는 것이다.  1234function myFunction() &amp;#123;  var myHeader = document.getElementById(&apos;demo&apos;);  myHeader.innerHTML = &apos;Hello">
 <meta name="twitter:image" content="http://yoursite.com/images/js.jpeg">
     
 
@@ -171,17 +171,21 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="Javascript-Syntax-basics"><a href="#Javascript-Syntax-basics" class="headerlink" title="Javascript Syntax basics"></a>Javascript Syntax basics</h1><p><img src="/images/js.jpeg" alt="js"></p>
-<h2 id="1-Hello-world"><a href="#1-Hello-world" class="headerlink" title="1. Hello world"></a>1. Hello world</h2><ul>
+            <h1>Javascript Syntax basics</h1>
+<p><img src="/images/js.jpeg" alt="js"></p>
+<h2>1. Hello world</h2>
+<ul>
 <li>정적인 HTML을 동적으로 변경할 수 있는 유일한 방법은 js를 사용하는 것이다.</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> myHeader = <span class="built_in">document</span>.getElementById(<span class="string">'demo'</span>);</div><div class="line">  myHeader.innerHTML = <span class="string">'Hello world!'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="2-외부의-Javascript-실행하기"><a href="#2-외부의-Javascript-실행하기" class="headerlink" title="2. 외부의 Javascript 실행하기"></a>2. 외부의 Javascript 실행하기</h2><ul>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> myHeader = <span class="built_in">document</span>.getElementById(<span class="string">'demo'</span>);</div><div class="line">  myHeader.innerHTML = <span class="string">'Hello world!'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2>2. 외부의 Javascript 실행하기</h2>
+<ul>
 <li>HTML과 Javascript는 역할(관심사 Concern)이 다르므로 분리된 파일로 작성하는 것이 바람직하다.</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"extern.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"extern.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure></p>
 <ul>
-<li><p>코드의 실행과정</p>
+<li>
+<p>코드의 실행과정</p>
 <ul>
 <li>1.script 요소를 만나면 웹페이지의 파싱을 잠시 중단한다.</li>
 <li>2.src 어트리뷰트에 정의된 자바스크립트 파일을 로드한 후 실행한다.</li>
@@ -191,14 +195,19 @@
 <p>body 요소의 가장 아래에 스크립트를 위치시키는 것은 좋은 아이디어이다. HTML 요소들이 스크립트 로딩 지연으로 인해 렌더링에 지장 받는 일이 발생하지 않아 페이지 로딩 시간이 단축된다.</p>
 </blockquote>
 </li>
-<li><p>HTML은 script를 만나면 멈추게 된다.</p>
+<li>
+<p>HTML은 script를 만나면 멈추게 된다.</p>
 <ul>
-<li><p>스크립트 로딩 지연으로 인한 병목 현상을 근복적으로 방지하기 위한 어트리뷰트가 추가되었다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script async src=&quot;extern.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script defer src=&quot;extern.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<li>
+<p>스크립트 로딩 지연으로 인한 병목 현상을 근복적으로 방지하기 위한 어트리뷰트가 추가되었다.
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script async src=&quot;extern.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script defer src=&quot;extern.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure></p>
 </li>
-<li><p>async = 스크립트는 다운로드 완료 직후 실행된다.</p>
+<li>
+<p>async = 스크립트는 다운로드 완료 직후 실행된다.</p>
 </li>
-<li>defer = 스크립트는 웹페이지 파싱 완료 직후 실행된다.<ul>
+<li>
+<p>defer = 스크립트는 웹페이지 파싱 완료 직후 실행된다.</p>
+<ul>
 <li>async와 defer 어트리뷰트는 웹페이지 파싱과 외부 스크립트 파일의 다운로드가 동시에 진행된다는 면에서는 동일하다. 하지만 스크립트의 실행 시점이 다르다.</li>
 </ul>
 </li>
@@ -208,31 +217,40 @@
 </blockquote>
 </li>
 </ul>
-<h2 id="3-JavaScript-Output"><a href="#3-JavaScript-Output" class="headerlink" title="3. JavaScript Output"></a>3. JavaScript Output</h2><ul>
-<li>alert box    -&gt; alert()</li>
-<li>HTML output -&gt;    document.write()</li>
-<li>HTML element -&gt;    innerHTML</li>
-<li>Browser console -&gt;    console.log()</li>
+<h2>3. JavaScript Output</h2>
+<ul>
+<li>alert box	-&gt; alert()</li>
+<li>HTML output -&gt;	document.write()</li>
+<li>HTML element -&gt;	innerHTML</li>
+<li>Browser console -&gt;	console.log()</li>
 </ul>
-<h2 id="4-Javascript-Syntax-Basics"><a href="#4-Javascript-Syntax-Basics" class="headerlink" title="4. Javascript Syntax Basics"></a>4. Javascript Syntax Basics</h2><h3 id="4-1-구문-statement"><a href="#4-1-구문-statement" class="headerlink" title="4.1 구문(statement)"></a>4.1 구문(statement)</h3><ul>
-<li>단계별로 수행될 명령들의 집합이다. 각각의 명령을 statement(구문)이라 하며 statement가 실행되면 무슨 일인가가 일어나게 된다.  </li>
-<li>구문은 값(Value), 연산자(Operator), 표현식(Expression), 키워드(Keyword), 주석(Comment)으로 구성되며 세미콜론( ; )으로 끝나야 한다.  </li>
-<li>구문은 block으로 그룹화 되며 이것을 함수라고 부른다.  </li>
-<li>조건문이나 반복문의 사용으로 제어될 수 있으며 이것을 Control Flow라고 한다.  </li>
+<h2>4. Javascript Syntax Basics</h2>
+<h3>4.1 구문(statement)</h3>
+<ul>
+<li>단계별로 수행될 명령들의 집합이다. 각각의 명령을 statement(구문)이라 하며 statement가 실행되면 무슨 일인가가 일어나게 된다.</li>
+<li>구문은 값(Value), 연산자(Operator), 표현식(Expression), 키워드(Keyword), 주석(Comment)으로 구성되며 세미콜론( ; )으로 끝나야 한다.</li>
+<li>구문은 block으로 그룹화 되며 이것을 함수라고 부른다.</li>
+<li>조건문이나 반복문의 사용으로 제어될 수 있으며 이것을 Control Flow라고 한다.</li>
 </ul>
-<h3 id="4-2-표현식-Expression"><a href="#4-2-표현식-Expression" class="headerlink" title="4.2 표현식(Expression)"></a>4.2 표현식(Expression)</h3><ul>
+<h3>4.2 표현식(Expression)</h3>
+<ul>
 <li>결과론 적으로 값 1개로 수렴되는 것이다.</li>
 </ul>
-<h3 id="4-2-변수-variable"><a href="#4-2-변수-variable" class="headerlink" title="4.2 변수(variable)"></a>4.2 변수(variable)</h3><ul>
+<h3>4.2 변수(variable)</h3>
+<ul>
 <li>값을 저장하거나 참조하기 위해 사용된다.</li>
 <li>메모리와 관련이 있다.</li>
-<li>유지할 필요가 있는 값을 경우 <code>변수</code>를 사용한다.<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var x; // 변수의 선언과 초기화</div><div class="line">x = 6; // 정수값의 할당</div></pre></td></tr></table></figure>
-</li>
+<li>유지할 필요가 있는 값을 경우 <code>변수</code>를 사용한다.
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var x; // 변수의 선언과 초기화</div><div class="line">x = 6; // 정수값의 할당</div></pre></td></tr></table></figure></li>
 </ul>
-<h3 id="4-4-값-Value"><a href="#4-4-값-Value" class="headerlink" title="4.4 값(Value)"></a>4.4 값(Value)</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">String</span> str = <span class="string">"Hello World"</span>;</div><div class="line">&lt;<span class="number">1</span>&gt;    &lt;2&gt;        &lt;3&gt;</div></pre></td></tr></table></figure>
+<h3>4.4 값(Value)</h3>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">String</span> str = <span class="string">"Hello World"</span>;</div><div class="line">&lt;<span class="number">1</span>&gt;    &lt;2&gt;        &lt;3&gt;</div></pre></td></tr></table></figure></p>
 <ul>
-<li>자바스크립트는 7가지의 데이터 타입을 제공한다.</li>
-<li><p>기본 자료형</p>
+<li>
+<p>자바스크립트는 7가지의 데이터 타입을 제공한다.</p>
+</li>
+<li>
+<p>기본 자료형</p>
 <ul>
 <li>Boolean</li>
 <li>null</li>
@@ -242,19 +260,23 @@
 <li>Symbol(New In ECMAScript 6)</li>
 </ul>
 </li>
-<li><p>object(객체)</p>
+<li>
+<p>object(객체)</p>
 </li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// literal : Number</span></div><div class="line"><span class="number">10.50</span></div><div class="line"><span class="number">1001</span></div><div class="line"></div><div class="line"><span class="comment">// literal : String</span></div><div class="line"><span class="string">'Hello'</span></div><div class="line"><span class="string">"World"</span></div><div class="line"></div><div class="line"><span class="comment">// literal : Object</span></div><div class="line">&#123; <span class="attr">name</span>: <span class="string">'Lee'</span>, <span class="attr">gender</span>: <span class="string">'male'</span> &#125;</div><div class="line"></div><div class="line"><span class="comment">// literal : Array</span></div><div class="line">[ <span class="string">'Black'</span>, <span class="string">'Gray'</span>, <span class="string">'White'</span> ];</div></pre></td></tr></table></figure>
-<h3 id="4-5-연산자-Operator"><a href="#4-5-연산자-Operator" class="headerlink" title="4.5 연산자(Operator)"></a>4.5 연산자(Operator)</h3><ul>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// literal : Number</span></div><div class="line"><span class="number">10.50</span></div><div class="line"><span class="number">1001</span></div><div class="line"></div><div class="line"><span class="comment">// literal : String</span></div><div class="line"><span class="string">'Hello'</span></div><div class="line"><span class="string">"World"</span></div><div class="line"></div><div class="line"><span class="comment">// literal : Object</span></div><div class="line">&#123; <span class="attr">name</span>: <span class="string">'Lee'</span>, <span class="attr">gender</span>: <span class="string">'male'</span> &#125;</div><div class="line"></div><div class="line"><span class="comment">// literal : Array</span></div><div class="line">[ <span class="string">'Black'</span>, <span class="string">'Gray'</span>, <span class="string">'White'</span> ];</div></pre></td></tr></table></figure></p>
+<h3>4.5 연산자(Operator)</h3>
+<ul>
 <li>산술 연산자, 대입 연산자, 문자열 연산자, 비교 연산자, 논리 연산자</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 대입 연산자</span></div><div class="line"><span class="keyword">var</span> color = <span class="string">'red'</span>;</div><div class="line"></div><div class="line"><span class="comment">// 산술 연산자</span></div><div class="line"><span class="keyword">var</span> area = <span class="number">5</span> * <span class="number">4</span>;</div><div class="line"></div><div class="line"><span class="comment">// 문자열 연산자</span></div><div class="line"><span class="keyword">var</span> str = <span class="string">'Hi! '</span> + <span class="string">'My name is Lee'</span>;</div><div class="line"></div><div class="line"><span class="comment">// 비교 연산자</span></div><div class="line"><span class="keyword">var</span> foo = <span class="number">3</span> &gt; <span class="number">5</span>; <span class="comment">// false</span></div><div class="line"></div><div class="line"><span class="comment">// 논리 연산자</span></div><div class="line"><span class="keyword">var</span> bar = (<span class="number">5</span> &gt; <span class="number">3</span>) &amp;&amp; (<span class="number">2</span> &lt; <span class="number">4</span>);  <span class="comment">// true</span></div></pre></td></tr></table></figure>
-<h3 id="4-6-키워드-keyword"><a href="#4-6-키워드-keyword" class="headerlink" title="4.6 키워드(keyword)"></a>4.6 키워드(keyword)</h3><ul>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 대입 연산자</span></div><div class="line"><span class="keyword">var</span> color = <span class="string">'red'</span>;</div><div class="line"></div><div class="line"><span class="comment">// 산술 연산자</span></div><div class="line"><span class="keyword">var</span> area = <span class="number">5</span> * <span class="number">4</span>;</div><div class="line"></div><div class="line"><span class="comment">// 문자열 연산자</span></div><div class="line"><span class="keyword">var</span> str = <span class="string">'Hi! '</span> + <span class="string">'My name is Lee'</span>;</div><div class="line"></div><div class="line"><span class="comment">// 비교 연산자</span></div><div class="line"><span class="keyword">var</span> foo = <span class="number">3</span> &gt; <span class="number">5</span>; <span class="comment">// false</span></div><div class="line"></div><div class="line"><span class="comment">// 논리 연산자</span></div><div class="line"><span class="keyword">var</span> bar = (<span class="number">5</span> &gt; <span class="number">3</span>) &amp;&amp; (<span class="number">2</span> &lt; <span class="number">4</span>);  <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<h3>4.6 키워드(keyword)</h3>
+<ul>
 <li>규정을 미리 정의해둔 것이다.</li>
 </ul>
-<h3 id="4-7-주석-Comment"><a href="#4-7-주석-Comment" class="headerlink" title="4.7 주석(Comment)"></a>4.7 주석(Comment)</h3><ul>
-<li>// //(1줄 짜리) or /<em> </em>/(여러줄 짜리) 방법이 있다. </li>
+<h3>4.7 주석(Comment)</h3>
+<ul>
+<li>// //(1줄 짜리) or /* */(여러줄 짜리) 방법이 있다.</li>
 </ul>
 
         </div>
@@ -263,7 +285,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/07/28/js-study-syntax/" data-id="cjaqqdj1j003rxh6fnyht57xr" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/07/28/js-study-syntax/" data-id="cjaqqf4kl003r7q6fczw51pad" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -368,11 +390,11 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/07/31/js-study-object/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2017/07/28/js-study-introduction/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            JavaScript Object
+            JavaScript-Introduction
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>

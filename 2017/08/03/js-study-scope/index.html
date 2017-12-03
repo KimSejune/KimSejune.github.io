@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="JavaScript,Scope" />
     
-    <meta name="description" content="Javascript Scope 3.Function scope자바스크립트의 Scope 종류  전역Scope(Global scope) 코드 어디에서든지 참조할 수 있다.   지역Scope(Local scope or Function-level scope) 정의된 함수 내에서만 참조할 수 있다.    변수의 Scope 종류  전역 변수 (Global variabl">
+    <meta name="description" content="Javascript Scope  3.Function scope 자바스크립트의 Scope 종류  전역Scope(Global scope)  코드 어디에서든지 참조할 수 있다.   지역Scope(Local scope or Function-level scope)  정의된 함수 내에서만 참조할 수 있다.    변수의 Scope 종류   전역 변수 (Global va">
 <meta name="keywords" content="JavaScript,Scope">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript Scope">
 <meta property="og:url" content="http://yoursite.com/2017/08/03/js-study-scope/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="Javascript Scope 3.Function scope자바스크립트의 Scope 종류  전역Scope(Global scope) 코드 어디에서든지 참조할 수 있다.   지역Scope(Local scope or Function-level scope) 정의된 함수 내에서만 참조할 수 있다.    변수의 Scope 종류  전역 변수 (Global variabl">
+<meta property="og:description" content="Javascript Scope  3.Function scope 자바스크립트의 Scope 종류  전역Scope(Global scope)  코드 어디에서든지 참조할 수 있다.   지역Scope(Local scope or Function-level scope)  정의된 함수 내에서만 참조할 수 있다.    변수의 Scope 종류   전역 변수 (Global va">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/js.jpeg">
 <meta property="og:updated_time" content="2017-11-07T12:35:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript Scope">
-<meta name="twitter:description" content="Javascript Scope 3.Function scope자바스크립트의 Scope 종류  전역Scope(Global scope) 코드 어디에서든지 참조할 수 있다.   지역Scope(Local scope or Function-level scope) 정의된 함수 내에서만 참조할 수 있다.    변수의 Scope 종류  전역 변수 (Global variabl">
+<meta name="twitter:description" content="Javascript Scope  3.Function scope 자바스크립트의 Scope 종류  전역Scope(Global scope)  코드 어디에서든지 참조할 수 있다.   지역Scope(Local scope or Function-level scope)  정의된 함수 내에서만 참조할 수 있다.    변수의 Scope 종류   전역 변수 (Global va">
 <meta name="twitter:image" content="http://yoursite.com/images/js.jpeg">
     
 
@@ -171,88 +171,111 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="Javascript-Scope"><a href="#Javascript-Scope" class="headerlink" title="Javascript Scope"></a>Javascript Scope</h1><p><img src="/images/js.jpeg" alt="js"></p>
-<h2 id="3-Function-scope"><a href="#3-Function-scope" class="headerlink" title="3.Function scope"></a>3.Function scope</h2><p>자바스크립트의 Scope 종류</p>
+            <h1>Javascript Scope</h1>
+<p><img src="/images/js.jpeg" alt="js"></p>
+<h2>3.Function scope</h2>
+<p>자바스크립트의 Scope 종류</p>
 <ul>
-<li>전역Scope(Global scope)<ul>
+<li>전역Scope(Global scope)
+<ul>
 <li>코드 어디에서든지 참조할 수 있다.</li>
 </ul>
 </li>
-<li>지역Scope(Local scope or Function-level scope)<ul>
+<li>지역Scope(Local scope or Function-level scope)
+<ul>
 <li>정의된 함수 내에서만 참조할 수 있다.</li>
 </ul>
 </li>
 </ul>
 <p>변수의 Scope 종류</p>
 <ul>
-<li>전역 변수 (Global variable)<ul>
+<li>
+<p>전역 변수 (Global variable)</p>
+<ul>
 <li>전역 Scope를 갖는 변수.</li>
 </ul>
 </li>
-<li><p>지역 변수 (Local variable)</p>
+<li>
+<p>지역 변수 (Local variable)</p>
 <ul>
 <li>지역 Scope를 갖는 변수</li>
 </ul>
 </li>
-<li><p><code>변수는 선언 위치(전역 또는 지역)에 의해 Scope를 가지게 된다. 즉 전역에서 선언된 변수는 전역 Scope를 갖는 전역 변수이고, 지역(자바스크립트의 경우 함수 내부)에서 선언된 변수는 지역 Scope를 갖는 지역 변수가 된다.</code></p>
+<li>
+<p><code>변수는 선언 위치(전역 또는 지역)에 의해 Scope를 가지게 된다. 즉 전역에서 선언된 변수는 전역 Scope를 갖는 전역 변수이고, 지역(자바스크립트의 경우 함수 내부)에서 선언된 변수는 지역 Scope를 갖는 지역 변수가 된다.</code></p>
 </li>
-<li><p><code>전역 Scope를 갖는 전역 변수는 전역(코드 어디서든지)에서 참조할 수 있다. 지역(함수 내부)에서 선언된 지역 변수는 그 지역과 그 지역의 하부 지역에서만 참조할 수 있다.</code></p>
+<li>
+<p><code>전역 Scope를 갖는 전역 변수는 전역(코드 어디서든지)에서 참조할 수 있다. 지역(함수 내부)에서 선언된 지역 변수는 그 지역과 그 지역의 하부 지역에서만 참조할 수 있다.</code></p>
 </li>
-<li><p>javascript는 함수 코드블럭만 지역Scope로 인식하며, 그 외는 전역 Scope이다.</p>
+<li>
+<p>javascript는 함수 코드블럭만 지역Scope로 인식하며, 그 외는 전역 Scope이다.</p>
 </li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="number">0</span>;  <span class="comment">// global</span></div><div class="line">&#123;</div><div class="line">  <span class="keyword">var</span> x = <span class="number">1</span>;  <span class="comment">// global</span></div><div class="line">  <span class="built_in">console</span>.log(x); <span class="comment">// 1</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(x);   <span class="comment">// 1</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> y = <span class="number">0</span>;  <span class="comment">// global</span></div><div class="line">&#123;</div><div class="line">  <span class="keyword">let</span> y = <span class="number">1</span>;  <span class="comment">// local</span></div><div class="line">  <span class="built_in">console</span>.log(y); <span class="comment">// 1</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(y);   <span class="comment">// 0</span></div></pre></td></tr></table></figure>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="number">0</span>;  <span class="comment">// global</span></div><div class="line">&#123;</div><div class="line">  <span class="keyword">var</span> x = <span class="number">1</span>;  <span class="comment">// global</span></div><div class="line">  <span class="built_in">console</span>.log(x); <span class="comment">// 1</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(x);   <span class="comment">// 1</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> y = <span class="number">0</span>;  <span class="comment">// global</span></div><div class="line">&#123;</div><div class="line">  <span class="keyword">let</span> y = <span class="number">1</span>;  <span class="comment">// local</span></div><div class="line">  <span class="built_in">console</span>.log(y); <span class="comment">// 1</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(y);   <span class="comment">// 0</span></div></pre></td></tr></table></figure></p>
 <blockquote>
 <p>let은 block-level-scope를 지원한다.</p>
 </blockquote>
-<h2 id="1-Global-scope"><a href="#1-Global-scope" class="headerlink" title="1. Global scope"></a>1. Global scope</h2><ul>
-<li><code>전역 변수는 전역 객체 window의 프로퍼티이다.</code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> global = <span class="string">'global'</span>; <span class="comment">// 전역 변수</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;  <span class="comment">// 전역 함수</span></div><div class="line">  <span class="keyword">var</span> local = <span class="string">'local'</span>; <span class="comment">// this로 선언하면 함수외부에서도 참조가가능하다 but var는 안된다.</span></div><div class="line">  <span class="built_in">console</span>.log(global);</div><div class="line">  <span class="built_in">console</span>.log(local);</div><div class="line">&#125;</div><div class="line">foo();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(global); <span class="comment">// window.global을 해도 같은 값이 나온다. 편의상 없앴다.</span></div><div class="line"><span class="built_in">console</span>.log(local); <span class="comment">// Uncaught ReferenceError: local is not defined</span></div></pre></td></tr></table></figure>
-</li>
+<h2>1. Global scope</h2>
+<ul>
+<li><code>전역 변수는 전역 객체 window의 프로퍼티이다.</code>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> global = <span class="string">'global'</span>; <span class="comment">// 전역 변수</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;  <span class="comment">// 전역 함수</span></div><div class="line">  <span class="keyword">var</span> local = <span class="string">'local'</span>; <span class="comment">// this로 선언하면 함수외부에서도 참조가가능하다 but var는 안된다.</span></div><div class="line">  <span class="built_in">console</span>.log(global);</div><div class="line">  <span class="built_in">console</span>.log(local);</div><div class="line">&#125;</div><div class="line">foo();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(global); <span class="comment">// window.global을 해도 같은 값이 나온다. 편의상 없앴다.</span></div><div class="line"><span class="built_in">console</span>.log(local); <span class="comment">// Uncaught ReferenceError: local is not defined</span></div></pre></td></tr></table></figure></li>
 </ul>
 <blockquote>
 <p><code>함수내부에 this로 선언한 변수들은 public 외부에서 참조가 가능하며 var로 선언한 변수들은 private하여 외부에서 참조가 불가능하다.</code></p>
 </blockquote>
-<h2 id="2-Non-block-level-scope-gt-Function-level-scope"><a href="#2-Non-block-level-scope-gt-Function-level-scope" class="headerlink" title="2. Non block-level scope -&gt; Function-level scope"></a>2. Non block-level scope -&gt; Function-level scope</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line">  <span class="keyword">var</span> x = <span class="number">5</span>; <span class="comment">// function이 아니니깐 global하다.</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(x); <span class="comment">// 5가 나온다.</span></div></pre></td></tr></table></figure>
-<h2 id="3-Function-scope-1"><a href="#3-Function-scope-1" class="headerlink" title="3. Function scope"></a>3. Function scope</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">10</span>;     <span class="comment">// 전역변수</span></div><div class="line"></div><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;  <span class="comment">// IIFE 즉시실행함수이다.</span></div><div class="line">  <span class="keyword">var</span> b = <span class="number">20</span>;   <span class="comment">// 지역변수</span></div><div class="line">&#125;)();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 10</span></div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">// "b" is not defined</span></div></pre></td></tr></table></figure>
+<h2>2. Non block-level scope -&gt; Function-level scope</h2>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line">  <span class="keyword">var</span> x = <span class="number">5</span>; <span class="comment">// function이 아니니깐 global하다.</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(x); <span class="comment">// 5가 나온다.</span></div></pre></td></tr></table></figure></p>
+<h2>3. Function scope</h2>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">10</span>;     <span class="comment">// 전역변수</span></div><div class="line"></div><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;  <span class="comment">// IIFE 즉시실행함수이다.</span></div><div class="line">  <span class="keyword">var</span> b = <span class="number">20</span>;   <span class="comment">// 지역변수</span></div><div class="line">&#125;)();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 10</span></div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">// "b" is not defined</span></div></pre></td></tr></table></figure></p>
 <ul>
 <li>자바스크립트는 function-level scope를 사용한다. 즉 함수 내에서 선언된 매개변수와 변수는 함수 외부에서는 유효하지 않다. 따라서 <code>변수 b는 지역 변수이다.</code></li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="string">'global'</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> x = <span class="string">'local'</span>;</div><div class="line">  <span class="built_in">console</span>.log(x);</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;  <span class="comment">// 내부함수</span></div><div class="line">    <span class="built_in">console</span>.log(x); <span class="comment">// local</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  bar();</div><div class="line">&#125;</div><div class="line">foo();</div><div class="line"><span class="built_in">console</span>.log(x); <span class="comment">// global</span></div></pre></td></tr></table></figure>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="string">'global'</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> x = <span class="string">'local'</span>;</div><div class="line">  <span class="built_in">console</span>.log(x);</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;  <span class="comment">// 내부함수</span></div><div class="line">    <span class="built_in">console</span>.log(x); <span class="comment">// local</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  bar();</div><div class="line">&#125;</div><div class="line">foo();</div><div class="line"><span class="built_in">console</span>.log(x); <span class="comment">// global</span></div></pre></td></tr></table></figure></p>
 <ul>
 <li>Scope 체이닝이 발생한다. = <code>실행 컨텍스트</code></li>
 <li><code>내부함수는 자신을 포함하고 있는 외부함수의 변수에 접근할 수 있다.</code> 이는 매우 유용하다. 클로저에서와 같이 내부함수가 더 오래 생존하는 경우, 타 언어와는 다른 움직임을 보인다.</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="string">'global'</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> x = <span class="string">'local'</span>;</div><div class="line">  <span class="built_in">console</span>.log(x);</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo();          <span class="comment">// local</span></div><div class="line"><span class="built_in">console</span>.log(x); <span class="comment">// global</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="number">10</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  x = <span class="number">100</span>;</div><div class="line">  <span class="built_in">console</span>.log(x);</div><div class="line">&#125;</div><div class="line">foo();  <span class="comment">// 100</span></div><div class="line"><span class="built_in">console</span>.log(x); <span class="comment">// 100 Q. 왜 100인가요?? 숫자는 지역값을 가져오나요? </span></div><div class="line"><span class="comment">// A. 내부함수에 var가아닌 전역으로 선언해서 그렇다.</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span> (<span class="params"> </span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">var</span> a = <span class="number">3</span>, b = <span class="number">5</span>;</div><div class="line"></div><div class="line">  <span class="keyword">var</span> bar = <span class="function"><span class="keyword">function</span> (<span class="params"> </span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> b = <span class="number">7</span>, c = <span class="number">11</span>;</div><div class="line"><span class="comment">// 이 시점에서 a는 3, b는 7, c는 11</span></div><div class="line">    a += b + c;</div><div class="line"><span class="comment">// 이 시점에서 a는 21, b는 7, c는 11</span></div><div class="line">  &#125;;</div><div class="line"><span class="comment">// 이 시점에서 a는 3, b는 5, c는 not defined</span></div><div class="line">  bar( );</div><div class="line"><span class="comment">// 이 시점에서 a는 21, b는 5  -&gt; a가 참조되어서 bar안에서 변경되서 a=21이며 b는 내부함수껏을 사용못하니깐 5이다.</span></div><div class="line"></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<h2 id="4-암묵적-전역"><a href="#4-암묵적-전역" class="headerlink" title="4. 암묵적 전역"></a>4. 암묵적 전역</h2><ul>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="string">'global'</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> x = <span class="string">'local'</span>;</div><div class="line">  <span class="built_in">console</span>.log(x);</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo();          <span class="comment">// local</span></div><div class="line"><span class="built_in">console</span>.log(x); <span class="comment">// global</span></div></pre></td></tr></table></figure></p>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="number">10</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  x = <span class="number">100</span>;</div><div class="line">  <span class="built_in">console</span>.log(x);</div><div class="line">&#125;</div><div class="line">foo();  <span class="comment">// 100</span></div><div class="line"><span class="built_in">console</span>.log(x); <span class="comment">// 100 Q. 왜 100인가요?? 숫자는 지역값을 가져오나요? </span></div><div class="line"><span class="comment">// A. 내부함수에 var가아닌 전역으로 선언해서 그렇다.</span></div></pre></td></tr></table></figure></p>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span> (<span class="params"> </span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">var</span> a = <span class="number">3</span>, b = <span class="number">5</span>;</div><div class="line"></div><div class="line">  <span class="keyword">var</span> bar = <span class="function"><span class="keyword">function</span> (<span class="params"> </span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> b = <span class="number">7</span>, c = <span class="number">11</span>;</div><div class="line"><span class="comment">// 이 시점에서 a는 3, b는 7, c는 11</span></div><div class="line">    a += b + c;</div><div class="line"><span class="comment">// 이 시점에서 a는 21, b는 7, c는 11</span></div><div class="line">  &#125;;</div><div class="line"><span class="comment">// 이 시점에서 a는 3, b는 5, c는 not defined</span></div><div class="line">  bar( );</div><div class="line"><span class="comment">// 이 시점에서 a는 21, b는 5  -&gt; a가 참조되어서 bar안에서 변경되서 a=21이며 b는 내부함수껏을 사용못하니깐 5이다.</span></div><div class="line"></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<h2>4. 암묵적 전역</h2>
+<ul>
 <li>var 키워드없이 선언을 하면 암묵적으로 전역번수가 된다.</li>
 </ul>
-<h2 id="5-Lexical-scoping-Static-scoping"><a href="#5-Lexical-scoping-Static-scoping" class="headerlink" title="5. Lexical scoping (Static scoping)"></a>5. Lexical scoping (Static scoping)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> i = <span class="number">5</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> i = <span class="number">10</span>;</div><div class="line">  bar();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123; <span class="comment">// 선언된 시점에서의 scope를 갖는다!</span></div><div class="line">  <span class="built_in">console</span>.log(i);</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo(); <span class="comment">// 5  bar와 foo가 각각 scope이기에 bar는 전역변수 i=5를 가져와서 출력한다.</span></div></pre></td></tr></table></figure>
-<h2 id="6-변수명의-중복"><a href="#6-변수명의-중복" class="headerlink" title="6. 변수명의 중복"></a>6. 변수명의 중복</h2><ul>
-<li><p>i값이 서로 전역변수로 중복이 되기에 조심해야한다.</p>
+<h2>5. Lexical scoping (Static scoping)</h2>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> i = <span class="number">5</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> i = <span class="number">10</span>;</div><div class="line">  bar();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123; <span class="comment">// 선언된 시점에서의 scope를 갖는다!</span></div><div class="line">  <span class="built_in">console</span>.log(i);</div><div class="line">&#125;</div><div class="line"></div><div class="line">foo(); <span class="comment">// 5  bar와 foo가 각각 scope이기에 bar는 전역변수 i=5를 가져와서 출력한다.</span></div></pre></td></tr></table></figure></p>
+<h2>6. 변수명의 중복</h2>
+<ul>
+<li>
+<p>i값이 서로 전역변수로 중복이 되기에 조심해야한다.</p>
 </li>
-<li><p><code>전역변수를 반드시 사용하여야 할 이유를 찾지 못한다면 지역변수를 사용하여야 한다. 변수의 범위인 스코프는 좁을수록 좋다.</code></p>
+<li>
+<p><code>전역변수를 반드시 사용하여야 할 이유를 찾지 못한다면 지역변수를 사용하여야 한다. 변수의 범위인 스코프는 좁을수록 좋다.</code></p>
 </li>
 </ul>
-<h2 id="7-최소한의-전역변수-사용"><a href="#7-최소한의-전역변수-사용" class="headerlink" title="7. 최소한의 전역변수 사용"></a>7. 최소한의 전역변수 사용</h2><ul>
+<h2>7. 최소한의 전역변수 사용</h2>
+<ul>
 <li>전역변수 사용을 최소화하는 방법 중 하나는 애플리케이션에서 전역변수 사용을 위해 다음과 같이 전역변수 객체 하나를 만들어 사용하는 것이다.</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> MYAPP = &#123;&#125;;</div><div class="line"></div><div class="line">MYAPP.student = &#123;</div><div class="line">  name: <span class="string">'Lee'</span>,</div><div class="line">  gender: <span class="string">'male'</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(MYAPP.student.name);</div></pre></td></tr></table></figure>
-<h2 id="8-즉시실행함수를-이용한-전역변수-사용-억제"><a href="#8-즉시실행함수를-이용한-전역변수-사용-억제" class="headerlink" title="8. 즉시실행함수를 이용한 전역변수 사용 억제"></a>8. 즉시실행함수를 이용한 전역변수 사용 억제</h2><ul>
-<li><p>전역변수 사용을 억제하기 위해, 즉시 실행 함수(IIFE, Immediately-Invoked Function Expression)를 사용할 수 있다.</p>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> MYAPP = &#123;&#125;;</div><div class="line"></div><div class="line">MYAPP.student = &#123;</div><div class="line">  name: <span class="string">'Lee'</span>,</div><div class="line">  gender: <span class="string">'male'</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(MYAPP.student.name);</div></pre></td></tr></table></figure></p>
+<h2>8. 즉시실행함수를 이용한 전역변수 사용 억제</h2>
+<ul>
+<li>
+<p>전역변수 사용을 억제하기 위해, 즉시 실행 함수(IIFE, Immediately-Invoked Function Expression)를 사용할 수 있다.</p>
 </li>
-<li><p>즉시 실행 함수는 즉시 실행되고 그 후 전역에서 바로 사라진다.</p>
+<li>
+<p>즉시 실행 함수는 즉시 실행되고 그 후 전역에서 바로 사라진다.</p>
 </li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> MYAPP = &#123;&#125;;</div><div class="line"></div><div class="line">  MYAPP.student = &#123;</div><div class="line">    name: <span class="string">'Lee'</span>,</div><div class="line">    gender: <span class="string">'male'</span></div><div class="line">  &#125;;</div><div class="line"></div><div class="line">  <span class="built_in">console</span>.log(MYAPP.student.name); <span class="comment">//사용가능</span></div><div class="line">&#125;());</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(MYAPP.student.name); <span class="comment">// 여기서 사용안된다.</span></div></pre></td></tr></table></figure>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> MYAPP = &#123;&#125;;</div><div class="line"></div><div class="line">  MYAPP.student = &#123;</div><div class="line">    name: <span class="string">'Lee'</span>,</div><div class="line">    gender: <span class="string">'male'</span></div><div class="line">  &#125;;</div><div class="line"></div><div class="line">  <span class="built_in">console</span>.log(MYAPP.student.name); <span class="comment">//사용가능</span></div><div class="line">&#125;());</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(MYAPP.student.name); <span class="comment">// 여기서 사용안된다.</span></div></pre></td></tr></table></figure></p>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://yoursite.com/2017/08/03/js-study-scope/" data-id="cjaqqdj1d003jxh6fqbtq2oj1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/08/03/js-study-scope/" data-id="cjaqqf4kh003j7q6fdwda0pu7" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -368,9 +391,9 @@
     </a>
     
     
-        <a href="/2017/08/01/js-study-function/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/08/01/js-study-prototype/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">JavaScript Function</p>
+        <p class="article-nav-title">JavaScript Prototype</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
