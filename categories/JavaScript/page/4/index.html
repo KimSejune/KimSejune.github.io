@@ -149,17 +149,17 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/08/03/js-study-scope/" class="thumbnail">
+        <a href="/2017/08/03/js-study-this/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Scope" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/prototype_metthod_invocation_pattern.png)" alt="JavaScript This" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/03/js-study-scope/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/03/js-study-this/">0</span>
     
 </span>
 
@@ -170,33 +170,22 @@
         
         <div class="article-meta">
             <div class="category">
-            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Scope/">Scope</a>
+            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/This/">This</a>
             </div>
             <div class="date"><time datetime="2017-08-03T03:54:00.000Z" itemprop="datePublished">2017-08-03</time></div>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/03/js-study-scope/">JavaScript Scope</a>
+        <a href="/2017/08/03/js-study-this/">JavaScript This</a>
         </h1>
     
 
         <p class="article-excerpt">
-            Javascript Scope
-3.Function scope자바스크립트의 Scope 종류
+            Javascript this
+자바스크립트의 함수는 호출될 때, 매개변수로 전달되는 인자값 이외에, arguments 객체와 this를 암묵적으로 전달 받는다.
 
-전역Scope(Global scope)
-코드 어디에서든지 참조할 수 있다.
-
-
-지역Scope(Local scope or Function-level scope)
-정의된 함수 내에서만 참조할 수 있다.
-
-
-
-변수의 Scope 종류
-
-전역 변수 (Global variabl
+12345678910function square(number) &#123;  console.log(arguments);  console.log(this);  // browser에서는 window로 
         </p>
     </div>
 </article>
@@ -265,53 +254,6 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/08/01/js-study-prototype/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/object_literal_prototype_chaining.png)" alt="JavaScript Prototype" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/01/js-study-prototype/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Prototype/">Prototype</a>
-            </div>
-            <div class="date"><time datetime="2017-08-01T03:54:00.000Z" itemprop="datePublished">2017-08-01</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/01/js-study-prototype/">JavaScript Prototype</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Javascript Prototype12345678function Person(name) &#123;  this.name = name;  this.sayHello = function()&#123;    console.log(this.name);  &#125;&#125;var foo = new Person('Lee');
-foo의 property는 name, 
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
         <a href="/2017/08/01/js-study-immutability/" class="thumbnail">
     
     
@@ -353,29 +295,25 @@ Immutability(변경불가성)이란? 객체가 생성된 이후 그 상태를 �
     </div>
 </article>
     
-        </div>
-    
 
     
     
     
     
-        <div class="article-row">
-    
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/07/31/js-study-operator/" class="thumbnail">
+        <a href="/2017/08/01/js-study-prototype/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Operator" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/object_literal_prototype_chaining.png)" alt="JavaScript Prototype" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/07/31/js-study-operator/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/01/js-study-prototype/">0</span>
     
 </span>
 
@@ -386,70 +324,20 @@ Immutability(변경불가성)이란? 객체가 생성된 이후 그 상태를 �
         
         <div class="article-meta">
             <div class="category">
-            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Operator/">Operator</a>
+            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Prototype/">Prototype</a>
             </div>
-            <div class="date"><time datetime="2017-07-31T03:54:00.000Z" itemprop="datePublished">2017-07-31</time></div>
+            <div class="date"><time datetime="2017-08-01T03:54:00.000Z" itemprop="datePublished">2017-08-01</time></div>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/07/31/js-study-operator/">JavaScript Operator</a>
+        <a href="/2017/08/01/js-study-prototype/">JavaScript Prototype</a>
         </h1>
     
 
         <p class="article-excerpt">
-            Javascript Operator
-1. 산술 연술자 (Arithmetic Operators)1234567891011121314151617var x = 5;var y = 2;var z;z = x + y;  // 7z = x - y;  // 3z = x * y;  // 10z = x / y;  // 2.5z = x % y;  // 1z = x++;    //
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/07/31/js-study-control-flow/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript-Control-Flow" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/07/31/js-study-control-flow/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Control-Flow/">Control Flow</a>
-            </div>
-            <div class="date"><time datetime="2017-07-31T03:54:00.000Z" itemprop="datePublished">2017-07-31</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/07/31/js-study-control-flow/">JavaScript-Control-Flow</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Javascript Control Flow
-1. 블록 구문(Block statement)
-중괄호로 범위가 정해진 구문을 블록 구문이라고 한다.
-
-1234567891011121314151617181920// 함수function foo() &#123;  var x = 1, y = 2;  console.log(x + y);&#125;foo();// 객체리터럴va
+            Javascript Prototype12345678function Person(name) &#123;  this.name = name;  this.sayHello = function()&#123;    console.log(this.name);  &#125;&#125;var foo = new Person('Lee');
+foo의 property는 name, 
         </p>
     </div>
 </article>
@@ -521,6 +409,57 @@ Immutability(변경불가성)이란? 객체가 생성된 이후 그 상태를 �
         <article class="article article-summary">
     <div class="article-summary-inner">
         
+        <a href="/2017/07/31/js-study-operator/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Operator" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/07/31/js-study-operator/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Operator/">Operator</a>
+            </div>
+            <div class="date"><time datetime="2017-07-31T03:54:00.000Z" itemprop="datePublished">2017-07-31</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/07/31/js-study-operator/">JavaScript Operator</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            Javascript Operator
+1. 산술 연술자 (Arithmetic Operators)1234567891011121314151617var x = 5;var y = 2;var z;z = x + y;  // 7z = x - y;  // 3z = x * y;  // 10z = x / y;  // 2.5z = x % y;  // 1z = x++;    //
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
         <a href="/2017/07/31/js-study-data-type-variable/" class="thumbnail">
     
     
@@ -564,6 +503,56 @@ JavaScript는 동적 타이핑 언어로 변수의 Type annotation이 필요없�
     </div>
 </article>
     
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/07/31/js-study-control-flow/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript-Control-Flow" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/07/31/js-study-control-flow/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Control-Flow/">Control Flow</a>
+            </div>
+            <div class="date"><time datetime="2017-07-31T03:54:00.000Z" itemprop="datePublished">2017-07-31</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/07/31/js-study-control-flow/">JavaScript-Control-Flow</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            Javascript Control Flow
+1. 블록 구문(Block statement)
+중괄호로 범위가 정해진 구문을 블록 구문이라고 한다.
+
+1234567891011121314151617181920// 함수function foo() &#123;  var x = 1, y = 2;  console.log(x + y);&#125;foo();// 객체리터럴va
+        </p>
+    </div>
+</article>
+    
         </div>
     
 
@@ -572,6 +561,56 @@ JavaScript는 동적 타이핑 언어로 변수의 Type annotation이 필요없�
     
     
         <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/07/28/js-study-syntax/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript-Syntax" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/07/28/js-study-syntax/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Syntax/">Syntax</a>
+            </div>
+            <div class="date"><time datetime="2017-07-28T03:54:00.000Z" itemprop="datePublished">2017-07-28</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/07/28/js-study-syntax/">JavaScript-Syntax</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            Javascript Syntax basics
+1. Hello world
+정적인 HTML을 동적으로 변경할 수 있는 유일한 방법은 js를 사용하는 것이다.
+
+1234function myFunction() &#123;  var myHeader = document.getElementById('demo');  myHeader.innerHTML = 'Hello wo
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -617,56 +656,6 @@ compiler은 인간의 언어를 컴퓨터 언어로 변환시킨다.
 
 2. Syntax &amp; Semantics
 컴퓨터가 이해할 
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/07/28/js-study-syntax/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript-Syntax" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/07/28/js-study-syntax/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Syntax/">Syntax</a>
-            </div>
-            <div class="date"><time datetime="2017-07-28T03:54:00.000Z" itemprop="datePublished">2017-07-28</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/07/28/js-study-syntax/">JavaScript-Syntax</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Javascript Syntax basics
-1. Hello world
-정적인 HTML을 동적으로 변경할 수 있는 유일한 방법은 js를 사용하는 것이다.
-
-1234function myFunction() &#123;  var myHeader = document.getElementById('demo');  myHeader.innerHTML = 'Hello wo
         </p>
     </div>
 </article>
@@ -724,26 +713,6 @@ compiler은 인간의 언어를 컴퓨터 언어로 변환시킨다.
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2017/12/14/Reactjs-study-router/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/directory.png)" alt="React Router" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/React/">React</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/React/Router/">Router</a></p>
-                            <p class="item-title"><a href="/2017/12/14/Reactjs-study-router/" class="title">React Router</a></p>
-                            <p class="item-date"><time datetime="2017-12-14T03:54:00.000Z" itemprop="datePublished">2017-12-14</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
                             <a href="/2017/12/14/algorithm-study-reverseInt/" class="thumbnail">
     
     
@@ -757,6 +726,26 @@ compiler은 인간의 언어를 컴퓨터 언어로 변환시킨다.
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Algorithm/level2/">level2</a></p>
                             <p class="item-title"><a href="/2017/12/14/algorithm-study-reverseInt/" class="title">Algorithm 정수 내림차순으로 배치하기</a></p>
+                            <p class="item-date"><time datetime="2017-12-14T03:54:00.000Z" itemprop="datePublished">2017-12-14</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/12/14/Reactjs-study-router/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/directory.png)" alt="React Router" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/React/">React</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/React/Router/">Router</a></p>
+                            <p class="item-title"><a href="/2017/12/14/Reactjs-study-router/" class="title">React Router</a></p>
                             <p class="item-date"><time datetime="2017-12-14T03:54:00.000Z" itemprop="datePublished">2017-12-14</time></p>
                         </div>
                     </li>
@@ -784,26 +773,6 @@ compiler은 인간의 언어를 컴퓨터 언어로 변환시킨다.
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2017/12/11/algorithm-study-getminsum/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/algo.jpeg)" alt="Algorithm 최소값 만들기" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Algorithm/level2/">level2</a></p>
-                            <p class="item-title"><a href="/2017/12/11/algorithm-study-getminsum/" class="title">Algorithm 최소값 만들기</a></p>
-                            <p class="item-date"><time datetime="2017-12-11T03:54:00.000Z" itemprop="datePublished">2017-12-11</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
                             <a href="/2017/12/11/Reactjs-study-syntax/" class="thumbnail">
     
     
@@ -817,6 +786,26 @@ compiler은 인간의 언어를 컴퓨터 언어로 변환시킨다.
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/React/">React</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/React/Syntax/">Syntax</a></p>
                             <p class="item-title"><a href="/2017/12/11/Reactjs-study-syntax/" class="title">React Syntax</a></p>
+                            <p class="item-date"><time datetime="2017-12-11T03:54:00.000Z" itemprop="datePublished">2017-12-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/12/11/algorithm-study-getminsum/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/algo.jpeg)" alt="Algorithm 최소값 만들기" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Algorithm/level2/">level2</a></p>
+                            <p class="item-title"><a href="/2017/12/11/algorithm-study-getminsum/" class="title">Algorithm 최소값 만들기</a></p>
                             <p class="item-date"><time datetime="2017-12-11T03:54:00.000Z" itemprop="datePublished">2017-12-11</time></p>
                         </div>
                     </li>
