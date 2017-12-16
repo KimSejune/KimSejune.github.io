@@ -149,17 +149,17 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/08/21/js-study-es6-destructuring/" class="thumbnail">
+        <a href="/2017/08/21/js-study-es6-let-const/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/es6.png)" alt="JavaScript ES6 Destructuring" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/es6.png)" alt="JavaScript ES6 let const" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/21/js-study-es6-destructuring/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/21/js-study-es6-let-const/">0</span>
     
 </span>
 
@@ -177,122 +177,20 @@
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/21/js-study-es6-destructuring/">JavaScript ES6 Destructuring</a>
+        <a href="/2017/08/21/js-study-es6-let-const/">JavaScript ES6 let const</a>
         </h1>
     
 
         <p class="article-excerpt">
-            Javascript ES6 Destructuring
+            Javascript ES6 let, const
 
-디스트럭처링(Destructuring)은 기존에 구조로 가지고 있던 객체(배열 또는 객체)를 분석하여 개별적인 변수에 할당하는 것이다.
-배열 또는 객체 리터럴에서 필요한 값만을 추출하여 변수에 할당하거나 반환할 때 유용하다.
+ES5에서의 변수선언의 유일한 방법은 var키워드를 사용하는 것이다.
+var 키워드의 단점
 
-1. 배열 디스트럭처링 (Array destructuring)
-ES5의 경우,
-        </p>
-    </div>
-</article>
-    
+1.Function-level-scope
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/08/21/js-study-es6-template-literals/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/es6.png)" alt="JavaScript ES6 Template Literals" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/21/js-study-es6-template-literals/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/ES6/">ES6</a>
-            </div>
-            <div class="date"><time datetime="2017-08-21T03:54:00.000Z" itemprop="datePublished">2017-08-21</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/21/js-study-es6-template-literals/">JavaScript ES6 Template Literals</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Javascript ES6 Template Literals
-
-템플릿 리터럴은 일반 문자열과 비슷해 보이지만, ‘ 또는 “ 같은 통상적인 따옴표 문자 대신 백틱(backtick) 문자 `를 사용한다.
-
-123const template = `템플릿 리터럴은 '작은따옴표(single quotes)'과 "큰따옴표(double quotes)"를 혼용할 수 있다.`;
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/08/21/js-study-es6-enhanced-object-property/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/es6.png)" alt="JavaScript ES6 Enhanced-Object-Property" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/21/js-study-es6-enhanced-object-property/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/ES6/">ES6</a>
-            </div>
-            <div class="date"><time datetime="2017-08-21T03:54:00.000Z" itemprop="datePublished">2017-08-21</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/21/js-study-es6-enhanced-object-property/">JavaScript ES6 Enhanced-Object-Property</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Javascript ES6 Extended Object property 객체 리터럴 프로퍼티 기능 확장
-1. 프로퍼티 축약 표현
-ES5에서 객체 리터럴의 프로퍼티는 프로퍼티 이름과 프로퍼티 값으로 구성된다.
-
-123456789// ES5var x = 1, y = 2;var obj = &#123;  x: x,  y: y&#125;;console.log(obj
+전역 변수의 남발(전역 변수는 어디서 변경될지 알기 힘들어지기 때문에 사용하지 않는 것이 좋다.)
+for loop 초기화식에서 사용한 변수를 for loop 외부 또는 전역에
         </p>
     </div>
 </article>
@@ -359,17 +257,17 @@ Arrow function(화살표 함수)은 function 키워드 대신 화살표(=&gt;)�
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/08/21/js-study-es6-let-const/" class="thumbnail">
+        <a href="/2017/08/21/js-study-es6-class/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/es6.png)" alt="JavaScript ES6 let const" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/es6.png)" alt="JavaScript ES6 Class" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/21/js-study-es6-let-const/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/21/js-study-es6-class/">0</span>
     
 </span>
 
@@ -387,20 +285,16 @@ Arrow function(화살표 함수)은 function 키워드 대신 화살표(=&gt;)�
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/21/js-study-es6-let-const/">JavaScript ES6 let const</a>
+        <a href="/2017/08/21/js-study-es6-class/">JavaScript ES6 Class</a>
         </h1>
     
 
         <p class="article-excerpt">
-            Javascript ES6 let, const
+            Javascript ES6 Class
 
-ES5에서의 변수선언의 유일한 방법은 var키워드를 사용하는 것이다.
-var 키워드의 단점
-
-1.Function-level-scope
-
-전역 변수의 남발(전역 변수는 어디서 변경될지 알기 힘들어지기 때문에 사용하지 않는 것이 좋다.)
-for loop 초기화식에서 사용한 변수를 for loop 외부 또는 전역에
+Javascript는 프로토타입 기반(prototype-based) 객체지향형 언어다.
+프로토타입 기반 프로그래밍은 클래스가 필요없는(class-free) 객체지향 프로그래밍 스타일로 프로토타입 체인과 클로저 등으로 객체 지향 언어의 상속, 캡슐화(정보 은닉) 등의 개념을 구현할 수 있다.
+class는 함수 객체이다.
         </p>
     </div>
 </article>
@@ -409,6 +303,167 @@ for loop 초기화식에서 사용한 변수를 for loop 외부 또는 전역에
     
     
     
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/08/21/js-study-es6-destructuring/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/es6.png)" alt="JavaScript ES6 Destructuring" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/21/js-study-es6-destructuring/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/ES6/">ES6</a>
+            </div>
+            <div class="date"><time datetime="2017-08-21T03:54:00.000Z" itemprop="datePublished">2017-08-21</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/08/21/js-study-es6-destructuring/">JavaScript ES6 Destructuring</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            Javascript ES6 Destructuring
+
+디스트럭처링(Destructuring)은 기존에 구조로 가지고 있던 객체(배열 또는 객체)를 분석하여 개별적인 변수에 할당하는 것이다.
+배열 또는 객체 리터럴에서 필요한 값만을 추출하여 변수에 할당하거나 반환할 때 유용하다.
+
+1. 배열 디스트럭처링 (Array destructuring)
+ES5의 경우,
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/08/21/js-study-es6-enhanced-object-property/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/es6.png)" alt="JavaScript ES6 Enhanced-Object-Property" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/21/js-study-es6-enhanced-object-property/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/ES6/">ES6</a>
+            </div>
+            <div class="date"><time datetime="2017-08-21T03:54:00.000Z" itemprop="datePublished">2017-08-21</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/08/21/js-study-es6-enhanced-object-property/">JavaScript ES6 Enhanced-Object-Property</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            Javascript ES6 Extended Object property 객체 리터럴 프로퍼티 기능 확장
+1. 프로퍼티 축약 표현
+ES5에서 객체 리터럴의 프로퍼티는 프로퍼티 이름과 프로퍼티 값으로 구성된다.
+
+123456789// ES5var x = 1, y = 2;var obj = &#123;  x: x,  y: y&#125;;console.log(obj
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/08/15/js-study-jquery-basic/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/jq_traversing2.png)" alt="JavaScript jquery basic" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/15/js-study-jquery-basic/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/jQuery/">jQuery</a>
+            </div>
+            <div class="date"><time datetime="2017-08-15T03:54:00.000Z" itemprop="datePublished">2017-08-15</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/08/15/js-study-jquery-basic/">JavaScript jquery basic</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            jQuery Basic1. Introduction
+jQuery는 존 레식이 2006년에 발표한 크로스 플랫폼을 지원하는 경량의 자바스크립트 라이브러리이다. 
+
+jQuery의 특징
+
+크로스 플랫폼을 지원하는 jQuery는 어떠한 브라우저에서도 동일하게 동작한다. 이것은 브라우저 호환성을 고려하여 대체 코드(Polyfill)를 작성할 필요가 없다는 것을 의미한
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -455,61 +510,6 @@ settings는 Ajax 요청 설정 정보로서 key/value의 쌍으로 이루어진 
 
 url    요청이 전송될 url     
 
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/08/15/js-study-jquery-basic/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/jq_traversing2.png)" alt="JavaScript jquery basic" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/15/js-study-jquery-basic/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/jQuery/">jQuery</a>
-            </div>
-            <div class="date"><time datetime="2017-08-15T03:54:00.000Z" itemprop="datePublished">2017-08-15</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/15/js-study-jquery-basic/">JavaScript jquery basic</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            jQuery Basic1. Introduction
-jQuery는 존 레식이 2006년에 발표한 크로스 플랫폼을 지원하는 경량의 자바스크립트 라이브러리이다. 
-
-jQuery의 특징
-
-크로스 플랫폼을 지원하는 jQuery는 어떠한 브라우저에서도 동일하게 동작한다. 이것은 브라우저 호환성을 고려하여 대체 코드(Polyfill)를 작성할 필요가 없다는 것을 의미한
         </p>
     </div>
 </article>
@@ -627,17 +627,17 @@ server에서 ajax를 통해서 데이터를 던지면 그것을 client가 받는
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/08/14/js-study-restapi/" class="thumbnail">
+        <a href="/2017/08/14/js-study-ajax/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/restapi.jpeg)" alt="JavaScript RestAPI" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/cdr.jpg)" alt="JavaScript Ajax" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/14/js-study-restapi/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/14/js-study-ajax/">0</span>
     
 </span>
 
@@ -648,23 +648,23 @@ server에서 ajax를 통해서 데이터를 던지면 그것을 client가 받는
         
         <div class="article-meta">
             <div class="category">
-            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/RestAPI/">RestAPI</a>
+            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Ajax/">Ajax</a>
             </div>
             <div class="date"><time datetime="2017-08-14T03:54:00.000Z" itemprop="datePublished">2017-08-14</time></div>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/14/js-study-restapi/">JavaScript RestAPI</a>
+        <a href="/2017/08/14/js-study-ajax/">JavaScript Ajax</a>
         </h1>
     
 
         <p class="article-excerpt">
-            JavaScript RestAPI  
-REST의 기본 원칙을 성실히 지킨 서비스 디자인을 “RESTful”이라고 표현한다.  
-1. REST API 중심 규칙URI는 자원을 표현하는 데에 집중하고 행위에 대한 정의는 HTTP Method를 통해 하는 것이 REST한 API를 설계하는 중심 규칙이다.  
+            JavaScript Ajax3. Ajax 요청 및 응답 처리
+브라우저는 XMLHttpRequest 객체를 이용하여 Ajax 요청을 생성한다. 서버가 브라우저의 요청에 대해 응답을 반환하면 같은 XMLHttpRequest 객체가 그 결과를 처리한다.
 
-URI는 정보의 자원을 표현해야 한다.리소스명은 동사
+요청 처리의 예이다.
+123456// XMLHttpRequest 객체의 생성var req = new XMLH
         </p>
     </div>
 </article>
