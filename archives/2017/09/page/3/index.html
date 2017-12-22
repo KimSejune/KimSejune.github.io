@@ -149,17 +149,17 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/09/06/node-study-graphql/" class="thumbnail">
+        <a href="/2017/09/06/node-study-spa/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/graphql.png)" alt="Node-GraphQL" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/spa.png)" alt="Node-SPA(Single Page Application)" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/06/node-study-graphql/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/06/node-study-spa/">0</span>
     
 </span>
 
@@ -170,27 +170,28 @@
         
         <div class="article-meta">
             <div class="category">
-            <a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/GraphQL/">GraphQL</a>
+            <a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/SPA/">SPA</a>
             </div>
             <div class="date"><time datetime="2017-09-06T03:54:00.000Z" itemprop="datePublished">2017-09-06</time></div>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/09/06/node-study-graphql/">Node-GraphQL</a>
+        <a href="/2017/09/06/node-study-spa/">Node-SPA(Single Page Application)</a>
         </h1>
     
 
         <p class="article-excerpt">
             
-Node GraphQLREST API의 단점
-각각의 자원마다 경로가 따로 있음. 즉, 여러 자원이 동시에 필요한 경우에는 요청을 여러 번 보내야 함 (요청의 횟수 면에서 비효율적)  
+Node Single-page ApplicationSPA의 구조
 
-(보통의 경우) 자원의 필요한 속성만 얻어올 수 없음. 즉, 일부 속성의 필요하더라도 전체 속성을 가져와야만 함 (요청의 용량 면에서 비효율적)  
+ejs를 사용하여서 웹개발을 하게되면 전체를 다시 새로고침을 해야한다.
+SPA 구조를 사용하면 Ajax를 통하여 부분만 고쳐준다.
 
+SPA 실습Link
 
-GraphQL
-Fa
+data 부분을 node.js module로 빼뒀다.
+npm으로 설치한 module은 경로지정이 없어도 불러와 지지만 직접만든 modul
         </p>
     </div>
 </article>
@@ -199,6 +200,60 @@ Fa
     
     
     
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/09/05/node-study-cors/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/cors.png)" alt="Node-CORS" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/05/node-study-cors/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/CORS/">CORS</a>
+            </div>
+            <div class="date"><time datetime="2017-09-05T03:54:00.000Z" itemprop="datePublished">2017-09-05</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/09/05/node-study-cors/">Node-CORS</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            
+Node CORS보내는쪽과 받는쪽의 Domain이 다를때 발생하는 문제
+Some-origin Plicy(동일 출처 정책)
+웹페이지에서 리소스를 불러올 때, 리소스의 출처가 웹페이지의 출처와 같으면 안전하다고 보고, 출처가 다르면 해당 리소스는 안전하지 않다고 보는 원칙
+여기서 &#39;출처&#39;란 &#39;프로토콜 + 도메인 + 포트번호&#39;의 결
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -242,60 +297,6 @@ Node Fetch APIFetch API
 비교적 최근에 도입되어 IE 및 구형 안드로이드 브라우저(4.x)는 지원하지 않음  
 Fetch Polyfill  
 최신기술로써 지원하지 않는 브라우저가 많지만 Fetch Polyfill을 사용하면 사용가능하다
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/09/05/node-study-cors/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/cors.png)" alt="Node-CORS" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/05/node-study-cors/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Node-js/">Node.js</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Node-js/CORS/">CORS</a>
-            </div>
-            <div class="date"><time datetime="2017-09-05T03:54:00.000Z" itemprop="datePublished">2017-09-05</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/09/05/node-study-cors/">Node-CORS</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-Node CORS보내는쪽과 받는쪽의 Domain이 다를때 발생하는 문제
-Some-origin Plicy(동일 출처 정책)
-웹페이지에서 리소스를 불러올 때, 리소스의 출처가 웹페이지의 출처와 같으면 안전하다고 보고, 출처가 다르면 해당 리소스는 안전하지 않다고 보는 원칙
-여기서 &#39;출처&#39;란 &#39;프로토콜 + 도메인 + 포트번호&#39;의 결
         </p>
     </div>
 </article>
@@ -735,7 +736,7 @@ Data Structures in Web DevelopmentArray &amp; Hash(Dictionary) - indexing post
                             <a href="/2017/12/22/DB-study-syntax/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/directory.png)" alt="DataBase Syntax" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/db.png)" alt="DataBase Syntax" class="thumbnail-image"></span>
     
     
 </a>

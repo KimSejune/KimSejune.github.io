@@ -9,20 +9,20 @@
     
         <meta name="keywords" content="DataBase,Syntax" />
     
-    <meta name="description" content="DataBase기본적인 DataBase의 문법과 간단한 SQL에대한 예제들을 소개합니다.  RDBMS란?   DDL, DML   Aggregate, Group Function   SQL   ERD   Table 생성    RDBMS란? (Relational Database Management System) F.커드가 도입한 관계형 모델을 기반으로 데이터베이">
+    <meta name="description" content="DataBase 기본적인 DataBase의 문법과 간단한 SQL에대한 예제들을 소개합니다.  RDBMS란?   DDL, DML   Aggregate, Group Function   SQL   ERD   Table 생성    RDBMS란? (Relational Database Management System) F.커드가 도입한 관계형 모델을 기반으로 데이터베">
 <meta name="keywords" content="DataBase,Syntax">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DataBase Syntax">
 <meta property="og:url" content="http://yoursite.com/2017/12/22/DB-study-syntax/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="DataBase기본적인 DataBase의 문법과 간단한 SQL에대한 예제들을 소개합니다.  RDBMS란?   DDL, DML   Aggregate, Group Function   SQL   ERD   Table 생성    RDBMS란? (Relational Database Management System) F.커드가 도입한 관계형 모델을 기반으로 데이터베이">
+<meta property="og:description" content="DataBase 기본적인 DataBase의 문법과 간단한 SQL에대한 예제들을 소개합니다.  RDBMS란?   DDL, DML   Aggregate, Group Function   SQL   ERD   Table 생성    RDBMS란? (Relational Database Management System) F.커드가 도입한 관계형 모델을 기반으로 데이터베">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/images/directory.png">
-<meta property="og:updated_time" content="2017-12-22T13:44:52.000Z">
+<meta property="og:image" content="http://yoursite.com/images/db.png">
+<meta property="og:updated_time" content="2017-12-22T13:54:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DataBase Syntax">
-<meta name="twitter:description" content="DataBase기본적인 DataBase의 문법과 간단한 SQL에대한 예제들을 소개합니다.  RDBMS란?   DDL, DML   Aggregate, Group Function   SQL   ERD   Table 생성    RDBMS란? (Relational Database Management System) F.커드가 도입한 관계형 모델을 기반으로 데이터베이">
-<meta name="twitter:image" content="http://yoursite.com/images/directory.png">
+<meta name="twitter:description" content="DataBase 기본적인 DataBase의 문법과 간단한 SQL에대한 예제들을 소개합니다.  RDBMS란?   DDL, DML   Aggregate, Group Function   SQL   ERD   Table 생성    RDBMS란? (Relational Database Management System) F.커드가 도입한 관계형 모델을 기반으로 데이터베">
+<meta name="twitter:image" content="http://yoursite.com/images/db.png">
     
 
     
@@ -171,7 +171,8 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="DataBase"><a href="#DataBase" class="headerlink" title="DataBase"></a>DataBase</h1><p>기본적인 DataBase의 문법과 간단한 SQL에대한 예제들을 소개합니다.</p>
+            <h1 id="DataBase"><a href="#DataBase" class="headerlink" title="DataBase"></a>DataBase</h1><p><img src="/images/db.png" alt="Database"></p>
+<p>기본적인 DataBase의 문법과 간단한 SQL에대한 예제들을 소개합니다.</p>
 <ul>
 <li>RDBMS란?  </li>
 <li>DDL, DML  </li>
@@ -198,7 +199,6 @@
 <ul>
 <li><code>트래픽을 줄이고 분산하여 보다 쉽고 간단하게 저장</code>하는 것이 더 필요하다고 판단하여 새로운 데이터베이스를 필요로하게 되어서 등장하였다.  </li>
 </ul>
-<p><img src="/images/directory.png" alt="폴더 구조"></p>
 <h2 id="DDL-amp-DML"><a href="#DDL-amp-DML" class="headerlink" title="DDL &amp; DML"></a>DDL &amp; DML</h2><p><code>DDL</code> (Data Definition Language)  </p>
 <ul>
 <li>Create, Drop, Truncate, Alter, Data Type, Constraint  </li>
@@ -269,6 +269,29 @@
 <h3 id="DML"><a href="#DML" class="headerlink" title="DML"></a>DML</h3><p><code>Insert 테이블 Data 추가</code><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> 테이블이름 (col1, col2) <span class="keyword">VALUES</span>(“val1”, “val2”);</div></pre></td></tr></table></figure></p>
 <p><code>Update 테이블 Data 수정</code><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">UPDATE</span> 테이블이름 <span class="keyword">SET</span> 변경내용 <span class="keyword">Where</span> <span class="keyword">id</span> = <span class="number">1</span>;</div></pre></td></tr></table></figure></p>
 <p><code>Delete 테이블 Data 삭제</code><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> 테이블이름 <span class="keyword">Where</span> <span class="keyword">id</span> = <span class="number">1</span>;</div></pre></td></tr></table></figure></p>
+<h2 id="Aggregate-Function"><a href="#Aggregate-Function" class="headerlink" title="Aggregate Function"></a>Aggregate Function</h2><h3 id="AVG"><a href="#AVG" class="headerlink" title="AVG"></a><code>AVG</code></h3><p>AVG (평균 구하기)<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">AVG</span>(salary) <span class="keyword">FROM</span> Student;</div></pre></td></tr></table></figure></p>
+<ul>
+<li>Group By </li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT 부서명, AVG(salary) FROM 직장; =&gt; 오류 발생</div><div class="line"><span class="keyword">SELECT</span> 부서명, <span class="keyword">AVG</span>(salary) <span class="keyword">FROM</span> 직장 <span class="keyword">GROUP</span> <span class="keyword">BY</span> 부서명;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>Having : Group By를 한 결과에 대해서 조건을 걸어주는 역할을 한다.</code></li>
+</ul>
+<h3 id="COUNT"><a href="#COUNT" class="headerlink" title="COUNT"></a>COUNT</h3><ul>
+<li>해당 col의 수를 센다.<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(column_name)</div><div class="line"><span class="keyword">FROM</span> table_name</div><div class="line"><span class="keyword">WHERE</span> condition;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="MAX"><a href="#MAX" class="headerlink" title="MAX"></a>MAX</h3><ul>
+<li>해당 col의 최대값을 보여준다.<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">MAX</span>(column_name)</div><div class="line"><span class="keyword">FROM</span> table_name</div><div class="line"><span class="keyword">WHERE</span> condition;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="MIN"><a href="#MIN" class="headerlink" title="MIN"></a>MIN</h3><ul>
+<li>해당 col의 최소값을 보여준다.<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">MIN</span>(column_name)</div><div class="line"><span class="keyword">FROM</span> table_name</div><div class="line"><span class="keyword">WHERE</span> condition;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="SUM"><a href="#SUM" class="headerlink" title="SUM"></a>SUM</h3><ul>
+<li>해당 col의 합을 보여준다.<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">SUM</span>(col_name) <span class="keyword">FROM</span> table_name;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">SUM</span>(salary) <span class="keyword">FROM</span> Student;</div></pre></td></tr></table></figure></li>
+</ul>
 
         </div>
         <footer class="article-footer">
@@ -276,7 +299,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/12/22/DB-study-syntax/" data-id="cjbhyx66n0000776f014dbz8x" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/12/22/DB-study-syntax/" data-id="cjbhza8wv0000b46f2a46gvi7" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -406,7 +429,7 @@
                             <a href="/2017/12/22/DB-study-syntax/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/directory.png)" alt="DataBase Syntax" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/db.png)" alt="DataBase Syntax" class="thumbnail-image"></span>
     
     
 </a>

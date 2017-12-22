@@ -149,17 +149,17 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/08/08/js-study-Number/" class="thumbnail">
+        <a href="/2017/08/08/js-study-Math/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Number" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Math" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/08/js-study-Number/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/08/js-study-Math/">0</span>
     
 </span>
 
@@ -170,23 +170,27 @@
         
         <div class="article-meta">
             <div class="category">
-            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Number/">Number</a>
+            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Math/">Math</a>
             </div>
             <div class="date"><time datetime="2017-08-08T03:54:00.000Z" itemprop="datePublished">2017-08-08</time></div>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/08/js-study-Number/">JavaScript Number</a>
+        <a href="/2017/08/08/js-study-Math/">JavaScript Math</a>
         </h1>
     
 
         <p class="article-excerpt">
-            JavaScript Number
-1. Number Constructor
-Number 객체는 Number() 생성자 함수를 통해 생성할 수 있다.
+            JavaScript Math
+1. Math Property
+정적(static) 프로퍼티로 Math 객체를 생성할 필요없이 Math.propertyName의 형태로 사용한다.
+대문자로 써져있으면 상수이다 즉 변하면 안되는 값이다.
+Math는 생성자 함수가 아닌 객체이다.
+객체라서 prototype이 존재하지 않는다.
 
-123456789new Number(value);var x = new Number(123);var y = new Number('123');var z = new Number('str');console.log(x);
+1.1 Math,PI
+PI 값(π ≈ 3
         </p>
     </div>
 </article>
@@ -417,6 +421,62 @@ Function Code : 함수 내에 존재하는 코드
         <article class="article article-summary">
     <div class="article-summary-inner">
         
+        <a href="/2017/08/01/js-study-function/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Function" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/01/js-study-function/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Function/">Function</a>
+            </div>
+            <div class="date"><time datetime="2017-08-01T03:54:00.000Z" itemprop="datePublished">2017-08-01</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/08/01/js-study-function/">JavaScript Function</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            Javascript Function
+
+함수란 어떤 특정 작업을 수행하기 위해 필요한 일련의 구문들을 그룹화하기 위한 개념이다.(코드의 재사용)
+함수의 기능
+특정 작업을 수행하는 구문들의 집합을 정의하고 필요시에 호출하여 필요한 값 또는 수행 결과를 얻는다.
+객체 생성, 객체의 행위 지정(메서드)
+정보의 구성 및 은닉, 클로저, 모듈화 등의 기능을 수행할 수
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
         <a href="/2017/08/01/js-study-immutability/" class="thumbnail">
     
     
@@ -458,14 +518,10 @@ Immutability(변경불가성)이란? 객체가 생성된 이후 그 상태를 �
     </div>
 </article>
     
-        </div>
-    
 
     
     
     
-    
-        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -505,58 +561,6 @@ Immutability(변경불가성)이란? 객체가 생성된 이후 그 상태를 �
         <p class="article-excerpt">
             Javascript Prototype12345678function Person(name) &#123;  this.name = name;  this.sayHello = function()&#123;    console.log(this.name);  &#125;&#125;var foo = new Person('Lee');
 foo의 property는 name, 
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/08/01/js-study-function/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Function" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/01/js-study-function/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/JavaScript/Function/">Function</a>
-            </div>
-            <div class="date"><time datetime="2017-08-01T03:54:00.000Z" itemprop="datePublished">2017-08-01</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/01/js-study-function/">JavaScript Function</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Javascript Function
-
-함수란 어떤 특정 작업을 수행하기 위해 필요한 일련의 구문들을 그룹화하기 위한 개념이다.(코드의 재사용)
-함수의 기능
-특정 작업을 수행하는 구문들의 집합을 정의하고 필요시에 호출하여 필요한 값 또는 수행 결과를 얻는다.
-객체 생성, 객체의 행위 지정(메서드)
-정보의 구성 및 은닉, 클로저, 모듈화 등의 기능을 수행할 수
         </p>
     </div>
 </article>
@@ -616,7 +620,7 @@ foo의 property는 name,
                             <a href="/2017/12/22/DB-study-syntax/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/directory.png)" alt="DataBase Syntax" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/db.png)" alt="DataBase Syntax" class="thumbnail-image"></span>
     
     
 </a>
