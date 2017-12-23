@@ -18,7 +18,7 @@
 <meta property="og:description" content="DataBase 기본적인 DataBase의 문법과 간단한 SQL에대한 예제들을 소개합니다.  RDBMS란?   DDL, DML   Aggregate, Group Function   SQL   ERD   Table 생성    RDBMS란? (Relational Database Management System) F.커드가 도입한 관계형 모델을 기반으로 데이터베">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/db.png">
-<meta property="og:updated_time" content="2017-12-22T13:54:58.000Z">
+<meta property="og:updated_time" content="2017-12-23T00:47:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DataBase Syntax">
 <meta name="twitter:description" content="DataBase 기본적인 DataBase의 문법과 간단한 SQL에대한 예제들을 소개합니다.  RDBMS란?   DDL, DML   Aggregate, Group Function   SQL   ERD   Table 생성    RDBMS란? (Relational Database Management System) F.커드가 도입한 관계형 모델을 기반으로 데이터베">
@@ -275,7 +275,7 @@
 </ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT 부서명, AVG(salary) FROM 직장; =&gt; 오류 발생</div><div class="line"><span class="keyword">SELECT</span> 부서명, <span class="keyword">AVG</span>(salary) <span class="keyword">FROM</span> 직장 <span class="keyword">GROUP</span> <span class="keyword">BY</span> 부서명;</div></pre></td></tr></table></figure>
 <ul>
-<li><code>Having : Group By를 한 결과에 대해서 조건을 걸어주는 역할을 한다.</code></li>
+<li><code>Having =&gt; Group By를 한 결과에 대해서 조건을 걸어주는 역할을 한다.</code></li>
 </ul>
 <h3 id="COUNT"><a href="#COUNT" class="headerlink" title="COUNT"></a>COUNT</h3><ul>
 <li>해당 col의 수를 센다.<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(column_name)</div><div class="line"><span class="keyword">FROM</span> table_name</div><div class="line"><span class="keyword">WHERE</span> condition;</div></pre></td></tr></table></figure>
@@ -290,7 +290,62 @@
 </li>
 </ul>
 <h3 id="SUM"><a href="#SUM" class="headerlink" title="SUM"></a>SUM</h3><ul>
-<li>해당 col의 합을 보여준다.<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">SUM</span>(col_name) <span class="keyword">FROM</span> table_name;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">SUM</span>(salary) <span class="keyword">FROM</span> Student;</div></pre></td></tr></table></figure></li>
+<li>해당 col의 합을 보여준다.<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">SUM</span>(col_name) <span class="keyword">FROM</span> table_name;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">SUM</span>(salary) <span class="keyword">FROM</span> Student;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="SQL-structured-Query-Language"><a href="#SQL-structured-Query-Language" class="headerlink" title="SQL (structured Query Language)"></a>SQL (structured Query Language)</h2><p>구조화된 질의 언어</p>
+<p>기본적인 문법 구조</p>
+<ul>
+<li>SELECT : Table의 원하는 col을 선택한다.</li>
+<li>FROM : 특정 Table로 부터</li>
+<li>WHERE : 특정 조건</li>
+</ul>
+<h3 id="SQL-기본-Example"><a href="#SQL-기본-Example" class="headerlink" title="SQL 기본 Example"></a>SQL 기본 Example</h3><p>Student 테이블을 전부다 가져오고싶다.<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELECT*FROM Student; =&gt; *는 전부를 나타낸다.</div></pre></td></tr></table></figure></p>
+<p>Student 테이블중에서 name(col)을 가져오고싶다.<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span> <span class="keyword">FROM</span> Student;</div></pre></td></tr></table></figure></p>
+<p>Student 테이블중에서 name(col)이 kimsejune을 가져오고싶다.<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span> <span class="keyword">FROM</span> Student <span class="keyword">WHERE</span> <span class="keyword">name</span>=“kimsejune”;</div></pre></td></tr></table></figure></p>
+<h3 id="JOIN"><a href="#JOIN" class="headerlink" title="JOIN"></a>JOIN</h3><p>2개 이상의 테이블을 합쳐서 하나의 테이블로 만든다.</p>
+<p>Cross Join : (Cartasian Product) 모든 가능한 쌍이 나타난다.  </p>
+<p><code>Inner Join</code> : 조건을 만족하는 tuple만 나타난다. </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, jobname <span class="keyword">FROM</span> Student <span class="keyword">Inner</span> <span class="keyword">Join</span> Job         <span class="keyword">ON</span> Student.id = Job.student_id;</div></pre></td></tr></table></figure>
+<p><code>Outer Join</code> : 조건을 만족하지 않는 tuple도 나타난다. =&gt; null로 표기  </p>
+<ul>
+<li><p>Left Outer Join =&gt; join table의 왼쪽 table 값중 null인 것도 가져온다.  </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, jobname <span class="keyword">FROM</span> Student <span class="keyword">Left</span> <span class="keyword">Outer</span> <span class="keyword">Join</span> Job                       <span class="keyword">ON</span> Student.id = Job.student_id;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Right Outer Join =&gt; join table의 오른쪽 table 값중 null인 것도 가져온다.  </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, jobname <span class="keyword">FROM</span> Student <span class="keyword">Right</span> <span class="keyword">Outer</span> <span class="keyword">Join</span> Job                       <span class="keyword">ON</span> Student.id = Job.student_id;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Full Outer Join =&gt; 양쪽 table 값중 null인 것도 가져온다.  </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, jobname <span class="keyword">FROM</span> Student <span class="keyword">Full</span> <span class="keyword">Outer</span> <span class="keyword">Join</span> Job                       <span class="keyword">ON</span> Student.id = Job.student_id;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Natural Join : 조건을 만족하는 tuple들의 동일한 col이 합쳐져서 나타난다.  </p>
+<p><code>Self Join</code> : 자기 자신과 Join   </p>
+<ul>
+<li>상사를 찾을 때 많이 이용된다.</li>
+</ul>
+<h2 id="ERD"><a href="#ERD" class="headerlink" title="ERD"></a>ERD</h2><p>Entity-Relationship Diagram</p>
+<p>테이블의 관계</p>
+<ul>
+<li>1:1<ul>
+<li>한 사람은 한개의 학번을 가진다.</li>
+</ul>
+</li>
+<li>1:M<ul>
+<li>교수님은 여러명의 제자를 가지지만 제자는 한명의 담당교수만이 존재한다.</li>
+</ul>
+</li>
+<li>N:M<ul>
+<li>한 사람은 여러개의 취미를 가질 수 있고 하나의 취미도 여러명의 사람이 가지고 있다.</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/erdex.png" alt="DADA-ERD"></p>
+<h2 id="Table-생성"><a href="#Table-생성" class="headerlink" title="Table 생성"></a>Table 생성</h2><p>방법 1. 직접 SQL (Create) 를 사용하여서 만들기  </p>
+<p>방법 2. ERD를 그린후 적용하기</p>
+<p>방법 3. Library 이용하기</p>
+<ul>
+<li>sequelize, knex … etc</li>
 </ul>
 
         </div>
@@ -299,7 +354,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/12/22/DB-study-syntax/" data-id="cjbhza8wv0000b46f2a46gvi7" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/12/22/DB-study-syntax/" data-id="cjbimpkny0000k06f1zd860n2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
