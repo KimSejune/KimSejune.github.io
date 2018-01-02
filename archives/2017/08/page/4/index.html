@@ -149,17 +149,17 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/08/08/js-study-Number/" class="thumbnail">
+        <a href="/2017/08/08/js-study-built-in-object/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Number" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/BOM.png)" alt="JavaScript Built In Object" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/08/js-study-Number/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/08/js-study-built-in-object/">0</span>
     
 </span>
 
@@ -177,16 +177,15 @@
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/08/js-study-Number/">JavaScript Number</a>
+        <a href="/2017/08/08/js-study-built-in-object/">JavaScript Built In Object</a>
         </h1>
     
 
         <p class="article-excerpt">
-            JavaScript Number
-1. Number Constructor
-Number 객체는 Number() 생성자 함수를 통해 생성할 수 있다.
+            JavaScript Built In ObjectBuilt-in Object(내장 객체)는 웹페이지 등을 표현하기 위한 공통의 기능을 제공한다.
 
-123456789new Number(value);var x = new Number(123);var y = new Number('123');var z = new Number('str');console.log(x);
+Standard Built-in Objects (or Global Objects) 기본적으로 적용되어있는 객체들 (string, array 등등)
+BOM (Browser Object Model) size, hist
         </p>
     </div>
 </article>
@@ -417,17 +416,17 @@ Function Code : 함수 내에 존재하는 코드
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/08/01/js-study-prototype/" class="thumbnail">
+        <a href="/2017/08/01/js-study-function/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/object_literal_prototype_chaining.png)" alt="JavaScript Prototype" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Function" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/01/js-study-prototype/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/01/js-study-function/">0</span>
     
 </span>
 
@@ -445,13 +444,18 @@ Function Code : 함수 내에 존재하는 코드
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/01/js-study-prototype/">JavaScript Prototype</a>
+        <a href="/2017/08/01/js-study-function/">JavaScript Function</a>
         </h1>
     
 
         <p class="article-excerpt">
-            Javascript Prototype12345678function Person(name) &#123;  this.name = name;  this.sayHello = function()&#123;    console.log(this.name);  &#125;&#125;var foo = new Person('Lee');
-foo의 property는 name, 
+            Javascript Function
+
+함수란 어떤 특정 작업을 수행하기 위해 필요한 일련의 구문들을 그룹화하기 위한 개념이다.(코드의 재사용)
+함수의 기능
+특정 작업을 수행하는 구문들의 집합을 정의하고 필요시에 호출하여 필요한 값 또는 수행 결과를 얻는다.
+객체 생성, 객체의 행위 지정(메서드)
+정보의 구성 및 은닉, 클로저, 모듈화 등의 기능을 수행할 수
         </p>
     </div>
 </article>
@@ -517,17 +521,17 @@ Immutability(변경불가성)이란? 객체가 생성된 이후 그 상태를 �
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/08/01/js-study-function/" class="thumbnail">
+        <a href="/2017/08/01/js-study-prototype/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Function" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/object_literal_prototype_chaining.png)" alt="JavaScript Prototype" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/01/js-study-function/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/01/js-study-prototype/">0</span>
     
 </span>
 
@@ -545,18 +549,13 @@ Immutability(변경불가성)이란? 객체가 생성된 이후 그 상태를 �
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/01/js-study-function/">JavaScript Function</a>
+        <a href="/2017/08/01/js-study-prototype/">JavaScript Prototype</a>
         </h1>
     
 
         <p class="article-excerpt">
-            Javascript Function
-
-함수란 어떤 특정 작업을 수행하기 위해 필요한 일련의 구문들을 그룹화하기 위한 개념이다.(코드의 재사용)
-함수의 기능
-특정 작업을 수행하는 구문들의 집합을 정의하고 필요시에 호출하여 필요한 값 또는 수행 결과를 얻는다.
-객체 생성, 객체의 행위 지정(메서드)
-정보의 구성 및 은닉, 클로저, 모듈화 등의 기능을 수행할 수
+            Javascript Prototype12345678function Person(name) &#123;  this.name = name;  this.sayHello = function()&#123;    console.log(this.name);  &#125;&#125;var foo = new Person('Lee');
+foo의 property는 name, 
         </p>
     </div>
 </article>
