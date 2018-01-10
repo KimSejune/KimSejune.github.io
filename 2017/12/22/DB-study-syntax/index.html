@@ -7,10 +7,10 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Syntax,DataBase" />
+        <meta name="keywords" content="DataBase,Syntax" />
     
     <meta name="description" content="DataBase 기본적인 DataBase의 문법과 간단한 SQL에대한 예제들을 소개합니다.  RDBMS란?   DDL, DML   Aggregate, Group Function   SQL   ERD   Table 생성    RDBMS란? (Relational Database Management System) F.커드가 도입한 관계형 모델을 기반으로 데이터베">
-<meta name="keywords" content="Syntax,DataBase">
+<meta name="keywords" content="DataBase,Syntax">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DataBase Syntax">
 <meta property="og:url" content="http://yoursite.com/2017/12/22/DB-study-syntax/index.html">
@@ -18,7 +18,7 @@
 <meta property="og:description" content="DataBase 기본적인 DataBase의 문법과 간단한 SQL에대한 예제들을 소개합니다.  RDBMS란?   DDL, DML   Aggregate, Group Function   SQL   ERD   Table 생성    RDBMS란? (Relational Database Management System) F.커드가 도입한 관계형 모델을 기반으로 데이터베">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/db.png">
-<meta property="og:updated_time" content="2017-12-27T02:53:42.000Z">
+<meta property="og:updated_time" content="2018-01-10T06:59:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DataBase Syntax">
 <meta name="twitter:description" content="DataBase 기본적인 DataBase의 문법과 간단한 SQL에대한 예제들을 소개합니다.  RDBMS란?   DDL, DML   Aggregate, Group Function   SQL   ERD   Table 생성    RDBMS란? (Relational Database Management System) F.커드가 도입한 관계형 모델을 기반으로 데이터베">
@@ -267,7 +267,7 @@
 </ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="keyword">MEMBER</span> <span class="keyword">DROP</span> <span class="keyword">CONSTRAINT</span> c_member_fk;</div></pre></td></tr></table></figure>
 <h3 id="DML"><a href="#DML" class="headerlink" title="DML"></a>DML</h3><p><code>Insert 테이블 Data 추가</code><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> 테이블이름 (col1, col2) <span class="keyword">VALUES</span>(“val1”, “val2”);</div></pre></td></tr></table></figure></p>
-<p><code>Update 테이블 Data 수정</code><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">UPDATE</span> 테이블이름 <span class="keyword">SET</span> 변경내용 <span class="keyword">Where</span> <span class="keyword">id</span> = <span class="number">1</span>;</div></pre></td></tr></table></figure></p>
+<p><code>Update 테이블 Data 수정</code><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">UPDATE</span> 테이블이름 <span class="keyword">SET</span> <span class="keyword">name</span>=<span class="string">"Kim"</span> <span class="keyword">Where</span> <span class="keyword">id</span> = <span class="number">1</span>;</div></pre></td></tr></table></figure></p>
 <p><code>Delete 테이블 Data 삭제</code><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> 테이블이름 <span class="keyword">Where</span> <span class="keyword">id</span> = <span class="number">1</span>;</div></pre></td></tr></table></figure></p>
 <h2 id="Aggregate-Function"><a href="#Aggregate-Function" class="headerlink" title="Aggregate Function"></a>Aggregate Function</h2><h3 id="AVG"><a href="#AVG" class="headerlink" title="AVG"></a><code>AVG</code></h3><p>AVG (평균 구하기)<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">AVG</span>(salary) <span class="keyword">FROM</span> Student;</div></pre></td></tr></table></figure></p>
 <ul>
@@ -306,17 +306,17 @@
 <h3 id="JOIN"><a href="#JOIN" class="headerlink" title="JOIN"></a>JOIN</h3><p>2개 이상의 테이블을 합쳐서 하나의 테이블로 만든다.</p>
 <p>Cross Join : (Cartasian Product) 모든 가능한 쌍이 나타난다.  </p>
 <p><code>Inner Join</code> : 조건을 만족하는 tuple만 나타난다. </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, jobname <span class="keyword">FROM</span> Student <span class="keyword">Inner</span> <span class="keyword">Join</span> Job         <span class="keyword">ON</span> Student.id = Job.student_id;</div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, jobname <span class="keyword">FROM</span> Student <span class="keyword">Inner</span> <span class="keyword">Join</span> Job</div><div class="line"><span class="keyword">ON</span> Student.id = Job.student_id;</div></pre></td></tr></table></figure>
 <p><code>Outer Join</code> : 조건을 만족하지 않는 tuple도 나타난다. =&gt; null로 표기  </p>
 <ul>
 <li><p>Left Outer Join =&gt; join table의 왼쪽 table 값중 null인 것도 가져온다.  </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, jobname <span class="keyword">FROM</span> Student <span class="keyword">Left</span> <span class="keyword">Outer</span> <span class="keyword">Join</span> Job                       <span class="keyword">ON</span> Student.id = Job.student_id;</div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, jobname <span class="keyword">FROM</span> Student <span class="keyword">Left</span> <span class="keyword">Outer</span> <span class="keyword">Join</span> Job</div><div class="line"><span class="keyword">ON</span> Student.id = Job.student_id;</div></pre></td></tr></table></figure>
 </li>
 <li><p>Right Outer Join =&gt; join table의 오른쪽 table 값중 null인 것도 가져온다.  </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, jobname <span class="keyword">FROM</span> Student <span class="keyword">Right</span> <span class="keyword">Outer</span> <span class="keyword">Join</span> Job                       <span class="keyword">ON</span> Student.id = Job.student_id;</div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, jobname <span class="keyword">FROM</span> Student <span class="keyword">Right</span> <span class="keyword">Outer</span> <span class="keyword">Join</span> Job</div><div class="line"><span class="keyword">ON</span> Student.id = Job.student_id;</div></pre></td></tr></table></figure>
 </li>
 <li><p>Full Outer Join =&gt; 양쪽 table 값중 null인 것도 가져온다.  </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, jobname <span class="keyword">FROM</span> Student <span class="keyword">Full</span> <span class="keyword">Outer</span> <span class="keyword">Join</span> Job                       <span class="keyword">ON</span> Student.id = Job.student_id;</div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, jobname <span class="keyword">FROM</span> Student <span class="keyword">Full</span> <span class="keyword">Outer</span> <span class="keyword">Join</span> Job</div><div class="line"><span class="keyword">ON</span> Student.id = Job.student_id;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>Natural Join : 조건을 만족하는 tuple들의 동일한 col이 합쳐져서 나타난다.  </p>
@@ -354,7 +354,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/12/22/DB-study-syntax/" data-id="cjc632qki0005e76facq2i8ea" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/12/22/DB-study-syntax/" data-id="cjc8pti5h00002i6f8tztw541" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

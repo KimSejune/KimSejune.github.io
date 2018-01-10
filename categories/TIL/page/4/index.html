@@ -199,17 +199,17 @@ Some-origin Plicy(동일 출처 정책)
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/09/05/node-study-jwt/" class="thumbnail">
+        <a href="/2017/09/05/node-study-fetchapi/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/jwt.png)" alt="Node-jwt" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/fetch.jpeg)" alt="Node-fetchApi" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/05/node-study-jwt/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/05/node-study-fetchapi/">0</span>
     
 </span>
 
@@ -227,19 +227,17 @@ Some-origin Plicy(동일 출처 정책)
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/09/05/node-study-jwt/">Node-jwt</a>
+        <a href="/2017/09/05/node-study-fetchapi/">Node-fetchApi</a>
         </h1>
     
 
         <p class="article-excerpt">
             
-Node JWT쿠키의 단점
-쿠키를 지원하는 클라이언트에서 밖에 사용할 수 없음
-적절히 관리되지 않은 쿠키는 보안에 취약하며, 관리를 하려고 해도 CORS 대응이 복잡함
-
-Token Based Auth
-토큰이란, 사용자의 자격증명(아이디, 패스워드 등)을 통해 인증이 이루어진 후, 특정 자원에 대한 자격증명으로서 대신 사용되는 인증 수단
-서버에 요청을 할 
+Node Fetch APIFetch API
+웹 브라우저의 XMLHttpRequest를 대체하기 위해 만들어진 새로운 HTTP client 표준  
+비교적 최근에 도입되어 IE 및 구형 안드로이드 브라우저(4.x)는 지원하지 않음  
+Fetch Polyfill  
+최신기술로써 지원하지 않는 브라우저가 많지만 Fetch Polyfill을 사용하면 사용가능하다
         </p>
     </div>
 </article>
@@ -252,55 +250,6 @@ Token Based Auth
     
     
         <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/09/04/node-study-node-Express-Middleware/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/middle.jpg)" alt="Node-Express-Middleware" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/04/node-study-node-Express-Middleware/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a>
-            </div>
-            <div class="date"><time datetime="2017-09-04T03:54:00.000Z" itemprop="datePublished">2017-09-04</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/09/04/node-study-node-Express-Middleware/">Node-Express-Middleware</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-Node Express MiddlewareMiddleware?1234567// 미들웨어 = 함수function helloMiddleware(res, req, next) &#123;  console.log('hello')  next()&#125;app.use(helloMiddleware)
-
-요청이 발생할 때 마다 console.log(‘hello’)가 나타
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -358,14 +307,10 @@ HTTP Cookie
     </div>
 </article>
     
-        </div>
-    
 
     
     
     
-    
-        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -413,6 +358,59 @@ Node SessionSession사전적 의미
 HTTP session요청 - 응답  
 
 클라이언트가 TCP 연결을 수립합니다(또는 전송 계층이 TCP가 아닌 다른 적당한 연결로
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/09/04/node-study-node-Express-Middleware/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/middle.jpg)" alt="Node-Express-Middleware" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/04/node-study-node-Express-Middleware/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a>
+            </div>
+            <div class="date"><time datetime="2017-09-04T03:54:00.000Z" itemprop="datePublished">2017-09-04</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/09/04/node-study-node-Express-Middleware/">Node-Express-Middleware</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            
+Node Express MiddlewareMiddleware?1234567// 미들웨어 = 함수function helloMiddleware(res, req, next) &#123;  console.log('hello')  next()&#125;app.use(helloMiddleware)
+
+요청이 발생할 때 마다 console.log(‘hello’)가 나타
         </p>
     </div>
 </article>
@@ -650,17 +648,17 @@ Post method
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/08/29/node-study-template-language/" class="thumbnail">
+        <a href="/2017/08/29/node-study-express/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/ejs.png)" alt="Node-Template-Language" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/express.jpg)" alt="Node-Express" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/29/node-study-template-language/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/29/node-study-express/">0</span>
     
 </span>
 
@@ -678,15 +676,20 @@ Post method
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/29/node-study-template-language/">Node-Template-Language</a>
+        <a href="/2017/08/29/node-study-express/">Node-Express</a>
         </h1>
     
 
         <p class="article-excerpt">
-              
-Node Template LanguageStatic Web Page누가 어떻게 요청하든 미리 저장되어 있던 HTML 파일을 그대로 응답
-Dynamic Web Page요청한 사람과 요청한 내용에 따라 각각 다른 내용으로 편집한 HTML을 응답
-Template Engine템플릿과 데이터를 결합해 문서를 생성하는 프로그램, 혹은 라이브러리템플릿을 작성할 때
+            Node Express
+실습환경Glitch Tutorial
+나의 Glitch
+Express
+Node.js 생태계에서 가장 널리 쓰이는 웹 프레임워크
+내장하고 있는 기능은 매우 적으나, 미들웨어를 주입하는 방식으로 기능을 확장하는 생태계를 가지고 있음
+공식 매뉴얼 한국어 번역
+
+Express 앱의 기본 구조12345678910111213141516// Exp
         </p>
     </div>
 </article>
