@@ -18,7 +18,7 @@
 <meta property="og:description" content="Java 반복문  참고서적 : Java의정석 3rd Edition  do-while문while문의 변형으로 기본적인 구조는 같으나 조건식과 블럭 {}의 순서를 바꿔놓은 것이다.{}먼저 수행한 후에 조건식을 평가한다. 그러기에 최소한 한번은 수행될 것을 보장한다. 123do &amp;#123;  // 조건식의 연산결과가 참일 경우 수행될 문장&amp;#125; while(">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/java.png">
-<meta property="og:updated_time" content="2018-03-09T02:02:32.000Z">
+<meta property="og:updated_time" content="2018-03-12T02:22:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 반복문">
 <meta name="twitter:description" content="Java 반복문  참고서적 : Java의정석 3rd Edition  do-while문while문의 변형으로 기본적인 구조는 같으나 조건식과 블럭 {}의 순서를 바꿔놓은 것이다.{}먼저 수행한 후에 조건식을 평가한다. 그러기에 최소한 한번은 수행될 것을 보장한다. 123do &amp;#123;  // 조건식의 연산결과가 참일 경우 수행될 문장&amp;#125; while(">
@@ -201,13 +201,15 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> chapter04;</div><div class="line"><span class="comment">// 구구단을 출력하는 예제이다.</span></div><div class="line"><span class="comment">// 2단의 5번째 까지만 출력을 하라.</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FlowEx33</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">	</div><div class="line">		Loop1 : <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= <span class="number">9</span>; i++) &#123;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= <span class="number">9</span>; j++) &#123;</div><div class="line">				System.out.println(<span class="string">"구구단 : "</span>+i+<span class="string">"단 = "</span>+i+<span class="string">"*"</span>+j+<span class="string">"="</span>+i*j);</div><div class="line">				<span class="keyword">if</span>(j == <span class="number">5</span>) <span class="keyword">break</span> Loop1;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>중첩반복문에 Loop1이라는 이름을 붙여주고 break Loop1을 함으로써 구구단은 2단의 5번째까지만 출력된다.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">구구단 : <span class="number">2</span>단 = <span class="number">2</span>*<span class="number">1</span>=<span class="number">2</span></div><div class="line">구구단 : <span class="number">2</span>단 = <span class="number">2</span>*<span class="number">2</span>=<span class="number">4</span></div><div class="line">구구단 : <span class="number">2</span>단 = <span class="number">2</span>*<span class="number">3</span>=<span class="number">6</span></div><div class="line">구구단 : <span class="number">2</span>단 = <span class="number">2</span>*<span class="number">4</span>=<span class="number">8</span></div><div class="line">구구단 : <span class="number">2</span>단 = <span class="number">2</span>*<span class="number">5</span>=<span class="number">10</span></div></pre></td></tr></table></figure>
+<p><code>break</code>만 사용하면 해당 반복문을 빠져나가고 <code>break 이름</code>하면 묶인 반복문을 전부다 빠져나간다.</p>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://yoursite.com/2018/03/08/java-study-loop/" data-id="cjejaqojx001bg86fmdvyy8f3" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2018/03/08/java-study-loop/" data-id="cjenlsau9001lml6fcr2ffo8q" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
