@@ -262,6 +262,53 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
+        <a href="/2017/08/01/js-study-prototype/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/object_literal_prototype_chaining.png)" alt="JavaScript Prototype" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/01/js-study-prototype/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/JavaScript/">JavaScript</a>
+            </div>
+            <div class="date"><time datetime="2017-08-01T03:54:00.000Z" itemprop="datePublished">2017-08-01</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/08/01/js-study-prototype/">JavaScript Prototype</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            Javascript Prototype12345678function Person(name) &#123;  this.name = name;  this.sayHello = function()&#123;    console.log(this.name);  &#125;&#125;var foo = new Person('Lee');
+foo의 property는 name, 
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
         <a href="/2017/08/01/js-study-immutability/" class="thumbnail">
     
     
@@ -299,53 +346,6 @@
 Immutability(변경불가성)이란? 객체가 생성된 이후 그 상태를 변경할 수 없는 디자인 패턴을 의미한다.레퍼런스를 참조한 다른 객체에서 객체를 변경하는 상황을 해결하는 방법
 
 객체를 불변객체로 만들어 프로퍼티의 변경을 방지하며 객체의 변경이 필요한 경우에는 참조가 아닌 객체의 방어적 복사(defensive 
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/08/01/js-study-prototype/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/object_literal_prototype_chaining.png)" alt="JavaScript Prototype" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/01/js-study-prototype/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/JavaScript/">JavaScript</a>
-            </div>
-            <div class="date"><time datetime="2017-08-01T03:54:00.000Z" itemprop="datePublished">2017-08-01</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/01/js-study-prototype/">JavaScript Prototype</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Javascript Prototype12345678function Person(name) &#123;  this.name = name;  this.sayHello = function()&#123;    console.log(this.name);  &#125;&#125;var foo = new Person('Lee');
-foo의 property는 name, 
         </p>
     </div>
 </article>
@@ -414,17 +414,17 @@ foo의 property는 name,
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/07/31/js-study-operator/" class="thumbnail">
+        <a href="/2017/07/31/js-study-data-type-variable/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Operator" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Data-Type Variable" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/07/31/js-study-operator/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/07/31/js-study-data-type-variable/">0</span>
     
 </span>
 
@@ -442,13 +442,17 @@ foo의 property는 name,
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/07/31/js-study-operator/">JavaScript Operator</a>
+        <a href="/2017/07/31/js-study-data-type-variable/">JavaScript Data-Type Variable</a>
         </h1>
     
 
         <p class="article-excerpt">
-            Javascript Operator
-1. 산술 연술자 (Arithmetic Operators)1234567891011121314151617var x = 5;var y = 2;var z;z = x + y;  // 7z = x - y;  // 3z = x * y;  // 10z = x / y;  // 2.5z = x % y;  // 1z = x++;    //
+            Javascript Data type &amp; Variable
+
+변수란?: 메모리 주소에 접근하기 위해 사람이 이해할 수 있는 언어로 지정한 식별자이다.
+자료형은 데이터의 성질을 나타낸다.
+javascript 영역이 입력되는 값을 판단하여서 메모리에 저장한다.
+JavaScript는 동적 타이핑 언어로 변수의 Type annotation이 필요없이 값이 할
         </p>
     </div>
 </article>
@@ -461,56 +465,6 @@ foo의 property는 name,
     
     
         <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/07/31/js-study-control-flow/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript-Control-Flow" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/07/31/js-study-control-flow/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/JavaScript/">JavaScript</a>
-            </div>
-            <div class="date"><time datetime="2017-07-31T03:54:00.000Z" itemprop="datePublished">2017-07-31</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/07/31/js-study-control-flow/">JavaScript-Control-Flow</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Javascript Control Flow
-1. 블록 구문(Block statement)
-중괄호로 범위가 정해진 구문을 블록 구문이라고 한다.
-
-1234567891011121314151617181920// 함수function foo() &#123;  var x = 1, y = 2;  console.log(x + y);&#125;foo();// 객체리터럴va
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -562,29 +516,25 @@ foo의 property는 name,
     </div>
 </article>
     
-        </div>
-    
 
     
     
     
     
-        <div class="article-row">
-    
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/07/31/js-study-data-type-variable/" class="thumbnail">
+        <a href="/2017/07/31/js-study-control-flow/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Data-Type Variable" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript-Control-Flow" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/07/31/js-study-data-type-variable/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/07/31/js-study-control-flow/">0</span>
     
 </span>
 
@@ -602,17 +552,67 @@ foo의 property는 name,
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/07/31/js-study-data-type-variable/">JavaScript Data-Type Variable</a>
+        <a href="/2017/07/31/js-study-control-flow/">JavaScript-Control-Flow</a>
         </h1>
     
 
         <p class="article-excerpt">
-            Javascript Data type &amp; Variable
+            Javascript Control Flow
+1. 블록 구문(Block statement)
+중괄호로 범위가 정해진 구문을 블록 구문이라고 한다.
 
-변수란?: 메모리 주소에 접근하기 위해 사람이 이해할 수 있는 언어로 지정한 식별자이다.
-자료형은 데이터의 성질을 나타낸다.
-javascript 영역이 입력되는 값을 판단하여서 메모리에 저장한다.
-JavaScript는 동적 타이핑 언어로 변수의 Type annotation이 필요없이 값이 할
+1234567891011121314151617181920// 함수function foo() &#123;  var x = 1, y = 2;  console.log(x + y);&#125;foo();// 객체리터럴va
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/07/31/js-study-operator/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Operator" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/07/31/js-study-operator/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/JavaScript/">JavaScript</a>
+            </div>
+            <div class="date"><time datetime="2017-07-31T03:54:00.000Z" itemprop="datePublished">2017-07-31</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/07/31/js-study-operator/">JavaScript Operator</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            Javascript Operator
+1. 산술 연술자 (Arithmetic Operators)1234567891011121314151617var x = 5;var y = 2;var z;z = x + y;  // 7z = x - y;  // 3z = x * y;  // 10z = x / y;  // 2.5z = x % y;  // 1z = x++;    //
         </p>
     </div>
 </article>
@@ -625,17 +625,17 @@ JavaScript는 동적 타이핑 언어로 변수의 Type annotation이 필요없�
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/07/28/js-study-syntax/" class="thumbnail">
+        <a href="/2017/07/28/js-study-coding/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript-Syntax" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript-Coding" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/07/28/js-study-syntax/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/07/28/js-study-coding/">0</span>
     
 </span>
 
@@ -653,16 +653,19 @@ JavaScript는 동적 타이핑 언어로 변수의 Type annotation이 필요없�
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/07/28/js-study-syntax/">JavaScript-Syntax</a>
+        <a href="/2017/07/28/js-study-coding/">JavaScript-Coding</a>
         </h1>
     
 
         <p class="article-excerpt">
-            Javascript Syntax basics
-1. Hello world
-정적인 HTML을 동적으로 변경할 수 있는 유일한 방법은 js를 사용하는 것이다.
+            Javascript Coding
+1. Computational thinking
+coding은 수행되어져야 하는 명령을 컴퓨터에 전달하는 일종의 커뮤니케이션이다.
+compiler은 인간의 언어를 컴퓨터 언어로 변환시킨다.
+문제 해결 능력 : 요구사항을 명확히 이해한 후 해결과제가 일치하는 능력
 
-1234function myFunction() &#123;  var myHeader = document.getElementById('demo');  myHeader.innerHTML = 'Hello wo
+2. Syntax &amp; Semantics
+컴퓨터가 이해할 
         </p>
     </div>
 </article>
