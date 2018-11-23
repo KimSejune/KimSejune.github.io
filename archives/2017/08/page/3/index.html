@@ -149,17 +149,17 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/08/14/js-study-async/" class="thumbnail">
+        <a href="/2017/08/14/js-study-event/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/event-loop.png)" alt="JavaScript Async" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/event-loop.png)" alt="JavaScript Event" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/14/js-study-async/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/14/js-study-event/">0</span>
     
 </span>
 
@@ -177,16 +177,17 @@
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/14/js-study-async/">JavaScript Async</a>
+        <a href="/2017/08/14/js-study-event/">JavaScript Event</a>
         </h1>
     
 
         <p class="article-excerpt">
-            JavaScript Asynchronous processing model1. 브라우저의 동작 원리2. Ajax
+            JavaScript Event1. Introduction2. 동기식 처리 모델 vs 비동기식 처리 모델
 server에서 ajax를 통해서 데이터를 던지면 그것을 client가 받는 방식을 나타낸다.
 전통적으로는 새로운 HTML을 불러와서 load부터 다시한다.
 현재는 DOM Manipulation(조작)을 통하여서 ajax 통신을 한다.
-서버가 존재
+
+서버가 존재해야한
         </p>
     </div>
 </article>
@@ -257,6 +258,59 @@ DOM이란?
         <article class="article article-summary">
     <div class="article-summary-inner">
         
+        <a href="/2017/08/09/js-study-string/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript String" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/09/js-study-string/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/JavaScript/">JavaScript</a>
+            </div>
+            <div class="date"><time datetime="2017-08-09T03:54:00.000Z" itemprop="datePublished">2017-08-09</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/08/09/js-study-string/">JavaScript String</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            JavaScript String
+1. String Constructor
+String 객체는 String() 생성자 함수를 통해 생성할 수 있다. 이때 전달된 인자는 모두 문자열로 변환된다.
+new를 넣지 않는다면 그냥 문자로만 변환한다.
+
+
+
+12345678var x = 'Lee';var y = new String('Lee');console.log(x ==
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
         <a href="/2017/08/09/js-study-array/" class="thumbnail">
     
     
@@ -300,6 +354,60 @@ Array() // Array 생성자로 생성하며 prototype관계가 성립한다.
 
 
 1.1 배열 리터럴12345678
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/08/09/js-study-regexp/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Regexp" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/09/js-study-regexp/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/JavaScript/">JavaScript</a>
+            </div>
+            <div class="date"><time datetime="2017-08-09T03:54:00.000Z" itemprop="datePublished">2017-08-09</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/08/09/js-study-regexp/">JavaScript Regexp</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            JavaScript Regexp
+1. 정규표현식 (Regulat Expression)
+정규표현식(Regular Expression)은 문자열에서 특정 내용을 찾거나 대체 또는 발췌하는데 사용한다.
+
+12345var tel = '0101234567팔';var myRegExp = /^[0-9]+$/;console.log(myRegExp.test(tel)); /
         </p>
     </div>
 </article>
@@ -369,124 +477,17 @@ Date 생성자를 사용하여 날짜와 시간을 가지는 인스턴스를 생
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/08/09/js-study-string/" class="thumbnail">
+        <a href="/2017/08/08/js-study-built-in-object/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript String" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/09/js-study-string/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/JavaScript/">JavaScript</a>
-            </div>
-            <div class="date"><time datetime="2017-08-09T03:54:00.000Z" itemprop="datePublished">2017-08-09</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/09/js-study-string/">JavaScript String</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            JavaScript String
-1. String Constructor
-String 객체는 String() 생성자 함수를 통해 생성할 수 있다. 이때 전달된 인자는 모두 문자열로 변환된다.
-new를 넣지 않는다면 그냥 문자로만 변환한다.
-
-
-
-12345678var x = 'Lee';var y = new String('Lee');console.log(x ==
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/08/09/js-study-regexp/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Regexp" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/BOM.png)" alt="JavaScript Built In Object" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/09/js-study-regexp/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/JavaScript/">JavaScript</a>
-            </div>
-            <div class="date"><time datetime="2017-08-09T03:54:00.000Z" itemprop="datePublished">2017-08-09</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/09/js-study-regexp/">JavaScript Regexp</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            JavaScript Regexp
-1. 정규표현식 (Regulat Expression)
-정규표현식(Regular Expression)은 문자열에서 특정 내용을 찾거나 대체 또는 발췌하는데 사용한다.
-
-12345var tel = '0101234567팔';var myRegExp = /^[0-9]+$/;console.log(myRegExp.test(tel)); /
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/08/08/js-study-Math/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Math" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/08/js-study-Math/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/08/js-study-built-in-object/">0</span>
     
 </span>
 
@@ -504,20 +505,15 @@ new를 넣지 않는다면 그냥 문자로만 변환한다.
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/08/js-study-Math/">JavaScript Math</a>
+        <a href="/2017/08/08/js-study-built-in-object/">JavaScript Built In Object</a>
         </h1>
     
 
         <p class="article-excerpt">
-            JavaScript Math
-1. Math Property
-정적(static) 프로퍼티로 Math 객체를 생성할 필요없이 Math.propertyName의 형태로 사용한다.
-대문자로 써져있으면 상수이다 즉 변하면 안되는 값이다.
-Math는 생성자 함수가 아닌 객체이다.
-객체라서 prototype이 존재하지 않는다.
+            JavaScript Built In ObjectBuilt-in Object(내장 객체)는 웹페이지 등을 표현하기 위한 공통의 기능을 제공한다.
 
-1.1 Math,PI
-PI 값(π ≈ 3
+Standard Built-in Objects (or Global Objects) 기본적으로 적용되어있는 객체들 (string, array 등등)
+BOM (Browser Object Model) size, hist
         </p>
     </div>
 </article>
@@ -585,56 +581,6 @@ PI 값(π ≈ 3
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/08/08/js-study-standard-built-in-object/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Standard Built In Object" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/08/js-study-standard-built-in-object/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/JavaScript/">JavaScript</a>
-            </div>
-            <div class="date"><time datetime="2017-08-08T03:54:00.000Z" itemprop="datePublished">2017-08-08</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/08/js-study-standard-built-in-object/">JavaScript Standard Built In Object</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            JavaScript Standard Built In Object
-1. Global Object
-전역 객체(Global Object)는 모든 객체의 유일한 최상위 객체를 의미하며 일반적으로 Browser-side에서는 window, Server-side(Node.js)에서는 global 객체를 의미한다.
-
-123456// in browser consoleth
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
         <a href="/2017/08/08/js-study-Number/" class="thumbnail">
     
     
@@ -673,6 +619,60 @@ PI 값(π ≈ 3
 Number 객체는 Number() 생성자 함수를 통해 생성할 수 있다.
 
 123456789new Number(value);var x = new Number(123);var y = new Number('123');var z = new Number('str');console.log(x);
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/08/08/js-study-Math/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Math" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/08/js-study-Math/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/JavaScript/">JavaScript</a>
+            </div>
+            <div class="date"><time datetime="2017-08-08T03:54:00.000Z" itemprop="datePublished">2017-08-08</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/08/08/js-study-Math/">JavaScript Math</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            JavaScript Math
+1. Math Property
+정적(static) 프로퍼티로 Math 객체를 생성할 필요없이 Math.propertyName의 형태로 사용한다.
+대문자로 써져있으면 상수이다 즉 변하면 안되는 값이다.
+Math는 생성자 함수가 아닌 객체이다.
+객체라서 prototype이 존재하지 않는다.
+
+1.1 Math,PI
+PI 값(π ≈ 3
         </p>
     </div>
 </article>
@@ -732,7 +732,7 @@ Number 객체는 Number() 생성자 함수를 통해 생성할 수 있다.
                             <a href="/2018/11/22/graphql-study-inRestAPI/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(/images/graphql.png)" alt="GraphQL을 통하여 Rest API를 감싸보자." class="thumbnail-image"></span>
     
     
 </a>
@@ -752,7 +752,7 @@ Number 객체는 Number() 생성자 함수를 통해 생성할 수 있다.
                             <a href="/2018/11/21/graphql-study/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(/images/graphql.png)" alt="GraphQL" class="thumbnail-image"></span>
     
     
 </a>
