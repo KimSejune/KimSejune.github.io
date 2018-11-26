@@ -18,7 +18,7 @@
 <meta property="og:description" content="Graph QL GraphQL 영상출처 이 예제에서는 영화관 API를 Graph QL을 가지고 만드는 예제이다.  여기서는 graphql- yoga 를 사용하여 더 쉽게 Graph QL을 사용하였다. Graphql을 사용하면 기존의 Rest API를 사용하던 단점인 Over-fetching, Under-fetching을 극복할 수 있다. Over-fetch">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/graphql.png">
-<meta property="og:updated_time" content="2018-11-23T01:15:55.877Z">
+<meta property="og:updated_time" content="2018-11-26T01:16:50.995Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GraphQL">
 <meta name="twitter:description" content="Graph QL GraphQL 영상출처 이 예제에서는 영화관 API를 Graph QL을 가지고 만드는 예제이다.  여기서는 graphql- yoga 를 사용하여 더 쉽게 Graph QL을 사용하였다. Graphql을 사용하면 기존의 Rest API를 사용하던 단점인 Over-fetching, Under-fetching을 극복할 수 있다. Over-fetch">
@@ -188,7 +188,7 @@
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Rest API</span></div><div class="line"></div><div class="line">/feed/</div><div class="line">/noti/</div><div class="line">/users/<span class="number">1</span>/</div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Graph QL</span></div><div class="line">query&#123;</div><div class="line">	feed &#123;</div><div class="line">		comments</div><div class="line">		likeNumber</div><div class="line">	&#125;</div><div class="line">	noti &#123;</div><div class="line">		isRead</div><div class="line">	&#125;</div><div class="line">	user &#123;</div><div class="line">		username</div><div class="line">		profilePic</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="내가-접근한-GraphQL-이해방법"><a href="#내가-접근한-GraphQL-이해방법" class="headerlink" title="내가 접근한 GraphQL 이해방법."></a>내가 접근한 GraphQL 이해방법.</h2><p><b>schema.graphql</b> 에 <code>Query, Mutation을 구현</code>하고 이 파일을 <b>index.js </b><code>typeDefs에 연결</code>을 한다.<br>그 다음 <b>db.js</b> 에서 원하는 값을 만들고 <code>원하는 동작을 schema.graphql에 정의</code>한 후 함수로 생성한다.<br>db.js의 값을 <b>resolver.js</b>에서 받아서 Query, Mutation으로 구현하면 된다.</p>
+<h2 id="내가-접근한-GraphQL-이해방법"><a href="#내가-접근한-GraphQL-이해방법" class="headerlink" title="내가 접근한 GraphQL 이해방법."></a>내가 접근한 GraphQL 이해방법.</h2><p>schema.graphql에 <code>Query, Mutation을 구현</code>하고 이 파일을 index.js <code>typeDefs에 연결</code>을 한다.<br>그 다음 db.js 에서 원하는 값을 만들고 <code>원하는 동작을 resolver.js에 정의</code>한 후 함수로 생성한다.<br>resolver.js에 구현할때 <code>함수명은 schema.graphql에서 정의한 명으로 사용</code>하고 각각의 함수들을 db.js에서 구현한 함수들을 통하여 구현한다.</p>
 <blockquote>
 <p>정보를 조회할경우 Query를 정보의 변경시 Mutation을 사용한다.</p>
 </blockquote>
@@ -204,7 +204,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2018/11/21/graphql-study/" data-id="cjotcso3r00160c6f48a8cqys" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2018/11/21/graphql-study/" data-id="cjoxmhg28001i6j6f5rlak6fj" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
