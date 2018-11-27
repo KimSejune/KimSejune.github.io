@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="Node.js,AWS,Elasticache" />
     
-    <meta name="description" content="Kue file-type을 이용한 파일 형식 감지   Redis In-memory Database   Kue를 이용한 작업 큐 구현   aws-sdk를 통한 AWS S3 사용   Sharp를 이용한 이미지 처리   이미지 처리 라이브러리   express.Router   multer를 이용한 multipart/form-data 처리   파일 업로드 지원">
+    <meta name="description" content="Kue  file-type을 이용한 파일 형식 감지 Redis In-memory Database Kue를 이용한 작업 큐 구현 aws-sdk를 통한 AWS S3 사용 Sharp를 이용한 이미지 처리  이미지 처리 라이브러리   express.Router multer를 이용한 multipart/form-data 처리  파일 업로드 지원   JSDoc  주석">
 <meta name="keywords" content="Node.js,AWS,Elasticache">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node-kue">
 <meta property="og:url" content="http://yoursite.com/2017/10/27/node-study-elasticache/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="Kue file-type을 이용한 파일 형식 감지   Redis In-memory Database   Kue를 이용한 작업 큐 구현   aws-sdk를 통한 AWS S3 사용   Sharp를 이용한 이미지 처리   이미지 처리 라이브러리   express.Router   multer를 이용한 multipart/form-data 처리   파일 업로드 지원">
+<meta property="og:description" content="Kue  file-type을 이용한 파일 형식 감지 Redis In-memory Database Kue를 이용한 작업 큐 구현 aws-sdk를 통한 AWS S3 사용 Sharp를 이용한 이미지 처리  이미지 처리 라이브러리   express.Router multer를 이용한 multipart/form-data 처리  파일 업로드 지원   JSDoc  주석">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/nodejs.png">
 <meta property="og:updated_time" content="2017-12-27T02:59:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node-kue">
-<meta name="twitter:description" content="Kue file-type을 이용한 파일 형식 감지   Redis In-memory Database   Kue를 이용한 작업 큐 구현   aws-sdk를 통한 AWS S3 사용   Sharp를 이용한 이미지 처리   이미지 처리 라이브러리   express.Router   multer를 이용한 multipart/form-data 처리   파일 업로드 지원">
+<meta name="twitter:description" content="Kue  file-type을 이용한 파일 형식 감지 Redis In-memory Database Kue를 이용한 작업 큐 구현 aws-sdk를 통한 AWS S3 사용 Sharp를 이용한 이미지 처리  이미지 처리 라이브러리   express.Router multer를 이용한 multipart/form-data 처리  파일 업로드 지원   JSDoc  주석">
 <meta name="twitter:image" content="http://yoursite.com/images/nodejs.png">
     
 
@@ -172,33 +172,41 @@
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/nodejs.png" alt="nodejs"></p>
-<h1 id="Kue"><a href="#Kue" class="headerlink" title="Kue"></a>Kue</h1><ul>
-<li>file-type을 이용한 파일 형식 감지  </li>
-<li>Redis In-memory Database  </li>
-<li><a href="https://www.npmjs.com/package/kue" target="_blank" rel="external">Kue</a>를 이용한 작업 큐 구현  </li>
-<li>aws-sdk를 통한 AWS S3 사용  </li>
-<li>Sharp를 이용한 이미지 처리  <ul>
+<h1>Kue</h1>
+<ul>
+<li>file-type을 이용한 파일 형식 감지</li>
+<li>Redis In-memory Database</li>
+<li><a href="https://www.npmjs.com/package/kue" target="_blank" rel="external">Kue</a>를 이용한 작업 큐 구현</li>
+<li>aws-sdk를 통한 AWS S3 사용</li>
+<li>Sharp를 이용한 이미지 처리
+<ul>
 <li>이미지 처리 라이브러리</li>
 </ul>
 </li>
-<li>express.Router  </li>
-<li>multer를 이용한 multipart/form-data 처리  <ul>
+<li>express.Router</li>
+<li>multer를 이용한 multipart/form-data 처리
+<ul>
 <li>파일 업로드 지원</li>
 </ul>
 </li>
-<li>JSDoc  <ul>
+<li>JSDoc
+<ul>
 <li>주석을 통한 문서 생성</li>
 </ul>
 </li>
 </ul>
-<h2 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h2><p>Redis는 대표적인 In-memory 데이터베이스입니다. 간단히 key-value 스토어로 사용하거나, 내장된 다양한 자료구조를 사용할 수 있습니다.  </p>
-<h3 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h3><p>macOS의 경우 아래 명령을 통해 설치합니다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">brew install redis</div><div class="line">brew services start redis</div></pre></td></tr></table></figure>
-<h2 id="Kue-1"><a href="#Kue-1" class="headerlink" title="Kue"></a>Kue</h2><p><code>Kue는</code> Node.js 기반 비동기 작업 큐입니다. 데이터 저장과 통신을 위해 Redis를 사용합니다. 주로 CPU 부하가 큰 작업(멀티미디어 처리, PDF 생성 등)을 웹 서버와 분리된 다른 프로세스에서 실행시키기 위한 목적으로 사용됩니다.  </p>
+<h2>Redis</h2>
+<p>Redis는 대표적인 In-memory 데이터베이스입니다. 간단히 key-value 스토어로 사용하거나, 내장된 다양한 자료구조를 사용할 수 있습니다.</p>
+<h3>설치</h3>
+<p>macOS의 경우 아래 명령을 통해 설치합니다.</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">brew install redis</div><div class="line">brew services start redis</div></pre></td></tr></table></figure></p>
+<h2>Kue</h2>
+<p><code>Kue는</code> Node.js 기반 비동기 작업 큐입니다. 데이터 저장과 통신을 위해 Redis를 사용합니다. 주로 CPU 부하가 큰 작업(멀티미디어 처리, PDF 생성 등)을 웹 서버와 분리된 다른 프로세스에서 실행시키기 위한 목적으로 사용됩니다.</p>
 <ul>
 <li><code>어떤 작업을 다른 서버로 넘기기위한 방법이다.</code></li>
 </ul>
-<h2 id="ElastiCache"><a href="#ElastiCache" class="headerlink" title="ElastiCache"></a>ElastiCache</h2><p><code>ElastiCache는</code> AWS에서 제공하는 Redis이다. ElastiCache를 사용할 때에는 <code>const queue = kue.createQueue()</code>안에서 AWS에서 생성한 ElastiCache의 end-point를 설정해야한다.</p>
+<h2>ElastiCache</h2>
+<p><code>ElastiCache는</code> AWS에서 제공하는 Redis이다. ElastiCache를 사용할 때에는 <code>const queue = kue.createQueue()</code>안에서 AWS에서 생성한 ElastiCache의 end-point를 설정해야한다.</p>
 <blockquote>
 <p>ElastiCache를 실행시킬 worker.js를 실행시키기 위해서는 PM2로 실행한다.</p>
 </blockquote>
@@ -209,7 +217,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/10/27/node-study-elasticache/" data-id="cjoxmhg4n00686j6fi8qdajeo" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/10/27/node-study-elasticache/" data-id="cjoz9w4a9006mmt6fn2ob1emg" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -325,7 +333,7 @@
     </a>
     
     
-        <a href="/2017/10/08/node-project-dada-redis/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/10/08/node-project-dada/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
         <p class="article-nav-title">Node-Project</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>

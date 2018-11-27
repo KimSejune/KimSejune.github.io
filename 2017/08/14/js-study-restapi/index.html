@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="JavaScript,RestAPI" />
     
-    <meta name="description" content="JavaScript RestAPI   REST의 기본 원칙을 성실히 지킨 서비스 디자인을 “RESTful”이라고 표현한다.   1. REST API 중심 규칙URI는 자원을 표현하는 데에 집중하고 행위에 대한 정의는 HTTP Method를 통해 하는 것이 REST한 API를 설계하는 중심 규칙이다.    URI는 정보의 자원을 표현해야 한다.리소스명은 동사">
+    <meta name="description" content="JavaScript RestAPI  REST의 기본 원칙을 성실히 지킨 서비스 디자인을 “RESTful”이라고 표현한다. 1. REST API 중심 규칙 URI는 자원을 표현하는 데에 집중하고 행위에 대한 정의는 HTTP Method를 통해 하는 것이 REST한 API를 설계하는 중심 규칙이다.  URI는 정보의 자원을 표현해야 한다. 리소스명은 동사보다는">
 <meta name="keywords" content="JavaScript,RestAPI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript RestAPI">
 <meta property="og:url" content="http://yoursite.com/2017/08/14/js-study-restapi/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="JavaScript RestAPI   REST의 기본 원칙을 성실히 지킨 서비스 디자인을 “RESTful”이라고 표현한다.   1. REST API 중심 규칙URI는 자원을 표현하는 데에 집중하고 행위에 대한 정의는 HTTP Method를 통해 하는 것이 REST한 API를 설계하는 중심 규칙이다.    URI는 정보의 자원을 표현해야 한다.리소스명은 동사">
+<meta property="og:description" content="JavaScript RestAPI  REST의 기본 원칙을 성실히 지킨 서비스 디자인을 “RESTful”이라고 표현한다. 1. REST API 중심 규칙 URI는 자원을 표현하는 데에 집중하고 행위에 대한 정의는 HTTP Method를 통해 하는 것이 REST한 API를 설계하는 중심 규칙이다.  URI는 정보의 자원을 표현해야 한다. 리소스명은 동사보다는">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/restapi.jpeg">
 <meta property="og:updated_time" content="2017-12-27T02:57:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript RestAPI">
-<meta name="twitter:description" content="JavaScript RestAPI   REST의 기본 원칙을 성실히 지킨 서비스 디자인을 “RESTful”이라고 표현한다.   1. REST API 중심 규칙URI는 자원을 표현하는 데에 집중하고 행위에 대한 정의는 HTTP Method를 통해 하는 것이 REST한 API를 설계하는 중심 규칙이다.    URI는 정보의 자원을 표현해야 한다.리소스명은 동사">
+<meta name="twitter:description" content="JavaScript RestAPI  REST의 기본 원칙을 성실히 지킨 서비스 디자인을 “RESTful”이라고 표현한다. 1. REST API 중심 규칙 URI는 자원을 표현하는 데에 집중하고 행위에 대한 정의는 HTTP Method를 통해 하는 것이 REST한 API를 설계하는 중심 규칙이다.  URI는 정보의 자원을 표현해야 한다. 리소스명은 동사보다는">
 <meta name="twitter:image" content="http://yoursite.com/images/restapi.jpeg">
     
 
@@ -171,40 +171,96 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="JavaScript-RestAPI"><a href="#JavaScript-RestAPI" class="headerlink" title="JavaScript RestAPI"></a>JavaScript RestAPI</h1><p><img src="/images/restapi.jpeg" alt="REST API">  </p>
-<p>REST의 기본 원칙을 성실히 지킨 서비스 디자인을 “RESTful”이라고 표현한다.  </p>
-<h2 id="1-REST-API-중심-규칙"><a href="#1-REST-API-중심-규칙" class="headerlink" title="1. REST API 중심 규칙"></a>1. REST API 중심 규칙</h2><p>URI는 자원을 표현하는 데에 집중하고 행위에 대한 정의는 HTTP Method를 통해 하는 것이 REST한 API를 설계하는 중심 규칙이다.  </p>
+            <h1>JavaScript RestAPI</h1>
+<p><img src="/images/restapi.jpeg" alt="REST API"></p>
+<p>REST의 기본 원칙을 성실히 지킨 서비스 디자인을 “RESTful”이라고 표현한다.</p>
+<h2>1. REST API 중심 규칙</h2>
+<p>URI는 자원을 표현하는 데에 집중하고 행위에 대한 정의는 HTTP Method를 통해 하는 것이 REST한 API를 설계하는 중심 규칙이다.</p>
 <ol>
-<li>URI는 정보의 자원을 표현해야 한다.<br>리소스명은 동사보다는 명사를 사용한다. URI는 자원을 표현하는데 중점을 두어야 한다.  </li>
+<li>URI는 정보의 자원을 표현해야 한다.<br>
+리소스명은 동사보다는 명사를 사용한다. URI는 자원을 표현하는데 중점을 두어야 한다.</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># good</span></div><div class="line">GET /books/1</div></pre></td></tr></table></figure>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># good</span></div><div class="line">GET /books/1</div></pre></td></tr></table></figure></p>
 <blockquote>
-<p>URI = 통합 자원 식별자(Uniform Resource Identifier, URI)는 인터넷에 있는 자원을 나타내는 유일한 주소이다.  </p>
+<p>URI = 통합 자원 식별자(Uniform Resource Identifier, URI)는 인터넷에 있는 자원을 나타내는 유일한 주소이다.</p>
 </blockquote>
-<ol>
+<ol start="2">
 <li>자원에 대한 행위는 HTTP Method(GET, POST, PUT, DELETE 등)으로 표현한다.</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># good</span></div><div class="line">DELETE /books/1</div></pre></td></tr></table></figure>
-<h2 id="2-HTTP-Method"><a href="#2-HTTP-Method" class="headerlink" title="2. HTTP Method"></a>2. HTTP Method</h2><table><br>  <tr><br>    <th>Method</th><br>    <th>Action</th><br>    <th>역할</th><br>  </tr><br>  <tr><br>    <td>GET</td><br>    <td>index/retrieve</td><br>    <td>모든/특정 리소스를 조회</td><br>  </tr><br>  <tr><br>    <td>POST</td><br>    <td>create</td><br>    <td>리소스를 생성</td><br>  </tr><br>  <tr><br>    <td>PUT</td><br>    <td>update</td><br>    <td>리소스를 갱신</td><br>  </tr><br>  <tr><br>    <td>DELETE</td><br>    <td>delete</td><br>    <td>리소스를 삭제</td><br>  </tr><br></table> 
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># good</span></div><div class="line">DELETE /books/1</div></pre></td></tr></table></figure></p>
+<h2>2. HTTP Method</h2>
+<p>&lt;table&gt;
+&lt;tr&gt;
+&lt;th&gt;Method&lt;/th&gt;
+&lt;th&gt;Action&lt;/th&gt;
+&lt;th&gt;역할&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;GET&lt;/td&gt;
+&lt;td&gt;index/retrieve&lt;/td&gt;
+&lt;td&gt;모든/특정 리소스를 조회&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;POST&lt;/td&gt;
+&lt;td&gt;create&lt;/td&gt;
+&lt;td&gt;리소스를 생성&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PUT&lt;/td&gt;
+&lt;td&gt;update&lt;/td&gt;
+&lt;td&gt;리소스를 갱신&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DELETE&lt;/td&gt;
+&lt;td&gt;delete&lt;/td&gt;
+&lt;td&gt;리소스를 삭제&lt;/td&gt;
+&lt;/tr&gt;<br>
+&lt;/table&gt;</p>
+<h2>3. REST API의 구성</h2>
+<p>REST API는 자원(Resource), 행위(Verb), 표현(Representations)의 3가지 요소로 구성된다.</p>
+<p>&lt;table&gt;
+&lt;tr&gt;
+&lt;th&gt;구성 요소&lt;/th&gt;
+&lt;th&gt;내용&lt;/th&gt;
+&lt;th&gt;표현 방법&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Resource&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;HTTP URI&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Verb&lt;/td&gt;
+&lt;td&gt;자원에 대한 행위&lt;/td&gt;
+&lt;td&gt;HTTP Method&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Representations&lt;/td&gt;
+&lt;td&gt;자원에 대한 행위의 내용&lt;/td&gt;
+&lt;td&gt;HTTP Message Pay Load&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</p>
+<h2>4. Rest API의 Example</h2>
+<h3>4.1 PUT</h3>
+<p>books 리소스에서 특정 책을 조회(retrieve)한다.</p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> req = <span class="keyword">new</span> XMLHttpRequest()</div><div class="line">req.open(<span class="string">'GET'</span>, <span class="string">'/books/1'</span>)</div><div class="line">req.send()</div></pre></td></tr></table></figure></p>
+<h3>4.2 POST</h3>
+<p>books 리소스에 책을 생성한다.</p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> req = <span class="keyword">new</span> XMLHttpRequest()</div><div class="line">req.open(<span class="string">'POST'</span>, <span class="string">'/books'</span>)</div><div class="line">req.setRequestHeader(<span class="string">'Content-type'</span>, <span class="string">'application/json'</span>)</div><div class="line">req.send(<span class="built_in">JSON</span>.stringify(&#123;</div><div class="line">  title: <span class="string">"ES6"</span>,</div><div class="line">  author: <span class="string">"kim"</span></div><div class="line">&#125;))</div></pre></td></tr></table></figure></p>
+<h3>4.3 PUT</h3>
+<p>books 리소스의 책의 타이틀을 “ES6”에서 “ECMAScript6”로 갱신한다.</p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> req = <span class="keyword">new</span> XMLHttpRequest()</div><div class="line">req.open(<span class="string">'PUT'</span>, <span class="string">'books/1'</span>)</div><div class="line">req.setRequestHeader(<span class="string">'Content-type'</span>, <span class="string">'application/json'</span>)</div><div class="line">req.send(<span class="built_in">JSON</span>.stringify(&#123;</div><div class="line">  title:<span class="string">'ecamscript6'</span>,</div><div class="line">  author:<span class="string">'kim'</span></div><div class="line">&#125;))</div></pre></td></tr></table></figure></p>
+<h3>4.4 DELETE</h3>
+<p>books 리소스에서 책을 삭제한다.</p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> req = <span class="keyword">new</span> XMLHttpRequest()</div><div class="line">req.open(<span class="string">'DELETE'</span>, <span class="string">'books/1'</span>)</div><div class="line">req.send()</div></pre></td></tr></table></figure></p>
 
-<h2 id="3-REST-API의-구성"><a href="#3-REST-API의-구성" class="headerlink" title="3. REST API의 구성"></a>3. REST API의 구성</h2><p>REST API는 자원(Resource), 행위(Verb), 표현(Representations)의 3가지 요소로 구성된다.  </p>
-<table><br>  <tr><br>    <th>구성 요소</th><br>    <th>내용</th><br>    <th>표현 방법</th><br>  </tr><br>  <tr><br>    <td>Resource</td><br>    <td></td><br>    <td>HTTP URI</td><br>  </tr><br>  <tr><br>    <td>Verb</td><br>    <td>자원에 대한 행위</td><br>    <td>HTTP Method</td><br>  </tr><br>  <tr><br>    <td>Representations</td><br>    <td>자원에 대한 행위의 내용</td><br>    <td>HTTP Message Pay Load</td><br>  </tr><br></table>
-
-<h2 id="4-Rest-API의-Example"><a href="#4-Rest-API의-Example" class="headerlink" title="4. Rest API의 Example"></a>4. Rest API의 Example</h2><h3 id="4-1-PUT"><a href="#4-1-PUT" class="headerlink" title="4.1 PUT"></a>4.1 PUT</h3><p>books 리소스에서 특정 책을 조회(retrieve)한다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> req = <span class="keyword">new</span> XMLHttpRequest()</div><div class="line">req.open(<span class="string">'GET'</span>, <span class="string">'/books/1'</span>)</div><div class="line">req.send()</div></pre></td></tr></table></figure>
-<h3 id="4-2-POST"><a href="#4-2-POST" class="headerlink" title="4.2 POST"></a>4.2 POST</h3><p>books 리소스에 책을 생성한다.  </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> req = <span class="keyword">new</span> XMLHttpRequest()</div><div class="line">req.open(<span class="string">'POST'</span>, <span class="string">'/books'</span>)</div><div class="line">req.setRequestHeader(<span class="string">'Content-type'</span>, <span class="string">'application/json'</span>)</div><div class="line">req.send(<span class="built_in">JSON</span>.stringify(&#123;</div><div class="line">  title: <span class="string">"ES6"</span>,</div><div class="line">  author: <span class="string">"kim"</span></div><div class="line">&#125;))</div></pre></td></tr></table></figure>
-<h3 id="4-3-PUT"><a href="#4-3-PUT" class="headerlink" title="4.3 PUT"></a>4.3 PUT</h3><p>books 리소스의 책의 타이틀을 “ES6”에서 “ECMAScript6”로 갱신한다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> req = <span class="keyword">new</span> XMLHttpRequest()</div><div class="line">req.open(<span class="string">'PUT'</span>, <span class="string">'books/1'</span>)</div><div class="line">req.setRequestHeader(<span class="string">'Content-type'</span>, <span class="string">'application/json'</span>)</div><div class="line">req.send(<span class="built_in">JSON</span>.stringify(&#123;</div><div class="line">  title:<span class="string">'ecamscript6'</span>,</div><div class="line">  author:<span class="string">'kim'</span></div><div class="line">&#125;))</div></pre></td></tr></table></figure>
-<h3 id="4-4-DELETE"><a href="#4-4-DELETE" class="headerlink" title="4.4 DELETE"></a>4.4 DELETE</h3><p>books 리소스에서 책을 삭제한다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> req = <span class="keyword">new</span> XMLHttpRequest()</div><div class="line">req.open(<span class="string">'DELETE'</span>, <span class="string">'books/1'</span>)</div><div class="line">req.send()</div></pre></td></tr></table></figure>
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://yoursite.com/2017/08/14/js-study-restapi/" data-id="cjoxmhg3y00536j6f9tldppdo" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/08/14/js-study-restapi/" data-id="cjoz9w49p005hmt6fwgmvy9xv" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -309,20 +365,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/08/14/js-study-ajax/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2017/08/15/js-study-jquery-ajax-json/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            JavaScript Ajax
+            JavaScript jquery Ajax
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2017/08/14/js-study-dom/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/08/14/js-study-event/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">JavaScript Dom</p>
+        <p class="article-nav-title">JavaScript Event</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     

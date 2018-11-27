@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="Algorithm,하샤드수" />
     
-    <meta name="description" content="하샤드수 입력된 값의 자리수의 합으로 나눴을 경우 나누어지는 경우를 하샤드수라고 한다.  입력된 값의 모든 자리수를 더해서 나눴을때 나누어 떨어지면 true, 아니면 false를 반환하라.  12345678910111213141516171819202122package harshadnumber;public class HarshadNumber &amp;#123;		p">
+    <meta name="description" content="하샤드수  입력된 값의 자리수의 합으로 나눴을 경우 나누어지는 경우를 하샤드수라고 한다.  입력된 값의 모든 자리수를 더해서 나눴을때 나누어 떨어지면 true, 아니면 false를 반환하라.  12345678910111213141516171819202122package harshadnumber;public class HarshadNumber &amp;#123;">
 <meta name="keywords" content="Algorithm,하샤드수">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Algorithm 하샤드수">
 <meta property="og:url" content="http://yoursite.com/2017/12/10/algorithm-study-HarshadNumber/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="하샤드수 입력된 값의 자리수의 합으로 나눴을 경우 나누어지는 경우를 하샤드수라고 한다.  입력된 값의 모든 자리수를 더해서 나눴을때 나누어 떨어지면 true, 아니면 false를 반환하라.  12345678910111213141516171819202122package harshadnumber;public class HarshadNumber &amp;#123;		p">
+<meta property="og:description" content="하샤드수  입력된 값의 자리수의 합으로 나눴을 경우 나누어지는 경우를 하샤드수라고 한다.  입력된 값의 모든 자리수를 더해서 나눴을때 나누어 떨어지면 true, 아니면 false를 반환하라.  12345678910111213141516171819202122package harshadnumber;public class HarshadNumber &amp;#123;">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/algo.jpeg">
 <meta property="og:updated_time" content="2017-12-10T12:45:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Algorithm 하샤드수">
-<meta name="twitter:description" content="하샤드수 입력된 값의 자리수의 합으로 나눴을 경우 나누어지는 경우를 하샤드수라고 한다.  입력된 값의 모든 자리수를 더해서 나눴을때 나누어 떨어지면 true, 아니면 false를 반환하라.  12345678910111213141516171819202122package harshadnumber;public class HarshadNumber &amp;#123;		p">
+<meta name="twitter:description" content="하샤드수  입력된 값의 자리수의 합으로 나눴을 경우 나누어지는 경우를 하샤드수라고 한다.  입력된 값의 모든 자리수를 더해서 나눴을때 나누어 떨어지면 true, 아니면 false를 반환하라.  12345678910111213141516171819202122package harshadnumber;public class HarshadNumber &amp;#123;">
 <meta name="twitter:image" content="http://yoursite.com/images/algo.jpeg">
     
 
@@ -171,12 +171,13 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="하샤드수"><a href="#하샤드수" class="headerlink" title="하샤드수"></a>하샤드수</h1><p><img src="/images/algo.jpeg" alt="algo"></p>
+            <h1>하샤드수</h1>
+<p><img src="/images/algo.jpeg" alt="algo"></p>
 <p>입력된 값의 자리수의 합으로 나눴을 경우 나누어지는 경우를 하샤드수라고 한다.</p>
 <ul>
 <li>입력된 값의 모든 자리수를 더해서 나눴을때 나누어 떨어지면 true, 아니면 false를 반환하라.</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> harshadnumber;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HarshadNumber</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isHarshad</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</div><div class="line">		<span class="keyword">int</span> answer = num;</div><div class="line">		<span class="keyword">int</span> sum = <span class="number">0</span>;</div><div class="line">		<span class="keyword">boolean</span> flag = <span class="keyword">true</span>;</div><div class="line">		<span class="keyword">while</span>(num &gt; <span class="number">0</span>) &#123;</div><div class="line">			sum += num%<span class="number">10</span>;</div><div class="line">			num = num/<span class="number">10</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="comment">// 3항연산자를 사용하여서 조금 더 간편하게 사용.</span></div><div class="line">		flag = answer%sum == <span class="number">0</span> ? <span class="keyword">true</span> : <span class="keyword">false</span>; </div><div class="line">		<span class="keyword">return</span> flag;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		HarshadNumber hm = <span class="keyword">new</span> HarshadNumber();</div><div class="line">		</div><div class="line">		System.out.println(hm.isHarshad(<span class="number">18</span>));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> harshadnumber;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HarshadNumber</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isHarshad</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</div><div class="line">		<span class="keyword">int</span> answer = num;</div><div class="line">		<span class="keyword">int</span> sum = <span class="number">0</span>;</div><div class="line">		<span class="keyword">boolean</span> flag = <span class="keyword">true</span>;</div><div class="line">		<span class="keyword">while</span>(num &gt; <span class="number">0</span>) &#123;</div><div class="line">			sum += num%<span class="number">10</span>;</div><div class="line">			num = num/<span class="number">10</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="comment">// 3항연산자를 사용하여서 조금 더 간편하게 사용.</span></div><div class="line">		flag = answer%sum == <span class="number">0</span> ? <span class="keyword">true</span> : <span class="keyword">false</span>; </div><div class="line">		<span class="keyword">return</span> flag;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		HarshadNumber hm = <span class="keyword">new</span> HarshadNumber();</div><div class="line">		</div><div class="line">		System.out.println(hm.isHarshad(<span class="number">18</span>));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
         </div>
         <footer class="article-footer">
@@ -184,7 +185,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/12/10/algorithm-study-HarshadNumber/" data-id="cjoxmhg1e00056j6f6h56x78a" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/12/10/algorithm-study-HarshadNumber/" data-id="cjoz9w4770004mt6fake5n1v8" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -289,11 +290,11 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/12/11/Reactjs-study-syntax/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2017/12/11/algorithm-study-getminsum/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            React Syntax
+            Algorithm 최소값 만들기
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>

@@ -149,17 +149,17 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/09/05/node-study-cors/" class="thumbnail">
+        <a href="/2017/09/05/node-study-jwt/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/cors.png)" alt="Node-CORS" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/jwt.png)" alt="Node-jwt" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/05/node-study-cors/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/05/node-study-jwt/">0</span>
     
 </span>
 
@@ -177,16 +177,22 @@
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/09/05/node-study-cors/">Node-CORS</a>
+        <a href="/2017/09/05/node-study-jwt/">Node-jwt</a>
         </h1>
     
 
         <p class="article-excerpt">
             
-Node CORS보내는쪽과 받는쪽의 Domain이 다를때 발생하는 문제
-Some-origin Plicy(동일 출처 정책)
-웹페이지에서 리소스를 불러올 때, 리소스의 출처가 웹페이지의 출처와 같으면 안전하다고 보고, 출처가 다르면 해당 리소스는 안전하지 않다고 보는 원칙
-여기서 &#39;출처&#39;란 &#39;프로토콜 + 도메인 + 포트번호&#39;의 결
+Node JWT
+쿠키의 단점
+
+쿠키를 지원하는 클라이언트에서 밖에 사용할 수 없음
+적절히 관리되지 않은 쿠키는 보안에 취약하며, 관리를 하려고 해도 CORS 대응이 복잡함
+
+Token Based Auth
+
+토큰이란, 사용자의 자격증명(아이디, 패스워드 등)을 통해 인증이 이루어진 후, 특정 자원에 대한 자격증명으로서 대신 사용되는 인증 수단
+서버에 요청을
         </p>
     </div>
 </article>
@@ -233,125 +239,16 @@ Some-origin Plicy(동일 출처 정책)
 
         <p class="article-excerpt">
             
-Node Fetch APIFetch API
-웹 브라우저의 XMLHttpRequest를 대체하기 위해 만들어진 새로운 HTTP client 표준  
-비교적 최근에 도입되어 IE 및 구형 안드로이드 브라우저(4.x)는 지원하지 않음  
-Fetch Polyfill  
-최신기술로써 지원하지 않는 브라우저가 많지만 Fetch Polyfill을 사용하면 사용가능하다
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
+Node Fetch API
+Fetch API
 
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/09/04/node-study-node-Express-Middleware/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/middle.jpg)" alt="Node-Express-Middleware" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/04/node-study-node-Express-Middleware/">0</span>
-    
-</span>
+웹 브라우저의 XMLHttpRequest를 대체하기 위해 만들어진 새로운 HTTP client 표준
+비교적 최근에 도입되어 IE 및 구형 안드로이드 브라우저(4.x)는 지원하지 않음
+Fetch Polyfill
+
+최신기술로써 지원하지 않는 브라우저가 많지만 Fetch Polyfill을 사용하면 사용가능하다.
 
 
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a>
-            </div>
-            <div class="date"><time datetime="2017-09-04T03:54:00.000Z" itemprop="datePublished">2017-09-04</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/09/04/node-study-node-Express-Middleware/">Node-Express-Middleware</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-Node Express MiddlewareMiddleware?1234567// 미들웨어 = 함수function helloMiddleware(res, req, next) &#123;  console.log('hello')  next()&#125;app.use(helloMiddleware)
-
-요청이 발생할 때 마다 console.log(‘hello’)가 나타
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/09/04/node-study-node-cookie/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/nodejs.png)" alt="Node-Cookie" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/04/node-study-node-cookie/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a>
-            </div>
-            <div class="date"><time datetime="2017-09-04T03:54:00.000Z" itemprop="datePublished">2017-09-04</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/09/04/node-study-node-cookie/">Node-Cookie</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-Node Cookie쿠키의 필요성
-개별 클라이언트의 여러 요청에 걸친 정보의 유지
-장바구니
-로그인/로그아웃
-방문 기록
-
-
-
-HTTP Cookie
-서버가 응답을 통해 웹 브라우저에 저장하는 이름+값 형태의 정보
-웹 브라우저는 쿠키를 저장하기 위한 저장소를 가지고 있음
-저장소는 자료의 유효기간과 접근 권한에 대한 다양한 옵션을 제공
-
-쿠키 전송 절차
-서버는 
         </p>
     </div>
 </article>
@@ -402,15 +299,23 @@ HTTP Cookie
 
         <p class="article-excerpt">
             
-Node SessionSession사전적 의미
+Node Session
+Session
+사전적 의미
+
 (특정한 활동을 위한) 시간
 (의회 등의)회기; (법정의) 개정 (기간)
 
-실질적 의미시작 조건과 종료조건이 있는 시간, 또는 회기정보 교환이 지속되는 시간, 또는 회기
+실질적 의미
+시작 조건과 종료조건이 있는 시간, 또는 회기
+정보 교환이 지속되는 시간, 또는 회기
 세션의 예
-HTTP session요청 - 응답  
 
-클라이언트가 TCP 연결을 수립합니다(또는 전송 계층이 TCP가 아닌 다른 적당한 연결로
+
+HTTP session
+요청 - 응답
+
+클라이언트가 TCP 연결을 수립합니다(또는 전송 계층이 TCP가 아닌 다른 적
         </p>
     </div>
 </article>
@@ -419,6 +324,75 @@ HTTP session요청 - 응답
     
     
     
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/09/04/node-study-node-cookie/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/nodejs.png)" alt="Node-Cookie" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/04/node-study-node-cookie/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a>
+            </div>
+            <div class="date"><time datetime="2017-09-04T03:54:00.000Z" itemprop="datePublished">2017-09-04</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/09/04/node-study-node-cookie/">Node-Cookie</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            
+Node Cookie
+쿠키의 필요성
+
+개별 클라이언트의 여러 요청에 걸친 정보의 유지
+
+장바구니
+로그인/로그아웃
+방문 기록
+
+
+
+HTTP Cookie
+
+서버가 응답을 통해 웹 브라우저에 저장하는 이름+값 형태의 정보
+웹 브라우저는 쿠키를 저장하기 위한 저장소를 가지고 있음
+저장소는 자료의 유효기간과 접근 권한에 대한 다양한 옵션을 제공
+
+쿠키 전송 절차
+
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -456,12 +430,64 @@ HTTP session요청 - 응답
     
 
         <p class="article-excerpt">
-            Git 으로 배포하기  
+            Git 으로 배포하기
 
-Repository를 새로 만든다.  
-Portfolio를 만드는데 안에 플젝(a, b)을 넣을때는 index.html이 존재해야하며 상대경로로 이루어져야한다.  
-terminal로 이동하여서 portfolio로 이동 후 git init,   add,  commit을 순차적으로 한다.   
-Git remote add origin 
+
+Repository를 새로 만든다.
+Portfolio를 만드는데 안에 플젝(a, b)을 넣을때는 index.html이 존재해야하며 상대경로로 이루어져야한다.
+terminal로 이동하여서 portfolio로 이동 후 git init,   add,  commit을 순차적으로 한다.
+Git remote add origin (portfol
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/09/04/node-study-node-Express-Middleware/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/middle.jpg)" alt="Node-Express-Middleware" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/04/node-study-node-Express-Middleware/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a>
+            </div>
+            <div class="date"><time datetime="2017-09-04T03:54:00.000Z" itemprop="datePublished">2017-09-04</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/09/04/node-study-node-Express-Middleware/">Node-Express-Middleware</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            
+Node Express Middleware
+Middleware?
+1234567// 미들웨어 = 함수function helloMiddleware(res, req, next) &#123;  console.log('hello')  next()&#125;app.use(helloMiddleware)
+
+요청이 발생할 때 마다 console.log('hello')가 
         </p>
     </div>
 </article>
@@ -512,8 +538,10 @@ Git remote add origin
 
         <p class="article-excerpt">
             Javascript ES6 Data Structure
-Data Structures in Web DevelopmentArray &amp; Hash(Dictionary) - indexing post
-123456789101112in RDB[articleId, title, body, userId, view][&#123;	userId: 1,	articleId: 1,
+
+Data Structures in Web Development
+Array &amp; Hash(Dictionary) - indexing post
+123456789101112in RDB[articleId, title, body, userId, view][&#123;	userId: 1,	articleId: 
         </p>
     </div>
 </article>
@@ -522,6 +550,79 @@ Data Structures in Web DevelopmentArray &amp; Hash(Dictionary) - indexing post
     
     
     
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/08/30/node-study-service-develope/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/node-banner.jpg)" alt="Node-Service-Develop" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/30/node-study-service-develope/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a>
+            </div>
+            <div class="date"><time datetime="2017-08-30T03:54:00.000Z" itemprop="datePublished">2017-08-30</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/08/30/node-study-service-develope/">Node-Service-Develop</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            
+Node Service Develop
+URL Shortener
+
+goo.gl
+bit.ly
+urlo.cc
+
+요구사항
+
+긴 URL을 짧은 URL로 변경하는 것은 한 명의 관리자만 만들 수 있음
+짧은 URL은 누구나 이용할 수 있음
+
+시나리오 설계
+화면 설계
+데이터 설계
+프로젝트 세팅
+
+npm init -y
+.gitignore 추가
+
+Express 앱 세팅
+
+
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -560,82 +661,22 @@ Data Structures in Web DevelopmentArray &amp; Hash(Dictionary) - indexing post
 
         <p class="article-excerpt">
             
-Node Web FormHTML FormHTML form의 기본 동작HTML form을 전송하면, 입력된 정보가 기본적으로 percent encoding 되어 요청됨
-
-GET method  
-
-이름=값 형식으로 간다.12GET /search?query=%EA%B0%9C&amp;sort=latest HTTP/1.1...
-
+Node Web Form
+HTML Form
+HTML form의 기본 동작
+HTML form을 전송하면, 입력된 정보가 기본적으로 percent encoding 되어 요청됨
 
 
-Post method  
+GET method
 
-이름
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/08/30/node-study-service-develope/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/node-banner.jpg)" alt="Node-Service-Develop" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/30/node-study-service-develope/">0</span>
-    
-</span>
+이름=값 형식으로 간다.
+12GET /search?query=%EA%B0%9C&amp;sort=latest HTTP/1.1...
 
 
-    
-</a>
 
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a>
-            </div>
-            <div class="date"><time datetime="2017-08-30T03:54:00.000Z" itemprop="datePublished">2017-08-30</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/30/node-study-service-develope/">Node-Service-Develop</a>
-        </h1>
-    
+Post method
 
-        <p class="article-excerpt">
-              
-Node Service DevelopURL Shortener
-goo.gl
-bit.ly
-urlo.cc
-
-요구사항
-긴 URL을 짧은 URL로 변경하는 것은 한 명의 관리자만 만들 수 있음  
-짧은 URL은 누구나 이용할 수 있음  
-
-시나리오 설계화면 설계데이터 설계프로젝트 세팅
-npm init -y 
-.gitignore 추가
-
-Express 앱 세팅
-n
+이
         </p>
     </div>
 </article>
@@ -648,17 +689,17 @@ n
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/08/29/node-study-http/" class="thumbnail">
+        <a href="/2017/08/29/node-study-express/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/http.png)" alt="Node-Http" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/express.jpg)" alt="Node-Express" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/29/node-study-http/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/29/node-study-express/">0</span>
     
 </span>
 
@@ -676,25 +717,24 @@ n
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/29/node-study-http/">Node-Http</a>
+        <a href="/2017/08/29/node-study-express/">Node-Express</a>
         </h1>
     
 
         <p class="article-excerpt">
-            
-HTTP History APIHTTP History API
-history.back()
-window.history.back();
+            Node Express
 
-history.forward()
-window.history.forward();
+실습환경
+Glitch Tutorial
+나의 Glitch
+Express
 
-history.go()
-히스토리에서 특정 위치로 가기
+Node.js 생태계에서 가장 널리 쓰이는 웹 프레임워크
+내장하고 있는 기능은 매우 적으나, 미들웨어를 주입하는 방식으로 기능을 확장하는 생태계를 가지고 있음
+공식 매뉴얼 한국어 번역
 
-history.pushState()
-히스토리 엔트리의 추가 및 변경
-이 메서드들은 windo
+Express 앱의 기본 구조
+12345678910111213141516//
         </p>
     </div>
 </article>

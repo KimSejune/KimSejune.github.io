@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="PlayNode" />
     
-    <meta name="description" content="Play Node 발표내용 정리 GraphQL + Relay + Serverless필요한 리소스만 요청하고 사용하는 API 만들기장바구니 개발시 Component : cart, proudectlist, productdata 등등단점 : 모바일에서 네트워크 콜을 4가지를 해야하는데 이것이 네트워크가 안좋을때 받기가 힘들다.해결법 : queryString? =">
+    <meta name="description" content="Play Node 발표내용 정리  GraphQL + Relay + Serverless 필요한 리소스만 요청하고 사용하는 API 만들기 장바구니 개발시 Component : cart, proudectlist, productdata 등등 단점 : 모바일에서 네트워크 콜을 4가지를 해야하는데 이것이 네트워크가 안좋을때 받기가 힘들다. 해결법 : queryStri">
 <meta name="keywords" content="PlayNode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node Developer Connect">
 <meta property="og:url" content="http://yoursite.com/2017/11/09/conference-node-developer-connect/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="Play Node 발표내용 정리 GraphQL + Relay + Serverless필요한 리소스만 요청하고 사용하는 API 만들기장바구니 개발시 Component : cart, proudectlist, productdata 등등단점 : 모바일에서 네트워크 콜을 4가지를 해야하는데 이것이 네트워크가 안좋을때 받기가 힘들다.해결법 : queryString? =">
+<meta property="og:description" content="Play Node 발표내용 정리  GraphQL + Relay + Serverless 필요한 리소스만 요청하고 사용하는 API 만들기 장바구니 개발시 Component : cart, proudectlist, productdata 등등 단점 : 모바일에서 네트워크 콜을 4가지를 해야하는데 이것이 네트워크가 안좋을때 받기가 힘들다. 해결법 : queryStri">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/playnode.jpeg">
 <meta property="og:updated_time" content="2017-12-22T02:21:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node Developer Connect">
-<meta name="twitter:description" content="Play Node 발표내용 정리 GraphQL + Relay + Serverless필요한 리소스만 요청하고 사용하는 API 만들기장바구니 개발시 Component : cart, proudectlist, productdata 등등단점 : 모바일에서 네트워크 콜을 4가지를 해야하는데 이것이 네트워크가 안좋을때 받기가 힘들다.해결법 : queryString? =">
+<meta name="twitter:description" content="Play Node 발표내용 정리  GraphQL + Relay + Serverless 필요한 리소스만 요청하고 사용하는 API 만들기 장바구니 개발시 Component : cart, proudectlist, productdata 등등 단점 : 모바일에서 네트워크 콜을 4가지를 해야하는데 이것이 네트워크가 안좋을때 받기가 힘들다. 해결법 : queryStri">
 <meta name="twitter:image" content="http://yoursite.com/images/playnode.jpeg">
     
 
@@ -171,43 +171,62 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="Play-Node-발표내용-정리"><a href="#Play-Node-발표내용-정리" class="headerlink" title="Play Node 발표내용 정리"></a>Play Node 발표내용 정리</h1><p><img src="/images/playnode.jpeg" alt="playnode"></p>
-<h1 id="GraphQL-Relay-Serverless"><a href="#GraphQL-Relay-Serverless" class="headerlink" title="GraphQL + Relay + Serverless"></a>GraphQL + Relay + Serverless</h1><h2 id="필요한-리소스만-요청하고-사용하는-API-만들기"><a href="#필요한-리소스만-요청하고-사용하는-API-만들기" class="headerlink" title="필요한 리소스만 요청하고 사용하는 API 만들기"></a>필요한 리소스만 요청하고 사용하는 API 만들기</h2><p>장바구니 개발시 Component : cart, proudectlist, productdata 등등<br>단점 : 모바일에서 네트워크 콜을 4가지를 해야하는데 이것이 네트워크가 안좋을때 받기가 힘들다.<br>해결법 : queryString? =&gt; 장기적 개발이 힘들다.<br>해결법 : custom된 endpoint를 생성한다 기기별로(모바일, 웹 등등) =&gt; 여러개의 엔드포인트를 만들기에는 문제가 있다.<br>해결법 : BFF(soundcloud) 모바일을 위해 최적화된 endpoint를 만들어준다. =&gt; 고객마다 needs가 달라서 어렵다.  </p>
+            <h1>Play Node 발표내용 정리</h1>
+<p><img src="/images/playnode.jpeg" alt="playnode"></p>
+<h1>GraphQL + Relay + Serverless</h1>
+<h2>필요한 리소스만 요청하고 사용하는 API 만들기</h2>
+<p>장바구니 개발시 Component : cart, proudectlist, productdata 등등<br>
+단점 : 모바일에서 네트워크 콜을 4가지를 해야하는데 이것이 네트워크가 안좋을때 받기가 힘들다.<br>
+해결법 : queryString? =&gt; 장기적 개발이 힘들다.<br>
+해결법 : custom된 endpoint를 생성한다 기기별로(모바일, 웹 등등) =&gt; 여러개의 엔드포인트를 만들기에는 문제가 있다.<br>
+해결법 : BFF(soundcloud) 모바일을 위해 최적화된 endpoint를 만들어준다. =&gt; 고객마다 needs가 달라서 어렵다.</p>
 <blockquote>
-<p>BFF? 프론트엔드를 중심으로 백엔드가 들어간다.  </p>
+<p>BFF? 프론트엔드를 중심으로 백엔드가 들어간다.</p>
 </blockquote>
 <p>최고의 해결법 : GraphQL =&gt; <code>A Query Language for API</code> API를 위한 질의 언어</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 요청</span></div><div class="line">&#123;</div><div class="line">  me &#123;</div><div class="line">    name: ,</div><div class="line">    company:</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 응답</span></div><div class="line">&#123;</div><div class="line">  me &#123;</div><div class="line">    name: <span class="string">"김세준"</span>,</div><div class="line">    company: <span class="string">"학생"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 해당유저의 정보만 요청가능하다</span></div><div class="line">&#123;</div><div class="line">  &#123;</div><div class="line">    user(id=<span class="number">1</span>) &#123;</div><div class="line">      name: <span class="string">"김세준"</span>,</div><div class="line">      company: <span class="string">"학생"</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 요청</span></div><div class="line">&#123;</div><div class="line">  me &#123;</div><div class="line">    name: ,</div><div class="line">    company:</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 응답</span></div><div class="line">&#123;</div><div class="line">  me &#123;</div><div class="line">    name: <span class="string">"김세준"</span>,</div><div class="line">    company: <span class="string">"학생"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 해당유저의 정보만 요청가능하다</span></div><div class="line">&#123;</div><div class="line">  &#123;</div><div class="line">    user(id=<span class="number">1</span>) &#123;</div><div class="line">      name: <span class="string">"김세준"</span>,</div><div class="line">      company: <span class="string">"학생"</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>Post /graphql을 통해 여러개의 component를 1개로 보내준다.</p>
 <p>GraphQL은 강력한 TypeSystem으로 적용된다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 형태</span></div><div class="line">type Query &#123;</div><div class="line">  cart: Cart</div><div class="line">&#125;</div><div class="line">type Cart &#123;</div><div class="line">  products: [product] !</div><div class="line">  shippingAddess: <span class="built_in">String</span>!</div><div class="line">&#125;</div><div class="line">type Product &#123;</div><div class="line">  imageUrl: <span class="built_in">String</span>!,</div><div class="line">  description: <span class="built_in">String</span>!</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 요청</span></div><div class="line"></div><div class="line">&#123;</div><div class="line">  &#123;</div><div class="line">    cart</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 형태</span></div><div class="line">type Query &#123;</div><div class="line">  cart: Cart</div><div class="line">&#125;</div><div class="line">type Cart &#123;</div><div class="line">  products: [product] !</div><div class="line">  shippingAddess: <span class="built_in">String</span>!</div><div class="line">&#125;</div><div class="line">type Product &#123;</div><div class="line">  imageUrl: <span class="built_in">String</span>!,</div><div class="line">  description: <span class="built_in">String</span>!</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 요청</span></div><div class="line"></div><div class="line">&#123;</div><div class="line">  &#123;</div><div class="line">    cart</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>Mutation 기존의 것을 변형해서 가져온다.</p>
 <p>Mutation</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">mutation &#123;</div><div class="line">  createProduct(&#123;</div><div class="line">    input: &#123;</div><div class="line">      desciption: <span class="string">"clothes"</span></div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">&#125;&#123;</div><div class="line">  price &#123;</div><div class="line">    product</div><div class="line">  &#125;</div><div class="line">&#125; =&gt; client가 원하는 데이터</div></pre></td></tr></table></figure>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">mutation &#123;</div><div class="line">  createProduct(&#123;</div><div class="line">    input: &#123;</div><div class="line">      desciption: <span class="string">"clothes"</span></div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">&#125;&#123;</div><div class="line">  price &#123;</div><div class="line">    product</div><div class="line">  &#125;</div><div class="line">&#125; =&gt; client가 원하는 데이터</div></pre></td></tr></table></figure></p>
 <blockquote>
 <p>GraphQL의 최대의 강점은 Client가 원하는 값을 딱 그정도만 준다. 단 서버단에서 미리 맞춰야한다.</p>
 </blockquote>
 <p>Relay : passing 역할을 합니다.</p>
 <p>Client가 요청한 데이터를 중간에 Relay가 가로챈다</p>
-<p>Relay의 요구사항<br>특정한 id에 대해 요청을 하고 그에대한 응답을 해야합니다.</p>
-<h2 id="Serverless"><a href="#Serverless" class="headerlink" title="Serverless"></a>Serverless</h2><p>Functions이 핵심 기능이다. input은 event이다.</p>
+<p>Relay의 요구사항
+특정한 id에 대해 요청을 하고 그에대한 응답을 해야합니다.</p>
+<h2>Serverless</h2>
+<p>Functions이 핵심 기능이다. input은 event이다.</p>
 <ol>
 <li>서버관리의 모든걸 클라우드에게 맡기자</li>
 <li>Event가 발생할때만 사용하기 때문에 Price가 적어진다. =&gt; 실행시간, 메모리 소비량, 요청 횟수를 줄인다.</li>
 </ol>
-<h1 id="GrapeQL"><a href="#GrapeQL" class="headerlink" title="GrapeQL"></a>GrapeQL</h1><p>하나의 Endpoint에 모든 CRUD, 혹은 그에 속하기 애매한 모든 행위를 담음 POST의 경우 HTTP Payload를 적극적으로 활용<br>application/json<br>application/graphql  </p>
-<h1 id="함수형-프로그래밍"><a href="#함수형-프로그래밍" class="headerlink" title="함수형 프로그래밍"></a>함수형 프로그래밍</h1><p>함수형 프로그래밍 특징 - 순수 함수<br>일급객체 = 변수에 저장할 수 있는가, 파라미터로 전달할 수 있는가, return value로 사용될 수 있을까<br>Persistent Immutable Data = 지속적이고 불변하는 데이터  </p>
+<h1>GrapeQL</h1>
+<p>하나의 Endpoint에 모든 CRUD, 혹은 그에 속하기 애매한 모든 행위를 담음 POST의 경우 HTTP Payload를 적극적으로 활용
+application/json<br>
+application/graphql</p>
+<h1>함수형 프로그래밍</h1>
+<p>함수형 프로그래밍 특징 - 순수 함수<br>
+일급객체 = 변수에 저장할 수 있는가, 파라미터로 전달할 수 있는가, return value로 사용될 수 있을까<br>
+Persistent Immutable Data = 지속적이고 불변하는 데이터</p>
 <p>함수형 프로그래밍이란? 데이터를 가공하는 컨베이어 벨트같은 것이다.</p>
 <blockquote>
 <p>인프런 함수형-프로그래밍</p>
 </blockquote>
-<h2 id="Ramda"><a href="#Ramda" class="headerlink" title="Ramda"></a>Ramda</h2><ul>
-<li>실용적인 함수형 프로그래밍 라이브러리  </li>
+<h2>Ramda</h2>
+<ul>
+<li>실용적인 함수형 프로그래밍 라이브러리</li>
 <li>Ramda의 함수들은 모두 자동적으로 Curry 됩니다.</li>
 </ul>
 <p>R.isNil, R.path, R.compose(a,b,c,d)</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">R.compose(R.isNil, R.path([<span class="string">"req"</span>, <span class="string">"query"</span>, itemName]))(httpParam);</div></pre></td></tr></table></figure>
-<h1 id="Node-js-API-서버-성능-개선기"><a href="#Node-js-API-서버-성능-개선기" class="headerlink" title="Node.js API 서버 성능 개선기"></a>Node.js API 서버 성능 개선기</h1><p>서버 하나의 한계 파악<br>병목구간 확인<br>코드 개선 후 비교</p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">R.compose(R.isNil, R.path([<span class="string">"req"</span>, <span class="string">"query"</span>, itemName]))(httpParam);</div></pre></td></tr></table></figure></p>
+<h1>Node.js API 서버 성능 개선기</h1>
+<p>서버 하나의 한계 파악
+병목구간 확인
+코드 개선 후 비교</p>
 <p>ARTILLERY.IO =&gt; Node.js 작성된 부하 테스트 도구</p>
 
         </div>
@@ -216,7 +235,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/11/09/conference-node-developer-connect/" data-id="cjoxmhg1x00126j6fkzy3m41z" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/11/09/conference-node-developer-connect/" data-id="cjoz9w47q0012mt6fqjc084gm" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

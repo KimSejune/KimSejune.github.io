@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="CSS" />
     
-    <meta name="description" content="#CSS Core-Note  CSS에서 헷갈리는 부분이나 어려운 부분을 간단하게 나마 정리를 해보았다.  초기 CSS 설정초기에 설정을 할경우 margin까지를 box의 영역으로 설정해주는 방법이다. 12345*&amp;#123;	Box-sizing : border-box;	Margin : 0;	Padding: 0;	&amp;#125; Margin 상쇄를 없애는 방법o">
+    <meta name="description" content="#CSS Core-Note  CSS에서 헷갈리는 부분이나 어려운 부분을 간단하게 나마 정리를 해보았다.  초기 CSS 설정 초기에 설정을 할경우 margin까지를 box의 영역으로 설정해주는 방법이다. 12345*&amp;#123;	Box-sizing : border-box;	Margin : 0;	Padding: 0;	&amp;#125; Margin 상쇄를 없애는 방법">
 <meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS Core-Note">
 <meta property="og:url" content="http://yoursite.com/2017/12/29/css-study-corenote/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="#CSS Core-Note  CSS에서 헷갈리는 부분이나 어려운 부분을 간단하게 나마 정리를 해보았다.  초기 CSS 설정초기에 설정을 할경우 margin까지를 box의 영역으로 설정해주는 방법이다. 12345*&amp;#123;	Box-sizing : border-box;	Margin : 0;	Padding: 0;	&amp;#125; Margin 상쇄를 없애는 방법o">
+<meta property="og:description" content="#CSS Core-Note  CSS에서 헷갈리는 부분이나 어려운 부분을 간단하게 나마 정리를 해보았다.  초기 CSS 설정 초기에 설정을 할경우 margin까지를 box의 영역으로 설정해주는 방법이다. 12345*&amp;#123;	Box-sizing : border-box;	Margin : 0;	Padding: 0;	&amp;#125; Margin 상쇄를 없애는 방법">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/css.jpeg">
 <meta property="og:updated_time" content="2017-12-29T01:32:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS Core-Note">
-<meta name="twitter:description" content="#CSS Core-Note  CSS에서 헷갈리는 부분이나 어려운 부분을 간단하게 나마 정리를 해보았다.  초기 CSS 설정초기에 설정을 할경우 margin까지를 box의 영역으로 설정해주는 방법이다. 12345*&amp;#123;	Box-sizing : border-box;	Margin : 0;	Padding: 0;	&amp;#125; Margin 상쇄를 없애는 방법o">
+<meta name="twitter:description" content="#CSS Core-Note  CSS에서 헷갈리는 부분이나 어려운 부분을 간단하게 나마 정리를 해보았다.  초기 CSS 설정 초기에 설정을 할경우 margin까지를 box의 영역으로 설정해주는 방법이다. 12345*&amp;#123;	Box-sizing : border-box;	Margin : 0;	Padding: 0;	&amp;#125; Margin 상쇄를 없애는 방법">
 <meta name="twitter:image" content="http://yoursite.com/images/css.jpeg">
     
 
@@ -176,22 +176,29 @@
 <ul>
 <li>CSS에서 헷갈리는 부분이나 어려운 부분을 간단하게 나마 정리를 해보았다.</li>
 </ul>
-<h2 id="초기-CSS-설정"><a href="#초기-CSS-설정" class="headerlink" title="초기 CSS 설정"></a>초기 CSS 설정</h2><p>초기에 설정을 할경우 <code>margin까지를 box의 영역으로 설정</code>해주는 방법이다.</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">*&#123;</div><div class="line">	<span class="attribute">Box-sizing </span>: border-box;</div><div class="line">	<span class="attribute">Margin </span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">Padding</span>: <span class="number">0</span>;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
-<h2 id="Margin-상쇄를-없애는-방법"><a href="#Margin-상쇄를-없애는-방법" class="headerlink" title="Margin 상쇄를 없애는 방법"></a>Margin 상쇄를 없애는 방법</h2><p>overflow를 사용한다.</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">overflow</span>: <span class="selector-tag">auto</span>;</div></pre></td></tr></table></figure>
-<h2 id="2개의-요소중에-1개만-float를-설정하였을-때-margin이-사라지는-문제"><a href="#2개의-요소중에-1개만-float를-설정하였을-때-margin이-사라지는-문제" class="headerlink" title="2개의 요소중에 1개만 float를 설정하였을 때 margin이 사라지는 문제"></a>2개의 요소중에 1개만 float를 설정하였을 때 margin이 사라지는 문제</h2><p>float가 선언이 안된 영역에 overflow: hidden; 을 하면 사라진 margin이 나타난다.</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>;</div></pre></td></tr></table></figure>
+<h2>초기 CSS 설정</h2>
+<p>초기에 설정을 할경우 <code>margin까지를 box의 영역으로 설정</code>해주는 방법이다.</p>
+<p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">*&#123;</div><div class="line">	<span class="attribute">Box-sizing </span>: border-box;</div><div class="line">	<span class="attribute">Margin </span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">Padding</span>: <span class="number">0</span>;</div><div class="line">	&#125;</div></pre></td></tr></table></figure></p>
+<h2>Margin 상쇄를 없애는 방법</h2>
+<p>overflow를 사용한다.</p>
+<p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">overflow</span>: <span class="selector-tag">auto</span>;</div></pre></td></tr></table></figure></p>
+<h2>2개의 요소중에 1개만 float를 설정하였을 때 margin이 사라지는 문제</h2>
+<p>float가 선언이 안된 영역에 overflow: hidden; 을 하면 사라진 margin이 나타난다.</p>
+<p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>;</div></pre></td></tr></table></figure></p>
 <blockquote>
-<p>overflow: hidden; 프로퍼티는 자식 요소가 부모 요소의 영역보다 클 경우 넘치는 부분을 안보이게 해주는 역할을 하는데<br>여기서는 float 프로퍼티가 없어서 제대로 표현되지 못하는 요소를 제대로 출력해준다.</p>
+<p>overflow: hidden; 프로퍼티는 자식 요소가 부모 요소의 영역보다 클 경우 넘치는 부분을 안보이게 해주는 역할을 하는데
+여기서는 float 프로퍼티가 없어서 제대로 표현되지 못하는 요소를 제대로 출력해준다.</p>
 </blockquote>
-<h2 id="input-간격-줄이는-방법"><a href="#input-간격-줄이는-방법" class="headerlink" title="input 간격 줄이는 방법"></a>input 간격 줄이는 방법</h2><p>방법1) input과 버튼에 float 을 주고 부모요소에 float해제  </p>
-<p>방법2) input과 버튼 부모요소에 font-size: 0; 을 주고 input 과 버튼에 font-size 제 선언  </p>
-<p>방법3) 부모요소에 display: flex  </p>
-<h3 id="inline-block에서-4px의-영역이-발생한다"><a href="#inline-block에서-4px의-영역이-발생한다" class="headerlink" title="inline-block에서 4px의 영역이 발생한다."></a>inline-block에서 4px의 영역이 발생한다.</h3><p>감싸고 있는 요소의 font-size를 0으로 변경하여서 요소간의 4px간격을 없애줘야한다.</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.wrapper</span> &#123;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">0</span>; <span class="comment">/*요소간 간격을 제거*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="float-프로퍼티를-가진-자식-요소를-포함하는-부모-요소의-높이가-정상적으로-반영되지-않는-문제"><a href="#float-프로퍼티를-가진-자식-요소를-포함하는-부모-요소의-높이가-정상적으로-반영되지-않는-문제" class="headerlink" title="float 프로퍼티를 가진 자식 요소를 포함하는 부모 요소의 높이가 정상적으로 반영되지 않는 문제"></a>float 프로퍼티를 가진 자식 요소를 포함하는 부모 요소의 높이가 정상적으로 반영되지 않는 문제</h2><p>부모요소에 <code>clearfix를 설정</code>해주면 부모의 높이가 제대로 반영이된다.</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span> &#123;</div><div class="line">	content = “”;</div><div class="line">	display = block;</div><div class="line">	clear = both;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2>input 간격 줄이는 방법</h2>
+<p>방법1) input과 버튼에 float 을 주고 부모요소에 float해제</p>
+<p>방법2) input과 버튼 부모요소에 font-size: 0; 을 주고 input 과 버튼에 font-size 제 선언</p>
+<p>방법3) 부모요소에 display: flex</p>
+<h3>inline-block에서 4px의 영역이 발생한다.</h3>
+<p>감싸고 있는 요소의 font-size를 0으로 변경하여서 요소간의 4px간격을 없애줘야한다.</p>
+<p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.wrapper</span> &#123;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">0</span>; <span class="comment">/*요소간 간격을 제거*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2>float 프로퍼티를 가진 자식 요소를 포함하는 부모 요소의 높이가 정상적으로 반영되지 않는 문제</h2>
+<p>부모요소에 <code>clearfix를 설정</code>해주면 부모의 높이가 제대로 반영이된다.</p>
+<p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span> &#123;</div><div class="line">	content = “”;</div><div class="line">	display = block;</div><div class="line">	clear = both;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
         </div>
         <footer class="article-footer">
@@ -199,7 +206,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/12/29/css-study-corenote/" data-id="cjoxmhg1z00166j6fhslqtjqs" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/12/29/css-study-corenote/" data-id="cjoz9w47s0016mt6faa4s8n5o" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

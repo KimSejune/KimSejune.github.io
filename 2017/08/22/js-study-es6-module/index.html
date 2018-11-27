@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="JavaScript,ES6,Module" />
     
-    <meta name="description" content="Javascript ES6 Module 1. IntroductionMODULE : 애플리케이션을 구성하는 개별적 요소    구현된 세부사항을 캡슐화하고 공개가 필요한 API를 외부에 노출해 다른 코드에서 로드하고 사용할 수 있도록 작성된 재사용 가능한 코드조각   모듈은 캡슐화가 되는 것이 기본적   공개할 것만 공개하는 것이 캡슐화이다.   모듈만의 개별">
+    <meta name="description" content="Javascript ES6 Module  1. Introduction MODULE : 애플리케이션을 구성하는 개별적 요소  구현된 세부사항을 캡슐화하고 공개가 필요한 API를 외부에 노출해 다른 코드에서 로드하고 사용할 수 있도록 작성된 재사용 가능한 코드조각 모듈은 캡슐화가 되는 것이 기본적 공개할 것만 공개하는 것이 캡슐화이다. 모듈만의 개별적인 전역을">
 <meta name="keywords" content="JavaScript,ES6,Module">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript ES6 Module">
 <meta property="og:url" content="http://yoursite.com/2017/08/22/js-study-es6-module/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="Javascript ES6 Module 1. IntroductionMODULE : 애플리케이션을 구성하는 개별적 요소    구현된 세부사항을 캡슐화하고 공개가 필요한 API를 외부에 노출해 다른 코드에서 로드하고 사용할 수 있도록 작성된 재사용 가능한 코드조각   모듈은 캡슐화가 되는 것이 기본적   공개할 것만 공개하는 것이 캡슐화이다.   모듈만의 개별">
+<meta property="og:description" content="Javascript ES6 Module  1. Introduction MODULE : 애플리케이션을 구성하는 개별적 요소  구현된 세부사항을 캡슐화하고 공개가 필요한 API를 외부에 노출해 다른 코드에서 로드하고 사용할 수 있도록 작성된 재사용 가능한 코드조각 모듈은 캡슐화가 되는 것이 기본적 공개할 것만 공개하는 것이 캡슐화이다. 모듈만의 개별적인 전역을">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/es6.png">
 <meta property="og:updated_time" content="2017-12-27T02:55:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript ES6 Module">
-<meta name="twitter:description" content="Javascript ES6 Module 1. IntroductionMODULE : 애플리케이션을 구성하는 개별적 요소    구현된 세부사항을 캡슐화하고 공개가 필요한 API를 외부에 노출해 다른 코드에서 로드하고 사용할 수 있도록 작성된 재사용 가능한 코드조각   모듈은 캡슐화가 되는 것이 기본적   공개할 것만 공개하는 것이 캡슐화이다.   모듈만의 개별">
+<meta name="twitter:description" content="Javascript ES6 Module  1. Introduction MODULE : 애플리케이션을 구성하는 개별적 요소  구현된 세부사항을 캡슐화하고 공개가 필요한 API를 외부에 노출해 다른 코드에서 로드하고 사용할 수 있도록 작성된 재사용 가능한 코드조각 모듈은 캡슐화가 되는 것이 기본적 공개할 것만 공개하는 것이 캡슐화이다. 모듈만의 개별적인 전역을">
 <meta name="twitter:image" content="http://yoursite.com/images/es6.png">
     
 
@@ -171,42 +171,46 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="Javascript-ES6-Module"><a href="#Javascript-ES6-Module" class="headerlink" title="Javascript ES6 Module"></a>Javascript ES6 Module</h1><p><img src="/images/es6.png" alt="ES6"></p>
-<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><p>MODULE : 애플리케이션을 구성하는 개별적 요소  </p>
+            <h1>Javascript ES6 Module</h1>
+<p><img src="/images/es6.png" alt="ES6"></p>
+<h2>1. Introduction</h2>
+<p>MODULE : 애플리케이션을 구성하는 개별적 요소</p>
 <ul>
-<li>구현된 세부사항을 캡슐화하고 공개가 필요한 API를 외부에 노출해 다른 코드에서 로드하고 사용할 수 있도록 작성된 재사용 가능한 코드조각  </li>
-<li>모듈은 캡슐화가 되는 것이 기본적  </li>
-<li>공개할 것만 공개하는 것이 캡슐화이다.  </li>
-<li>모듈만의 개별적인 전역을 가져야한다.  </li>
-<li>private은 함수내의 지역변수로 선언된 것으로 사용된다.  </li>
+<li>구현된 세부사항을 캡슐화하고 공개가 필요한 API를 외부에 노출해 다른 코드에서 로드하고 사용할 수 있도록 작성된 재사용 가능한 코드조각</li>
+<li>모듈은 캡슐화가 되는 것이 기본적</li>
+<li>공개할 것만 공개하는 것이 캡슐화이다.</li>
+<li>모듈만의 개별적인 전역을 가져야한다.</li>
+<li>private은 함수내의 지역변수로 선언된 것으로 사용된다.</li>
 </ul>
 <blockquote>
-<p>COMMONJS 와 AMD(Asynchronous Module Definition) : 클라이언트 사이드에 국한되지 않고 범용적으로 사용하고자 하는 움직임이 생기면서 제안된 것  </p>
+<p>COMMONJS 와 AMD(Asynchronous Module Definition) : 클라이언트 사이드에 국한되지 않고 범용적으로 사용하고자 하는 움직임이 생기면서 제안된 것</p>
 </blockquote>
-<h2 id="2-EXPORT-amp-IMPORT"><a href="#2-EXPORT-amp-IMPORT" class="headerlink" title="2. EXPORT &amp; IMPORT"></a>2. EXPORT &amp; IMPORT</h2><p>모듈안에 선언한 모든 것들은 기본적으로 해당 모듈 안에서만 참조가능하다.  </p>
+<h2>2. EXPORT &amp; IMPORT</h2>
+<p>모듈안에 선언한 모든 것들은 기본적으로 해당 모듈 안에서만 참조가능하다.</p>
 <blockquote>
 <p>모듈안에 선언한 항목을 외부에 공개해 다른 모듈들이 사용할 수 있게 하고 싶다면 export해야 한다.</p>
 </blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// lib.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> pi = <span class="built_in">Math</span>.PI; <span class="comment">//공개하겠다</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">square</span>(<span class="params">x</span>) </span>&#123; <span class="comment">// 공개하겠다</span></div><div class="line">  <span class="keyword">return</span> x * x;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123; <span class="comment">// 공개하겠다</span></div><div class="line">  <span class="keyword">constructor</span>(name) &#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// lib.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> pi = <span class="built_in">Math</span>.PI; <span class="comment">//공개하겠다</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">square</span>(<span class="params">x</span>) </span>&#123; <span class="comment">// 공개하겠다</span></div><div class="line">  <span class="keyword">return</span> x * x;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123; <span class="comment">// 공개하겠다</span></div><div class="line">  <span class="keyword">constructor</span>(name) &#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>선언문 앞에 매번 키워드를 붙이는 것이 싫다면 대상을 한번에 모아 export할 수 있다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// lib.js</span></div><div class="line"><span class="keyword">const</span> pi = <span class="built_in">Math</span>.PI;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">square</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> x * x;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>(name) &#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> &#123; pi, square, Person &#125;;</div></pre></td></tr></table></figure>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// lib.js</span></div><div class="line"><span class="keyword">const</span> pi = <span class="built_in">Math</span>.PI;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">square</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> x * x;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>(name) &#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> &#123; pi, square, Person &#125;;</div></pre></td></tr></table></figure></p>
 <p>import : export된 이름으로 import한다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// main.js</span></div><div class="line"><span class="keyword">import</span> &#123; pi, square, Person &#125; <span class="keyword">from</span> <span class="string">'./lib'</span>;</div><div class="line"><span class="built_in">console</span>.log(pi);         <span class="comment">// 3.141592653589793</span></div><div class="line"><span class="built_in">console</span>.log(square(<span class="number">10</span>)); <span class="comment">// 100</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> Person(<span class="string">'Lee'</span>)); <span class="comment">// Person &#123; name: 'Lee' &#125;</span></div></pre></td></tr></table></figure>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// main.js</span></div><div class="line"><span class="keyword">import</span> &#123; pi, square, Person &#125; <span class="keyword">from</span> <span class="string">'./lib'</span>;</div><div class="line"><span class="built_in">console</span>.log(pi);         <span class="comment">// 3.141592653589793</span></div><div class="line"><span class="built_in">console</span>.log(square(<span class="number">10</span>)); <span class="comment">// 100</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> Person(<span class="string">'Lee'</span>)); <span class="comment">// Person &#123; name: 'Lee' &#125;</span></div></pre></td></tr></table></figure></p>
 <p>각각의 이름을 지정하지 않고 하나로 한꺼번에 import할 수 있다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// main.js</span></div><div class="line"><span class="keyword">import</span> * <span class="keyword">as</span> lib <span class="keyword">from</span> <span class="string">'./lib'</span>;</div><div class="line"><span class="built_in">console</span>.log(lib.pi);         <span class="comment">// 3.141592653589793</span></div><div class="line"><span class="built_in">console</span>.log(lib.square(<span class="number">10</span>)); <span class="comment">// 100</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> lib.Person(<span class="string">'Lee'</span>)); <span class="comment">// Person &#123; name: 'Lee' &#125;</span></div></pre></td></tr></table></figure>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// main.js</span></div><div class="line"><span class="keyword">import</span> * <span class="keyword">as</span> lib <span class="keyword">from</span> <span class="string">'./lib'</span>;</div><div class="line"><span class="built_in">console</span>.log(lib.pi);         <span class="comment">// 3.141592653589793</span></div><div class="line"><span class="built_in">console</span>.log(lib.square(<span class="number">10</span>)); <span class="comment">// 100</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> lib.Person(<span class="string">'Lee'</span>)); <span class="comment">// Person &#123; name: 'Lee' &#125;</span></div></pre></td></tr></table></figure></p>
 <p>이름을 변경해 import 할 수 도 있다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// main.js</span></div><div class="line"><span class="keyword">import</span> &#123; pi <span class="keyword">as</span> PI, square <span class="keyword">as</span> sq, Person <span class="keyword">as</span> P &#125; <span class="keyword">from</span> <span class="string">'./lib'</span>;</div><div class="line"><span class="built_in">console</span>.log(PI);    <span class="comment">// 3.141592653589793</span></div><div class="line"><span class="built_in">console</span>.log(sq(<span class="number">2</span>)); <span class="comment">// 4</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> P(<span class="string">'Kim'</span>)); <span class="comment">// Person &#123; name: 'Kim' &#125;</span></div></pre></td></tr></table></figure>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// main.js</span></div><div class="line"><span class="keyword">import</span> &#123; pi <span class="keyword">as</span> PI, square <span class="keyword">as</span> sq, Person <span class="keyword">as</span> P &#125; <span class="keyword">from</span> <span class="string">'./lib'</span>;</div><div class="line"><span class="built_in">console</span>.log(PI);    <span class="comment">// 3.141592653589793</span></div><div class="line"><span class="built_in">console</span>.log(sq(<span class="number">2</span>)); <span class="comment">// 4</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> P(<span class="string">'Kim'</span>)); <span class="comment">// Person &#123; name: 'Kim' &#125;</span></div></pre></td></tr></table></figure></p>
 <p>모듈에서 하나만을 export하는 경우, default 키워드를 사용할 수 있다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// lib.js</span></div><div class="line"><span class="function"><span class="keyword">function</span> (<span class="params">x</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> x * x;</div><div class="line">&#125;</div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span>;</div><div class="line"></div><div class="line"><span class="comment">//축약형</span></div><div class="line"><span class="comment">// lib.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> (<span class="params">x</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> x * x;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// lib.js</span></div><div class="line"><span class="function"><span class="keyword">function</span> (<span class="params">x</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> x * x;</div><div class="line">&#125;</div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span>;</div><div class="line"></div><div class="line"><span class="comment">//축약형</span></div><div class="line"><span class="comment">// lib.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> (<span class="params">x</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> x * x;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>default 키워드와 함께 export한 모듈은 {}없이 임의의 이름으로 import한다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// main.js</span></div><div class="line"><span class="keyword">import</span> square <span class="keyword">from</span> <span class="string">'./lib'</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(square(<span class="number">3</span>)); <span class="comment">// 9</span></div></pre></td></tr></table></figure>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// main.js</span></div><div class="line"><span class="keyword">import</span> square <span class="keyword">from</span> <span class="string">'./lib'</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(square(<span class="number">3</span>)); <span class="comment">// 9</span></div></pre></td></tr></table></figure></p>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://yoursite.com/2017/08/22/js-study-es6-module/" data-id="cjoxmhg3e003t6j6f8wj2yha1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/08/22/js-study-es6-module/" data-id="cjoz9w48z003tmt6f5x35uvbt" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -311,20 +315,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/08/28/node-study-restapi/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2017/08/22/js-study-es6-promise/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            Node-Rest-API
+            JavaScript ES6 Promise
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2017/08/22/js-study-es6-promise/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/08/21/js-study-es6-arrow/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">JavaScript ES6 Promise</p>
+        <p class="article-nav-title">JavaScript ES6 Arrow Function</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     

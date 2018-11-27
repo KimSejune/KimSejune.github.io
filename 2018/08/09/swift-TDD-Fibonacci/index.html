@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="swift,TDD" />
     
-    <meta name="description" content="Swift TDD 아래의 글은 Swift의 Unit Test를  Xcode에서 진행하는 방법을 설명한다.  우선 프로젝트를 Single View App으로 선택한 후 Product Name을 작성한다.    include Unit Tests: Unit Test를 Project 생성시 생성할 것인지 체크하는 부분이다.include UI Tests: UI Te">
+    <meta name="description" content="Swift TDD  아래의 글은 Swift의 Unit Test를  Xcode에서 진행하는 방법을 설명한다.  우선 프로젝트를 Single View App으로 선택한 후 Product Name을 작성한다.  include Unit Tests: Unit Test를 Project 생성시 생성할 것인지 체크하는 부분이다. include UI Tests: UI Te">
 <meta name="keywords" content="swift,TDD">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Swift TDD">
 <meta property="og:url" content="http://yoursite.com/2018/08/09/swift-TDD-Fibonacci/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="Swift TDD 아래의 글은 Swift의 Unit Test를  Xcode에서 진행하는 방법을 설명한다.  우선 프로젝트를 Single View App으로 선택한 후 Product Name을 작성한다.    include Unit Tests: Unit Test를 Project 생성시 생성할 것인지 체크하는 부분이다.include UI Tests: UI Te">
+<meta property="og:description" content="Swift TDD  아래의 글은 Swift의 Unit Test를  Xcode에서 진행하는 방법을 설명한다.  우선 프로젝트를 Single View App으로 선택한 후 Product Name을 작성한다.  include Unit Tests: Unit Test를 Project 생성시 생성할 것인지 체크하는 부분이다. include UI Tests: UI Te">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/Swift_TDD1.png">
 <meta property="og:updated_time" content="2018-08-09T02:06:07.124Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift TDD">
-<meta name="twitter:description" content="Swift TDD 아래의 글은 Swift의 Unit Test를  Xcode에서 진행하는 방법을 설명한다.  우선 프로젝트를 Single View App으로 선택한 후 Product Name을 작성한다.    include Unit Tests: Unit Test를 Project 생성시 생성할 것인지 체크하는 부분이다.include UI Tests: UI Te">
+<meta name="twitter:description" content="Swift TDD  아래의 글은 Swift의 Unit Test를  Xcode에서 진행하는 방법을 설명한다.  우선 프로젝트를 Single View App으로 선택한 후 Product Name을 작성한다.  include Unit Tests: Unit Test를 Project 생성시 생성할 것인지 체크하는 부분이다. include UI Tests: UI Te">
 <meta name="twitter:image" content="http://yoursite.com/images/Swift_TDD1.png">
     
 
@@ -171,34 +171,40 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="Swift-TDD"><a href="#Swift-TDD" class="headerlink" title="Swift TDD"></a>Swift TDD</h1><ul>
+            <h1>Swift TDD</h1>
+<ul>
 <li>아래의 글은 Swift의 <code>Unit Test</code>를  Xcode에서 진행하는 방법을 설명한다.</li>
 </ul>
-<p>우선 프로젝트를 Single View App으로 선택한 후 Product Name을 작성한다.  </p>
+<p>우선 프로젝트를 Single View App으로 선택한 후 Product Name을 작성한다.</p>
 <p><img src="/images/Swift_TDD1.png" alt="TDD"></p>
-<p><code>include Unit Tests: Unit Test를 Project 생성시 생성할 것인지 체크하는 부분이다.</code><br><code>include UI Tests: UI Test를 Project 생성시 생성할 것인지 체크하는 부분이다.</code>  </p>
+<p><code>include Unit Tests: Unit Test를 Project 생성시 생성할 것인지 체크하는 부분이다.</code><br>
+<code>include UI Tests: UI Test를 Project 생성시 생성할 것인지 체크하는 부분이다.</code></p>
 <p>Next를 눌러서 원하는 곳에 프로젝트를 생성해준다.</p>
 <p><img src="/images/Swift_TDD2.png" alt="TDD"></p>
 <p>Command + 6을 누르거나 Show the Test navigator를 선택해준다.</p>
-<p>초기에 Project생성시에 <code>include Unit Tests</code>, <code>include UI Tests</code> 를 체크하였기 때문에 생성되어 있는것이다.  </p>
+<p>초기에 Project생성시에 <code>include Unit Tests</code>, <code>include UI Tests</code> 를 체크하였기 때문에 생성되어 있는것이다.</p>
 <p>만약 초기에 선택을 못하였거나 Test를 추가하고 싶다면 아래의 + 버튼을 누르면 된다.</p>
 <p><img src="/images/Swift_TDD3.png" alt="TDD"></p>
 <p>Unit Test를 하기위해서 <code>FiboTddPraticeTests</code>를 선택하면 아래와 같은 코드가 나타난다.</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> XCTest</div><div class="line"><span class="comment">// 어떤 프로젝트를 Test할것인지 import해줘야한다.</span></div><div class="line"><span class="meta">@testable</span> <span class="keyword">import</span> FiboTddPratice</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">FiboTddPraticeTests</span>: <span class="title">XCTestCase</span> </span>&#123;</div><div class="line">    </div><div class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">setUp</span><span class="params">()</span></span> &#123;</div><div class="line">        <span class="keyword">super</span>.setUp()</div><div class="line">        <span class="comment">// Put setup code here. This method is called before the invocation of each test method in the class.</span></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">tearDown</span><span class="params">()</span></span> &#123;</div><div class="line">        <span class="comment">// Put teardown code here. This method is called after the invocation of each test method in the class.</span></div><div class="line">        <span class="keyword">super</span>.tearDown()</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">testExample</span><span class="params">()</span></span> &#123;</div><div class="line">        <span class="comment">// This is an example of a functional test case.</span></div><div class="line">        <span class="comment">// Use XCTAssert and related functions to verify your tests produce the correct results.</span></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">testPerformanceExample</span><span class="params">()</span></span> &#123;</div><div class="line">        <span class="comment">// This is an example of a performance test case.</span></div><div class="line">        <span class="keyword">self</span>.measure &#123;</div><div class="line">            <span class="comment">// Put the code you want to measure the time of here.</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> XCTest</div><div class="line"><span class="comment">// 어떤 프로젝트를 Test할것인지 import해줘야한다.</span></div><div class="line"><span class="meta">@testable</span> <span class="keyword">import</span> FiboTddPratice</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">FiboTddPraticeTests</span>: <span class="title">XCTestCase</span> </span>&#123;</div><div class="line">    </div><div class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">setUp</span><span class="params">()</span></span> &#123;</div><div class="line">        <span class="keyword">super</span>.setUp()</div><div class="line">        <span class="comment">// Put setup code here. This method is called before the invocation of each test method in the class.</span></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">tearDown</span><span class="params">()</span></span> &#123;</div><div class="line">        <span class="comment">// Put teardown code here. This method is called after the invocation of each test method in the class.</span></div><div class="line">        <span class="keyword">super</span>.tearDown()</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">testExample</span><span class="params">()</span></span> &#123;</div><div class="line">        <span class="comment">// This is an example of a functional test case.</span></div><div class="line">        <span class="comment">// Use XCTAssert and related functions to verify your tests produce the correct results.</span></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">testPerformanceExample</span><span class="params">()</span></span> &#123;</div><div class="line">        <span class="comment">// This is an example of a performance test case.</span></div><div class="line">        <span class="keyword">self</span>.measure &#123;</div><div class="line">            <span class="comment">// Put the code you want to measure the time of here.</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>위의 SetUp() Method, tearDown() Method에 대하여 알아보자.</p>
-<h2 id="SetUP"><a href="#SetUP" class="headerlink" title="SetUP()"></a>SetUP()</h2><p>SetUp() Method는 <b>각 Test Case의 Test Method가 불리기 전에 <code>상태를 reset</code>할 기회를 제공한다.</b></p>
-<p>SetUp Instance Method는 각 테스트가 시작되기 전에 한 번 호출된다.  </p>
-<p>SetUp Method를 Override하여서 각 Test Method의 상태를 다시 설정한다.  </p>
+<h2>SetUP()</h2>
+<p>SetUp() Method는 &lt;b&gt;각 Test Case의 Test Method가 불리기 전에 <code>상태를 reset</code>할 기회를 제공한다.&lt;/b&gt;</p>
+<p>SetUp Instance Method는 각 테스트가 시작되기 전에 한 번 호출된다.</p>
+<p>SetUp Method를 Override하여서 각 Test Method의 상태를 다시 설정한다.</p>
 <p><a href="https://developer.apple.com/documentation/xctest/xctest/1500341-setup" target="_blank" rel="external">SetUp Method Link</a></p>
-<h2 id="tearDown"><a href="#tearDown" class="headerlink" title="tearDown()"></a>tearDown()</h2><p>tearDown() Method는 <b> Test Case의 Test Method가 끝난 후에 <code>Clean Up</code>을 할 기회를 제공한다.</b></p>
+<h2>tearDown()</h2>
+<p>tearDown() Method는 &lt;b&gt; Test Case의 Test Method가 끝난 후에 <code>Clean Up</code>을 할 기회를 제공한다.&lt;/b&gt;</p>
 <p>tearDown Instance Method는 각 테스트가 완료된 후에 한 번 호출된다. test 마다 clean up을 수행하려면 Override하라.</p>
 <p><a href="https://developer.apple.com/documentation/xctest/xctest/1500463-teardown" target="_blank" rel="external">tearDown Method Link</a></p>
-<h2 id="TDD-시작"><a href="#TDD-시작" class="headerlink" title="TDD 시작"></a>TDD 시작</h2><p>우선 FiboTddPraticeTests Class안에 만들고 싶은 Class의 property를 생성해준다.<br>그러면 당연히 Error가 날 것이다. 왜냐하면 생성을 해주지 않았기 때문이다.  </p>
+<h2>TDD 시작</h2>
+<p>우선 FiboTddPraticeTests Class안에 만들고 싶은 Class의 property를 생성해준다.<br>
+그러면 당연히 Error가 날 것이다. 왜냐하면 생성을 해주지 않았기 때문이다.</p>
 <p><img src="/images/Swift_TDD4.png" alt="TDD"></p>
-<p>여기서 먼저 Error가 나는 것을 확인한 후에 Class를 생성해줘야한다.  </p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Foundation</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Fibonacci</span> </span>&#123;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Project에 Fibonacci.swift 파일을 생성하고 Class만 생성해준다.  </p>
-<p>그러면 Error(Red)가 사라질 것이다.  </p>
+<p>여기서 먼저 Error가 나는 것을 확인한 후에 Class를 생성해줘야한다.</p>
+<p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Foundation</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Fibonacci</span> </span>&#123;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Project에 Fibonacci.swift 파일을 생성하고 Class만 생성해준다.</p>
+<p>그러면 Error(Red)가 사라질 것이다.</p>
 
         </div>
         <footer class="article-footer">
@@ -206,7 +212,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2018/08/09/swift-TDD-Fibonacci/" data-id="cjoxmhg5r008t6j6fpyhs5li4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2018/08/09/swift-TDD-Fibonacci/" data-id="cjoz9w4bj0093mt6fezy4z55s" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

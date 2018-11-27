@@ -187,9 +187,10 @@
 
 CSS에서 헷갈리는 부분이나 어려운 부분을 간단하게 나마 정리를 해보았다.
 
-초기 CSS 설정초기에 설정을 할경우 margin까지를 box의 영역으로 설정해주는 방법이다.
+초기 CSS 설정
+초기에 설정을 할경우 margin까지를 box의 영역으로 설정해주는 방법이다.
 12345*&#123;	Box-sizing : border-box;	Margin : 0;	Padding: 0;	&#125;
-Margin 상쇄를 없애는 방법o
+Margin 상쇄를 없애는 방법
         </p>
     </div>
 </article>
@@ -236,17 +237,19 @@ Margin 상쇄를 없애는 방법o
 
         <p class="article-excerpt">
             DataBase
+
 기본적인 DataBase의 문법과 간단한 SQL에대한 예제들을 소개합니다.
 
-RDBMS란?  
-DDL, DML  
-Aggregate, Group Function  
-SQL  
-ERD  
-Table 생성  
+RDBMS란?
+DDL, DML
+Aggregate, Group Function
+SQL
+ERD
+Table 생성
 
 RDBMS란? (Relational Database Management System)
-F.커드가 도입한 관계형 모델을 기반으로 데이터베
+
+F.커드가 도입한 관계형 모델을 기반으로 데이터베이스를 관리하는 방
         </p>
     </div>
 </article>
@@ -297,14 +300,17 @@ F.커드가 도입한 관계형 모델을 기반으로 데이터베
 
         <p class="article-excerpt">
             행렬의 곱셈
+
 A,B 2개의 행렬의 곱을 구하여라
 
-answer를 선언해준다.  
-행은 A.length, 열은 B[0].length이다 (2x3) * (3x2) = (2x2) 배열이 나오기 때문이다.  
+answer를 선언해준다.
+
+행은 A.length, 열은 B[0].length이다 (2x3) * (3x2) = (2x2) 배열이 나오기 때문이다.
 
 
 3중 for문을 사용하여서 값들을 answer에다가 저장한다.
-answer[0][0] = A[0][0]B[0][0] + A[0][1]B[1][0] + A
+
+answer[0][0] = A[0][0]*B[0][0] + A[0][1]*B[1][0] + 
         </p>
     </div>
 </article>
@@ -313,58 +319,6 @@ answer[0][0] = A[0][0]B[0][0] + A[0][1]B[1][0] + A
     
     
     
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/12/14/Reactjs-study-router/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/directory.png)" alt="React Router" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/12/14/Reactjs-study-router/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/React/">React</a>
-            </div>
-            <div class="date"><time datetime="2017-12-14T03:54:00.000Z" itemprop="datePublished">2017-12-14</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/12/14/Reactjs-study-router/">React Router</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            React Router폴더 구조
-설치방법기본 세팅
-123456789101112// React typeScript Setting$ create-react-app react-router --scripts-version=react-scripts-ts// React router dom$ yarn add react-router-dom// typescript여서 설치
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -403,13 +357,70 @@ answer[0][0] = A[0][0]B[0][0] + A[0][1]B[1][0] + A
 
         <p class="article-excerpt">
             정수 내림차순으로 배치하기
-정수로 입력받은 값을 올림차순으로 변경하여서 int형으로 반환하여라.접근방법  
+
+정수로 입력받은 값을 올림차순으로 변경하여서 int형으로 반환하여라.
+접근방법
 
 입력받은 수를 char 배열로 변경해준다.
 입력받은 수를 reverse method을 사용하기 위하여 StringBuilder에 저장한다.
 반환값이 Integer형 임으로 parseInt를 사용한다.
 
 12345678910111213141516171
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/12/14/Reactjs-study-router/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/directory.png)" alt="React Router" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/12/14/Reactjs-study-router/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/React/">React</a>
+            </div>
+            <div class="date"><time datetime="2017-12-14T03:54:00.000Z" itemprop="datePublished">2017-12-14</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/12/14/Reactjs-study-router/">React Router</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            React Router
+폴더 구조
+
+설치방법
+기본 세팅
+123456789101112// React typeScript Setting$ create-react-app react-router --scripts-version=react-scripts-ts// React router dom$ yarn add react-router-dom// typescript여서
         </p>
     </div>
 </article>
@@ -456,13 +467,14 @@ answer[0][0] = A[0][0]B[0][0] + A[0][1]B[1][0] + A
 
         <p class="article-excerpt">
             원하는 요일구하기
+
 2016년의 원하는 요일구하기 고려사항
 
 Month의 자리수가 2자리가 아닌경우와 day의 자리수가 2자리가 아닌경우를 고려해서 0을 붙여줘야한다.
 DateFormat을 yyyyMMdd로 맞춰줘야 Year Month Day로 표현된다.
 Calender함수를 사용하여서 값을 구한다.
 
-1234567891011121314151617181920
+123456789101112131415161718192
         </p>
     </div>
 </article>
@@ -475,6 +487,56 @@ Calender함수를 사용하여서 값을 구한다.
     
     
         <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/12/11/Reactjs-study-syntax/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/12/11/Reactjs-study-syntax/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/React/">React</a>
+            </div>
+            <div class="date"><time datetime="2017-12-11T03:54:00.000Z" itemprop="datePublished">2017-12-11</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/12/11/Reactjs-study-syntax/">React Syntax</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            React Syntax
+create-React-app
+설치법
+12345678$ npm install create-react-app -g// 대문자를 사용하면 안된다!!$ create-react-app [ProjectName]// 시작할때 2개중 하나를 사용하면된다.$ yarn start $ npm start
+12345678910// index.jsimpor
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -513,7 +575,8 @@ Calender함수를 사용하여서 값을 구한다.
 
         <p class="article-excerpt">
             최소값 만들기
-최솟값 만들기는 A, B에서 각각 한 개의 숫자를 뽑아 두 수를 곱한 값을 누적하여 더합니다. 
+
+최솟값 만들기는 A, B에서 각각 한 개의 숫자를 뽑아 두 수를 곱한 값을 누적하여 더합니다.
 
 A, B의 길이는 같습니다.
 
@@ -524,54 +587,6 @@ A, B의 길이는 같습니다.
 곱한값들을 answer에다가 합친다.
 
 1234567891011121
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/12/11/Reactjs-study-syntax/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/12/11/Reactjs-study-syntax/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/React/">React</a>
-            </div>
-            <div class="date"><time datetime="2017-12-11T03:54:00.000Z" itemprop="datePublished">2017-12-11</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/12/11/Reactjs-study-syntax/">React Syntax</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            React Syntaxcreate-React-app
-설치법12345678$ npm install create-react-app -g// 대문자를 사용하면 안된다!!$ create-react-app [ProjectName]// 시작할때 2개중 하나를 사용하면된다.$ yarn start $ npm start
-12345678910// index.jsimport 
         </p>
     </div>
 </article>
@@ -622,11 +637,12 @@ A, B의 길이는 같습니다.
 
         <p class="article-excerpt">
             하샤드수
+
 입력된 값의 자리수의 합으로 나눴을 경우 나누어지는 경우를 하샤드수라고 한다.
 
 입력된 값의 모든 자리수를 더해서 나눴을때 나누어 떨어지면 true, 아니면 false를 반환하라.
 
-12345678910111213141516171819202122package harshadnumber;public class HarshadNumber &#123;		p
+12345678910111213141516171819202122package harshadnumber;public class HarshadNumber &#123;		
         </p>
     </div>
 </article>
@@ -673,11 +689,12 @@ A, B의 길이는 같습니다.
 
         <p class="article-excerpt">
             소수찾기
+
 입력된 값이 n일경우 1~n까지중 소수의 개수를 반환하여라
 
 10이 들어온다면 2, 3, 5, 7 4개가 존재함으로 4를 반환
 
-12345678910111213141516171819202122232425262728293031323334353637package numberofprime;public class NumOfPrime &#123;		publ
+12345678910111213141516171819202122232425262728293031323334353637package numberofprime;public class NumOfPrime &#123;		pub
         </p>
     </div>
 </article>
