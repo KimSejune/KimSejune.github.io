@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="Node.js,SPA" />
     
-    <meta name="description" content="170925 WPSN SPA Security &amp;amp; Authentication SPA Security SPA(Single-Page Application)은 사용자 경험이 좋은 만큼 프론트엔드와 백엔드의 코드가 복잡해지는 경우가 많습니다. SPA와 API 서버의 출처가 같은 경우, 보안과 인증을 위해 전통적 방식대로 쿠키를 쓸 수 있습니다. 다만 쿠키를">
+    <meta name="description" content="170925 WPSN SPA Security &amp;amp; AuthenticationSPA SecuritySPA(Single-Page Application)은 사용자 경험이 좋은 만큼 프론트엔드와 백엔드의 코드가 복잡해지는 경우가 많습니다.   SPA와 API 서버의 출처가 같은 경우, 보안과 인증을 위해 전통적 방식대로 쿠키를 쓸 수 있습니다. 다만 쿠키를">
 <meta name="keywords" content="Node.js,SPA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node-SPA-security-authentication">
 <meta property="og:url" content="http://yoursite.com/2017/09/25/node-study-spa-security-authentication/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="170925 WPSN SPA Security &amp;amp; Authentication SPA Security SPA(Single-Page Application)은 사용자 경험이 좋은 만큼 프론트엔드와 백엔드의 코드가 복잡해지는 경우가 많습니다. SPA와 API 서버의 출처가 같은 경우, 보안과 인증을 위해 전통적 방식대로 쿠키를 쓸 수 있습니다. 다만 쿠키를">
+<meta property="og:description" content="170925 WPSN SPA Security &amp;amp; AuthenticationSPA SecuritySPA(Single-Page Application)은 사용자 경험이 좋은 만큼 프론트엔드와 백엔드의 코드가 복잡해지는 경우가 많습니다.   SPA와 API 서버의 출처가 같은 경우, 보안과 인증을 위해 전통적 방식대로 쿠키를 쓸 수 있습니다. 다만 쿠키를">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/spa.png">
 <meta property="og:updated_time" content="2017-12-27T03:01:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node-SPA-security-authentication">
-<meta name="twitter:description" content="170925 WPSN SPA Security &amp;amp; Authentication SPA Security SPA(Single-Page Application)은 사용자 경험이 좋은 만큼 프론트엔드와 백엔드의 코드가 복잡해지는 경우가 많습니다. SPA와 API 서버의 출처가 같은 경우, 보안과 인증을 위해 전통적 방식대로 쿠키를 쓸 수 있습니다. 다만 쿠키를">
+<meta name="twitter:description" content="170925 WPSN SPA Security &amp;amp; AuthenticationSPA SecuritySPA(Single-Page Application)은 사용자 경험이 좋은 만큼 프론트엔드와 백엔드의 코드가 복잡해지는 경우가 많습니다.   SPA와 API 서버의 출처가 같은 경우, 보안과 인증을 위해 전통적 방식대로 쿠키를 쓸 수 있습니다. 다만 쿠키를">
 <meta name="twitter:image" content="http://yoursite.com/images/spa.png">
     
 
@@ -173,34 +173,27 @@
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/spa.png" alt="SPA"></p>
 <p>170925</p>
-<h1>WPSN SPA Security &amp; Authentication</h1>
-<h2>SPA Security</h2>
-<p>SPA(Single-Page Application)은 사용자 경험이 좋은 만큼 프론트엔드와 백엔드의 코드가 복잡해지는 경우가 많습니다.</p>
-<p>SPA와 API 서버의 출처가 같은 경우, 보안과 인증을 위해 전통적 방식대로 쿠키를 쓸 수 있습니다. 다만 쿠키를 위한 보안 정책<code>(CSRF 등)</code>은 당연히 적용해야 합니다.</p>
-<p>SPA와 API 서버의 출처가 다른 경우에도 쿠키를 사용할 수 있지만, 여러가지 문제(구현 상 불편함, 보안의 취약함)때문에 보통 쿠키 대신 JWT와 같은 토큰을 사용하는 경우가 많습니다. 일단은 출처가 다르므로 CORS 보안 정책에 대한 구현이 필요한데, 이 때 설정을 통해서 특정 출처의 Ajax 요청에 대해서만 API 서버에 접근 가능하도록 <a href="https://www.npmjs.com/package/cors#configuring-cors" target="_blank" rel="external">제한을 둘 수 있습니다.</a></p>
-<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">app.use(cors(&#123;</div><div class="line">  origin: <span class="string">'http://example.com'</span>,</div><div class="line">  optionsSuccessStatus: <span class="number">200</span> <span class="comment">// some legacy browsers (IE11, various SmartTVs) choke on 204 </span></div><div class="line">&#125;))</div></pre></td></tr></table></figure></p>
-<p>기존 page : window.open('http:google.com')
-열린 page : window.opener // 나를 연 page를 참조
-window.opener.postMessage('send message', '*')</p>
-<p>기존 page : window.addEventListerner('message', e =&gt; {
-console.log(e.data)
-})</p>
-<h2>SPA Authentication</h2>
-<p>SPA의 인증을 위해 단순하게 인증을 위한 REST API를 둘 수도 있을 것입니다. 하지만 회원가입과 로그인은 누구나 할 수 있어야 한다는 특성때문에 REST API가 공격을 받을 위험이 커지게 됩니다.</p>
+<h1 id="WPSN-SPA-Security-amp-Authentication"><a href="#WPSN-SPA-Security-amp-Authentication" class="headerlink" title="WPSN SPA Security &amp; Authentication"></a>WPSN SPA Security &amp; Authentication</h1><h2 id="SPA-Security"><a href="#SPA-Security" class="headerlink" title="SPA Security"></a>SPA Security</h2><p>SPA(Single-Page Application)은 사용자 경험이 좋은 만큼 프론트엔드와 백엔드의 코드가 복잡해지는 경우가 많습니다.  </p>
+<p>SPA와 API 서버의 출처가 같은 경우, 보안과 인증을 위해 전통적 방식대로 쿠키를 쓸 수 있습니다. 다만 쿠키를 위한 보안 정책<code>(CSRF 등)</code>은 당연히 적용해야 합니다.  </p>
+<p>SPA와 API 서버의 출처가 다른 경우에도 쿠키를 사용할 수 있지만, 여러가지 문제(구현 상 불편함, 보안의 취약함)때문에 보통 쿠키 대신 JWT와 같은 토큰을 사용하는 경우가 많습니다. 일단은 출처가 다르므로 CORS 보안 정책에 대한 구현이 필요한데, 이 때 설정을 통해서 특정 출처의 Ajax 요청에 대해서만 API 서버에 접근 가능하도록 <a href="https://www.npmjs.com/package/cors#configuring-cors" target="_blank" rel="external">제한을 둘 수 있습니다.</a>  </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">app.use(cors(&#123;</div><div class="line">  origin: <span class="string">'http://example.com'</span>,</div><div class="line">  optionsSuccessStatus: <span class="number">200</span> <span class="comment">// some legacy browsers (IE11, various SmartTVs) choke on 204 </span></div><div class="line">&#125;))</div></pre></td></tr></table></figure>
+<p>기존 page : window.open(‘http:google.com’)<br>열린 page : window.opener // 나를 연 page를 참조<br>          window.opener.postMessage(‘send message’, ‘*’)</p>
+<p>기존 page : window.addEventListerner(‘message’, e =&gt; {<br>  console.log(e.data)<br>})</p>
+<h2 id="SPA-Authentication"><a href="#SPA-Authentication" class="headerlink" title="SPA Authentication"></a>SPA Authentication</h2><p>SPA의 인증을 위해 단순하게 인증을 위한 REST API를 둘 수도 있을 것입니다. 하지만 회원가입과 로그인은 누구나 할 수 있어야 한다는 특성때문에 REST API가 공격을 받을 위험이 커지게 됩니다.  </p>
 <p>그래서 회원가입과 로그인 만큼은 SPA + REST API를 통해서 하는 것이 아니라, CSRF와 Captcha 등의 보안 정책을 적용한 별도의 웹 페이지를 통해 해주는 것이 좋습니다. 이런 전략을 사용하면 SPA와 웹 페이지 간에 토큰을 주고 받을 필요가 있는데, 이를 위해 팝업(<code>window.open</code>)과 윈도우 간 메시지 통신(<code>window.postMessage</code>)을 사용합니다.</p>
 <ol>
-<li>redirect 로그인, 회원가입을 하면 토큰을 포함 시킨 경로를 가지고 spa로 redirect 시킬 수 있다.</li>
-<li>popup =&gt; window.open, window.postMessage사용</li>
+<li>redirect 로그인, 회원가입을 하면 토큰을 포함 시킨 경로를 가지고 spa로 redirect 시킬 수 있다.  </li>
+<li>popup =&gt; window.open, window.postMessage사용  </li>
 </ol>
-<p>아래의 두 프로젝트를 통해 직접 SPA 인증 절차를 시험해 볼 수 있습니다.</p>
-<p><code>api</code> 프로젝트는 passport를 이용해서 Github OAuth 로그인을 구현한 프로젝트입니다.</p>
-<p><code>spa</code> 프로젝트는 React를 이용해서 API 서버에 접속할 수 있는 프로젝트입니다.</p>
+<p>아래의 두 프로젝트를 통해 직접 SPA 인증 절차를 시험해 볼 수 있습니다.  </p>
+<p><code>api</code> 프로젝트는 passport를 이용해서 Github OAuth 로그인을 구현한 프로젝트입니다.  </p>
+<p><code>spa</code> 프로젝트는 React를 이용해서 API 서버에 접속할 수 있는 프로젝트입니다.  </p>
 <p>인증 절차는 다음과 같이 구현되었습니다.</p>
 <ol>
-<li>SPA에서 API 서버의 /auth/ 경로에 대해 팝업을 열고 message 이벤트에 대한 핸들러를 등록합니다.</li>
-<li>사용자는 API 서버에 대해 열린 팝업에서 로그인을 시도합니다.</li>
-<li>로그인이 성공하면, 팝업에서 window.opener.postMessage(...)를 통해 SPA에 토큰을 전달합니다.</li>
-<li>이제부터 SPA에서 토큰을 통해 인증된 요청을 보낼 수 있게 됩니다.</li>
+<li>SPA에서 API 서버의 /auth/ 경로에 대해 팝업을 열고 message 이벤트에 대한 핸들러를 등록합니다.  </li>
+<li>사용자는 API 서버에 대해 열린 팝업에서 로그인을 시도합니다.  </li>
+<li>로그인이 성공하면, 팝업에서 window.opener.postMessage(…)를 통해 SPA에 토큰을 전달합니다.  </li>
+<li>이제부터 SPA에서 토큰을 통해 인증된 요청을 보낼 수 있게 됩니다.  </li>
 </ol>
 <p>인증 절차에 대한 자세한 사항은 코드를 참고해주세요.</p>
 
@@ -210,7 +203,7 @@ console.log(e.data)
 
 
 
-    <a data-url="http://yoursite.com/2017/09/25/node-study-spa-security-authentication/" data-id="cjoz9w4ba008jmt6f7496xbn6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/09/25/node-study-spa-security-authentication/" data-id="cjoza6owx008j186ficdsib0m" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

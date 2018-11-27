@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="Node.js,Web Form" />
     
-    <meta name="description" content="Node Web Form HTML Form HTML form의 기본 동작 HTML form을 전송하면, 입력된 정보가 기본적으로 percent encoding 되어 요청됨   GET method  이름=값 형식으로 간다. 12GET /search?query=%EA%B0%9C&amp;amp;sort=latest HTTP/1.1...    Post method  이">
+    <meta name="description" content="Node Web FormHTML FormHTML form의 기본 동작HTML form을 전송하면, 입력된 정보가 기본적으로 percent encoding 되어 요청됨  GET method    이름=값 형식으로 간다.12GET /search?query=%EA%B0%9C&amp;amp;sort=latest HTTP/1.1...    Post method    이름">
 <meta name="keywords" content="Node.js,Web Form">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node-Web-Form">
 <meta property="og:url" content="http://yoursite.com/2017/08/30/node-study-web-form/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="Node Web Form HTML Form HTML form의 기본 동작 HTML form을 전송하면, 입력된 정보가 기본적으로 percent encoding 되어 요청됨   GET method  이름=값 형식으로 간다. 12GET /search?query=%EA%B0%9C&amp;amp;sort=latest HTTP/1.1...    Post method  이">
+<meta property="og:description" content="Node Web FormHTML FormHTML form의 기본 동작HTML form을 전송하면, 입력된 정보가 기본적으로 percent encoding 되어 요청됨  GET method    이름=값 형식으로 간다.12GET /search?query=%EA%B0%9C&amp;amp;sort=latest HTTP/1.1...    Post method    이름">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/123.png">
 <meta property="og:updated_time" content="2017-12-27T03:01:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node-Web-Form">
-<meta name="twitter:description" content="Node Web Form HTML Form HTML form의 기본 동작 HTML form을 전송하면, 입력된 정보가 기본적으로 percent encoding 되어 요청됨   GET method  이름=값 형식으로 간다. 12GET /search?query=%EA%B0%9C&amp;amp;sort=latest HTTP/1.1...    Post method  이">
+<meta name="twitter:description" content="Node Web FormHTML FormHTML form의 기본 동작HTML form을 전송하면, 입력된 정보가 기본적으로 percent encoding 되어 요청됨  GET method    이름=값 형식으로 간다.12GET /search?query=%EA%B0%9C&amp;amp;sort=latest HTTP/1.1...    Post method    이름">
 <meta name="twitter:image" content="http://yoursite.com/images/123.png">
     
 
@@ -172,77 +172,58 @@
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/123.png" alt="web form"></p>
-<h1>Node Web Form</h1>
-<h2>HTML Form</h2>
-<h2>HTML form의 기본 동작</h2>
-<p>HTML form을 전송하면, 입력된 정보가 기본적으로 <code>percent encoding</code> 되어 요청됨</p>
+<h1 id="Node-Web-Form"><a href="#Node-Web-Form" class="headerlink" title="Node Web Form"></a>Node Web Form</h1><h2 id="HTML-Form"><a href="#HTML-Form" class="headerlink" title="HTML Form"></a>HTML Form</h2><h2 id="HTML-form의-기본-동작"><a href="#HTML-form의-기본-동작" class="headerlink" title="HTML form의 기본 동작"></a>HTML form의 기본 동작</h2><p>HTML form을 전송하면, 입력된 정보가 기본적으로 <code>percent encoding</code> 되어 요청됨</p>
 <ul>
-<li>
-<p>GET method</p>
+<li><p>GET method  </p>
 <ul>
-<li>이름=값 형식으로 간다.
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">GET /search?query=%EA%B0%9C&amp;sort=latest HTTP/1.1</div><div class="line">...</div></pre></td></tr></table></figure></li>
+<li>이름=값 형식으로 간다.<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">GET /search?query=%EA%B0%9C&amp;sort=latest HTTP/1.1</div><div class="line">...</div></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
-<li>
-<p>Post method</p>
+<li><p>Post method  </p>
 <ul>
 <li>이름=값 형식으로 간다.</li>
 <li>urlencoded로는 파일을 보내기에 부적절해서 다른 <code>Content-type인 multipart를 사용한다.</code></li>
 </ul>
 </li>
 </ul>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">POST /form HTTP/1.1</div><div class="line">Content-Type: application/x-www-form-urlencoded</div><div class="line">...</div><div class="line"></div><div class="line">home=Cosby&amp;favorite+flavor=flies</div></pre></td></tr></table></figure></p>
-<h2>multipart/ form-data</h2>
-<ul>
-<li>기본 설정(percent encoding)으로는 폼으로 <code>파일을 업로드하는 것은 불가능</code></li>
-<li>(클라이언트 측) form 태그에 <code>enctype=&quot;multipart/form-data&quot;</code>속성을 적용하면 파일 업로드 가능</li>
-<li>(서버 측) body-parser 미들웨어는 multipart/form-data 형태의 요청을 지원하지 않음 (<code>multer</code> 필요)</li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">POST /form HTTP/1.1</div><div class="line">Content-Type: application/x-www-form-urlencoded</div><div class="line">...</div><div class="line"></div><div class="line">home=Cosby&amp;favorite+flavor=flies</div></pre></td></tr></table></figure>
+<h2 id="multipart-form-data"><a href="#multipart-form-data" class="headerlink" title="multipart/ form-data"></a>multipart/ form-data</h2><ul>
+<li>기본 설정(percent encoding)으로는 폼으로 <code>파일을 업로드하는 것은 불가능</code>  </li>
+<li>(클라이언트 측) form 태그에 <code>enctype=&quot;multipart/form-data&quot;</code>속성을 적용하면 파일 업로드 가능  </li>
+<li>(서버 측) body-parser 미들웨어는 multipart/form-data 형태의 요청을 지원하지 않음 (<code>multer</code> 필요)<ul>
 <li><code>json, url-encoded형식을 req.body에서 사용하기 위해서는 body-parser가 필요하다.</code></li>
 </ul>
-<h2>HTML Form 예제 <a href="https://glitch.com/edit/#!/wpsn-form-example" target="_blank" rel="external">Link</a></h2>
-<ul>
-<li>
-<p>UUID</p>
-</li>
-<li>
-<p>Redirection after submission</p>
-</li>
-<li>
-<p>Form validation</p>
-</li>
-<li>
-<p>클라이언트 측 validation을 잘하면 사용자가 사용하기에 편하다.</p>
-</li>
-<li>
-<p>클라이언트 측 validation 구현방법</p>
 </li>
 </ul>
-<p><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">required</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"title"</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="HTML-Form-예제-Link"><a href="#HTML-Form-예제-Link" class="headerlink" title="HTML Form 예제 Link"></a>HTML Form 예제 <a href="https://glitch.com/edit/#!/wpsn-form-example" target="_blank" rel="external">Link</a></h2><ul>
+<li>UUID  </li>
+<li>Redirection after submission  </li>
+<li><p>Form validation  </p>
+</li>
+<li><p>클라이언트 측 validation을 잘하면 사용자가 사용하기에 편하다.</p>
+</li>
+<li>클라이언트 측 validation 구현방법</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">required</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"title"</span>&gt;</span></div></pre></td></tr></table></figure>
 <blockquote>
-<p>redirect('/')는 300(301 Moved Permanently
-302 Found) 번대 에러가 발생했을 때 다른 곳으로 보내준다.</p>
+<p>redirect(‘/‘)는 300(301 Moved Permanently<br>302 Found) 번대 에러가 발생했을 때 다른 곳으로 보내준다.</p>
 </blockquote>
 <ul>
-<li>post 응답이 redirect가아닌 새로고침을 하면 같은 값이 계속 간다.
-<ul>
+<li>post 응답이 redirect가아닌 새로고침을 하면 같은 값이 계속 간다.<ul>
 <li>Ajax를 사용할때는 redirect를 하지 않아도 괜찮다.</li>
 </ul>
 </li>
 </ul>
-<h3>301과 302의 차이</h3>
-<ul>
-<li>
-<p>301응답이란? 사용자가 보내면 web browser는 그걸을 기억했다가 똑같은 요청이 온다면 web browser가 <code>서버에 요청을 하지않고 web browser에서 그전의 저장한 정보를 보낸다.</code></p>
+<h3 id="301과-302의-차이"><a href="#301과-302의-차이" class="headerlink" title="301과 302의 차이"></a>301과 302의 차이</h3><ul>
+<li><p>301응답이란? 사용자가 보내면 web browser는 그걸을 기억했다가 똑같은 요청이 온다면 web browser가 <code>서버에 요청을 하지않고 web browser에서 그전의 저장한 정보를 보낸다.</code></p>
 </li>
-<li>
-<p>res.redirect는 302 상태코드로 응답합니다.</p>
+<li><p>res.redirect는 302 상태코드로 응답합니다.</p>
 </li>
 </ul>
-<h3>UUID</h3>
-<ul>
+<h3 id="UUID"><a href="#UUID" class="headerlink" title="UUID"></a>UUID</h3><ul>
 <li>범용 공용 식별자 : 어디에서든지 유니크한 아이디</li>
-<li>128bit의 숫자로 이루어져 있으며</li>
+<li>128bit의 숫자로 이루어져 있으며 </li>
 </ul>
 
         </div>
@@ -251,7 +232,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/08/30/node-study-web-form/" data-id="cjoz9w4bd008rmt6frnetjwuz" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/08/30/node-study-web-form/" data-id="cjoza6ox1008r186ft2nas93v" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

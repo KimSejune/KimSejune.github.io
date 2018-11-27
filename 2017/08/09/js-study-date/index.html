@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="JavaScript,Date" />
     
-    <meta name="description" content="JavaScript Date   생성자 함수로 반드시 생성해야한다 리터럴 방식이 없다.  1. Date Constructor  Date 생성자를 사용하여 날짜와 시간을 가지는 인스턴스를 생성한다.  1234new Date()new Date(milliseconds)new Date(dateString)new Date(year, month[, day, hour,">
+    <meta name="description" content="JavaScript Date  생성자 함수로 반드시 생성해야한다 리터럴 방식이 없다.  1. Date Constructor Date 생성자를 사용하여 날짜와 시간을 가지는 인스턴스를 생성한다.   1234new Date()new Date(milliseconds)new Date(dateString)new Date(year, month[, day, hour,">
 <meta name="keywords" content="JavaScript,Date">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript Date">
 <meta property="og:url" content="http://yoursite.com/2017/08/09/js-study-date/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="JavaScript Date   생성자 함수로 반드시 생성해야한다 리터럴 방식이 없다.  1. Date Constructor  Date 생성자를 사용하여 날짜와 시간을 가지는 인스턴스를 생성한다.  1234new Date()new Date(milliseconds)new Date(dateString)new Date(year, month[, day, hour,">
+<meta property="og:description" content="JavaScript Date  생성자 함수로 반드시 생성해야한다 리터럴 방식이 없다.  1. Date Constructor Date 생성자를 사용하여 날짜와 시간을 가지는 인스턴스를 생성한다.   1234new Date()new Date(milliseconds)new Date(dateString)new Date(year, month[, day, hour,">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/js.jpeg">
 <meta property="og:updated_time" content="2017-12-27T02:54:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript Date">
-<meta name="twitter:description" content="JavaScript Date   생성자 함수로 반드시 생성해야한다 리터럴 방식이 없다.  1. Date Constructor  Date 생성자를 사용하여 날짜와 시간을 가지는 인스턴스를 생성한다.  1234new Date()new Date(milliseconds)new Date(dateString)new Date(year, month[, day, hour,">
+<meta name="twitter:description" content="JavaScript Date  생성자 함수로 반드시 생성해야한다 리터럴 방식이 없다.  1. Date Constructor Date 생성자를 사용하여 날짜와 시간을 가지는 인스턴스를 생성한다.   1234new Date()new Date(milliseconds)new Date(dateString)new Date(year, month[, day, hour,">
 <meta name="twitter:image" content="http://yoursite.com/images/js.jpeg">
     
 
@@ -171,177 +171,141 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1>JavaScript Date</h1>
-<p><img src="/images/js.jpeg" alt="js"></p>
+            <h1 id="JavaScript-Date"><a href="#JavaScript-Date" class="headerlink" title="JavaScript Date"></a>JavaScript Date</h1><p><img src="/images/js.jpeg" alt="js"></p>
 <ul>
 <li>생성자 함수로 반드시 생성해야한다 리터럴 방식이 없다.</li>
 </ul>
-<h2>1. Date Constructor</h2>
-<ul>
-<li>Date 생성자를 사용하여 날짜와 시간을 가지는 인스턴스를 생성한다.</li>
+<h2 id="1-Date-Constructor"><a href="#1-Date-Constructor" class="headerlink" title="1. Date Constructor"></a>1. Date Constructor</h2><ul>
+<li>Date 생성자를 사용하여 날짜와 시간을 가지는 인스턴스를 생성한다. </li>
 </ul>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>()</div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(milliseconds)</div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(dateString)</div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(year, month[, day, hour, minute, second, millisecond])</div></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>()</div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(milliseconds)</div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(dateString)</div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(year, month[, day, hour, minute, second, millisecond])</div></pre></td></tr></table></figure>
 <ul>
 <li>Date() 생성자 함수를 new 연산자없이 사용하면 Date 객체를 반환하지 않고 결과값을 문자열로 반환한다.</li>
 </ul>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> date, date); <span class="comment">//object Thu May 12 2016 00:51:36 GMT+0900 (KST)</span></div><div class="line"></div><div class="line">date = <span class="built_in">Date</span>();</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> date, date); <span class="comment">// string Thu May 12 2016 00:51:36 GMT+0900 (KST)</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.dir(<span class="built_in">Date</span>);</div></pre></td></tr></table></figure></p>
-<h3>1.1 new Date()</h3>
-<ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> date, date); <span class="comment">//object Thu May 12 2016 00:51:36 GMT+0900 (KST)</span></div><div class="line"></div><div class="line">date = <span class="built_in">Date</span>();</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> date, date); <span class="comment">// string Thu May 12 2016 00:51:36 GMT+0900 (KST)</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.dir(<span class="built_in">Date</span>);</div></pre></td></tr></table></figure>
+<h3 id="1-1-new-Date"><a href="#1-1-new-Date" class="headerlink" title="1.1 new Date()"></a>1.1 new Date()</h3><ul>
 <li>매개변수가 없는 경우 현재 날짜와 시간을 가지는 인스턴스를 반환한다.</li>
 </ul>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// Thu May 12 2016 15:38:39 GMT+0900 (KST)</span></div></pre></td></tr></table></figure></p>
-<h3>1.2 new Date(milliseconds)</h3>
-<ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// Thu May 12 2016 15:38:39 GMT+0900 (KST)</span></div></pre></td></tr></table></figure>
+<h3 id="1-2-new-Date-milliseconds"><a href="#1-2-new-Date-milliseconds" class="headerlink" title="1.2 new Date(milliseconds)"></a>1.2 new Date(milliseconds)</h3><ul>
 <li>매개변수에 밀리초를 전달하면 1970년 1월 1일 00:00(UTC)을 기점으로 전달된 밀리초만큼 경과한 날짜와 시간을 가지는 인스턴스를 반환한다.</li>
 </ul>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">0</span>);</div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// Fri Jan 01 1970 09:00:00 GMT+0900 (KST)</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">86400000</span>);</div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// Fri Jan 02 1970 09:00:00 GMT+0900 (KST)</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">0</span>);</div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// Fri Jan 01 1970 09:00:00 GMT+0900 (KST)</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">86400000</span>);</div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// Fri Jan 02 1970 09:00:00 GMT+0900 (KST)</span></div></pre></td></tr></table></figure>
 <ul>
 <li>86400000ms는 1day를 의미한다.</li>
 </ul>
-<h3>1.3 new Date(dateString)</h3>
-<ul>
-<li>매개변수에 날짜와 시간을 나타내는 <code>문자열</code>을 전달하면 지정된 날짜와 시간을 가지는 인스턴스를 반환한다.
-<ul>
+<h3 id="1-3-new-Date-dateString"><a href="#1-3-new-Date-dateString" class="headerlink" title="1.3 new Date(dateString)"></a>1.3 new Date(dateString)</h3><ul>
+<li>매개변수에 날짜와 시간을 나타내는 <code>문자열</code>을 전달하면 지정된 날짜와 시간을 가지는 인스턴스를 반환한다.<ul>
 <li>문자열로 나타내진다.</li>
 </ul>
 </li>
 </ul>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2017/08/08/20:00:00'</span>);</div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// Tue Aug 08 2017 20:00:00 GMT+0900 (KST)</span></div></pre></td></tr></table></figure></p>
-<h3>1.4 new Date(year, month[, day, hour, minute, second, millisecond])</h3>
-<ul>
-<li>매개변수에 년, 월, 일, 시, 분, 초, 밀리초를 의미하는 숫자를 전달하면 지정된 날짜와 시간을 가지는 인스턴스를 반환한다. <code>이때 년, 월을 반드시 지정하여야 한다.</code>
-<ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2017/08/08/20:00:00'</span>);</div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// Tue Aug 08 2017 20:00:00 GMT+0900 (KST)</span></div></pre></td></tr></table></figure>
+<h3 id="1-4-new-Date-year-month-day-hour-minute-second-millisecond"><a href="#1-4-new-Date-year-month-day-hour-minute-second-millisecond" class="headerlink" title="1.4 new Date(year, month[, day, hour, minute, second, millisecond])"></a>1.4 new Date(year, month[, day, hour, minute, second, millisecond])</h3><ul>
+<li>매개변수에 년, 월, 일, 시, 분, 초, 밀리초를 의미하는 숫자를 전달하면 지정된 날짜와 시간을 가지는 인스턴스를 반환한다. <code>이때 년, 월을 반드시 지정하여야 한다.</code><ul>
 <li>숫자로 나타내진다.</li>
-<li>year	1900년 이후의 년</li>
-<li>month	월을 나타내는 <code>0 ~ 11까지의 정수 (주의: 0부터 시작, 0 = 1월)</code></li>
-<li>day	일을 나타내는 1 ~ 31까지의 정수</li>
-<li>hour	시를 나타내는 0 ~ 23까지의 정수</li>
-<li>minute	분을 나타내는 0 ~ 59까지의 정수</li>
-<li>second	초를 나타내는 0 ~ 59까지의 정수</li>
-<li>millisecond	밀리초를 나타내는 0 ~ 999까지의 정수</li>
+<li>year    1900년 이후의 년</li>
+<li>month    월을 나타내는 <code>0 ~ 11까지의 정수 (주의: 0부터 시작, 0 = 1월)</code></li>
+<li>day    일을 나타내는 1 ~ 31까지의 정수</li>
+<li>hour    시를 나타내는 0 ~ 23까지의 정수</li>
+<li>minute    분을 나타내는 0 ~ 59까지의 정수</li>
+<li>second    초를 나타내는 0 ~ 59까지의 정수</li>
+<li>millisecond    밀리초를 나타내는 0 ~ 999까지의 정수</li>
 </ul>
 </li>
 </ul>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1999</span>);</div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// Thu Jan 01 1999 09:00:01 GMT+0900 (KST)</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1999</span>, <span class="number">10</span>, <span class="number">3</span>, <span class="number">11</span>, <span class="number">33</span>, <span class="number">30</span>, <span class="number">0</span>);</div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// Wed Nov 03 1999 11:33:30 GMT+0900 (KST)</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1999</span>, <span class="number">10</span>);</div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// Mon Nov 01 1999 00:00:00 GMT+0900 (KST)</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'1999/10/3/11:33:00:00'</span>);</div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// Mon Nov 01 1999 00:00:00 GMT+0900 (KST)</span></div></pre></td></tr></table></figure></p>
-<h2>2. Date Method</h2>
-<h3>2.1 Date.now()</h3>
-<ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1999</span>);</div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// Thu Jan 01 1999 09:00:01 GMT+0900 (KST)</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1999</span>, <span class="number">10</span>, <span class="number">3</span>, <span class="number">11</span>, <span class="number">33</span>, <span class="number">30</span>, <span class="number">0</span>);</div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// Wed Nov 03 1999 11:33:30 GMT+0900 (KST)</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1999</span>, <span class="number">10</span>);</div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// Mon Nov 01 1999 00:00:00 GMT+0900 (KST)</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'1999/10/3/11:33:00:00'</span>);</div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// Mon Nov 01 1999 00:00:00 GMT+0900 (KST)</span></div></pre></td></tr></table></figure>
+<h2 id="2-Date-Method"><a href="#2-Date-Method" class="headerlink" title="2. Date Method"></a>2. Date Method</h2><h3 id="2-1-Date-now"><a href="#2-1-Date-now" class="headerlink" title="2.1 Date.now()"></a>2.1 Date.now()</h3><ul>
 <li>1970년 1월 1일 00:00:00(UTC)을 기점으로 현재 시간까지 경과한 밀리초를 숫자로 반환한다.</li>
 </ul>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> n = <span class="built_in">Date</span>.now();</div><div class="line"><span class="built_in">console</span>.log(n);</div></pre></td></tr></table></figure></p>
-<h3>2.2 Date.parse()</h3>
-<ul>
-<li>1970년 1월 1일 00:00:00(UTC)을 기점으로 매개변수로 전달된 지정 시간(new Date(dateString)의 인수와 동일한 형식)까지의 밀리초를 숫자로 반환한다.
-<ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> n = <span class="built_in">Date</span>.now();</div><div class="line"><span class="built_in">console</span>.log(n);</div></pre></td></tr></table></figure>
+<h3 id="2-2-Date-parse"><a href="#2-2-Date-parse" class="headerlink" title="2.2 Date.parse()"></a>2.2 Date.parse()</h3><ul>
+<li>1970년 1월 1일 00:00:00(UTC)을 기점으로 매개변수로 전달된 지정 시간(new Date(dateString)의 인수와 동일한 형식)까지의 밀리초를 숫자로 반환한다.<ul>
 <li>UTC로 지정을 안해주면 컴퓨터의 로컬을 기준으로 반영한다.</li>
 </ul>
 </li>
 </ul>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = <span class="built_in">Date</span>.parse(<span class="string">'Jan 2, 1970 00:00:00 UTC'</span>); <span class="comment">// UTC</span></div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// 86400000</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> d = <span class="built_in">Date</span>.parse(<span class="string">'Jan 2, 1970 09:00:00'</span>); <span class="comment">// KST</span></div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// 86400000</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> d = <span class="built_in">Date</span>.parse(<span class="string">'1970/01/02/09:00:00'</span>); <span class="comment">// KST</span></div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// 86400000</span></div></pre></td></tr></table></figure></p>
-<h3>2.3 Date.UTC()</h3>
-<ul>
-<li>
-<p>1970년 1월 1일 00:00:00(UTC)을 기점으로 매개변수로 전달된 지정 시간(new Date(year, month[, day, hour, minute, second, millisecond]))의 인수와 동일한 형식)까지의 밀리초를 숫자로 반환한다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = <span class="built_in">Date</span>.parse(<span class="string">'Jan 2, 1970 00:00:00 UTC'</span>); <span class="comment">// UTC</span></div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// 86400000</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> d = <span class="built_in">Date</span>.parse(<span class="string">'Jan 2, 1970 09:00:00'</span>); <span class="comment">// KST</span></div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// 86400000</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> d = <span class="built_in">Date</span>.parse(<span class="string">'1970/01/02/09:00:00'</span>); <span class="comment">// KST</span></div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// 86400000</span></div></pre></td></tr></table></figure>
+<h3 id="2-3-Date-UTC"><a href="#2-3-Date-UTC" class="headerlink" title="2.3 Date.UTC()"></a>2.3 Date.UTC()</h3><ul>
+<li><p>1970년 1월 1일 00:00:00(UTC)을 기점으로 매개변수로 전달된 지정 시간(new Date(year, month[, day, hour, minute, second, millisecond]))의 인수와 동일한 형식)까지의 밀리초를 숫자로 반환한다.</p>
 </li>
-<li>
-<p>UTC() 메소드는 new Date(year, month[, day, hour, minute, second, millisecond])와 같은 형식의 인수를 사용한다. 하지만 UTC() 메소드의 인수는 local time(KST)가 아닌 UTC로 인식된다.</p>
+<li><p>UTC() 메소드는 new Date(year, month[, day, hour, minute, second, millisecond])와 같은 형식의 인수를 사용한다. 하지만 UTC() 메소드의 인수는 local time(KST)가 아닌 UTC로 인식된다.</p>
 </li>
 </ul>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = <span class="built_in">Date</span>.UTC(<span class="number">1970</span>, <span class="number">0</span>, <span class="number">2</span>);</div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// 86400000</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> d = <span class="built_in">Date</span>.UTC(<span class="string">'1970/1/2'</span>);</div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// NaN</span></div></pre></td></tr></table></figure></p>
-<h3>2.4 Date.prototype.getFullYear()</h3>
-<ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = <span class="built_in">Date</span>.UTC(<span class="number">1970</span>, <span class="number">0</span>, <span class="number">2</span>);</div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// 86400000</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> d = <span class="built_in">Date</span>.UTC(<span class="string">'1970/1/2'</span>);</div><div class="line"><span class="built_in">console</span>.log(d); <span class="comment">// NaN</span></div></pre></td></tr></table></figure>
+<h3 id="2-4-Date-prototype-getFullYear"><a href="#2-4-Date-prototype-getFullYear" class="headerlink" title="2.4 Date.prototype.getFullYear()"></a>2.4 Date.prototype.getFullYear()</h3><ul>
 <li>해당 연도를 나타내는 4자리 숫자를 반환한다.</li>
 </ul>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line"><span class="keyword">var</span> year = today.getFullYear();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(today); <span class="comment">// Tue Aug 08 2017 20:53:24 GMT+0900 (KST)</span></div><div class="line"><span class="built_in">console</span>.log(year);  <span class="comment">// 2017</span></div></pre></td></tr></table></figure></p>
-<h3>2.5 Date.prototype.setFullYear()</h3>
-<ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line"><span class="keyword">var</span> year = today.getFullYear();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(today); <span class="comment">// Tue Aug 08 2017 20:53:24 GMT+0900 (KST)</span></div><div class="line"><span class="built_in">console</span>.log(year);  <span class="comment">// 2017</span></div></pre></td></tr></table></figure>
+<h3 id="2-5-Date-prototype-setFullYear"><a href="#2-5-Date-prototype-setFullYear" class="headerlink" title="2.5 Date.prototype.setFullYear()"></a>2.5 Date.prototype.setFullYear()</h3><ul>
 <li>해당 연도를 나타내는 4자리 숫자를 설정한다. 연도 이외 월, 일도 설정할 수 있다.</li>
 </ul>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">dateObj.setFullYear(yearValue[, monthValue[, dayValue]])</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">today.setFullYear(<span class="number">2000</span>);</div><div class="line"><span class="keyword">var</span> year = today.getFullYear();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(today); <span class="comment">// Tue Aug 08 2000 20:54:21 GMT+0900 (KST)</span></div><div class="line"><span class="built_in">console</span>.log(year);  <span class="comment">// 2000</span></div><div class="line"></div><div class="line">today.setFullYear(<span class="number">1900</span>, <span class="number">0</span>, <span class="number">1</span>);</div><div class="line">year = today.getFullYear();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(today); <span class="comment">// Mon Jan 01 1900 20:54:21 GMT+0900 (KST)</span></div><div class="line"><span class="built_in">console</span>.log(year);  <span class="comment">// 1900</span></div></pre></td></tr></table></figure></p>
-<h3>2.6 Date.prototype.getMonth()</h3>
-<ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">dateObj.setFullYear(yearValue[, monthValue[, dayValue]])</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">today.setFullYear(<span class="number">2000</span>);</div><div class="line"><span class="keyword">var</span> year = today.getFullYear();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(today); <span class="comment">// Tue Aug 08 2000 20:54:21 GMT+0900 (KST)</span></div><div class="line"><span class="built_in">console</span>.log(year);  <span class="comment">// 2000</span></div><div class="line"></div><div class="line">today.setFullYear(<span class="number">1900</span>, <span class="number">0</span>, <span class="number">1</span>);</div><div class="line">year = today.getFullYear();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(today); <span class="comment">// Mon Jan 01 1900 20:54:21 GMT+0900 (KST)</span></div><div class="line"><span class="built_in">console</span>.log(year);  <span class="comment">// 1900</span></div></pre></td></tr></table></figure>
+<h3 id="2-6-Date-prototype-getMonth"><a href="#2-6-Date-prototype-getMonth" class="headerlink" title="2.6 Date.prototype.getMonth()"></a>2.6 Date.prototype.getMonth()</h3><ul>
 <li>해당 월을 나타내는 0 ~ 11의 정수를 반환한다. 1월은 0, 12월은 11이다.</li>
 </ul>
-<h3>2.7 Date.prototype.setMonth()</h3>
-<ul>
+<h3 id="2-7-Date-prototype-setMonth"><a href="#2-7-Date-prototype-setMonth" class="headerlink" title="2.7 Date.prototype.setMonth()"></a>2.7 Date.prototype.setMonth()</h3><ul>
 <li>해당 월을 나타내는 0 ~ 11의 정수를 설정한다. 1월은 0, 12월은 11이다. 월 이외 일도 설정할 수 있다.</li>
 </ul>
-<h3>2.8 Date.prototype.getDate()</h3>
-<ul>
+<h3 id="2-8-Date-prototype-getDate"><a href="#2-8-Date-prototype-getDate" class="headerlink" title="2.8 Date.prototype.getDate()"></a>2.8 Date.prototype.getDate()</h3><ul>
 <li>해당 날짜(1 ~ 31)를 나타내는 정수를 반환한다.</li>
 </ul>
-<h3>2.9 Date.prototype.setDate()</h3>
-<ul>
+<h3 id="2-9-Date-prototype-setDate"><a href="#2-9-Date-prototype-setDate" class="headerlink" title="2.9 Date.prototype.setDate()"></a>2.9 Date.prototype.setDate()</h3><ul>
 <li>해당 날짜(1 ~ 31)를 나타내는 정수를 설정한다.</li>
 </ul>
 <p>###2.10 Date.prototype.getDay()</p>
 <ul>
-<li>해당 요일(0 ~ 6)를 나타내는 정수를 반환한다. 반환값은 아래와 같다.
-<ul>
+<li>해당 요일(0 ~ 6)를 나타내는 정수를 반환한다. 반환값은 아래와 같다.<ul>
 <li>0은 일요일 6은 토요일이다.</li>
 </ul>
 </li>
 </ul>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line"><span class="keyword">var</span> day = today.getDay();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(today); <span class="comment">// Tue Aug 08 2017 20:58:22 GMT+0900 (KST)</span></div><div class="line"><span class="built_in">console</span>.log(day);   <span class="comment">// 2</span></div></pre></td></tr></table></figure></p>
-<h3>2.11 Date.prototype.getHours()</h3>
-<ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line"><span class="keyword">var</span> day = today.getDay();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(today); <span class="comment">// Tue Aug 08 2017 20:58:22 GMT+0900 (KST)</span></div><div class="line"><span class="built_in">console</span>.log(day);   <span class="comment">// 2</span></div></pre></td></tr></table></figure>
+<h3 id="2-11-Date-prototype-getHours"><a href="#2-11-Date-prototype-getHours" class="headerlink" title="2.11 Date.prototype.getHours()"></a>2.11 Date.prototype.getHours()</h3><ul>
 <li>해당 시간(0 ~ 23)를 나타내는 정수를 반환한다.</li>
 </ul>
-<h3>2.12 Date.prototype.setHours()</h3>
-<ul>
+<h3 id="2-12-Date-prototype-setHours"><a href="#2-12-Date-prototype-setHours" class="headerlink" title="2.12 Date.prototype.setHours()"></a>2.12 Date.prototype.setHours()</h3><ul>
 <li>해당 시간(0 ~ 23)를 나타내는 정수를 설정한다. 시간 이외 분, 초, 밀리초도 설정할 수 있다.</li>
 </ul>
-<h3>2.13 Date.prototype.getMinutes()</h3>
-<ul>
+<h3 id="2-13-Date-prototype-getMinutes"><a href="#2-13-Date-prototype-getMinutes" class="headerlink" title="2.13 Date.prototype.getMinutes()"></a>2.13 Date.prototype.getMinutes()</h3><ul>
 <li>해당 분(0 ~ 59)를 나타내는 정수를 반환한다.</li>
 </ul>
-<h3>2.14 Date.prototype.setMinutes()</h3>
-<ul>
+<h3 id="2-14-Date-prototype-setMinutes"><a href="#2-14-Date-prototype-setMinutes" class="headerlink" title="2.14 Date.prototype.setMinutes()"></a>2.14 Date.prototype.setMinutes()</h3><ul>
 <li>해당 분(0 ~ 59)를 나타내는 정수를 설정한다. 분 이외 초, 밀리초도 설정할 수 있다.</li>
 </ul>
-<h3>2.15 Date.prototype.getSeconds()</h3>
-<ul>
+<h3 id="2-15-Date-prototype-getSeconds"><a href="#2-15-Date-prototype-getSeconds" class="headerlink" title="2.15 Date.prototype.getSeconds()"></a>2.15 Date.prototype.getSeconds()</h3><ul>
 <li>해당 초(0 ~ 59)를 나타내는 정수를 반환한다.</li>
 </ul>
-<h3>2.16 Date.prototype.setSeconds()</h3>
-<ul>
+<h3 id="2-16-Date-prototype-setSeconds"><a href="#2-16-Date-prototype-setSeconds" class="headerlink" title="2.16 Date.prototype.setSeconds()"></a>2.16 Date.prototype.setSeconds()</h3><ul>
 <li>해당 초(0 ~ 59)를 나타내는 정수를 설정한다. 초 이외 밀리초도 설정할 수 있다.</li>
 </ul>
-<h3>2.17 Date.prototype.getMilliseconds()</h3>
-<ul>
+<h3 id="2-17-Date-prototype-getMilliseconds"><a href="#2-17-Date-prototype-getMilliseconds" class="headerlink" title="2.17 Date.prototype.getMilliseconds()"></a>2.17 Date.prototype.getMilliseconds()</h3><ul>
 <li>해당 밀리초(0 ~ 999)를 나타내는 정수를 반환한다.</li>
 </ul>
-<h3>2.18 Date.prototype.setMilliseconds()</h3>
-<ul>
+<h3 id="2-18-Date-prototype-setMilliseconds"><a href="#2-18-Date-prototype-setMilliseconds" class="headerlink" title="2.18 Date.prototype.setMilliseconds()"></a>2.18 Date.prototype.setMilliseconds()</h3><ul>
 <li>해당 밀리초(0 ~ 999)를 나타내는 정수를 설정한다.</li>
 </ul>
-<h3>2.19 Date.prototype.getTime()</h3>
-<ul>
+<h3 id="2-19-Date-prototype-getTime"><a href="#2-19-Date-prototype-getTime" class="headerlink" title="2.19 Date.prototype.getTime()"></a>2.19 Date.prototype.getTime()</h3><ul>
 <li>1970년 1월 1일 00:00:00(UTC)를 기점으로 현재 시간까지 경과된 밀리초를 반환한다.</li>
 </ul>
-<h3>2.20 Date.prototype.setTime()</h3>
-<ul>
+<h3 id="2-20-Date-prototype-setTime"><a href="#2-20-Date-prototype-setTime" class="headerlink" title="2.20 Date.prototype.setTime()"></a>2.20 Date.prototype.setTime()</h3><ul>
 <li>1970년 1월 1일 00:00:00(UTC)를 기점으로 현재 시간까지 경과된 밀리초를 설정한다.</li>
 </ul>
-<h3>2.21 Date.prototype.getTimezoneOffset()</h3>
-<ul>
+<h3 id="2-21-Date-prototype-getTimezoneOffset"><a href="#2-21-Date-prototype-getTimezoneOffset" class="headerlink" title="2.21 Date.prototype.getTimezoneOffset()"></a>2.21 Date.prototype.getTimezoneOffset()</h3><ul>
 <li>UTC와 지정 로케일(Locale) 시간과의 차이를 분단위로 반환한다.</li>
 </ul>
-<h3>2.22 Date.prototype.toDateString()</h3>
-<ul>
+<h3 id="2-22-Date-prototype-toDateString"><a href="#2-22-Date-prototype-toDateString" class="headerlink" title="2.22 Date.prototype.toDateString()"></a>2.22 Date.prototype.toDateString()</h3><ul>
 <li>사람이 읽을 수 있는 형식의 문자열로 날짜를 반환한다.</li>
 </ul>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'1988/8/17/13:30'</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(d.toString());     <span class="comment">// Sat Sep 17 1988 13:30:00 GMT+1000 (KDT)</span></div><div class="line"><span class="built_in">console</span>.log(d.toDateString()); <span class="comment">// Sat Sep 17 1988</span></div></pre></td></tr></table></figure></p>
-<h3>2.23 Date.prototype.toTimeString()</h3>
-<ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'1988/8/17/13:30'</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(d.toString());     <span class="comment">// Sat Sep 17 1988 13:30:00 GMT+1000 (KDT)</span></div><div class="line"><span class="built_in">console</span>.log(d.toDateString()); <span class="comment">// Sat Sep 17 1988</span></div></pre></td></tr></table></figure>
+<h3 id="2-23-Date-prototype-toTimeString"><a href="#2-23-Date-prototype-toTimeString" class="headerlink" title="2.23 Date.prototype.toTimeString()"></a>2.23 Date.prototype.toTimeString()</h3><ul>
 <li>사람이 읽을 수 있는 형식의 문자열로 시간을 반환한다.</li>
 </ul>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'1988/8/17/13:30'</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(d.toString());     <span class="comment">// Wed Aug 17 1988 13:30:00 GMT+1000 (KDT)</span></div><div class="line"><span class="built_in">console</span>.log(d.toTimeString()); <span class="comment">// 13:30:00 GMT+1000 (KDT)</span></div></pre></td></tr></table></figure></p>
-<h3>3. Date Example</h3>
-<ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'1988/8/17/13:30'</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(d.toString());     <span class="comment">// Wed Aug 17 1988 13:30:00 GMT+1000 (KDT)</span></div><div class="line"><span class="built_in">console</span>.log(d.toTimeString()); <span class="comment">// 13:30:00 GMT+1000 (KDT)</span></div></pre></td></tr></table></figure>
+<h3 id="3-Date-Example"><a href="#3-Date-Example" class="headerlink" title="3. Date Example"></a>3. Date Example</h3><ul>
 <li>현재 날짜와 시간을 초단위로 반복 출력하는 예제이다.</li>
 </ul>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span> <span class="title">printNow</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line"></div><div class="line">  <span class="keyword">var</span> dayNames = [<span class="string">'(일요일)'</span>, <span class="string">'(월요일)'</span>, <span class="string">'(화요일)'</span>, <span class="string">'(수요일)'</span>, <span class="string">'(목요일)'</span>, <span class="string">'(금요일)'</span>, <span class="string">'(토요일)'</span>];</div><div class="line">  <span class="comment">// getDay: 해당 요일(0 ~ 6)를 나타내는 정수를 반환한다.</span></div><div class="line">  <span class="keyword">var</span> day = dayNames[today.getDay()];</div><div class="line"></div><div class="line">  <span class="keyword">var</span> year   = today.getFullYear(),</div><div class="line">      month  = today.getMonth() + <span class="number">1</span>,</div><div class="line">      date   = today.getDate(),</div><div class="line">      hour   = today.getHours(),</div><div class="line">      minute = today.getMinutes(),</div><div class="line">      second = today.getSeconds();</div><div class="line">      ampm   = hour &gt;= <span class="number">12</span> ? <span class="string">'PM'</span> : <span class="string">'AM'</span>;</div><div class="line"></div><div class="line">  <span class="comment">// 12시간제로 변경</span></div><div class="line">  hour = hour % <span class="number">12</span>;</div><div class="line">  hour = hour ? hour : <span class="number">12</span>; <span class="comment">// 0 =&gt; 12</span></div><div class="line"></div><div class="line">  <span class="comment">// 10미만인 분과 초를 2자리로 변경</span></div><div class="line">  minute = minute &lt; <span class="number">10</span> ? <span class="string">'0'</span> + minute : minute;</div><div class="line">  second = second &lt; <span class="number">10</span> ? <span class="string">'0'</span> + second : second;</div><div class="line"></div><div class="line">  <span class="keyword">var</span> now = year + <span class="string">'년 '</span> + month + <span class="string">'월 '</span> + date + <span class="string">'일 '</span> + day + <span class="string">' '</span> + hour + <span class="string">':'</span> + minute + <span class="string">':'</span> + second + <span class="string">' '</span> + ampm;</div><div class="line"></div><div class="line">  <span class="built_in">console</span>.log(now);</div><div class="line">  setTimeout(printNow, <span class="number">1000</span>);</div><div class="line">&#125;());</div></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span> <span class="title">printNow</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line"></div><div class="line">  <span class="keyword">var</span> dayNames = [<span class="string">'(일요일)'</span>, <span class="string">'(월요일)'</span>, <span class="string">'(화요일)'</span>, <span class="string">'(수요일)'</span>, <span class="string">'(목요일)'</span>, <span class="string">'(금요일)'</span>, <span class="string">'(토요일)'</span>];</div><div class="line">  <span class="comment">// getDay: 해당 요일(0 ~ 6)를 나타내는 정수를 반환한다.</span></div><div class="line">  <span class="keyword">var</span> day = dayNames[today.getDay()];</div><div class="line"></div><div class="line">  <span class="keyword">var</span> year   = today.getFullYear(),</div><div class="line">      month  = today.getMonth() + <span class="number">1</span>,</div><div class="line">      date   = today.getDate(),</div><div class="line">      hour   = today.getHours(),</div><div class="line">      minute = today.getMinutes(),</div><div class="line">      second = today.getSeconds();</div><div class="line">      ampm   = hour &gt;= <span class="number">12</span> ? <span class="string">'PM'</span> : <span class="string">'AM'</span>;</div><div class="line"></div><div class="line">  <span class="comment">// 12시간제로 변경</span></div><div class="line">  hour = hour % <span class="number">12</span>;</div><div class="line">  hour = hour ? hour : <span class="number">12</span>; <span class="comment">// 0 =&gt; 12</span></div><div class="line"></div><div class="line">  <span class="comment">// 10미만인 분과 초를 2자리로 변경</span></div><div class="line">  minute = minute &lt; <span class="number">10</span> ? <span class="string">'0'</span> + minute : minute;</div><div class="line">  second = second &lt; <span class="number">10</span> ? <span class="string">'0'</span> + second : second;</div><div class="line"></div><div class="line">  <span class="keyword">var</span> now = year + <span class="string">'년 '</span> + month + <span class="string">'월 '</span> + date + <span class="string">'일 '</span> + day + <span class="string">' '</span> + hour + <span class="string">':'</span> + minute + <span class="string">':'</span> + second + <span class="string">' '</span> + ampm;</div><div class="line"></div><div class="line">  <span class="built_in">console</span>.log(now);</div><div class="line">  setTimeout(printNow, <span class="number">1000</span>);</div><div class="line">&#125;());</div></pre></td></tr></table></figure>
 
         </div>
         <footer class="article-footer">
@@ -349,7 +313,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/08/09/js-study-date/" data-id="cjoz9w48o0033mt6fkhyrkkxi" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/08/09/js-study-date/" data-id="cjoza6ou40031186f9n033o7f" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -454,20 +418,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/08/14/js-study-ajax/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2017/08/14/js-study-dom/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            JavaScript Ajax
+            JavaScript Dom
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2017/08/09/js-study-regexp/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/08/09/js-study-string/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">JavaScript Regexp</p>
+        <p class="article-nav-title">JavaScript String</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     

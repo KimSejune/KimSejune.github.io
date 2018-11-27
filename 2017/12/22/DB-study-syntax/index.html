@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="DataBase,Syntax" />
     
-    <meta name="description" content="DataBase  기본적인 DataBase의 문법과 간단한 SQL에대한 예제들을 소개합니다.  RDBMS란? DDL, DML Aggregate, Group Function SQL ERD Table 생성  RDBMS란? (Relational Database Management System)  F.커드가 도입한 관계형 모델을 기반으로 데이터베이스를 관리하는 방">
+    <meta name="description" content="DataBase 기본적인 DataBase의 문법과 간단한 SQL에대한 예제들을 소개합니다.  RDBMS란?   DDL, DML   Aggregate, Group Function   SQL   ERD   Table 생성    RDBMS란? (Relational Database Management System) F.커드가 도입한 관계형 모델을 기반으로 데이터베">
 <meta name="keywords" content="DataBase,Syntax">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DataBase Syntax">
 <meta property="og:url" content="http://yoursite.com/2017/12/22/DB-study-syntax/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="DataBase  기본적인 DataBase의 문법과 간단한 SQL에대한 예제들을 소개합니다.  RDBMS란? DDL, DML Aggregate, Group Function SQL ERD Table 생성  RDBMS란? (Relational Database Management System)  F.커드가 도입한 관계형 모델을 기반으로 데이터베이스를 관리하는 방">
+<meta property="og:description" content="DataBase 기본적인 DataBase의 문법과 간단한 SQL에대한 예제들을 소개합니다.  RDBMS란?   DDL, DML   Aggregate, Group Function   SQL   ERD   Table 생성    RDBMS란? (Relational Database Management System) F.커드가 도입한 관계형 모델을 기반으로 데이터베">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/db.png">
 <meta property="og:updated_time" content="2018-01-10T06:59:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DataBase Syntax">
-<meta name="twitter:description" content="DataBase  기본적인 DataBase의 문법과 간단한 SQL에대한 예제들을 소개합니다.  RDBMS란? DDL, DML Aggregate, Group Function SQL ERD Table 생성  RDBMS란? (Relational Database Management System)  F.커드가 도입한 관계형 모델을 기반으로 데이터베이스를 관리하는 방">
+<meta name="twitter:description" content="DataBase 기본적인 DataBase의 문법과 간단한 SQL에대한 예제들을 소개합니다.  RDBMS란?   DDL, DML   Aggregate, Group Function   SQL   ERD   Table 생성    RDBMS란? (Relational Database Management System) F.커드가 도입한 관계형 모델을 기반으로 데이터베">
 <meta name="twitter:image" content="http://yoursite.com/images/db.png">
     
 
@@ -171,245 +171,181 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1>DataBase</h1>
-<p><img src="/images/db.png" alt="Database"></p>
+            <h1 id="DataBase"><a href="#DataBase" class="headerlink" title="DataBase"></a>DataBase</h1><p><img src="/images/db.png" alt="Database"></p>
 <p>기본적인 DataBase의 문법과 간단한 SQL에대한 예제들을 소개합니다.</p>
 <ul>
-<li>RDBMS란?</li>
-<li>DDL, DML</li>
-<li>Aggregate, Group Function</li>
-<li>SQL</li>
-<li>ERD</li>
-<li>Table 생성</li>
+<li>RDBMS란?  </li>
+<li>DDL, DML  </li>
+<li>Aggregate, Group Function  </li>
+<li>SQL  </li>
+<li>ERD  </li>
+<li>Table 생성  </li>
 </ul>
-<h2>RDBMS란? (Relational Database Management System)</h2>
-<ul>
-<li>F.커드가 도입한 <code>관계형 모델을 기반</code>으로 데이터베이스를 관리하는 방식이다.</li>
-<li>RDBMS의 종류로는 Oracle, Mysql 등이 널리 사용되고있다.</li>
-<li>Relational을 표현하기 위하여 ERD(Entity-Relationship Diagram)으로 테이블을 표현한다.</li>
+<h2 id="RDBMS란-Relational-Database-Management-System"><a href="#RDBMS란-Relational-Database-Management-System" class="headerlink" title="RDBMS란? (Relational Database Management System)"></a>RDBMS란? (Relational Database Management System)</h2><ul>
+<li>F.커드가 도입한 <code>관계형 모델을 기반</code>으로 데이터베이스를 관리하는 방식이다.  </li>
+<li>RDBMS의 종류로는 Oracle, Mysql 등이 널리 사용되고있다.  </li>
+<li>Relational을 표현하기 위하여 ERD(Entity-Relationship Diagram)으로 테이블을 표현한다.  </li>
 </ul>
-<h3>NoSQL</h3>
-<p>NoSQL이란? MongoDB, Redis 등등 이 존재한다.</p>
+<h3 id="NoSQL"><a href="#NoSQL" class="headerlink" title="NoSQL"></a>NoSQL</h3><p>NoSQL이란? MongoDB, Redis 등등 이 존재한다.  </p>
 <p>NoSQL 장점</p>
 <ul>
-<li>데이터 분산형 구조를 만드는 것에 용이, 복제 및 대응에 용이, 빠른 데이터 처리, 대용량 데이터 저장</li>
+<li>데이터 분산형 구조를 만드는 것에 용이, 복제 및 대응에 용이, 빠른 데이터 처리, 대용량 데이터 저장  </li>
 </ul>
-<p>NoSQL 단점</p>
+<p>NoSQL 단점  </p>
 <ul>
 <li>보안의 취약하다, join을 통한 값을 찾기가 힘들다 (복잡한 Query가 어렵다.)</li>
 </ul>
-<p>NoSQL의 등장이유</p>
+<p>NoSQL의 등장이유  </p>
 <ul>
-<li><code>트래픽을 줄이고 분산하여 보다 쉽고 간단하게 저장</code>하는 것이 더 필요하다고 판단하여 새로운 데이터베이스를 필요로하게 되어서 등장하였다.</li>
+<li><code>트래픽을 줄이고 분산하여 보다 쉽고 간단하게 저장</code>하는 것이 더 필요하다고 판단하여 새로운 데이터베이스를 필요로하게 되어서 등장하였다.  </li>
 </ul>
-<h2>DDL &amp; DML</h2>
-<p><code>DDL</code> (Data Definition Language)</p>
+<h2 id="DDL-amp-DML"><a href="#DDL-amp-DML" class="headerlink" title="DDL &amp; DML"></a>DDL &amp; DML</h2><p><code>DDL</code> (Data Definition Language)  </p>
 <ul>
-<li>Create, Drop, Truncate, Alter, Data Type, Constraint</li>
-<li>Table 자체를 구성하는대 사용한다.</li>
+<li>Create, Drop, Truncate, Alter, Data Type, Constraint  </li>
+<li>Table 자체를 구성하는대 사용한다.  </li>
 </ul>
-<p><code>DML</code> (Data Manipulation Language)</p>
+<p><code>DML</code> (Data Manipulation Language)  </p>
 <ul>
-<li>Insert, Delete, Update Table 내부의 data를 바꿀때 사용한다.</li>
+<li>Insert, Delete, Update Table 내부의 data를 바꿀때 사용한다.   </li>
 </ul>
-<h3>DDL</h3>
-<h3><code>Create</code> 테이블 생성</h3>
-<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">MEMBER</span>(</div><div class="line">  <span class="keyword">id</span> <span class="built_in">INTEGER</span>(<span class="number">5</span>) PRIMARY <span class="keyword">KEY</span>,</div><div class="line">  <span class="keyword">name</span> <span class="built_in">VARCHAR</span>(<span class="number">50</span>)</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<h3 id="DDL"><a href="#DDL" class="headerlink" title="DDL"></a>DDL</h3><h3 id="Create-테이블-생성"><a href="#Create-테이블-생성" class="headerlink" title="Create 테이블 생성"></a><code>Create</code> 테이블 생성</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">MEMBER</span>(</div><div class="line">  <span class="keyword">id</span> <span class="built_in">INTEGER</span>(<span class="number">5</span>) PRIMARY <span class="keyword">KEY</span>,</div><div class="line">  <span class="keyword">name</span> <span class="built_in">VARCHAR</span>(<span class="number">50</span>)</div><div class="line">);</div></pre></td></tr></table></figure>
 <ul>
-<li>DataType (Oracle)
-&lt;table&gt;
-&lt;tr&gt;
-&lt;th&gt;Data Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;VARCHAR2(size)&lt;/th&gt;
-&lt;th&gt;가변길이 문자열 (최대 4000byte)&lt;/th&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;CHAR(size)&lt;/th&gt;
-&lt;th&gt;고정길이 문자열 (최대 2000byte)&lt;/th&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;NUMBER(p,s)&lt;/th&gt;
-&lt;th&gt;가변길이 숫자. 전체 p 자리 중 소수점 이하 s자리 (p:38, s:-84~127)&lt;/th&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th&gt;DATE&lt;/th&gt;
-&lt;th&gt;고정길이 날짜+시간, 7Byte&lt;/th&gt;
-&lt;/tr&gt;</li>
+<li>DataType (Oracle)<br><table><tr><br><th>Data Type</th><br><th>Description</th><br></tr><br><tr><br><th>VARCHAR2(size)</th><br><th>가변길이 문자열 (최대 4000byte)</th><br></tr><br><tr><br><th>CHAR(size)</th><br><th>고정길이 문자열 (최대 2000byte)</th><br></tr><br><tr><br><th>NUMBER(p,s)</th><br><th>가변길이 숫자. 전체 p 자리 중 소수점 이하 s자리 (p:38, s:-84~127)</th><br></tr><br><tr><br><th>DATE</th><br><th>고정길이 날짜+시간, 7Byte</th><br></tr>
+
+</table></li>
 </ul>
-<p>&lt;/table&gt;</p>
-<h3><code>Alter</code> 테이블 수정</h3>
-<ul>
-<li>
-<p>테이블 컬럼(col) 추가
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> Student <span class="keyword">ADD</span> (<span class="keyword">name</span> <span class="built_in">VARCHAR</span>(<span class="number">50</span>));</div></pre></td></tr></table></figure></p>
+<p></p>
+<h3 id="Alter-테이블-수정"><a href="#Alter-테이블-수정" class="headerlink" title="Alter 테이블 수정"></a><code>Alter</code> 테이블 수정</h3><ul>
+<li><p>테이블 컬럼(col) 추가</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> Student <span class="keyword">ADD</span> (<span class="keyword">name</span> <span class="built_in">VARCHAR</span>(<span class="number">50</span>));</div></pre></td></tr></table></figure>
 </li>
-<li>
-<p>테이블 컬럼(col) 수정
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> Student <span class="keyword">MODIFY</span> (<span class="keyword">name</span> <span class="built_in">VARCHAR</span>(<span class="number">50</span>));</div></pre></td></tr></table></figure></p>
+<li><p>테이블 컬럼(col) 수정</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> Student <span class="keyword">MODIFY</span> (<span class="keyword">name</span> <span class="built_in">VARCHAR</span>(<span class="number">50</span>));</div></pre></td></tr></table></figure>
 </li>
-<li>
-<p>테이블 컬럼(col) 삭제
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> Student <span class="keyword">DROP</span> <span class="keyword">name</span>;</div></pre></td></tr></table></figure></p>
+<li><p>테이블 컬럼(col) 삭제</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> Student <span class="keyword">DROP</span> <span class="keyword">name</span>;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3><code>Drop</code> 테이블 삭제</h3>
-<ul>
-<li>테이블 삭제
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> Student</div></pre></td></tr></table></figure></li>
+<h3 id="Drop-테이블-삭제"><a href="#Drop-테이블-삭제" class="headerlink" title="Drop 테이블 삭제"></a><code>Drop</code> 테이블 삭제</h3><ul>
+<li>테이블 삭제<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> Student</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<h3>Truncate 테이블의 모든 데이터 삭제(테이블은 존재)</h3>
-<ul>
-<li>테이블 내부 데이터 삭제
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> Student</div></pre></td></tr></table></figure></li>
+<h3 id="Truncate-테이블의-모든-데이터-삭제-테이블은-존재"><a href="#Truncate-테이블의-모든-데이터-삭제-테이블은-존재" class="headerlink" title="Truncate 테이블의 모든 데이터 삭제(테이블은 존재)"></a>Truncate 테이블의 모든 데이터 삭제(테이블은 존재)</h3><ul>
+<li>테이블 내부 데이터 삭제<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> Student</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<h3>Rename 이름 변경</h3>
-<ul>
-<li>테이블 Rename
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">RENAME</span> Student <span class="keyword">TO</span> employee;</div></pre></td></tr></table></figure></li>
+<h3 id="Rename-이름-변경"><a href="#Rename-이름-변경" class="headerlink" title="Rename 이름 변경"></a>Rename 이름 변경</h3><ul>
+<li>테이블 Rename<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">RENAME</span> Student <span class="keyword">TO</span> employee;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<h3>Comment 테이블에 설명 추가</h3>
-<p><code>Constraint</code> 테이블에 제약조건 생성</p>
-<h3>Table의 특정규약을 설정한다 즉 제약조건이다.</h3>
-<ul>
-<li>NOT NULL</li>
-<li>UNIQUE</li>
-<li><code>PRIMARY KEY</code> =&gt; PRIMARY KEY는  <code>NOT NULL + UNIQUE</code>하다.</li>
+<h3 id="Comment-테이블에-설명-추가"><a href="#Comment-테이블에-설명-추가" class="headerlink" title="Comment 테이블에 설명 추가"></a>Comment 테이블에 설명 추가</h3><p><code>Constraint</code> 테이블에 제약조건 생성  </p>
+<h3 id="Table의-특정규약을-설정한다-즉-제약조건이다"><a href="#Table의-특정규약을-설정한다-즉-제약조건이다" class="headerlink" title="Table의 특정규약을 설정한다 즉 제약조건이다."></a>Table의 특정규약을 설정한다 즉 제약조건이다.</h3><ul>
+<li>NOT NULL  </li>
+<li>UNIQUE  </li>
+<li><code>PRIMARY KEY</code> =&gt; PRIMARY KEY는  <code>NOT NULL + UNIQUE</code>하다.  </li>
 <li><code>FOREIGN KEY</code>=&gt; <code>주의 PRIMARY KEY에게만 FOREIGN KEY 가능</code></li>
-<li>CHECK</li>
+<li>CHECK  </li>
 </ul>
-<h3>PRIMARY KEY</h3>
-<p><code>PK는 한테이블당 한개만 존재</code></p>
-<p><code>인덱스 자동생성</code></p>
-<p><code>여러 컬럼을 하나의 PK로 설정 가능</code></p>
-<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">member</span> (</div><div class="line">  id1 <span class="built_in">NUMBER</span>(<span class="number">5</span>),</div><div class="line">  id2 <span class="built_in">NUMBER</span>(<span class="number">5</span>),</div><div class="line">  PRIMARY <span class="keyword">KEY</span>(id1, id2) </div><div class="line">);</div></pre></td></tr></table></figure></p>
+<h3 id="PRIMARY-KEY"><a href="#PRIMARY-KEY" class="headerlink" title="PRIMARY KEY"></a>PRIMARY KEY</h3><p><code>PK는 한테이블당 한개만 존재</code>  </p>
+<p><code>인덱스 자동생성</code>   </p>
+<p><code>여러 컬럼을 하나의 PK로 설정 가능</code>  </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">member</span> (</div><div class="line">  id1 <span class="built_in">NUMBER</span>(<span class="number">5</span>),</div><div class="line">  id2 <span class="built_in">NUMBER</span>(<span class="number">5</span>),</div><div class="line">  PRIMARY <span class="keyword">KEY</span>(id1, id2) </div><div class="line">);</div></pre></td></tr></table></figure>
 <blockquote>
 <p>여러 컬럼이 PK일떄 FK를 걸어야 할 경우 <code>PK에 해당하는 모든 컬럼</code>을 선택해야한다.</p>
 </blockquote>
-<h3>FOREIGN KEY</h3>
-<p>ON DELETE SET NULL : 해당하는 FK를 NULL로 바꾼다.</p>
-<p>ON DELETE CASCADE : 해당하는 FK를 가진 참조행도 삭제</p>
+<h3 id="FOREIGN-KEY"><a href="#FOREIGN-KEY" class="headerlink" title="FOREIGN KEY"></a>FOREIGN KEY</h3><p>ON DELETE SET NULL : 해당하는 FK를 NULL로 바꾼다.  </p>
+<p>ON DELETE CASCADE : 해당하는 FK를 가진 참조행도 삭제  </p>
 <ul>
-<li>
-<p>table을 생성할떄부터 Constraint를 넣는 방법
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">member</span> (</div><div class="line">  <span class="keyword">id</span> <span class="built_in">NUMBER</span>(<span class="number">5</span>) PRIMARY <span class="keyword">KEY</span>,</div><div class="line">  job_id <span class="built_in">NUMBER</span>(<span class="number">5</span>),</div><div class="line">  <span class="keyword">CONSTRAINT</span> c_member_fk FOREIGN <span class="keyword">KEY</span> (job_id)</div><div class="line">  <span class="keyword">REFERENCES</span> job(<span class="keyword">id</span>)</div><div class="line">  <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">SET</span> <span class="literal">NULL</span></div><div class="line">);</div></pre></td></tr></table></figure></p>
+<li><p>table을 생성할떄부터 Constraint를 넣는 방법</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">member</span> (</div><div class="line">  <span class="keyword">id</span> <span class="built_in">NUMBER</span>(<span class="number">5</span>) PRIMARY <span class="keyword">KEY</span>,</div><div class="line">  job_id <span class="built_in">NUMBER</span>(<span class="number">5</span>),</div><div class="line">  <span class="keyword">CONSTRAINT</span> c_member_fk FOREIGN <span class="keyword">KEY</span> (job_id)</div><div class="line">  <span class="keyword">REFERENCES</span> job(<span class="keyword">id</span>)</div><div class="line">  <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">SET</span> <span class="literal">NULL</span></div><div class="line">);</div></pre></td></tr></table></figure>
 </li>
-<li>
-<p>table에 Constraint를 추가해서 넣는 방법
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="keyword">MEMBER</span></div><div class="line"><span class="keyword">ADD</span> <span class="keyword">CONSTRAINT</span> c_member_fk</div><div class="line">  FOREIGN <span class="keyword">KEY</span> (job_id) <span class="keyword">REFERENCES</span> job(<span class="keyword">id</span>);</div></pre></td></tr></table></figure></p>
+<li><p>table에 Constraint를 추가해서 넣는 방법</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="keyword">MEMBER</span></div><div class="line"><span class="keyword">ADD</span> <span class="keyword">CONSTRAINT</span> c_member_fk</div><div class="line">  FOREIGN <span class="keyword">KEY</span> (job_id) <span class="keyword">REFERENCES</span> job(<span class="keyword">id</span>);</div></pre></td></tr></table></figure>
 </li>
-<li>
-<p>Constraint를 삭제하는 방법</p>
+<li><p>Constraint를 삭제하는 방법</p>
 </li>
 </ul>
-<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="keyword">MEMBER</span> <span class="keyword">DROP</span> <span class="keyword">CONSTRAINT</span> c_member_fk;</div></pre></td></tr></table></figure></p>
-<h3>DML</h3>
-<p><code>Insert 테이블 Data 추가</code><br>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> 테이블이름 (col1, col2) <span class="keyword">VALUES</span>(“val1”, “val2”);</div></pre></td></tr></table></figure></p>
-<p><code>Update 테이블 Data 수정</code><br>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">UPDATE</span> 테이블이름 <span class="keyword">SET</span> <span class="keyword">name</span>=<span class="string">"Kim"</span> <span class="keyword">Where</span> <span class="keyword">id</span> = <span class="number">1</span>;</div></pre></td></tr></table></figure></p>
-<p><code>Delete 테이블 Data 삭제</code><br>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> 테이블이름 <span class="keyword">Where</span> <span class="keyword">id</span> = <span class="number">1</span>;</div></pre></td></tr></table></figure></p>
-<h2>Aggregate Function</h2>
-<h3><code>AVG</code></h3>
-<p>AVG (평균 구하기)<br>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">AVG</span>(salary) <span class="keyword">FROM</span> Student;</div></pre></td></tr></table></figure></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="keyword">MEMBER</span> <span class="keyword">DROP</span> <span class="keyword">CONSTRAINT</span> c_member_fk;</div></pre></td></tr></table></figure>
+<h3 id="DML"><a href="#DML" class="headerlink" title="DML"></a>DML</h3><p><code>Insert 테이블 Data 추가</code><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> 테이블이름 (col1, col2) <span class="keyword">VALUES</span>(“val1”, “val2”);</div></pre></td></tr></table></figure></p>
+<p><code>Update 테이블 Data 수정</code><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">UPDATE</span> 테이블이름 <span class="keyword">SET</span> <span class="keyword">name</span>=<span class="string">"Kim"</span> <span class="keyword">Where</span> <span class="keyword">id</span> = <span class="number">1</span>;</div></pre></td></tr></table></figure></p>
+<p><code>Delete 테이블 Data 삭제</code><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> 테이블이름 <span class="keyword">Where</span> <span class="keyword">id</span> = <span class="number">1</span>;</div></pre></td></tr></table></figure></p>
+<h2 id="Aggregate-Function"><a href="#Aggregate-Function" class="headerlink" title="Aggregate Function"></a>Aggregate Function</h2><h3 id="AVG"><a href="#AVG" class="headerlink" title="AVG"></a><code>AVG</code></h3><p>AVG (평균 구하기)<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">AVG</span>(salary) <span class="keyword">FROM</span> Student;</div></pre></td></tr></table></figure></p>
 <ul>
-<li>Group By</li>
+<li>Group By </li>
 </ul>
-<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT 부서명, AVG(salary) FROM 직장; =&gt; 오류 발생</div><div class="line"><span class="keyword">SELECT</span> 부서명, <span class="keyword">AVG</span>(salary) <span class="keyword">FROM</span> 직장 <span class="keyword">GROUP</span> <span class="keyword">BY</span> 부서명;</div></pre></td></tr></table></figure></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT 부서명, AVG(salary) FROM 직장; =&gt; 오류 발생</div><div class="line"><span class="keyword">SELECT</span> 부서명, <span class="keyword">AVG</span>(salary) <span class="keyword">FROM</span> 직장 <span class="keyword">GROUP</span> <span class="keyword">BY</span> 부서명;</div></pre></td></tr></table></figure>
 <ul>
 <li><code>Having =&gt; Group By를 한 결과에 대해서 조건을 걸어주는 역할을 한다.</code></li>
 </ul>
-<h3>COUNT</h3>
-<ul>
-<li>해당 col의 수를 센다.
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(column_name)</div><div class="line"><span class="keyword">FROM</span> table_name</div><div class="line"><span class="keyword">WHERE</span> condition;</div></pre></td></tr></table></figure></li>
+<h3 id="COUNT"><a href="#COUNT" class="headerlink" title="COUNT"></a>COUNT</h3><ul>
+<li>해당 col의 수를 센다.<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(column_name)</div><div class="line"><span class="keyword">FROM</span> table_name</div><div class="line"><span class="keyword">WHERE</span> condition;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<h3>MAX</h3>
-<ul>
-<li>해당 col의 최대값을 보여준다.
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">MAX</span>(column_name)</div><div class="line"><span class="keyword">FROM</span> table_name</div><div class="line"><span class="keyword">WHERE</span> condition;</div></pre></td></tr></table></figure></li>
+<h3 id="MAX"><a href="#MAX" class="headerlink" title="MAX"></a>MAX</h3><ul>
+<li>해당 col의 최대값을 보여준다.<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">MAX</span>(column_name)</div><div class="line"><span class="keyword">FROM</span> table_name</div><div class="line"><span class="keyword">WHERE</span> condition;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<h3>MIN</h3>
-<ul>
-<li>해당 col의 최소값을 보여준다.
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">MIN</span>(column_name)</div><div class="line"><span class="keyword">FROM</span> table_name</div><div class="line"><span class="keyword">WHERE</span> condition;</div></pre></td></tr></table></figure></li>
+<h3 id="MIN"><a href="#MIN" class="headerlink" title="MIN"></a>MIN</h3><ul>
+<li>해당 col의 최소값을 보여준다.<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">MIN</span>(column_name)</div><div class="line"><span class="keyword">FROM</span> table_name</div><div class="line"><span class="keyword">WHERE</span> condition;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<h3>SUM</h3>
-<ul>
-<li>해당 col의 합을 보여준다.
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">SUM</span>(col_name) <span class="keyword">FROM</span> table_name;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">SUM</span>(salary) <span class="keyword">FROM</span> Student;</div></pre></td></tr></table></figure></li>
+<h3 id="SUM"><a href="#SUM" class="headerlink" title="SUM"></a>SUM</h3><ul>
+<li>해당 col의 합을 보여준다.<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">SUM</span>(col_name) <span class="keyword">FROM</span> table_name;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">SUM</span>(salary) <span class="keyword">FROM</span> Student;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<h2>SQL (structured Query Language)</h2>
-<p>구조화된 질의 언어</p>
+<h2 id="SQL-structured-Query-Language"><a href="#SQL-structured-Query-Language" class="headerlink" title="SQL (structured Query Language)"></a>SQL (structured Query Language)</h2><p>구조화된 질의 언어</p>
 <p>기본적인 문법 구조</p>
 <ul>
 <li>SELECT : Table의 원하는 col을 선택한다.</li>
 <li>FROM : 특정 Table로 부터</li>
 <li>WHERE : 특정 조건</li>
 </ul>
-<h3>SQL 기본 Example</h3>
-<p>Student 테이블을 전부다 가져오고싶다.
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELECT*FROM Student; =&gt; *는 전부를 나타낸다.</div></pre></td></tr></table></figure></p>
-<p>Student 테이블중에서 name(col)을 가져오고싶다.
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span> <span class="keyword">FROM</span> Student;</div></pre></td></tr></table></figure></p>
-<p>Student 테이블중에서 name(col)이 kimsejune을 가져오고싶다.
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span> <span class="keyword">FROM</span> Student <span class="keyword">WHERE</span> <span class="keyword">name</span>=“kimsejune”;</div></pre></td></tr></table></figure></p>
-<h3>JOIN</h3>
-<p>2개 이상의 테이블을 합쳐서 하나의 테이블로 만든다.</p>
-<p>Cross Join : (Cartasian Product) 모든 가능한 쌍이 나타난다.</p>
-<p><code>Inner Join</code> : 조건을 만족하는 tuple만 나타난다.</p>
-<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, jobname <span class="keyword">FROM</span> Student <span class="keyword">Inner</span> <span class="keyword">Join</span> Job</div><div class="line"><span class="keyword">ON</span> Student.id = Job.student_id;</div></pre></td></tr></table></figure></p>
-<p><code>Outer Join</code> : 조건을 만족하지 않는 tuple도 나타난다. =&gt; null로 표기</p>
+<h3 id="SQL-기본-Example"><a href="#SQL-기본-Example" class="headerlink" title="SQL 기본 Example"></a>SQL 기본 Example</h3><p>Student 테이블을 전부다 가져오고싶다.<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELECT*FROM Student; =&gt; *는 전부를 나타낸다.</div></pre></td></tr></table></figure></p>
+<p>Student 테이블중에서 name(col)을 가져오고싶다.<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span> <span class="keyword">FROM</span> Student;</div></pre></td></tr></table></figure></p>
+<p>Student 테이블중에서 name(col)이 kimsejune을 가져오고싶다.<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span> <span class="keyword">FROM</span> Student <span class="keyword">WHERE</span> <span class="keyword">name</span>=“kimsejune”;</div></pre></td></tr></table></figure></p>
+<h3 id="JOIN"><a href="#JOIN" class="headerlink" title="JOIN"></a>JOIN</h3><p>2개 이상의 테이블을 합쳐서 하나의 테이블로 만든다.</p>
+<p>Cross Join : (Cartasian Product) 모든 가능한 쌍이 나타난다.  </p>
+<p><code>Inner Join</code> : 조건을 만족하는 tuple만 나타난다. </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, jobname <span class="keyword">FROM</span> Student <span class="keyword">Inner</span> <span class="keyword">Join</span> Job</div><div class="line"><span class="keyword">ON</span> Student.id = Job.student_id;</div></pre></td></tr></table></figure>
+<p><code>Outer Join</code> : 조건을 만족하지 않는 tuple도 나타난다. =&gt; null로 표기  </p>
 <ul>
-<li>
-<p>Left Outer Join =&gt; join table의 왼쪽 table 값중 null인 것도 가져온다.<br>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, jobname <span class="keyword">FROM</span> Student <span class="keyword">Left</span> <span class="keyword">Outer</span> <span class="keyword">Join</span> Job</div><div class="line"><span class="keyword">ON</span> Student.id = Job.student_id;</div></pre></td></tr></table></figure></p>
+<li><p>Left Outer Join =&gt; join table의 왼쪽 table 값중 null인 것도 가져온다.  </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, jobname <span class="keyword">FROM</span> Student <span class="keyword">Left</span> <span class="keyword">Outer</span> <span class="keyword">Join</span> Job</div><div class="line"><span class="keyword">ON</span> Student.id = Job.student_id;</div></pre></td></tr></table></figure>
 </li>
-<li>
-<p>Right Outer Join =&gt; join table의 오른쪽 table 값중 null인 것도 가져온다.<br>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, jobname <span class="keyword">FROM</span> Student <span class="keyword">Right</span> <span class="keyword">Outer</span> <span class="keyword">Join</span> Job</div><div class="line"><span class="keyword">ON</span> Student.id = Job.student_id;</div></pre></td></tr></table></figure></p>
+<li><p>Right Outer Join =&gt; join table의 오른쪽 table 값중 null인 것도 가져온다.  </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, jobname <span class="keyword">FROM</span> Student <span class="keyword">Right</span> <span class="keyword">Outer</span> <span class="keyword">Join</span> Job</div><div class="line"><span class="keyword">ON</span> Student.id = Job.student_id;</div></pre></td></tr></table></figure>
 </li>
-<li>
-<p>Full Outer Join =&gt; 양쪽 table 값중 null인 것도 가져온다.<br>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, jobname <span class="keyword">FROM</span> Student <span class="keyword">Full</span> <span class="keyword">Outer</span> <span class="keyword">Join</span> Job</div><div class="line"><span class="keyword">ON</span> Student.id = Job.student_id;</div></pre></td></tr></table></figure></p>
+<li><p>Full Outer Join =&gt; 양쪽 table 값중 null인 것도 가져온다.  </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, jobname <span class="keyword">FROM</span> Student <span class="keyword">Full</span> <span class="keyword">Outer</span> <span class="keyword">Join</span> Job</div><div class="line"><span class="keyword">ON</span> Student.id = Job.student_id;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>Natural Join : 조건을 만족하는 tuple들의 동일한 col이 합쳐져서 나타난다.</p>
-<p><code>Self Join</code> : 자기 자신과 Join</p>
+<p>Natural Join : 조건을 만족하는 tuple들의 동일한 col이 합쳐져서 나타난다.  </p>
+<p><code>Self Join</code> : 자기 자신과 Join   </p>
 <ul>
 <li>상사를 찾을 때 많이 이용된다.</li>
 </ul>
-<h2>ERD</h2>
-<p>Entity-Relationship Diagram</p>
+<h2 id="ERD"><a href="#ERD" class="headerlink" title="ERD"></a>ERD</h2><p>Entity-Relationship Diagram</p>
 <p>테이블의 관계</p>
 <ul>
-<li>1:1
-<ul>
+<li>1:1<ul>
 <li>한 사람은 한개의 학번을 가진다.</li>
 </ul>
 </li>
-<li>1:M
-<ul>
+<li>1:M<ul>
 <li>교수님은 여러명의 제자를 가지지만 제자는 한명의 담당교수만이 존재한다.</li>
 </ul>
 </li>
-<li>N:M
-<ul>
+<li>N:M<ul>
 <li>한 사람은 여러개의 취미를 가질 수 있고 하나의 취미도 여러명의 사람이 가지고 있다.</li>
 </ul>
 </li>
 </ul>
 <p><img src="/images/erdex.png" alt="DADA-ERD"></p>
-<h2>Table 생성</h2>
-<p>방법 1. 직접 SQL (Create) 를 사용하여서 만들기</p>
+<h2 id="Table-생성"><a href="#Table-생성" class="headerlink" title="Table 생성"></a>Table 생성</h2><p>방법 1. 직접 SQL (Create) 를 사용하여서 만들기  </p>
 <p>방법 2. ERD를 그린후 적용하기</p>
 <p>방법 3. Library 이용하기</p>
 <ul>
-<li>sequelize, knex ... etc</li>
+<li>sequelize, knex … etc</li>
 </ul>
 
         </div>
@@ -418,7 +354,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/12/22/DB-study-syntax/" data-id="cjoz9w4700000mt6fv5s8k9lu" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/12/22/DB-study-syntax/" data-id="cjoza6os60000186fk07hdnc4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
