@@ -149,17 +149,17 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/09/06/node-study-spa/" class="thumbnail">
+        <a href="/2017/09/06/node-study-graphql/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/spa.png)" alt="Node-SPA(Single Page Application)" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/graphql.png)" alt="Node-GraphQL" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/06/node-study-spa/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/06/node-study-graphql/">0</span>
     
 </span>
 
@@ -177,21 +177,20 @@
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/09/06/node-study-spa/">Node-SPA(Single Page Application)</a>
+        <a href="/2017/09/06/node-study-graphql/">Node-GraphQL</a>
         </h1>
     
 
         <p class="article-excerpt">
             
-Node Single-page ApplicationSPA의 구조
+Node GraphQLREST API의 단점
+각각의 자원마다 경로가 따로 있음. 즉, 여러 자원이 동시에 필요한 경우에는 요청을 여러 번 보내야 함 (요청의 횟수 면에서 비효율적)  
 
-ejs를 사용하여서 웹개발을 하게되면 전체를 다시 새로고침을 해야한다.
-SPA 구조를 사용하면 Ajax를 통하여 부분만 고쳐준다.
+(보통의 경우) 자원의 필요한 속성만 얻어올 수 없음. 즉, 일부 속성의 필요하더라도 전체 속성을 가져와야만 함 (요청의 용량 면에서 비효율적)  
 
-SPA 실습Link
 
-data 부분을 node.js module로 빼뒀다.
-npm으로 설치한 module은 경로지정이 없어도 불러와 지지만 직접만든 modul
+GraphQL
+Fa
         </p>
     </div>
 </article>
@@ -200,60 +199,6 @@ npm으로 설치한 module은 경로지정이 없어도 불러와 지지만 직�
     
     
     
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/09/05/node-study-cors/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/cors.png)" alt="Node-CORS" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/05/node-study-cors/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a>
-            </div>
-            <div class="date"><time datetime="2017-09-05T03:54:00.000Z" itemprop="datePublished">2017-09-05</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/09/05/node-study-cors/">Node-CORS</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-Node CORS보내는쪽과 받는쪽의 Domain이 다를때 발생하는 문제
-Some-origin Plicy(동일 출처 정책)
-웹페이지에서 리소스를 불러올 때, 리소스의 출처가 웹페이지의 출처와 같으면 안전하다고 보고, 출처가 다르면 해당 리소스는 안전하지 않다고 보는 원칙
-여기서 &#39;출처&#39;란 &#39;프로토콜 + 도메인 + 포트번호&#39;의 결
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -303,25 +248,29 @@ Token Based Auth
     </div>
 </article>
     
+        </div>
+    
 
     
     
     
     
+        <div class="article-row">
+    
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/09/05/node-study-fetchapi/" class="thumbnail">
+        <a href="/2017/09/05/node-study-cors/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/fetch.jpeg)" alt="Node-fetchApi" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/cors.png)" alt="Node-CORS" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/05/node-study-fetchapi/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/05/node-study-cors/">0</span>
     
 </span>
 
@@ -339,29 +288,24 @@ Token Based Auth
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/09/05/node-study-fetchapi/">Node-fetchApi</a>
+        <a href="/2017/09/05/node-study-cors/">Node-CORS</a>
         </h1>
     
 
         <p class="article-excerpt">
             
-Node Fetch APIFetch API
-웹 브라우저의 XMLHttpRequest를 대체하기 위해 만들어진 새로운 HTTP client 표준  
-비교적 최근에 도입되어 IE 및 구형 안드로이드 브라우저(4.x)는 지원하지 않음  
-Fetch Polyfill  
-최신기술로써 지원하지 않는 브라우저가 많지만 Fetch Polyfill을 사용하면 사용가능하다
+Node CORS보내는쪽과 받는쪽의 Domain이 다를때 발생하는 문제
+Some-origin Plicy(동일 출처 정책)
+웹페이지에서 리소스를 불러올 때, 리소스의 출처가 웹페이지의 출처와 같으면 안전하다고 보고, 출처가 다르면 해당 리소스는 안전하지 않다고 보는 원칙
+여기서 &#39;출처&#39;란 &#39;프로토콜 + 도메인 + 포트번호&#39;의 결
         </p>
     </div>
 </article>
-    
-        </div>
     
 
     
     
     
-    
-        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -409,10 +353,228 @@ Ajax의 장점
     </div>
 </article>
     
+        </div>
+    
 
     
     
     
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/09/05/node-study-fetchapi/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/fetch.jpeg)" alt="Node-fetchApi" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/05/node-study-fetchapi/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a>
+            </div>
+            <div class="date"><time datetime="2017-09-05T03:54:00.000Z" itemprop="datePublished">2017-09-05</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/09/05/node-study-fetchapi/">Node-fetchApi</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            
+Node Fetch APIFetch API
+웹 브라우저의 XMLHttpRequest를 대체하기 위해 만들어진 새로운 HTTP client 표준  
+비교적 최근에 도입되어 IE 및 구형 안드로이드 브라우저(4.x)는 지원하지 않음  
+Fetch Polyfill  
+최신기술로써 지원하지 않는 브라우저가 많지만 Fetch Polyfill을 사용하면 사용가능하다
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/09/04/node-study-node-Express-Middleware/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/middle.jpg)" alt="Node-Express-Middleware" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/04/node-study-node-Express-Middleware/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a>
+            </div>
+            <div class="date"><time datetime="2017-09-04T03:54:00.000Z" itemprop="datePublished">2017-09-04</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/09/04/node-study-node-Express-Middleware/">Node-Express-Middleware</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            
+Node Express MiddlewareMiddleware?1234567// 미들웨어 = 함수function helloMiddleware(res, req, next) &#123;  console.log('hello')  next()&#125;app.use(helloMiddleware)
+
+요청이 발생할 때 마다 console.log(‘hello’)가 나타
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/09/04/node-study-node-session/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/nodejs.png)" alt="Node-Session" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/04/node-study-node-session/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a>
+            </div>
+            <div class="date"><time datetime="2017-09-04T03:54:00.000Z" itemprop="datePublished">2017-09-04</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/09/04/node-study-node-session/">Node-Session</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            
+Node SessionSession사전적 의미
+(특정한 활동을 위한) 시간
+(의회 등의)회기; (법정의) 개정 (기간)
+
+실질적 의미시작 조건과 종료조건이 있는 시간, 또는 회기정보 교환이 지속되는 시간, 또는 회기
+세션의 예
+HTTP session요청 - 응답  
+
+클라이언트가 TCP 연결을 수립합니다(또는 전송 계층이 TCP가 아닌 다른 적당한 연결로
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/09/04/js-study-git/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/git.png)" alt="Git Manage" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/04/js-study-git/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Git/">Git</a>
+            </div>
+            <div class="date"><time datetime="2017-09-04T03:54:00.000Z" itemprop="datePublished">2017-09-04</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/09/04/js-study-git/">Git Manage</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            Git 으로 배포하기  
+
+Repository를 새로 만든다.  
+Portfolio를 만드는데 안에 플젝(a, b)을 넣을때는 index.html이 존재해야하며 상대경로로 이루어져야한다.  
+terminal로 이동하여서 portfolio로 이동 후 git init,   add,  commit을 순차적으로 한다.   
+Git remote add origin 
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -466,169 +628,6 @@ HTTP Cookie
 
 쿠키 전송 절차
 서버는 
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/09/04/node-study-node-Express-Middleware/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/middle.jpg)" alt="Node-Express-Middleware" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/04/node-study-node-Express-Middleware/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a>
-            </div>
-            <div class="date"><time datetime="2017-09-04T03:54:00.000Z" itemprop="datePublished">2017-09-04</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/09/04/node-study-node-Express-Middleware/">Node-Express-Middleware</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-Node Express MiddlewareMiddleware?1234567// 미들웨어 = 함수function helloMiddleware(res, req, next) &#123;  console.log('hello')  next()&#125;app.use(helloMiddleware)
-
-요청이 발생할 때 마다 console.log(‘hello’)가 나타
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/09/04/node-study-node-session/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/nodejs.png)" alt="Node-Session" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/04/node-study-node-session/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a>
-            </div>
-            <div class="date"><time datetime="2017-09-04T03:54:00.000Z" itemprop="datePublished">2017-09-04</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/09/04/node-study-node-session/">Node-Session</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-Node SessionSession사전적 의미
-(특정한 활동을 위한) 시간
-(의회 등의)회기; (법정의) 개정 (기간)
-
-실질적 의미시작 조건과 종료조건이 있는 시간, 또는 회기정보 교환이 지속되는 시간, 또는 회기
-세션의 예
-HTTP session요청 - 응답  
-
-클라이언트가 TCP 연결을 수립합니다(또는 전송 계층이 TCP가 아닌 다른 적당한 연결로
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/09/04/js-study-git/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/git.png)" alt="Git Manage" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/04/js-study-git/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Git/">Git</a>
-            </div>
-            <div class="date"><time datetime="2017-09-04T03:54:00.000Z" itemprop="datePublished">2017-09-04</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/09/04/js-study-git/">Git Manage</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Git 으로 배포하기  
-
-Repository를 새로 만든다.  
-Portfolio를 만드는데 안에 플젝(a, b)을 넣을때는 index.html이 존재해야하며 상대경로로 이루어져야한다.  
-terminal로 이동하여서 portfolio로 이동 후 git init,   add,  commit을 순차적으로 한다.   
-Git remote add origin 
         </p>
     </div>
 </article>

@@ -18,7 +18,7 @@
 <meta property="og:description" content="Node TDDNode.js에서 TDD를 하기위하여 필요한 라이브러리를 소개한다.    Mocha   Mocha는 테스트 코드를 돌려주는 Test Runner이다.     Should   assertion(검증) 라이브러리이다.     Supertest   express 통합 테스트용 라이브러리이다.      MochaMocha 공식 사이트 Link Mo">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/nodejs.png">
-<meta property="og:updated_time" content="2018-12-03T01:38:56.159Z">
+<meta property="og:updated_time" content="2018-12-03T01:41:56.940Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node TDD 도구">
 <meta name="twitter:description" content="Node TDDNode.js에서 TDD를 하기위하여 필요한 라이브러리를 소개한다.    Mocha   Mocha는 테스트 코드를 돌려주는 Test Runner이다.     Should   assertion(검증) 라이브러리이다.     Supertest   express 통합 테스트용 라이브러리이다.      MochaMocha 공식 사이트 Link Mo">
@@ -194,7 +194,7 @@
 <p>mocha는 개발환경에서만 필요한 라이브러리이기 때문에 -dev에 설치한다.  </p>
 </blockquote>
 <p>하나의 예시를 들어보자, 예시는 문자열이 들어오면 전체다 대문자로 바꿔주는 함수이다.  </p>
-<p>먼저 TDD 원칙인 Rer-Green-Refactor 원칙을 통하여 red 상태를 만들어본다.  </p>
+<p>먼저 TDD 원칙인 Red-Green-Refactor 원칙을 통하여 Red 상태를 만들어본다.  </p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//test.js</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">convertToUppercase</span>(<span class="params">str</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> str</div><div class="line">&#125;</div><div class="line"><span class="built_in">module</span>.exports = &#123;convertToUppercase&#125;</div></pre></td></tr></table></figure>
 <blockquote>
 <p>test하고자하는 파일은 spec을 추가해주면 된다.  </p>
@@ -205,7 +205,7 @@
 <p>명령어를 실행하는 방법: node_modules/.bin/mocha test.spec.js </p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//test.js  </span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">convertToUppercase</span>(<span class="params">str</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> str.toUpperCase();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;convertToUppercase&#125;</div></pre></td></tr></table></figure>
-<p>String의 str.toUpperCase()를 사용하여 Green상태로 만들었다.<br>refactor의 경우 아래의 should를 사용하여서 해보겠다.  </p>
+<p>String의 str.toUpperCase()를 사용하여 Green상태로 만들었다.<br>Refactor의 경우 아래의 should를 사용하여서 해보겠다.  </p>
 <h2 id="Should"><a href="#Should" class="headerlink" title="Should"></a>Should</h2><p>should 공식 사이트 <a href="https://shouldjs.github.io/" target="_blank" rel="external">Link</a></p>
 <p>should는 <code>assertion(검증)</code> 라이브러리이다.<br>Node.js의 공식문서에는 assert를 사용하지말고 서드파티 라이브러리를 사용하라고 개시되어있다.<br>가독성 높은 테스트 코드를 만들 수 있다.  </p>
 <ul>
@@ -228,7 +228,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2018/12/02/node-tdd/" data-id="cjp7ncbzo008vkp6fzl0x9yll" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2018/12/02/node-tdd/" data-id="cjp7xvjd7008tcg6foayxbrlh" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
