@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="Algorithm,행렬의 곱셈" />
     
-    <meta name="description" content="행렬의 곱셈 A,B 2개의 행렬의 곱을 구하여라  answer를 선언해준다.   행은 A.length, 열은 B[0].length이다 (2x3) * (3x2) = (2x2) 배열이 나오기 때문이다.     3중 for문을 사용하여서 값들을 answer에다가 저장한다. answer[0][0] = A[0][0]B[0][0] + A[0][1]B[1][0] + A">
+    <meta name="description" content="행렬의 곱셈  A,B 2개의 행렬의 곱을 구하여라  answer를 선언해준다.  행은 A.length, 열은 B[0].length이다 (2x3) * (3x2) = (2x2) 배열이 나오기 때문이다.   3중 for문을 사용하여서 값들을 answer에다가 저장한다.  answer[0][0] = A[0][0]*B[0][0] + A[0][1]*B[1][0] +">
 <meta name="keywords" content="Algorithm,행렬의 곱셈">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Algorithm 행렬의 곱셈">
 <meta property="og:url" content="http://yoursite.com/2017/12/16/algorithm-study-productMatrix/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="행렬의 곱셈 A,B 2개의 행렬의 곱을 구하여라  answer를 선언해준다.   행은 A.length, 열은 B[0].length이다 (2x3) * (3x2) = (2x2) 배열이 나오기 때문이다.     3중 for문을 사용하여서 값들을 answer에다가 저장한다. answer[0][0] = A[0][0]B[0][0] + A[0][1]B[1][0] + A">
+<meta property="og:description" content="행렬의 곱셈  A,B 2개의 행렬의 곱을 구하여라  answer를 선언해준다.  행은 A.length, 열은 B[0].length이다 (2x3) * (3x2) = (2x2) 배열이 나오기 때문이다.   3중 for문을 사용하여서 값들을 answer에다가 저장한다.  answer[0][0] = A[0][0]*B[0][0] + A[0][1]*B[1][0] +">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/algo.jpeg">
 <meta property="og:updated_time" content="2017-12-16T02:05:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Algorithm 행렬의 곱셈">
-<meta name="twitter:description" content="행렬의 곱셈 A,B 2개의 행렬의 곱을 구하여라  answer를 선언해준다.   행은 A.length, 열은 B[0].length이다 (2x3) * (3x2) = (2x2) 배열이 나오기 때문이다.     3중 for문을 사용하여서 값들을 answer에다가 저장한다. answer[0][0] = A[0][0]B[0][0] + A[0][1]B[1][0] + A">
+<meta name="twitter:description" content="행렬의 곱셈  A,B 2개의 행렬의 곱을 구하여라  answer를 선언해준다.  행은 A.length, 열은 B[0].length이다 (2x3) * (3x2) = (2x2) 배열이 나오기 때문이다.   3중 for문을 사용하여서 값들을 answer에다가 저장한다.  answer[0][0] = A[0][0]*B[0][0] + A[0][1]*B[1][0] +">
 <meta name="twitter:image" content="http://yoursite.com/images/algo.jpeg">
     
 
@@ -171,22 +171,25 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="행렬의-곱셈"><a href="#행렬의-곱셈" class="headerlink" title="행렬의 곱셈"></a>행렬의 곱셈</h1><p><img src="/images/algo.jpeg" alt="algo"></p>
+            <h1>행렬의 곱셈</h1>
+<p><img src="/images/algo.jpeg" alt="algo"></p>
 <p>A,B 2개의 행렬의 곱을 구하여라</p>
 <ul>
-<li>answer를 선언해준다.  <ul>
-<li>행은 A.length, 열은 B[0].length이다 (2x3) * (3x2) = (2x2) 배열이 나오기 때문이다.  </li>
+<li>answer를 선언해준다.
+<ul>
+<li>행은 A.length, 열은 B[0].length이다 (2x3) * (3x2) = (2x2) 배열이 나오기 때문이다.</li>
 </ul>
 </li>
-<li>3중 for문을 사용하여서 값들을 answer에다가 저장한다.<ul>
-<li>answer[0][0] = A[0][0]<em>B[0][0] + A[0][1]</em>B[1][0] + A[0][2]*B[2][0]   </li>
-<li>answer[0][1] = A[0][0]<em>B[0][1] + A[0][1]</em>B[1][1] + A[0][2]*B[2][1]  </li>
-<li>answer[1][0] = A[1][0]<em>B[1][0] + A[1][1]</em>B[1][0] + A[1][2]*B[2][0]  </li>
-<li>answer[1][1] = A[1][0]<em>B[1][1] + A[1][1]</em>B[1][1] + A[1][2]*B[2][1]  </li>
+<li>3중 for문을 사용하여서 값들을 answer에다가 저장한다.
+<ul>
+<li>answer[0][0] = A[0][0]*B[0][0] + A[0][1]*B[1][0] + A[0][2]*B[2][0]</li>
+<li>answer[0][1] = A[0][0]*B[0][1] + A[0][1]*B[1][1] + A[0][2]*B[2][1]</li>
+<li>answer[1][0] = A[1][0]*B[1][0] + A[1][1]*B[1][0] + A[1][2]*B[2][0]</li>
+<li>answer[1][1] = A[1][0]*B[1][1] + A[1][1]*B[1][1] + A[1][2]*B[2][1]</li>
 </ul>
 </li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> productMatrix;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductMatrix</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="keyword">public</span> <span class="keyword">int</span>[][] Matrix(<span class="keyword">int</span>[][] A, <span class="keyword">int</span>[][] B) &#123;</div><div class="line">		<span class="keyword">int</span>[][] answer = <span class="keyword">new</span> <span class="keyword">int</span>[A.length][B[<span class="number">0</span>].length];</div><div class="line">		</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; answer.length; i++) &#123;</div><div class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; answer[<span class="number">0</span>].length; j++) &#123;</div><div class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; A[<span class="number">0</span>].length; k++) &#123;</div><div class="line">					answer[i][j] += A[i][k] * B[k][j]; </div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="keyword">return</span> answer;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		ProductMatrix pm = <span class="keyword">new</span> ProductMatrix();</div><div class="line">		<span class="keyword">int</span>[][] a = &#123; &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> &#125;, &#123; <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span> &#125; &#125;;</div><div class="line">		<span class="keyword">int</span>[][] b = &#123; &#123; <span class="number">1</span>, <span class="number">1</span> &#125;, &#123; <span class="number">1</span>, <span class="number">1</span> &#125;, &#123; <span class="number">1</span>, <span class="number">1</span> &#125; &#125;;</div><div class="line">		System.out.println(pm.Matrix(a, b));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> productMatrix;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductMatrix</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="keyword">public</span> <span class="keyword">int</span>[][] Matrix(<span class="keyword">int</span>[][] A, <span class="keyword">int</span>[][] B) &#123;</div><div class="line">		<span class="keyword">int</span>[][] answer = <span class="keyword">new</span> <span class="keyword">int</span>[A.length][B[<span class="number">0</span>].length];</div><div class="line">		</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; answer.length; i++) &#123;</div><div class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; answer[<span class="number">0</span>].length; j++) &#123;</div><div class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; A[<span class="number">0</span>].length; k++) &#123;</div><div class="line">					answer[i][j] += A[i][k] * B[k][j]; </div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="keyword">return</span> answer;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		ProductMatrix pm = <span class="keyword">new</span> ProductMatrix();</div><div class="line">		<span class="keyword">int</span>[][] a = &#123; &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> &#125;, &#123; <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span> &#125; &#125;;</div><div class="line">		<span class="keyword">int</span>[][] b = &#123; &#123; <span class="number">1</span>, <span class="number">1</span> &#125;, &#123; <span class="number">1</span>, <span class="number">1</span> &#125;, &#123; <span class="number">1</span>, <span class="number">1</span> &#125; &#125;;</div><div class="line">		System.out.println(pm.Matrix(a, b));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
         </div>
         <footer class="article-footer">
@@ -194,7 +197,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/12/16/algorithm-study-productMatrix/" data-id="cjpao48im000tox6f3ehbbkdl" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/12/16/algorithm-study-productMatrix/" data-id="cjpaol75t000py16f29ug0vij" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

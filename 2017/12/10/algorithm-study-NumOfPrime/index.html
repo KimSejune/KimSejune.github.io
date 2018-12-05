@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="Algorithm,소수찾기" />
     
-    <meta name="description" content="소수찾기 입력된 값이 n일경우 1~n까지중 소수의 개수를 반환하여라  10이 들어온다면 2, 3, 5, 7 4개가 존재함으로 4를 반환  12345678910111213141516171819202122232425262728293031323334353637package numberofprime;public class NumOfPrime &amp;#123;		publ">
+    <meta name="description" content="소수찾기  입력된 값이 n일경우 1~n까지중 소수의 개수를 반환하여라  10이 들어온다면 2, 3, 5, 7 4개가 존재함으로 4를 반환  12345678910111213141516171819202122232425262728293031323334353637package numberofprime;public class NumOfPrime &amp;#123;		pub">
 <meta name="keywords" content="Algorithm,소수찾기">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Algorithm 소수찾기">
 <meta property="og:url" content="http://yoursite.com/2017/12/10/algorithm-study-NumOfPrime/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="소수찾기 입력된 값이 n일경우 1~n까지중 소수의 개수를 반환하여라  10이 들어온다면 2, 3, 5, 7 4개가 존재함으로 4를 반환  12345678910111213141516171819202122232425262728293031323334353637package numberofprime;public class NumOfPrime &amp;#123;		publ">
+<meta property="og:description" content="소수찾기  입력된 값이 n일경우 1~n까지중 소수의 개수를 반환하여라  10이 들어온다면 2, 3, 5, 7 4개가 존재함으로 4를 반환  12345678910111213141516171819202122232425262728293031323334353637package numberofprime;public class NumOfPrime &amp;#123;		pub">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/algo.jpeg">
 <meta property="og:updated_time" content="2017-12-10T12:55:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Algorithm 소수찾기">
-<meta name="twitter:description" content="소수찾기 입력된 값이 n일경우 1~n까지중 소수의 개수를 반환하여라  10이 들어온다면 2, 3, 5, 7 4개가 존재함으로 4를 반환  12345678910111213141516171819202122232425262728293031323334353637package numberofprime;public class NumOfPrime &amp;#123;		publ">
+<meta name="twitter:description" content="소수찾기  입력된 값이 n일경우 1~n까지중 소수의 개수를 반환하여라  10이 들어온다면 2, 3, 5, 7 4개가 존재함으로 4를 반환  12345678910111213141516171819202122232425262728293031323334353637package numberofprime;public class NumOfPrime &amp;#123;		pub">
 <meta name="twitter:image" content="http://yoursite.com/images/algo.jpeg">
     
 
@@ -171,12 +171,13 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="소수찾기"><a href="#소수찾기" class="headerlink" title="소수찾기"></a>소수찾기</h1><p><img src="/images/algo.jpeg" alt="algo"></p>
+            <h1>소수찾기</h1>
+<p><img src="/images/algo.jpeg" alt="algo"></p>
 <p>입력된 값이 n일경우 1~n까지중 소수의 개수를 반환하여라</p>
 <ul>
 <li>10이 들어온다면 2, 3, 5, 7 4개가 존재함으로 4를 반환</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> numberofprime;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NumOfPrime</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isPrime</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">		<span class="keyword">boolean</span> flag = <span class="keyword">true</span>;</div><div class="line">		<span class="keyword">int</span> count = <span class="number">0</span>;</div><div class="line">		<span class="keyword">int</span> i = <span class="number">1</span>;</div><div class="line">		<span class="keyword">while</span>(n &gt;= i) &#123;</div><div class="line">			<span class="keyword">if</span>(n%i == <span class="number">0</span>) &#123;</div><div class="line">				count++;</div><div class="line">			&#125;</div><div class="line">			i++;</div><div class="line">		&#125;</div><div class="line">		flag = (count == <span class="number">2</span>) ? <span class="keyword">true</span> : <span class="keyword">false</span>;</div><div class="line">		<span class="keyword">return</span> flag;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">numberOfPrime</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">		<span class="keyword">int</span> result = <span class="number">0</span>;</div><div class="line">		<span class="comment">// 함수를 완성하세요.</span></div><div class="line">		<span class="keyword">while</span>(n &gt; <span class="number">0</span>) &#123;</div><div class="line">			<span class="keyword">if</span>(isPrime(n)) &#123;</div><div class="line">				result++;</div><div class="line">			&#125;</div><div class="line">			n--;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="keyword">return</span> result;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		NumOfPrime prime = <span class="keyword">new</span> NumOfPrime();</div><div class="line">		System.out.println( prime.numberOfPrime(<span class="number">10</span>) );</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> numberofprime;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NumOfPrime</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isPrime</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">		<span class="keyword">boolean</span> flag = <span class="keyword">true</span>;</div><div class="line">		<span class="keyword">int</span> count = <span class="number">0</span>;</div><div class="line">		<span class="keyword">int</span> i = <span class="number">1</span>;</div><div class="line">		<span class="keyword">while</span>(n &gt;= i) &#123;</div><div class="line">			<span class="keyword">if</span>(n%i == <span class="number">0</span>) &#123;</div><div class="line">				count++;</div><div class="line">			&#125;</div><div class="line">			i++;</div><div class="line">		&#125;</div><div class="line">		flag = (count == <span class="number">2</span>) ? <span class="keyword">true</span> : <span class="keyword">false</span>;</div><div class="line">		<span class="keyword">return</span> flag;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">numberOfPrime</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">		<span class="keyword">int</span> result = <span class="number">0</span>;</div><div class="line">		<span class="comment">// 함수를 완성하세요.</span></div><div class="line">		<span class="keyword">while</span>(n &gt; <span class="number">0</span>) &#123;</div><div class="line">			<span class="keyword">if</span>(isPrime(n)) &#123;</div><div class="line">				result++;</div><div class="line">			&#125;</div><div class="line">			n--;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="keyword">return</span> result;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		NumOfPrime prime = <span class="keyword">new</span> NumOfPrime();</div><div class="line">		System.out.println( prime.numberOfPrime(<span class="number">10</span>) );</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
         </div>
         <footer class="article-footer">
@@ -184,7 +185,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/12/10/algorithm-study-NumOfPrime/" data-id="cjpao48ic0009ox6fvhpxbbol" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/12/10/algorithm-study-NumOfPrime/" data-id="cjpaol75h0006y16f7eq3p41o" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -289,20 +290,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/12/11/algorithm-study-getminsum/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2017/12/10/algorithm-study-HarshadNumber/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            Algorithm 최소값 만들기
+            Algorithm 하샤드수
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2017/12/10/algorithm-study-HarshadNumber/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/12/07/algorithm-study-divisible/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Algorithm 하샤드수</p>
+        <p class="article-nav-title">Algorithm 나누어 떨어지는 숫자 배열</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     

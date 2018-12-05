@@ -183,9 +183,10 @@
 
         <p class="article-excerpt">
             Javascript this
+
 자바스크립트의 함수는 호출될 때, 매개변수로 전달되는 인자값 이외에, arguments 객체와 this를 암묵적으로 전달 받는다.
 
-12345678910function square(number) &#123;  console.log(arguments);  console.log(this);  // browser에서는 window로 
+12345678910function square(number) &#123;  console.log(arguments);  console.log(this);  // browser에서는 window로
         </p>
     </div>
 </article>
@@ -232,20 +233,129 @@
 
         <p class="article-excerpt">
             Javascript Scope
-3.Function scope자바스크립트의 Scope 종류
+
+3.Function scope
+자바스크립트의 Scope 종류
 
 전역Scope(Global scope)
+
 코드 어디에서든지 참조할 수 있다.
 
 
 지역Scope(Local scope or Function-level scope)
+
 정의된 함수 내에서만 참조할 수 있다.
 
 
 
 변수의 Scope 종류
 
-전역 변수 (Global variabl
+
+전역 변수 (Global va
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/08/01/js-study-immutability/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Immutability" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/01/js-study-immutability/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/JavaScript/">JavaScript</a>
+            </div>
+            <div class="date"><time datetime="2017-08-01T03:54:00.000Z" itemprop="datePublished">2017-08-01</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/08/01/js-study-immutability/">JavaScript Immutability</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            Javascript Immutability
+
+Immutability(변경불가성)이란? 객체가 생성된 이후 그 상태를 변경할 수 없는 디자인 패턴을 의미한다.
+레퍼런스를 참조한 다른 객체에서 객체를 변경하는 상황을 해결하는 방법
+
+
+객체를 불변객체로 만들어 프로퍼티의 변경을 방지하며 객체의 변경이 필요한 경우에는 참조가 아닌 객체의 방어적 복사(defensi
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/08/01/js-study-prototype/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/object_literal_prototype_chaining.png)" alt="JavaScript Prototype" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/01/js-study-prototype/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/JavaScript/">JavaScript</a>
+            </div>
+            <div class="date"><time datetime="2017-08-01T03:54:00.000Z" itemprop="datePublished">2017-08-01</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/08/01/js-study-prototype/">JavaScript Prototype</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            Javascript Prototype
+12345678function Person(name) &#123;  this.name = name;  this.sayHello = function()&#123;    console.log(this.name);  &#125;&#125;var foo = new Person('Lee');
+foo의 property는 name,
         </p>
     </div>
 </article>
@@ -297,11 +407,16 @@
         <p class="article-excerpt">
             Javascript Function
 
+
+
 함수란 어떤 특정 작업을 수행하기 위해 필요한 일련의 구문들을 그룹화하기 위한 개념이다.(코드의 재사용)
+
+
 함수의 기능
+
 특정 작업을 수행하는 구문들의 집합을 정의하고 필요시에 호출하여 필요한 값 또는 수행 결과를 얻는다.
 객체 생성, 객체의 행위 지정(메서드)
-정보의 구성 및 은닉, 클로저, 모듈화 등의 기능을 수행할 수
+정보의 구성 및 은닉, 클로저, 모듈화 등의 기능을 
         </p>
     </div>
 </article>
@@ -314,17 +429,17 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/08/01/js-study-immutability/" class="thumbnail">
+        <a href="/2017/07/31/js-study-control-flow/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript Immutability" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript-Control-Flow" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/01/js-study-immutability/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/07/31/js-study-control-flow/">0</span>
     
 </span>
 
@@ -337,20 +452,23 @@
             <div class="category">
             <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/JavaScript/">JavaScript</a>
             </div>
-            <div class="date"><time datetime="2017-08-01T03:54:00.000Z" itemprop="datePublished">2017-08-01</time></div>
+            <div class="date"><time datetime="2017-07-31T03:54:00.000Z" itemprop="datePublished">2017-07-31</time></div>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/01/js-study-immutability/">JavaScript Immutability</a>
+        <a href="/2017/07/31/js-study-control-flow/">JavaScript-Control-Flow</a>
         </h1>
     
 
         <p class="article-excerpt">
-            Javascript Immutability
-Immutability(변경불가성)이란? 객체가 생성된 이후 그 상태를 변경할 수 없는 디자인 패턴을 의미한다.레퍼런스를 참조한 다른 객체에서 객체를 변경하는 상황을 해결하는 방법
+            Javascript Control Flow
 
-객체를 불변객체로 만들어 프로퍼티의 변경을 방지하며 객체의 변경이 필요한 경우에는 참조가 아닌 객체의 방어적 복사(defensive 
+1. 블록 구문(Block statement)
+
+중괄호로 범위가 정해진 구문을 블록 구문이라고 한다.
+
+1234567891011121314151617181920// 함수function foo() &#123;  var x = 1, y = 2;  console.log(x + y);&#125;foo();// 객체리터럴
         </p>
     </div>
 </article>
@@ -363,53 +481,6 @@ Immutability(변경불가성)이란? 객체가 생성된 이후 그 상태를 �
     
     
         <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/08/01/js-study-prototype/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/object_literal_prototype_chaining.png)" alt="JavaScript Prototype" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/01/js-study-prototype/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/JavaScript/">JavaScript</a>
-            </div>
-            <div class="date"><time datetime="2017-08-01T03:54:00.000Z" itemprop="datePublished">2017-08-01</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/01/js-study-prototype/">JavaScript Prototype</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Javascript Prototype12345678function Person(name) &#123;  this.name = name;  this.sayHello = function()&#123;    console.log(this.name);  &#125;&#125;var foo = new Person('Lee');
-foo의 property는 name, 
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -448,19 +519,17 @@ foo의 property는 name,
 
         <p class="article-excerpt">
             Javascript Operator
-1. 산술 연술자 (Arithmetic Operators)1234567891011121314151617var x = 5;var y = 2;var z;z = x + y;  // 7z = x - y;  // 3z = x * y;  // 10z = x / y;  // 2.5z = x % y;  // 1z = x++;    //
+
+1. 산술 연술자 (Arithmetic Operators)
+1234567891011121314151617var x = 5;var y = 2;var z;z = x + y;  // 7z = x - y;  // 3z = x * y;  // 10z = x / y;  // 2.5z = x % y;  // 1z = x++;    
         </p>
     </div>
 </article>
-    
-        </div>
     
 
     
     
     
-    
-        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -499,23 +568,31 @@ foo의 property는 name,
 
         <p class="article-excerpt">
             Javascript Object
+
 1. 객체(Object)란?
+
 자바스크립트는 객체기반의 스크립트 언어이며 이루고 있는 거의 모든것은 객체이다
 객체 = 키 + 데이터 + 동작
+
 이름(키) + 값으로 구성된 데이터(프로퍼티) + 동작을 나타내는(메서드)
 
 
 
 1.1 프로퍼티(Property)
-객체는 이름(name)과 값(value)의 쌍인 프로퍼티들을 포함하는 컨
+
+객체는 이름(name)과 값(value)의 쌍인 프로퍼티들을 포함
         </p>
     </div>
 </article>
+    
+        </div>
     
 
     
     
     
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -555,64 +632,11 @@ foo의 property는 name,
         <p class="article-excerpt">
             Javascript Data type &amp; Variable
 
+
 변수란?: 메모리 주소에 접근하기 위해 사람이 이해할 수 있는 언어로 지정한 식별자이다.
 자료형은 데이터의 성질을 나타낸다.
 javascript 영역이 입력되는 값을 판단하여서 메모리에 저장한다.
-JavaScript는 동적 타이핑 언어로 변수의 Type annotation이 필요없이 값이 할
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/07/31/js-study-control-flow/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript-Control-Flow" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/07/31/js-study-control-flow/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/JavaScript/">JavaScript</a>
-            </div>
-            <div class="date"><time datetime="2017-07-31T03:54:00.000Z" itemprop="datePublished">2017-07-31</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/07/31/js-study-control-flow/">JavaScript-Control-Flow</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Javascript Control Flow
-1. 블록 구문(Block statement)
-중괄호로 범위가 정해진 구문을 블록 구문이라고 한다.
-
-1234567891011121314151617181920// 함수function foo() &#123;  var x = 1, y = 2;  console.log(x + y);&#125;foo();// 객체리터럴va
+JavaScript는 동적 타이핑 언어로 변수의 Type annotation이 필요없이 값이 
         </p>
     </div>
 </article>
@@ -625,17 +649,17 @@ JavaScript는 동적 타이핑 언어로 변수의 Type annotation이 필요없�
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/07/28/js-study-introduction/" class="thumbnail">
+        <a href="/2017/07/28/js-study-syntax/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript-Introduction" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/js.jpeg)" alt="JavaScript-Syntax" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/07/28/js-study-introduction/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/07/28/js-study-syntax/">0</span>
     
 </span>
 
@@ -653,17 +677,18 @@ JavaScript는 동적 타이핑 언어로 변수의 Type annotation이 필요없�
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/07/28/js-study-introduction/">JavaScript-Introduction</a>
+        <a href="/2017/07/28/js-study-syntax/">JavaScript-Syntax</a>
         </h1>
     
 
         <p class="article-excerpt">
-            Javascript Introduction
-1. Introduction
-웹브라우저에서 동작하는 유일한 언어이다.
-jQuery의 등장으로 DOM(Document Object Model)를 보다 쉽게 제어할 수 있게 되었다.
-javascript는 interpreter language 컴파일러가 필요없다 동시에 번역한다.
-명령형, 함수형, 프로토타입 기반 객체지
+            Javascript Syntax basics
+
+1. Hello world
+
+정적인 HTML을 동적으로 변경할 수 있는 유일한 방법은 js를 사용하는 것이다.
+
+1234function myFunction() &#123;  var myHeader = document.getElementById('demo');  myHeader.innerHTML = 'Hello 
         </p>
     </div>
 </article>

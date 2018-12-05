@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="Node.js,Http" />
     
-    <meta name="description" content="HTTP History APIHTTP History API history.back() window.history.back();  history.forward() window.history.forward();  history.go() 히스토리에서 특정 위치로 가기  history.pushState() 히스토리 엔트리의 추가 및 변경 이 메서드들은 windo">
+    <meta name="description" content="HTTP History API HTTP History API history.back()  window.history.back();  history.forward()  window.history.forward();  history.go()  히스토리에서 특정 위치로 가기  history.pushState()  히스토리 엔트리의 추가 및 변경 이 메서드들은">
 <meta name="keywords" content="Node.js,Http">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node-Http">
 <meta property="og:url" content="http://yoursite.com/2017/08/29/node-study-http/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="HTTP History APIHTTP History API history.back() window.history.back();  history.forward() window.history.forward();  history.go() 히스토리에서 특정 위치로 가기  history.pushState() 히스토리 엔트리의 추가 및 변경 이 메서드들은 windo">
+<meta property="og:description" content="HTTP History API HTTP History API history.back()  window.history.back();  history.forward()  window.history.forward();  history.go()  히스토리에서 특정 위치로 가기  history.pushState()  히스토리 엔트리의 추가 및 변경 이 메서드들은">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/http.png">
 <meta property="og:updated_time" content="2017-12-27T03:01:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node-Http">
-<meta name="twitter:description" content="HTTP History APIHTTP History API history.back() window.history.back();  history.forward() window.history.forward();  history.go() 히스토리에서 특정 위치로 가기  history.pushState() 히스토리 엔트리의 추가 및 변경 이 메서드들은 windo">
+<meta name="twitter:description" content="HTTP History API HTTP History API history.back()  window.history.back();  history.forward()  window.history.forward();  history.go()  히스토리에서 특정 위치로 가기  history.pushState()  히스토리 엔트리의 추가 및 변경 이 메서드들은">
 <meta name="twitter:image" content="http://yoursite.com/images/http.png">
     
 
@@ -172,33 +172,43 @@
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/http.png" alt="http"></p>
-<h1 id="HTTP-History-API"><a href="#HTTP-History-API" class="headerlink" title="HTTP History API"></a>HTTP History API</h1><p><a href="https://developer.mozilla.org/ko/docs/Web/API/History_API" target="_blank" rel="external">HTTP History API</a></p>
-<h2 id="history-back"><a href="#history-back" class="headerlink" title="history.back()"></a>history.back()</h2><ul>
+<h1>HTTP History API</h1>
+<p><a href="https://developer.mozilla.org/ko/docs/Web/API/History_API" target="_blank" rel="external">HTTP History API</a></p>
+<h2>history.back()</h2>
+<ul>
 <li>window.history.back();</li>
 </ul>
-<h2 id="history-forward"><a href="#history-forward" class="headerlink" title="history.forward()"></a>history.forward()</h2><ul>
+<h2>history.forward()</h2>
+<ul>
 <li>window.history.forward();</li>
 </ul>
-<h2 id="history-go"><a href="#history-go" class="headerlink" title="history.go()"></a>history.go()</h2><ul>
+<h2>history.go()</h2>
+<ul>
 <li>히스토리에서 특정 위치로 가기</li>
 </ul>
-<h2 id="history-pushState"><a href="#history-pushState" class="headerlink" title="history.pushState()"></a>history.pushState()</h2><ul>
+<h2>history.pushState()</h2>
+<ul>
 <li>히스토리 엔트리의 추가 및 변경</li>
 <li>이 메서드들은 window.onpopstate 이벤트와 연동하여 동작합니다.</li>
 </ul>
-<h1 id="HTTP-까보기"><a href="#HTTP-까보기" class="headerlink" title="HTTP 까보기"></a>HTTP 까보기</h1><ul>
-<li>WireShark<ul>
+<h1>HTTP 까보기</h1>
+<ul>
+<li>WireShark
+<ul>
 <li>https를 사용하는 사이트는 wireshark로 찾아볼 수 없다.</li>
 </ul>
 </li>
-<li>Chrome Devtools<ul>
+<li>Chrome Devtools
+<ul>
 <li>검사탭 -&gt; Network</li>
 </ul>
 </li>
 </ul>
-<h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><ul>
+<h2>HTTP</h2>
+<ul>
 <li><code>웹 브라우저와 웹 서버 간의 통신을</code> 위해 개발된 통신규약</li>
-<li>최근에는 <code>REST API의 부상</code>와 함꼐 다른 용도로도 널리 사용됨<ul>
+<li>최근에는 <code>REST API의 부상</code>와 함꼐 다른 용도로도 널리 사용됨
+<ul>
 <li>모바일 앱 - 서버 간 통신</li>
 <li>서버 - 서버 간 통신</li>
 </ul>
@@ -206,35 +216,42 @@
 <li><code>80번 포트</code>를 기본으로 사용</li>
 <li>클라이언트의 <code>요청(requert)</code>과 서버의 <code>응답(response)</code>으로 이루어짐</li>
 </ul>
-<h2 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h2><ul>
+<h2>HTTPS</h2>
+<ul>
 <li>HTTP over SSL</li>
 <li>HTTP 통신을 암호화해 주고받는 내용을 중간에서 가로챌 수 없도록 함</li>
 <li><code>443번 포트</code>를 기본으로 사용</li>
 </ul>
-<h2 id="HTTP-2"><a href="#HTTP-2" class="headerlink" title="HTTP/2"></a>HTTP/2</h2><ul>
+<h2>HTTP/2</h2>
+<ul>
 <li><code>구글의 SPDY 프로토콜</code>을 기반으로 2015년에 확정된 새로운 HTTP 표준</li>
 <li><code>속도 개선</code>에 중점을 두고 개발됨</li>
 <li><code>반드시 HTTPS를 사용해야 함</code></li>
 <li>현재 전체 웹사이트 중 16% 이상이 사용중</li>
 </ul>
-<h2 id="HTTP-구성요소"><a href="#HTTP-구성요소" class="headerlink" title="HTTP 구성요소"></a>HTTP 구성요소</h2><h3 id="Request-amp-Response"><a href="#Request-amp-Response" class="headerlink" title="Request &amp; Response"></a>Request &amp; Response</h3><ul>
+<h2>HTTP 구성요소</h2>
+<h3>Request &amp; Response</h3>
+<ul>
 <li>웹 브라우저(또는 다른 클라이언트)는 웹 서버에 요청(request)를 보냄</li>
 <li>그에 따라 서버는 클라이언트에 응답(response)를 보냄</li>
-<li>웹 브라우저의 경우, <code>HTML 문서 형태의 응답</code>이 오면 해당 문서를 분석한 후, <code>문서에 포함된 모든 자원에 대한 요청을 각각 추가로 보냄</code> (이미지, 동영상, 오디오, CSS, JS, 폰트, …)</li>
+<li>웹 브라우저의 경우, <code>HTML 문서 형태의 응답</code>이 오면 해당 문서를 분석한 후, <code>문서에 포함된 모든 자원에 대한 요청을 각각 추가로 보냄</code> (이미지, 동영상, 오디오, CSS, JS, 폰트, ...)</li>
 </ul>
-<h3 id="Request-Methods"><a href="#Request-Methods" class="headerlink" title="Request Methods"></a>Request Methods</h3><ul>
-<li><code>HTTP 명세에는 8 종류</code>가 등록되어 있고, 각각의 역할과 충족해야 하는 성질이 명시되어 있음<ul>
+<h3>Request Methods</h3>
+<ul>
+<li><code>HTTP 명세에는 8 종류</code>가 등록되어 있고, 각각의 역할과 충족해야 하는 성질이 명시되어 있음
+<ul>
 <li>GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE, PATCH</li>
-<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Methods" target="_blank" rel="external">HTTP request methods</a>  </li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Methods" target="_blank" rel="external">HTTP request methods</a></li>
 </ul>
 </li>
 <li>웹 브라우저는 <code>특정 상황에서 특정 메소드로 요청을 보내도록 강제되어져 있음</code></li>
 <li>Ajax와 같이 <code>요청을 보내는 코드를 직접 짤 때</code>는 요청 메소드를 선택할 수 있음</li>
 <li><code>자료의 본문을 요청하는 GET</code>메소드와, <code>새로운 자료를 등록하는 POST</code> 메소드가 가장 많이 쓰임</li>
 </ul>
-<h3 id="서버가-충족시켜야-하는-메소드의-성질"><a href="#서버가-충족시켜야-하는-메소드의-성질" class="headerlink" title="(서버가 충족시켜야 하는) 메소드의 성질"></a>(서버가 충족시켜야 하는) 메소드의 성질</h3><p><code>Safe</code></p>
+<h3>(서버가 충족시켜야 하는) 메소드의 성질</h3>
+<p><code>Safe</code></p>
 <ul>
-<li>요청이 서버의 상태에 영향을 미치지 않아야 함. 즉, <code>읽기 전용</code>  </li>
+<li>요청이 서버의 상태에 영향을 미치지 않아야 함. 즉, <code>읽기 전용</code></li>
 </ul>
 <p><code>Idempotent</code></p>
 <ul>
@@ -247,105 +264,119 @@
 <blockquote>
 <p>fetch는 일부분만 바꿀때 사용하며, put은 전체를 바꿀때 사용한다,</p>
 </blockquote>
-<h2 id="link"><a href="#link" class="headerlink" title="link"></a>link</h2><ul>
+<h2>link</h2>
+<ul>
 <li>반드시 이 성질을 따르도록 서버를 구현해야 하는 것은 아니나, 구현했을 때의 이점이 있으므로 이대로 구현하는 것이 좋다</li>
 </ul>
 <p><img src="/images/HEDlwPSl.png" alt="link"></p>
-<h2 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h2><ul>
-<li>2,3,4는 domain영역이다.<ul>
-<li>4(TOP)는 특별한 기관에서 관리를한다.<br><img src="/images/url-anatomy-55598c24.png" alt="URL"></li>
+<h2>URL</h2>
+<ul>
+<li>2,3,4는 domain영역이다.
+<ul>
+<li>4(TOP)는 특별한 기관에서 관리를한다.
+<img src="/images/url-anatomy-55598c24.png" alt="URL"></li>
 </ul>
 </li>
 </ul>
-<h2 id="Percent-Encoding"><a href="#Percent-Encoding" class="headerlink" title="Percent Encoding"></a>Percent Encoding</h2><ul>
+<h2>Percent Encoding</h2>
+<ul>
 <li>URL은 <code>ASCII 문자</code>(128개의 영문자+특수문자+제어문자)밖에 사용하지 못하기 때문에, non-ASCII 문자를 위한 표현방법이 필요함 #</li>
 <li><code>Percent encoding</code>은 <code>non-ASCII 문자를 위한 웹 표준 인코딩 방법</code>으로, JavaScript에 관련 기능이 포함되어 있음</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&gt; encodeURIComponent(<span class="string">"한글"</span>)</div><div class="line"><span class="string">"%ED%95%9C%EA%B8%80"</span></div><div class="line">&gt; decodeURIComponent(<span class="string">"%ED%95%9C%EA%B8%80"</span>)</div><div class="line"><span class="string">"한글"</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> encoded = <span class="built_in">encodeURIComponent</span>(<span class="string">'패스트캠퍼스'</span>)</div><div class="line"><span class="literal">undefined</span></div><div class="line"><span class="built_in">decodeURIComponent</span>(encoded)</div><div class="line"><span class="string">"패스트캠퍼스"</span></div></pre></td></tr></table></figure>
-<h2 id="Request-Target"><a href="#Request-Target" class="headerlink" title="Request Target"></a>Request Target</h2><p>일반적인 경우 아래와 같은 구조가 사용됨</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&gt; encodeURIComponent(<span class="string">"한글"</span>)</div><div class="line"><span class="string">"%ED%95%9C%EA%B8%80"</span></div><div class="line">&gt; decodeURIComponent(<span class="string">"%ED%95%9C%EA%B8%80"</span>)</div><div class="line"><span class="string">"한글"</span></div></pre></td></tr></table></figure></p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> encoded = <span class="built_in">encodeURIComponent</span>(<span class="string">'패스트캠퍼스'</span>)</div><div class="line"><span class="literal">undefined</span></div><div class="line"><span class="built_in">decodeURIComponent</span>(encoded)</div><div class="line"><span class="string">"패스트캠퍼스"</span></div></pre></td></tr></table></figure></p>
+<h2>Request Target</h2>
+<p>일반적인 경우 아래와 같은 구조가 사용됨</p>
 <p><code>absolute path + query string + fragment id</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GET /path/to/resource?foo=bar&amp;spam=hoge#fragid HTTP/1.1</div></pre></td></tr></table></figure>
-<h2 id="Response-Status"><a href="#Response-Status" class="headerlink" title="Response Status"></a>Response Status</h2><ul>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GET /path/to/resource?foo=bar&amp;spam=hoge#fragid HTTP/1.1</div></pre></td></tr></table></figure></p>
+<h2>Response Status</h2>
+<ul>
 <li>응답의 성공, 실패 여부와 종류를 나타내며, <code>상태 코드 + 상태 메시지</code>의 형태로 응답에 포함됨</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">HTTP/1.1 200 OK</div></pre></td></tr></table></figure>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">HTTP/1.1 200 OK</div></pre></td></tr></table></figure></p>
 <p><a href="https://httpstatuses.com/" target="_blank" rel="external">HTTP Status Codes</a></p>
-<h2 id="Status-Category"><a href="#Status-Category" class="headerlink" title="Status Category"></a>Status Category</h2><p><b>2xx</b></p>
+<h2>Status Category</h2>
+<p>&lt;b&gt;2xx&lt;/b&gt;</p>
 <ul>
-<li>성공  </li>
+<li>성공</li>
 </ul>
-<p><b>3xx</b></p>
+<p>&lt;b&gt;3xx&lt;/b&gt;</p>
 <ul>
-<li>추가 작업이 필요함  </li>
+<li>추가 작업이 필요함</li>
 </ul>
-<p><b>4xx</b></p>
+<p>&lt;b&gt;4xx&lt;/b&gt;</p>
 <ul>
-<li>실패 - 클라이언트 책임  </li>
+<li>실패 - 클라이언트 책임</li>
 </ul>
-<p><b>5xx</b></p>
+<p>&lt;b&gt;5xx&lt;/b&gt;</p>
 <ul>
-<li>실패 - 서버 책임  </li>
+<li>실패 - 서버 책임</li>
 </ul>
-<h2 id="Status-Code-2xx"><a href="#Status-Code-2xx" class="headerlink" title="Status Code - 2xx"></a>Status Code - 2xx</h2><p><b>200</b> ok 성공</p>
-<p><b>201</b> Created 자료가 성공적으로 생성됨</p>
-<h2 id="Status-Code-3xx"><a href="#Status-Code-3xx" class="headerlink" title="Status Code - 3xx"></a>Status Code - 3xx</h2><p><b>301 Moved Permanently (Redirection)</b></p>
+<h2>Status Code - 2xx</h2>
+<p>&lt;b&gt;200&lt;/b&gt; ok 성공</p>
+<p>&lt;b&gt;201&lt;/b&gt; Created 자료가 성공적으로 생성됨</p>
+<h2>Status Code - 3xx</h2>
+<p>&lt;b&gt;301 Moved Permanently (Redirection)&lt;/b&gt;</p>
 <ul>
 <li>자료가 완전히 다른 곳으로 이동했음</li>
 </ul>
-<p><b>302 Found (Redirection)</b></p>
+<p>&lt;b&gt;302 Found (Redirection)&lt;/b&gt;</p>
 <ul>
 <li>자료가 일시적으로 다른 곳에 있음</li>
 </ul>
-<p><b>304 Not Modified (Cache)</b></p>
+<p>&lt;b&gt;304 Not Modified (Cache)&lt;/b&gt;</p>
 <ul>
 <li>클라이언트가 이미 가지고 있던 자료가 수정되지 않았음 (그대로 사용하면 됨)</li>
 </ul>
-<h2 id="Status-Code-4xx"><a href="#Status-Code-4xx" class="headerlink" title="Status Code - 4xx"></a>Status Code - 4xx</h2><p><b>400 Bad Request</b></p>
+<h2>Status Code - 4xx</h2>
+<p>&lt;b&gt;400 Bad Request&lt;/b&gt;</p>
 <ul>
 <li>요청의 형태가 잘못되어 응답할 수 없음</li>
 </ul>
-<p><b>403 Forbidden</b></p>
+<p>&lt;b&gt;403 Forbidden&lt;/b&gt;</p>
 <ul>
 <li>요청한 자료에 접근할 권한이 없음</li>
 </ul>
-<p><b>404 Not Found</b></p>
+<p>&lt;b&gt;404 Not Found&lt;/b&gt;</p>
 <ul>
 <li>요청한 자료가 없음</li>
 </ul>
-<h2 id="Status-Code-5xx"><a href="#Status-Code-5xx" class="headerlink" title="Status Code - 5xx"></a>Status Code - 5xx</h2><p><b>500 Internal Server Error</b></p>
+<h2>Status Code - 5xx</h2>
+<p>&lt;b&gt;500 Internal Server Error&lt;/b&gt;</p>
 <ul>
 <li>요청을 처리하던 중에 예상치 못한 오류가 발생함</li>
 </ul>
-<p><b>503 Service Unavailable</b></p>
+<p>&lt;b&gt;503 Service Unavailable&lt;/b&gt;</p>
 <ul>
 <li>서버가 일시적으로 응답을 할 수 없음</li>
 </ul>
-<h2 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h2><ul>
-<li><code>요청과 응답</code>에 대한 <code>추가 정보</code>를 표현하는 데 사용됨  </li>
-<li>인증, 캐싱, 쿠키, 보안, 내용협상, 프록시 등 웹 표준에 정의된 많은 <code>기능을 제어</code>하는 데 사용됨  </li>
+<h2>Header</h2>
+<ul>
+<li><code>요청과 응답</code>에 대한 <code>추가 정보</code>를 표현하는 데 사용됨</li>
+<li>인증, 캐싱, 쿠키, 보안, 내용협상, 프록시 등 웹 표준에 정의된 많은 <code>기능을 제어</code>하는 데 사용됨</li>
 </ul>
-<p><code>Authorization</code>  </p>
+<p><code>Authorization</code></p>
 <ul>
 <li>요청의 인증 정보</li>
 </ul>
-<p><code>User-Agent</code>  </p>
+<p><code>User-Agent</code></p>
 <ul>
 <li>요청 중인 클라이언트의 정보</li>
 </ul>
-<p><code>Location</code>  </p>
+<p><code>Location</code></p>
 <ul>
 <li>301, 302 응답에서 자료의 위치</li>
 </ul>
-<p><code>Accept</code>  </p>
+<p><code>Accept</code></p>
 <ul>
 <li>요청이 어떤 형태의 자료를 원하는지 나타냄</li>
 </ul>
-<p><code>Content-Type</code>  </p>
+<p><code>Content-Type</code></p>
 <ul>
 <li>요청 혹은 응답이 어떤 형태의 자료인지 나타냄</li>
 </ul>
-<h2 id="Content-Negotiation"><a href="#Content-Negotiation" class="headerlink" title="Content Negotiation"></a>Content Negotiation</h2><ul>
+<h2>Content Negotiation</h2>
+<ul>
 <li>요청의 Accept, Accept-Language 등의 헤더를 보고 서버가 그에 맞는 형태의 자료를 응답하는 절차를 content negotiation(내용협상)이라고 함</li>
 </ul>
 
@@ -355,7 +386,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/08/29/node-study-http/" data-id="cjpao48lr006vox6fkarqc8de" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/08/29/node-study-http/" data-id="cjpaol7930077y16ffxwn9ixj" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -460,20 +491,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/08/29/node-study-express/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2017/08/29/node-study-template-language/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            Node-Express
+            Node-Template-Language
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2017/08/28/node-study-restapi/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/08/29/node-study-express/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Node-Rest-API</p>
+        <p class="article-nav-title">Node-Express</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     

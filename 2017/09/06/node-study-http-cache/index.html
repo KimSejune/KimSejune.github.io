@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="Node.js,http,cache" />
     
-    <meta name="description" content="HTTP CacheCache컴퓨터 분야에서의 캐시는(주로 접근 속도의 개선을 위해) 데이터를 미리 복사해 놓는 임시 저장소, 혹은 그 임시 저장소에 데이터를 저장하는 행위를 가리킴 cache 혹은 caching이라는 용어 자체는 특정 기술을 가리키는 것이 아니라,접근 속도를 개선하기 위해 따로 저장소를 두는 ‘방법’을 가리킴 컴퓨터의 아주 많은 부분(CP">
+    <meta name="description" content="HTTP Cache Cache 컴퓨터 분야에서의 캐시는(주로 접근 속도의 개선을 위해) 데이터를 미리 복사해 놓는 임시 저장소, 혹은 그 임시 저장소에 데이터를 저장하는 행위를 가리킴 cache 혹은 caching이라는 용어 자체는 특정 기술을 가리키는 것이 아니라, 접근 속도를 개선하기 위해 따로 저장소를 두는 &apos;방법&apos;을 가리킴 컴퓨터의 아주 많은 부분">
 <meta name="keywords" content="Node.js,http,cache">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node-GraphQL">
 <meta property="og:url" content="http://yoursite.com/2017/09/06/node-study-http-cache/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="HTTP CacheCache컴퓨터 분야에서의 캐시는(주로 접근 속도의 개선을 위해) 데이터를 미리 복사해 놓는 임시 저장소, 혹은 그 임시 저장소에 데이터를 저장하는 행위를 가리킴 cache 혹은 caching이라는 용어 자체는 특정 기술을 가리키는 것이 아니라,접근 속도를 개선하기 위해 따로 저장소를 두는 ‘방법’을 가리킴 컴퓨터의 아주 많은 부분(CP">
+<meta property="og:description" content="HTTP Cache Cache 컴퓨터 분야에서의 캐시는(주로 접근 속도의 개선을 위해) 데이터를 미리 복사해 놓는 임시 저장소, 혹은 그 임시 저장소에 데이터를 저장하는 행위를 가리킴 cache 혹은 caching이라는 용어 자체는 특정 기술을 가리키는 것이 아니라, 접근 속도를 개선하기 위해 따로 저장소를 두는 &apos;방법&apos;을 가리킴 컴퓨터의 아주 많은 부분">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/cache.png">
 <meta property="og:updated_time" content="2017-12-27T02:59:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node-GraphQL">
-<meta name="twitter:description" content="HTTP CacheCache컴퓨터 분야에서의 캐시는(주로 접근 속도의 개선을 위해) 데이터를 미리 복사해 놓는 임시 저장소, 혹은 그 임시 저장소에 데이터를 저장하는 행위를 가리킴 cache 혹은 caching이라는 용어 자체는 특정 기술을 가리키는 것이 아니라,접근 속도를 개선하기 위해 따로 저장소를 두는 ‘방법’을 가리킴 컴퓨터의 아주 많은 부분(CP">
+<meta name="twitter:description" content="HTTP Cache Cache 컴퓨터 분야에서의 캐시는(주로 접근 속도의 개선을 위해) 데이터를 미리 복사해 놓는 임시 저장소, 혹은 그 임시 저장소에 데이터를 저장하는 행위를 가리킴 cache 혹은 caching이라는 용어 자체는 특정 기술을 가리키는 것이 아니라, 접근 속도를 개선하기 위해 따로 저장소를 두는 &apos;방법&apos;을 가리킴 컴퓨터의 아주 많은 부분">
 <meta name="twitter:image" content="http://yoursite.com/images/cache.png">
     
 
@@ -172,16 +172,22 @@
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/cache.png" alt="http cache"></p>
-<h1 id="HTTP-Cache"><a href="#HTTP-Cache" class="headerlink" title="HTTP Cache"></a>HTTP Cache</h1><h2 id="Cache"><a href="#Cache" class="headerlink" title="Cache"></a>Cache</h2><p>컴퓨터 분야에서의 캐시는(주로 접근 속도의 개선을 위해) <code>데이터를 미리 복사해 놓는 임시 저장소</code>, 혹은 <code>그 임시 저장소에 데이터를 저장하는 행위</code>를 가리킴</p>
-<p>cache 혹은 caching이라는 <code>용어 자체는 특정 기술을 가리키는 것이 아니라,</code><br>접근 속도를 개선하기 위해 따로 저장소를 두는 ‘방법’을 가리킴</p>
-<p>컴퓨터의 <code>아주 많은 부분</code>(CPU, GPU, HDD, 네트워크, 웹, 데이터베이스…)에서 사용되고 있음</p>
-<h2 id="HTTP-Cache-1"><a href="#HTTP-Cache-1" class="headerlink" title="HTTP Cache"></a>HTTP Cache</h2><ul>
+<h1>HTTP Cache</h1>
+<h2>Cache</h2>
+<p>컴퓨터 분야에서의 캐시는(주로 접근 속도의 개선을 위해) <code>데이터를 미리 복사해 놓는 임시 저장소</code>, 혹은 <code>그 임시 저장소에 데이터를 저장하는 행위</code>를 가리킴</p>
+<p>cache 혹은 caching이라는 <code>용어 자체는 특정 기술을 가리키는 것이 아니라,</code>
+접근 속도를 개선하기 위해 따로 저장소를 두는 '방법'을 가리킴</p>
+<p>컴퓨터의 <code>아주 많은 부분</code>(CPU, GPU, HDD, 네트워크, 웹, 데이터베이스...)에서 사용되고 있음</p>
+<h2>HTTP Cache</h2>
+<ul>
 <li>자원의 효율적 로딩을 위한 웹 표준</li>
-<li><code>서버에서 가져온 자원</code>(HTML, CSS, JS, 이미지, …)을 <code>가까운 곳</code>(브라우저, 혹은 다른 서버)에 저장해놓고 재사용</li>
+<li><code>서버에서 가져온 자원</code>(HTML, CSS, JS, 이미지, ...)을 <code>가까운 곳</code>(브라우저, 혹은 다른 서버)에 저장해놓고 재사용</li>
 <li>캐시를 할 것인지 말 것인지, 어떻게 할 것인지를 결정하는 규칙이 복잡하고, 브라우저마다 조금씩 다름</li>
 </ul>
-<h2 id="Common-Problem"><a href="#Common-Problem" class="headerlink" title="Common Problem"></a>Common Problem</h2><p><code>캐시된 자원</code>과 <code>실제 자원</code>의 <code>내용이 달라지는 문제</code>를 어떻게 해결할 것인가?</p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Expiration(만료)</p>
+<h2>Common Problem</h2>
+<p><code>캐시된 자원</code>과 <code>실제 자원</code>의 <code>내용이 달라지는 문제</code>를 어떻게 해결할 것인가?</p>
+<h2>Solution</h2>
+<p>Expiration(만료)</p>
 <ul>
 <li>정해진 시간이 지나면 <code>캐시가 자동으로 삭제</code>되도록 설정</li>
 </ul>
@@ -189,14 +195,23 @@
 <ul>
 <li>서버에 요청을 보내서 <code>캐시를 계속 사용할 수 있는지 확인</code></li>
 </ul>
-<h2 id="Cache-관련-헤더"><a href="#Cache-관련-헤더" class="headerlink" title="Cache 관련 헤더"></a>Cache 관련 헤더</h2><p><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers#Caching" target="_blank" rel="external">Cache 범주</a><br><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers#Conditionals" target="_blank" rel="external">Conditionals 범주</a></p>
-<p><code>Cache-Control</code><br>  (요청, 응답) 캐시와 관련된 다양한 기능을 하는 지시자를 포함. no-cache, max-age가 많이 사용됨. no-cache, max-age=0 지시자는 캐시를 사용하지 않도록 하거나, 캐시를 아직도 쓸 수 있는지 검증하기 위해 사용됨 <a href="https://stackoverflow.com/questions/1046966/whats-the-difference-between-cache-control-max-age-0-and-no-cache" target="_blank" rel="external">각각의 자세한 의미</a>  </p>
-<p><code>ETag</code><br>  (응답) 캐시의 검증을 위해 사용되는 자원의 식별자. 주로 자원의 <code>해시값</code>이 사용되나, 마지막으로 수정된 시각, 혹은 버전 넘버를 사용하기도 함  </p>
-<p><code>Expires</code><br>  (응답) 캐시를 만료시킬 <code>시각</code>을 서버에서 명시적으로 지정  </p>
-<p><code>Last-Modified</code><br>  (응답) 원래 자료가 마지막으로 수정된 시각  </p>
-<p><code>If-None-Match</code><br>  (요청) 검증을 위해 사용됨. 이전에 저장해두었던 자원의 ETag 값을 If-None-Match 헤더의 값으로 요청에 포함시켜서 보내면, 서버는 해당 경로에 있는 자원의 ETag와 비교해보고 자원의 전송 여부를 결정  </p>
-<p><code>If-Modified-Since</code><br>  (요청) 검증을 위해 사용됨. 이전에 저장해두었던 자원의 <code>Last-Modified</code> 값을 If-Modified-Since 헤더의 값으로 요청에 포함시켜서 보내면, 서버는 해당 경로에 있는 자원의 Last-Modified와 <code>비교</code>해보고 자원의 전송 여부를 결정  </p>
-<h2 id="브라우저-실습"><a href="#브라우저-실습" class="headerlink" title="브라우저 실습"></a>브라우저 실습</h2><p><a href="https://wpsn-axios-example.glitch.me/" target="_blank" rel="external">Link</a>  </p>
+<h2>Cache 관련 헤더</h2>
+<p><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers#Caching" target="_blank" rel="external">Cache 범주</a><br>
+<a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Headers#Conditionals" target="_blank" rel="external">Conditionals 범주</a></p>
+<p><code>Cache-Control</code><br>
+(요청, 응답) 캐시와 관련된 다양한 기능을 하는 지시자를 포함. no-cache, max-age가 많이 사용됨. no-cache, max-age=0 지시자는 캐시를 사용하지 않도록 하거나, 캐시를 아직도 쓸 수 있는지 검증하기 위해 사용됨 <a href="https://stackoverflow.com/questions/1046966/whats-the-difference-between-cache-control-max-age-0-and-no-cache" target="_blank" rel="external">각각의 자세한 의미</a></p>
+<p><code>ETag</code><br>
+(응답) 캐시의 검증을 위해 사용되는 자원의 식별자. 주로 자원의 <code>해시값</code>이 사용되나, 마지막으로 수정된 시각, 혹은 버전 넘버를 사용하기도 함</p>
+<p><code>Expires</code><br>
+(응답) 캐시를 만료시킬 <code>시각</code>을 서버에서 명시적으로 지정</p>
+<p><code>Last-Modified</code><br>
+(응답) 원래 자료가 마지막으로 수정된 시각</p>
+<p><code>If-None-Match</code><br>
+(요청) 검증을 위해 사용됨. 이전에 저장해두었던 자원의 ETag 값을 If-None-Match 헤더의 값으로 요청에 포함시켜서 보내면, 서버는 해당 경로에 있는 자원의 ETag와 비교해보고 자원의 전송 여부를 결정</p>
+<p><code>If-Modified-Since</code><br>
+(요청) 검증을 위해 사용됨. 이전에 저장해두었던 자원의 <code>Last-Modified</code> 값을 If-Modified-Since 헤더의 값으로 요청에 포함시켜서 보내면, 서버는 해당 경로에 있는 자원의 Last-Modified와 <code>비교</code>해보고 자원의 전송 여부를 결정</p>
+<h2>브라우저 실습</h2>
+<p><a href="https://wpsn-axios-example.glitch.me/" target="_blank" rel="external">Link</a></p>
 <blockquote>
 <p>Response의 etag와 Request의 if-none-match가 일치하면 브라우저와 서버가 자원의 변경이 없다는 것을 알 수 있다 그러면 HTML파일을 다시보낼 필요가 없으니 304응답이 되는 것이다 (304통신이란? 통신이 되어서 헤더는 이동해도 HTML은 이동하지 않는다) 이것을 검증작업이라고 한다.</p>
 </blockquote>
@@ -204,15 +219,17 @@
 <li>cache를 사용하지 않을 경우 Disable cache를 사용한다.</li>
 <li>cache를 새로고침하려면 command+shift+r을 누르면 된다.</li>
 </ul>
-<h2 id="Cacheable-Methods"><a href="#Cacheable-Methods" class="headerlink" title="Cacheable Methods"></a>Cacheable Methods</h2><p>POST 메소드는 Cacheable 범주에 포함되기는 하지만, 특별한 조건을 만족시켜야 하며 실무에서는 POST cache가 거의 사용되지 않습니다.  </p>
+<h2>Cacheable Methods</h2>
+<p>POST 메소드는 Cacheable 범주에 포함되기는 하지만, 특별한 조건을 만족시켜야 하며 실무에서는 POST cache가 거의 사용되지 않습니다.</p>
 <ul>
 <li><code>Get, Head만 cache가 가능하다.</code></li>
 </ul>
-<h2 id="캐시의-사용"><a href="#캐시의-사용" class="headerlink" title="캐시의 사용"></a>캐시의 사용</h2><ul>
-<li>브라우저는 이미 캐시를 잘 활용하도록 만들어져 있습니다.  </li>
-<li>Express는 이미 캐시를 잘 활용하도록 만들어져 있습니다.  </li>
+<h2>캐시의 사용</h2>
+<ul>
+<li>브라우저는 이미 캐시를 잘 활용하도록 만들어져 있습니다.</li>
+<li>Express는 이미 캐시를 잘 활용하도록 만들어져 있습니다.</li>
 </ul>
-<p>일단은 별다른 추가작업 없이도 편하게 캐시 기능을 사용할 수 있지만, 우리가 원하는대로 캐시가 동작하지 않을 때 그 <code>원인을 파악하기 위해 캐시 관련 헤더는 숙지</code>해두는 것이 좋습니다. 그리고 <code>HTTP method를 용도에 맞게</code> 사용하는 것도 중요합니다.  </p>
+<p>일단은 별다른 추가작업 없이도 편하게 캐시 기능을 사용할 수 있지만, 우리가 원하는대로 캐시가 동작하지 않을 때 그 <code>원인을 파악하기 위해 캐시 관련 헤더는 숙지</code>해두는 것이 좋습니다. 그리고 <code>HTTP method를 용도에 맞게</code> 사용하는 것도 중요합니다.</p>
 
         </div>
         <footer class="article-footer">
@@ -220,7 +237,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/09/06/node-study-http-cache/" data-id="cjpao48lq006sox6f7pzbnsvc" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/09/06/node-study-http-cache/" data-id="cjpaol7900070y16fweoszvak" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -325,20 +342,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/09/06/node-study-spa/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2017/09/06/node-study-graphql/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            Node-SPA(Single Page Application)
+            Node-GraphQL
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2017/09/05/node-study-fetchapi/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/09/06/node-study-spa/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Node-fetchApi</p>
+        <p class="article-nav-title">Node-SPA(Single Page Application)</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     

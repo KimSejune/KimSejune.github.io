@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="Node.js,Express" />
     
-    <meta name="description" content="Node Express 실습환경Glitch Tutorial 나의 Glitch Express Node.js 생태계에서 가장 널리 쓰이는 웹 프레임워크 내장하고 있는 기능은 매우 적으나, 미들웨어를 주입하는 방식으로 기능을 확장하는 생태계를 가지고 있음 공식 매뉴얼 한국어 번역  Express 앱의 기본 구조12345678910111213141516// Exp">
+    <meta name="description" content="Node Express  실습환경 Glitch Tutorial 나의 Glitch Express  Node.js 생태계에서 가장 널리 쓰이는 웹 프레임워크 내장하고 있는 기능은 매우 적으나, 미들웨어를 주입하는 방식으로 기능을 확장하는 생태계를 가지고 있음 공식 매뉴얼 한국어 번역  Express 앱의 기본 구조 12345678910111213141516//">
 <meta name="keywords" content="Node.js,Express">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node-Express">
 <meta property="og:url" content="http://yoursite.com/2017/08/29/node-study-express/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="Node Express 실습환경Glitch Tutorial 나의 Glitch Express Node.js 생태계에서 가장 널리 쓰이는 웹 프레임워크 내장하고 있는 기능은 매우 적으나, 미들웨어를 주입하는 방식으로 기능을 확장하는 생태계를 가지고 있음 공식 매뉴얼 한국어 번역  Express 앱의 기본 구조12345678910111213141516// Exp">
+<meta property="og:description" content="Node Express  실습환경 Glitch Tutorial 나의 Glitch Express  Node.js 생태계에서 가장 널리 쓰이는 웹 프레임워크 내장하고 있는 기능은 매우 적으나, 미들웨어를 주입하는 방식으로 기능을 확장하는 생태계를 가지고 있음 공식 매뉴얼 한국어 번역  Express 앱의 기본 구조 12345678910111213141516//">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/express.jpg">
 <meta property="og:updated_time" content="2017-12-27T02:59:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node-Express">
-<meta name="twitter:description" content="Node Express 실습환경Glitch Tutorial 나의 Glitch Express Node.js 생태계에서 가장 널리 쓰이는 웹 프레임워크 내장하고 있는 기능은 매우 적으나, 미들웨어를 주입하는 방식으로 기능을 확장하는 생태계를 가지고 있음 공식 매뉴얼 한국어 번역  Express 앱의 기본 구조12345678910111213141516// Exp">
+<meta name="twitter:description" content="Node Express  실습환경 Glitch Tutorial 나의 Glitch Express  Node.js 생태계에서 가장 널리 쓰이는 웹 프레임워크 내장하고 있는 기능은 매우 적으나, 미들웨어를 주입하는 방식으로 기능을 확장하는 생태계를 가지고 있음 공식 매뉴얼 한국어 번역  Express 앱의 기본 구조 12345678910111213141516//">
 <meta name="twitter:image" content="http://yoursite.com/images/express.jpg">
     
 
@@ -171,39 +171,46 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="Node-Express"><a href="#Node-Express" class="headerlink" title="Node Express"></a>Node Express</h1><p><img src="/images/express.jpg" alt="express"></p>
-<h2 id="실습환경"><a href="#실습환경" class="headerlink" title="실습환경"></a>실습환경</h2><p><a href="https://glitch.com/edit/#!/wpsn-glitch-tutorial" target="_blank" rel="external">Glitch Tutorial</a></p>
+            <h1>Node Express</h1>
+<p><img src="/images/express.jpg" alt="express"></p>
+<h2>실습환경</h2>
+<p><a href="https://glitch.com/edit/#!/wpsn-glitch-tutorial" target="_blank" rel="external">Glitch Tutorial</a></p>
 <p><a href="https://glitch-sejune-pratice.glitch.me/" target="_blank" rel="external">나의 Glitch</a></p>
-<h2 id="Express"><a href="#Express" class="headerlink" title="Express"></a>Express</h2><ul>
+<h2>Express</h2>
+<ul>
 <li>Node.js 생태계에서 <code>가장 널리 쓰이는 웹 프레임워크</code></li>
 <li>내장하고 있는 기능은 매우 적으나, <code>미들웨어를</code> 주입하는 방식으로 기능을 확장하는 <code>생태계</code>를 가지고 있음</li>
 <li><a href="https://expressjs.com/ko/" target="_blank" rel="external">공식 매뉴얼 한국어 번역</a></li>
 </ul>
-<h2 id="Express-앱의-기본-구조"><a href="#Express-앱의-기본-구조" class="headerlink" title="Express 앱의 기본 구조"></a>Express 앱의 기본 구조</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Express Instance 생성</span></div><div class="line"><span class="keyword">const</span> app = express()</div><div class="line"></div><div class="line"><span class="comment">// 미들웨어 주입</span></div><div class="line">app.use(sessionMiddleware())</div><div class="line">app.use(authenticationMiddleware())</div><div class="line"></div><div class="line"><span class="comment">// router handler register</span></div><div class="line">app.get(<span class="string">'/'</span>, (request, response) =&gt; &#123;</div><div class="line">  response.send(<span class="string">'Hello express!'</span>)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// Server Start</span></div><div class="line">app.listen(<span class="number">3000</span>, ()=&gt;&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'Example app listening on port 3000!'</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h2 id="Routing"><a href="#Routing" class="headerlink" title="Routing"></a>Routing</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">const</span> app = express()</div><div class="line"></div><div class="line"><span class="comment">// HTTP Request Method (GET, POST, DELETE, PUT, ...)</span></div><div class="line">app.get(<span class="string">'/articles'</span>, (req, res) =&gt; &#123;</div><div class="line">  res.send(<span class="string">'Hello Routing!'</span>)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// 특정 경로에만 미들웨어를 주입하는 것도 가능</span></div><div class="line">app.post(<span class="string">'/articles'</span>, bodyParserMiddleware(), (req, res) =&gt; &#123;</div><div class="line">  database.articles.create(req.body)  <span class="comment">// 요청한 body를 넣어둔다.</span></div><div class="line">  .then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">    res.send(&#123;<span class="attr">ok</span>: <span class="literal">true</span>&#125;)</div><div class="line">  &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// 경로의 특정 부분을 함수의 인자처럼 입력받을 수 있음</span></div><div class="line">app.get(<span class="string">'/articles/:id'</span>, (req, res)=&gt; &#123;</div><div class="line">  database.articles.find(req.params.id) <span class="comment">// 'req.params.id'에 요청한 사람의 id가 저장된다.</span></div><div class="line">    .then(<span class="function"><span class="params">article</span> =&gt;</span> &#123;</div><div class="line">      res.send(article)</div><div class="line">    &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h2 id="Request-객체"><a href="#Request-객체" class="headerlink" title="Request 객체"></a>Request 객체</h2><p><code>req.body</code>  </p>
+<h2>Express 앱의 기본 구조</h2>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Express Instance 생성</span></div><div class="line"><span class="keyword">const</span> app = express()</div><div class="line"></div><div class="line"><span class="comment">// 미들웨어 주입</span></div><div class="line">app.use(sessionMiddleware())</div><div class="line">app.use(authenticationMiddleware())</div><div class="line"></div><div class="line"><span class="comment">// router handler register</span></div><div class="line">app.get(<span class="string">'/'</span>, (request, response) =&gt; &#123;</div><div class="line">  response.send(<span class="string">'Hello express!'</span>)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// Server Start</span></div><div class="line">app.listen(<span class="number">3000</span>, ()=&gt;&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'Example app listening on port 3000!'</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<h2>Routing</h2>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">const</span> app = express()</div><div class="line"></div><div class="line"><span class="comment">// HTTP Request Method (GET, POST, DELETE, PUT, ...)</span></div><div class="line">app.get(<span class="string">'/articles'</span>, (req, res) =&gt; &#123;</div><div class="line">  res.send(<span class="string">'Hello Routing!'</span>)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// 특정 경로에만 미들웨어를 주입하는 것도 가능</span></div><div class="line">app.post(<span class="string">'/articles'</span>, bodyParserMiddleware(), (req, res) =&gt; &#123;</div><div class="line">  database.articles.create(req.body)  <span class="comment">// 요청한 body를 넣어둔다.</span></div><div class="line">  .then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">    res.send(&#123;<span class="attr">ok</span>: <span class="literal">true</span>&#125;)</div><div class="line">  &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// 경로의 특정 부분을 함수의 인자처럼 입력받을 수 있음</span></div><div class="line">app.get(<span class="string">'/articles/:id'</span>, (req, res)=&gt; &#123;</div><div class="line">  database.articles.find(req.params.id) <span class="comment">// 'req.params.id'에 요청한 사람의 id가 저장된다.</span></div><div class="line">    .then(<span class="function"><span class="params">article</span> =&gt;</span> &#123;</div><div class="line">      res.send(article)</div><div class="line">    &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<h2>Request 객체</h2>
+<p><code>req.body</code></p>
 <ul>
 <li>requset.body를 적절한 형태의 자바스크립트 객체로 변환하여 이곳에 저장 (<code>body-parser 미들웨어</code>에 의해 처리됨)</li>
 </ul>
-<p><code>req.ip</code>  </p>
+<p><code>req.ip</code></p>
 <ul>
-<li>요청한 쪽의 IP  </li>
+<li>요청한 쪽의 IP</li>
 </ul>
-<p><code>req.params</code>  </p>
+<p><code>req.params</code></p>
 <ul>
-<li>route parameter </li>
+<li>route parameter</li>
 </ul>
-<p><code>req.query</code>  </p>
+<p><code>req.query</code></p>
 <ul>
-<li>query string이 객체로 저장됨  </li>
+<li>query string이 객체로 저장됨</li>
 </ul>
-<h2 id="Response-객체"><a href="#Response-객체" class="headerlink" title="Response 객체"></a>Response 객체</h2><p><code>res.status(...)</code>    </p>
+<h2>Response 객체</h2>
+<p><code>res.status(...)</code></p>
 <ul>
 <li>응답의 상태 코드를 지정하는 메소드</li>
 </ul>
-<p><code>res.append(...)</code>  </p>
+<p><code>res.append(...)</code></p>
 <ul>
-<li>응답의 헤더를 지정하는 메소드  </li>
+<li>응답의 헤더를 지정하는 메소드</li>
 </ul>
 <p><code>res.send(...)</code></p>
 <ul>
@@ -219,7 +226,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/08/29/node-study-express/" data-id="cjpao48li006oox6fe6x9hmun" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/08/29/node-study-express/" data-id="cjpaol78w006ty16fi0a8rx5q" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -324,20 +331,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/08/29/node-study-template-language/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2017/08/29/node-study-http/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            Node-Template-Language
+            Node-Http
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2017/08/29/node-study-http/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/08/28/node-study-restapi/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Node-Http</p>
+        <p class="article-nav-title">Node-Rest-API</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     

@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="TypeScript" />
     
-    <meta name="description" content="TypeScript Korea 발표내용 정리   TypeScript로 얻은 것과 잃은 것 - 손찬욱 님TypeScript 왜 사용하였을까?egjs 2.x에서 eg.MovableCoord를 개발할 때 사용하였다.    현 상황 마우스로만 좌표를 가져올 수 있다.   개선 방향 줌, 마우스 휠, 키보드 등등을 통해서 좌표를 가져오기    생각해보니 Polymo">
+    <meta name="description" content="TypeScript Korea 발표내용 정리  TypeScript로 얻은 것과 잃은 것 - 손찬욱 님 TypeScript 왜 사용하였을까? egjs 2.x에서 eg.MovableCoord를 개발할 때 사용하였다.  현 상황 마우스로만 좌표를 가져올 수 있다. 개선 방향 줌, 마우스 휠, 키보드 등등을 통해서 좌표를 가져오기  생각해보니 Polymorphis">
 <meta name="keywords" content="TypeScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TypeScript Korea">
 <meta property="og:url" content="http://yoursite.com/2018/01/18/conference-TypeScript/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="TypeScript Korea 발표내용 정리   TypeScript로 얻은 것과 잃은 것 - 손찬욱 님TypeScript 왜 사용하였을까?egjs 2.x에서 eg.MovableCoord를 개발할 때 사용하였다.    현 상황 마우스로만 좌표를 가져올 수 있다.   개선 방향 줌, 마우스 휠, 키보드 등등을 통해서 좌표를 가져오기    생각해보니 Polymo">
+<meta property="og:description" content="TypeScript Korea 발표내용 정리  TypeScript로 얻은 것과 잃은 것 - 손찬욱 님 TypeScript 왜 사용하였을까? egjs 2.x에서 eg.MovableCoord를 개발할 때 사용하였다.  현 상황 마우스로만 좌표를 가져올 수 있다. 개선 방향 줌, 마우스 휠, 키보드 등등을 통해서 좌표를 가져오기  생각해보니 Polymorphis">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/ts.png">
 <meta property="og:updated_time" content="2018-01-18T12:11:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TypeScript Korea">
-<meta name="twitter:description" content="TypeScript Korea 발표내용 정리   TypeScript로 얻은 것과 잃은 것 - 손찬욱 님TypeScript 왜 사용하였을까?egjs 2.x에서 eg.MovableCoord를 개발할 때 사용하였다.    현 상황 마우스로만 좌표를 가져올 수 있다.   개선 방향 줌, 마우스 휠, 키보드 등등을 통해서 좌표를 가져오기    생각해보니 Polymo">
+<meta name="twitter:description" content="TypeScript Korea 발표내용 정리  TypeScript로 얻은 것과 잃은 것 - 손찬욱 님 TypeScript 왜 사용하였을까? egjs 2.x에서 eg.MovableCoord를 개발할 때 사용하였다.  현 상황 마우스로만 좌표를 가져올 수 있다. 개선 방향 줌, 마우스 휠, 키보드 등등을 통해서 좌표를 가져오기  생각해보니 Polymorphis">
 <meta name="twitter:image" content="http://yoursite.com/images/ts.png">
     
 
@@ -171,66 +171,87 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="TypeScript-Korea-발표내용-정리"><a href="#TypeScript-Korea-발표내용-정리" class="headerlink" title="TypeScript Korea 발표내용 정리"></a>TypeScript Korea 발표내용 정리</h1><p><img src="/images/ts.png" alt="TypeScript">  </p>
-<h2 id="TypeScript로-얻은-것과-잃은-것-손찬욱-님"><a href="#TypeScript로-얻은-것과-잃은-것-손찬욱-님" class="headerlink" title="TypeScript로 얻은 것과 잃은 것 - 손찬욱 님"></a>TypeScript로 얻은 것과 잃은 것 - 손찬욱 님</h2><h3 id="TypeScript-왜-사용하였을까"><a href="#TypeScript-왜-사용하였을까" class="headerlink" title="TypeScript 왜 사용하였을까?"></a>TypeScript 왜 사용하였을까?</h3><p>egjs 2.x에서 eg.MovableCoord를 개발할 때 사용하였다.  </p>
+            <h1>TypeScript Korea 발표내용 정리</h1>
+<p><img src="/images/ts.png" alt="TypeScript"></p>
+<h2>TypeScript로 얻은 것과 잃은 것 - 손찬욱 님</h2>
+<h3>TypeScript 왜 사용하였을까?</h3>
+<p>egjs 2.x에서 eg.MovableCoord를 개발할 때 사용하였다.</p>
 <ul>
-<li>현 상황 마우스로만 좌표를 가져올 수 있다.  </li>
-<li>개선 방향 줌, 마우스 휠, 키보드 등등을 통해서 좌표를 가져오기  </li>
+<li>현 상황 마우스로만 좌표를 가져올 수 있다.</li>
+<li>개선 방향 줌, 마우스 휠, 키보드 등등을 통해서 좌표를 가져오기</li>
 </ul>
 <p>생각해보니 Polymorphism이더라.</p>
-<p>기존에는 2개의 축을 <code>N개의 축</code>을 사용하고 제어하기를 원했다.<br>eg.MovableCoord를 의미에 맞게 eg.Axes로 Method를 변경하였다.<br>이때 안정적으로 개발하기 위하여 <code>TypeScript를</code> 사용하였다.  </p>
+<p>기존에는 2개의 축을 <code>N개의 축</code>을 사용하고 제어하기를 원했다.
+eg.MovableCoord를 의미에 맞게 eg.Axes로 Method를 변경하였다.
+이때 안정적으로 개발하기 위하여 <code>TypeScript를</code> 사용하였다.</p>
 <ul>
 <li>앞의 interface를 사용할 수 있다.</li>
 </ul>
-<h3 id="TypeScript로-얻은-것"><a href="#TypeScript로-얻은-것" class="headerlink" title="TypeScript로 얻은 것!"></a>TypeScript로 얻은 것!</h3><p>interface로 <code>설계 의도가 코드에 명확히 보인다.</code><br><code>definition 파일</code>까지 자동으로 만들어 주었다.  </p>
-<p>안정성이 뛰어났다.  </p>
+<h3>TypeScript로 얻은 것!</h3>
+<p>interface로 <code>설계 의도가 코드에 명확히 보인다.</code><br>
+<code>definition 파일</code>까지 자동으로 만들어 주었다.</p>
+<p>안정성이 뛰어났다.</p>
 <ul>
-<li>구현해야 할 것을 안하면 Error.  </li>
-<li>잘못된 값을 넣거나 필수값을 안넣으면 Error.  </li>
-<li>데이터를 전달하거나 변형하는 경우에 좋다 즉 데이터 흐름 추적이 뛰어나다.  </li>
+<li>구현해야 할 것을 안하면 Error.</li>
+<li>잘못된 값을 넣거나 필수값을 안넣으면 Error.</li>
+<li>데이터를 전달하거나 변형하는 경우에 좋다 즉 데이터 흐름 추적이 뛰어나다.</li>
 </ul>
-<p>편의성이 뛰어났다.  </p>
+<p>편의성이 뛰어났다.</p>
 <p>결과 코드의 폭넓은 지원 범위</p>
 <ul>
 <li>TypeScript를 공식적으로 <code>ES3</code>을 지원</li>
 </ul>
-<p>정리  </p>
+<p>정리</p>
 <ul>
 <li>코드가 명확해지고, 별도 주석을 안달아도 명세화가 가능하다.</li>
 <li>안전성. 구현의 실수를 개발중 잡아준다 특히, 데이터 전달과 변환이 많은 곳에서 좋다.</li>
 <li>편의성 툴 사용시 극대화</li>
 </ul>
-<h3 id="TypeScript로-잃은-것"><a href="#TypeScript로-잃은-것" class="headerlink" title="TypeScript로 잃은 것!"></a>TypeScript로 잃은 것!</h3><p>Angular2를 사용하면서 TypeScript를 처음 접하게 되었다.</p>
-<p>3’rd party library 사용 시 Hammer.js를 가져올 수가 없었다.</p>
+<h3>TypeScript로 잃은 것!</h3>
+<p>Angular2를 사용하면서 TypeScript를 처음 접하게 되었다.</p>
+<p>3'rd party library 사용 시 Hammer.js를 가져올 수가 없었다.</p>
 <ul>
 <li>TypeScript에서는 undefined가 나온다.</li>
 <li>Babel에서는 Hammer가 나온다.</li>
 </ul>
-<p>이런 상황이 왜 발생하는가?<br>hammer.js는 <code>UMD</code> 형태로 지원. 하지만 ES6 Module로 호출시 CommonJS 형식으로 인식    </p>
-<p>TypeScript가 정상인데 왜 Bable은 왜 되었을까??<br>Babel에는 내부적으로 그렇게 설정이 되어있다. 그래서 더욱 헷갈렸던 것이다.  </p>
-<p>다행인 것은 요즘 모듈들은 UMD 뿐만 아니라 ES6 Module 용도 함께 배포 package.json에서 지원<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"module"</span>: <span class="string">"outjs/index.js"</span>, <span class="comment">// es6 module</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>3’rd party library @types 사용 시 결국 다시 정의를 했어야했다.  </p>
-<p>과한 사용은 오히려 독!  </p>
-<p>정리 </p>
+<p>이런 상황이 왜 발생하는가?<br>
+hammer.js는 <code>UMD</code> 형태로 지원. 하지만 ES6 Module로 호출시 CommonJS 형식으로 인식</p>
+<p>TypeScript가 정상인데 왜 Bable은 왜 되었을까??
+Babel에는 내부적으로 그렇게 설정이 되어있다. 그래서 더욱 헷갈렸던 것이다.</p>
+<p>다행인 것은 요즘 모듈들은 UMD 뿐만 아니라 ES6 Module 용도 함께 배포 package.json에서 지원
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"module"</span>: <span class="string">"outjs/index.js"</span>, <span class="comment">// es6 module</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>3'rd party library @types 사용 시 결국 다시 정의를 했어야했다.</p>
+<p>과한 사용은 오히려 독!</p>
+<p>정리</p>
 <ul>
-<li><code>외부 모듈 사용이 불편</code>하다.  </li>
-<li>과하게 사용하면 <code>가독성을 떨어뜨린다.</code>  </li>
+<li><code>외부 모듈 사용이 불편</code>하다.</li>
+<li>과하게 사용하면 <code>가독성을 떨어뜨린다.</code></li>
 </ul>
-<h2 id="코드-한-줄-없는-TypeScript-사용기-김상원-님"><a href="#코드-한-줄-없는-TypeScript-사용기-김상원-님" class="headerlink" title="코드 한 줄 없는 TypeScript 사용기 - 김상원 님"></a>코드 한 줄 없는 TypeScript 사용기 - 김상원 님</h2><p>TypeScript란 JavaScript의 Offset이다.  </p>
-<h3 id="TypeScript는-어떻게-우리한테-신뢰를-주었나"><a href="#TypeScript는-어떻게-우리한테-신뢰를-주었나" class="headerlink" title="TypeScript는 어떻게 우리한테 신뢰를 주었나?"></a>TypeScript는 어떻게 우리한테 신뢰를 주었나?</h3><p>과거의 내가 쓴 코드를 믿을 수 있었다.<br>빠른 디버깅<br>적지만 믿을 수 있는 코드    </p>
+<h2>코드 한 줄 없는 TypeScript 사용기 - 김상원 님</h2>
+<p>TypeScript란 JavaScript의 Offset이다.</p>
+<h3>TypeScript는 어떻게 우리한테 신뢰를 주었나?</h3>
+<p>과거의 내가 쓴 코드를 믿을 수 있었다.<br>
+빠른 디버깅<br>
+적지만 믿을 수 있는 코드</p>
 <ul>
-<li>코드 내부에서 입력값을 받는 코드라면 런타임에서 타입을 검사하는 코드 확인 및 타입관련 테스트를 작성할 필요가 없다.  </li>
+<li>코드 내부에서 입력값을 받는 코드라면 런타임에서 타입을 검사하는 코드 확인 및 타입관련 테스트를 작성할 필요가 없다.</li>
 </ul>
-<p>refactoring<br>코드 === 문서  </p>
-<h3 id="TypeScript의-단점"><a href="#TypeScript의-단점" class="headerlink" title="TypeScript의 단점.."></a>TypeScript의 단점..</h3><p>세팅: 빌드 프로세스 수립과정이 복잡<br>변수 as any를 사용하면 TypeScript가 작동하지않는다.<br>코드와 타입이 불일치.</p>
-<h2 id="TypeScript-개발문화-한승호-님"><a href="#TypeScript-개발문화-한승호-님" class="headerlink" title="TypeScript 개발문화 - 한승호 님"></a>TypeScript 개발문화 - 한승호 님</h2><h3 id="TypeScript를-선택한-이유"><a href="#TypeScript를-선택한-이유" class="headerlink" title="TypeScript를 선택한 이유"></a>TypeScript를 선택한 이유</h3><ol>
+<p>refactoring<br>
+코드 === 문서</p>
+<h3>TypeScript의 단점..</h3>
+<p>세팅: 빌드 프로세스 수립과정이 복잡<br>
+변수 as any를 사용하면 TypeScript가 작동하지않는다.<br>
+코드와 타입이 불일치.</p>
+<h2>TypeScript 개발문화 - 한승호 님</h2>
+<h3>TypeScript를 선택한 이유</h3>
+<ol>
 <li>엔터프라이즈 웹서비스 (TypeScript 사용)</li>
 </ol>
 <ul>
 <li>애플리케이션 수준의 웹애플리케이션</li>
 <li>보안, 기능 확장을 고려한 설계</li>
 </ul>
-<ol>
+<ol start="2">
 <li>빠른 프로토타입 개발 (Node 사용)</li>
 </ol>
 <ul>
@@ -244,40 +265,55 @@
 <p>포기하기 힘든 Node.js의 장점</p>
 <ul>
 <li>Node ecosystem</li>
-<li>aws-sdk-js<ul>
-<li>SDK가 지원이 빠르다. promise 등등 </li>
+<li>aws-sdk-js
+<ul>
+<li>SDK가 지원이 빠르다. promise 등등</li>
 </ul>
 </li>
 </ul>
 <p>기존 JavaScript의 단점을 ES6, TypeScript로 완화 시켜줬다.</p>
-<h3 id="프로토타입에-TS를-끼얹다"><a href="#프로토타입에-TS를-끼얹다" class="headerlink" title="프로토타입에 TS를 끼얹다."></a>프로토타입에 TS를 끼얹다.</h3><p>Node Module Typescript로 활용하기  </p>
+<h3>프로토타입에 TS를 끼얹다.</h3>
+<p>Node Module Typescript로 활용하기</p>
 <ul>
 <li>Type annotation 지원</li>
 <li>Typescript Wrap 모듈을 생성</li>
 </ul>
-<h3 id="JetBrains-IDE-mocha-TEST"><a href="#JetBrains-IDE-mocha-TEST" class="headerlink" title="JetBrains IDE - mocha TEST"></a>JetBrains IDE - mocha TEST</h3><p>mocha(v4 기준) 테스트 실행 방법은 크게 2가지 방법으로 나뉩니다.</p>
+<h3>JetBrains IDE - mocha TEST</h3>
+<p>mocha(v4 기준) 테스트 실행 방법은 크게 2가지 방법으로 나뉩니다.</p>
 <ul>
 <li>컴파일된 테스트코드(js) 실행</li>
 <li>컴파일 되지 않은 테스트코드(ts) 실행</li>
 </ul>
-<p>CI(Continuous integration) TEST  </p>
-<h3 id="프론트엔드에-타입스크립트-프레임워크-적용"><a href="#프론트엔드에-타입스크립트-프레임워크-적용" class="headerlink" title="프론트엔드에 타입스크립트 프레임워크 적용"></a>프론트엔드에 타입스크립트 프레임워크 적용</h3><p>Angular를 선택</p>
+<p>CI(Continuous integration) TEST</p>
+<h3>프론트엔드에 타입스크립트 프레임워크 적용</h3>
+<p>Angular를 선택</p>
 <ul>
 <li>모듈에 대한 선택을 최소화</li>
 <li>강력하고 core팀 지원이 좋은 angular cli 사용</li>
 <li>좀 더 크기가 큰 웹 애플리케이션에 적합하도록 Angular가 구성되어있다고 판단</li>
 </ul>
-<h3 id="Sequalize-typescript"><a href="#Sequalize-typescript" class="headerlink" title="Sequalize-typescript"></a>Sequalize-typescript</h3><p>class로 구성되는 관계형 데이터 모델<br>IDE에서 타입 체크<br>기존의 sequelize define 모델    </p>
-<h3 id="TypeScript-도입에-대한-정리"><a href="#TypeScript-도입에-대한-정리" class="headerlink" title="TypeScript 도입에 대한 정리"></a>TypeScript 도입에 대한 정리</h3><p>학습에 대한 비용은 그리 높지 앟다.<br>프론트엔드에서 타입스크립트는 버릴게 없다.<br>백엔드는 Node.js의 한계가 보인다. DevOps 구축시에도 손이 많이간다.  </p>
-<h2 id="React-with-TypeScript-최종욱-님"><a href="#React-with-TypeScript-최종욱-님" class="headerlink" title="React with TypeScript - 최종욱 님"></a>React with TypeScript - 최종욱 님</h2><h3 id="React가-왜-좋을까"><a href="#React가-왜-좋을까" class="headerlink" title="React가 왜 좋을까?"></a>React가 왜 좋을까?</h3><p>A declarative, efficient, and flexible </p>
+<h3>Sequalize-typescript</h3>
+<p>class로 구성되는 관계형 데이터 모델<br>
+IDE에서 타입 체크<br>
+기존의 sequelize define 모델</p>
+<h3>TypeScript 도입에 대한 정리</h3>
+<p>학습에 대한 비용은 그리 높지 앟다.<br>
+프론트엔드에서 타입스크립트는 버릴게 없다.<br>
+백엔드는 Node.js의 한계가 보인다. DevOps 구축시에도 손이 많이간다.</p>
+<h2>React with TypeScript - 최종욱 님</h2>
+<h3>React가 왜 좋을까?</h3>
+<p>A declarative, efficient, and flexible</p>
 <blockquote>
 <p>React component is a function does <code>one thing</code> very well in a simple but <code>strict way</code></p>
 </blockquote>
-<p><code>strict way</code> = props 통신이 한정적이다.<br><code>One thing</code> = UI  </p>
-<h3 id="React와-함께하는-TypeScript의-장점"><a href="#React와-함께하는-TypeScript의-장점" class="headerlink" title="React와 함께하는 TypeScript의 장점!"></a>React와 함께하는 TypeScript의 장점!</h3><p>Because react component is a function  </p>
-<p><code>Live Coding</code><br><a href="https://github.com/johnwook/ts-meetup-2018-1" target="_blank" rel="external">https://github.com/johnwook/ts-meetup-2018-1</a></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> Tweet = <span class="function"><span class="params">props</span> =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> renderComponent(props, states);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> Tweet = <span class="function">(<span class="params">props:ITweetProps</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> renderComponent(props, states);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p><code>strict way</code> = props 통신이 한정적이다.<br>
+<code>One thing</code> = UI</p>
+<h3>React와 함께하는 TypeScript의 장점!</h3>
+<p>Because react component is a function</p>
+<p><code>Live Coding</code><br>
+https://github.com/johnwook/ts-meetup-2018-1</p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> Tweet = <span class="function"><span class="params">props</span> =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> renderComponent(props, states);</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p><figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> Tweet = <span class="function">(<span class="params">props:ITweetProps</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> renderComponent(props, states);</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
 <p><code>TypeScript는 interface를 정의하고 interface의 변화를 따라간다.</code></p>
 
         </div>
@@ -286,7 +322,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2018/01/18/conference-TypeScript/" data-id="cjpao48iq0012ox6frm2qmhxa" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2018/01/18/conference-TypeScript/" data-id="cjpaol7600011y16fwiglvb9q" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

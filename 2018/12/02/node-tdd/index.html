@@ -9,19 +9,19 @@
     
         <meta name="keywords" content="Node.js,TDD" />
     
-    <meta name="description" content="Node TDDNode.js에서 TDD를 하기위하여 필요한 라이브러리를 소개한다.    Mocha   Mocha는 테스트 코드를 돌려주는 Test Runner이다.     Should   assertion(검증) 라이브러리이다.     Supertest   express 통합 테스트용 라이브러리이다.      MochaMocha 공식 사이트 Link Mo">
+    <meta name="description" content="Node TDD Node.js에서 TDD를 하기위하여 필요한 라이브러리를 소개한다.  Mocha  Mocha는 테스트 코드를 돌려주는 Test Runner이다.   Should  assertion(검증) 라이브러리이다.   Supertest  express 통합 테스트용 라이브러리이다.    Mocha Mocha 공식 사이트 Link Mocha는 테스트">
 <meta name="keywords" content="Node.js,TDD">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node TDD 도구">
 <meta property="og:url" content="http://yoursite.com/2018/12/02/node-tdd/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="Node TDDNode.js에서 TDD를 하기위하여 필요한 라이브러리를 소개한다.    Mocha   Mocha는 테스트 코드를 돌려주는 Test Runner이다.     Should   assertion(검증) 라이브러리이다.     Supertest   express 통합 테스트용 라이브러리이다.      MochaMocha 공식 사이트 Link Mo">
+<meta property="og:description" content="Node TDD Node.js에서 TDD를 하기위하여 필요한 라이브러리를 소개한다.  Mocha  Mocha는 테스트 코드를 돌려주는 Test Runner이다.   Should  assertion(검증) 라이브러리이다.   Supertest  express 통합 테스트용 라이브러리이다.    Mocha Mocha 공식 사이트 Link Mocha는 테스트">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/nodejs.png">
 <meta property="og:updated_time" content="2018-12-03T01:41:56.940Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node TDD 도구">
-<meta name="twitter:description" content="Node TDDNode.js에서 TDD를 하기위하여 필요한 라이브러리를 소개한다.    Mocha   Mocha는 테스트 코드를 돌려주는 Test Runner이다.     Should   assertion(검증) 라이브러리이다.     Supertest   express 통합 테스트용 라이브러리이다.      MochaMocha 공식 사이트 Link Mo">
+<meta name="twitter:description" content="Node TDD Node.js에서 TDD를 하기위하여 필요한 라이브러리를 소개한다.  Mocha  Mocha는 테스트 코드를 돌려주는 Test Runner이다.   Should  assertion(검증) 라이브러리이다.   Supertest  express 통합 테스트용 라이브러리이다.    Mocha Mocha 공식 사이트 Link Mocha는 테스트">
 <meta name="twitter:image" content="http://yoursite.com/images/nodejs.png">
     
 
@@ -172,55 +172,75 @@
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/nodejs.png" alt="Node.js"></p>
-<h1 id="Node-TDD"><a href="#Node-TDD" class="headerlink" title="Node TDD"></a>Node TDD</h1><p>Node.js에서 TDD를 하기위하여 필요한 라이브러리를 소개한다.  </p>
+<h1>Node TDD</h1>
+<p>Node.js에서 TDD를 하기위하여 필요한 라이브러리를 소개한다.</p>
 <ul>
-<li>Mocha  <ul>
-<li>Mocha는 테스트 코드를 돌려주는 <code>Test Runner</code>이다.  </li>
-</ul>
-</li>
-<li>Should  <ul>
-<li><code>assertion(검증)</code> 라이브러리이다.  </li>
-</ul>
-</li>
-<li>Supertest  <ul>
-<li>express 통합 테스트용 라이브러리이다.  </li>
-</ul>
-</li>
-</ul>
-<h2 id="Mocha"><a href="#Mocha" class="headerlink" title="Mocha"></a>Mocha</h2><p>Mocha 공식 사이트 <a href="https://mochajs.org/" target="_blank" rel="external">Link</a></p>
-<p>Mocha는 테스트 코드를 돌려주는 <code>Test Runner</code>이다.<br><code>describe()</code>를 사용하여 모카에서는 테스트 환경을 구현한다.<br><code>it()</code>을 사용하여 테스트 케이스를 작성한다.  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install mocha --save-dev</div></pre></td></tr></table></figure>
-<blockquote>
-<p>mocha는 개발환경에서만 필요한 라이브러리이기 때문에 -dev에 설치한다.  </p>
-</blockquote>
-<p>하나의 예시를 들어보자, 예시는 문자열이 들어오면 전체다 대문자로 바꿔주는 함수이다.  </p>
-<p>먼저 TDD 원칙인 Red-Green-Refactor 원칙을 통하여 Red 상태를 만들어본다.  </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//test.js</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">convertToUppercase</span>(<span class="params">str</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> str</div><div class="line">&#125;</div><div class="line"><span class="built_in">module</span>.exports = &#123;convertToUppercase&#125;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>test하고자하는 파일은 spec을 추가해주면 된다.  </p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//test.spec.js</span></div><div class="line"><span class="keyword">const</span> assert = <span class="built_in">require</span>(<span class="string">'assert'</span>);</div><div class="line"><span class="keyword">const</span> test = <span class="built_in">require</span>(<span class="string">'./test'</span>);</div><div class="line"></div><div class="line">describe(<span class="string">'convertToUppercase 함수는'</span>, () =&gt; &#123;</div><div class="line">  it(<span class="string">'String을 Int로 변환한다'</span>, (done) =&gt; &#123;</div><div class="line">    <span class="keyword">const</span> actual = test.convertToUppercase(<span class="string">'asd'</span>);</div><div class="line">    <span class="keyword">const</span> expected = <span class="string">'ASD'</span>;</div><div class="line">    assert.equal(actual, expected);</div><div class="line">    done();</div><div class="line">  &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>위의 코드를 실행해보면 ‘ASD’를 기대했는데 ‘asd’가 와서 내가 의도한 대로 red가 나왔다.<br>이제 green으로 만들어보자.  </p>
-<blockquote>
-<p>명령어를 실행하는 방법: node_modules/.bin/mocha test.spec.js </p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//test.js  </span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">convertToUppercase</span>(<span class="params">str</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> str.toUpperCase();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;convertToUppercase&#125;</div></pre></td></tr></table></figure>
-<p>String의 str.toUpperCase()를 사용하여 Green상태로 만들었다.<br>Refactor의 경우 아래의 should를 사용하여서 해보겠다.  </p>
-<h2 id="Should"><a href="#Should" class="headerlink" title="Should"></a>Should</h2><p>should 공식 사이트 <a href="https://shouldjs.github.io/" target="_blank" rel="external">Link</a></p>
-<p>should는 <code>assertion(검증)</code> 라이브러리이다.<br>Node.js의 공식문서에는 assert를 사용하지말고 서드파티 라이브러리를 사용하라고 개시되어있다.<br>가독성 높은 테스트 코드를 만들 수 있다.  </p>
+<li>Mocha
 <ul>
-<li>하나의 문장처럼 만들기 때문이다.  </li>
+<li>Mocha는 테스트 코드를 돌려주는 <code>Test Runner</code>이다.</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//test.spec.js</span></div><div class="line"><span class="keyword">const</span> assert = <span class="built_in">require</span>(<span class="string">'assert'</span>);</div><div class="line"><span class="keyword">const</span> should = <span class="built_in">require</span>(<span class="string">'should'</span>);</div><div class="line"><span class="keyword">const</span> test = <span class="built_in">require</span>(<span class="string">'./test'</span>);</div><div class="line"></div><div class="line">describe(<span class="string">'convertToUppercase 함수는'</span>, () =&gt; &#123;</div><div class="line">  it(<span class="string">'String을 Int로 변환한다'</span>, (done) =&gt; &#123;</div><div class="line">    <span class="keyword">const</span> actual = test.convertToUppercase(<span class="string">'asd'</span>);</div><div class="line">    <span class="keyword">const</span> expected = <span class="string">'ASD'</span>;</div><div class="line">    actual.should.be.equal(expected);</div><div class="line">    done();</div><div class="line">  &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>should를 사용하여서 refactor를 진행하였다.  </p>
-<h2 id="SuperTest"><a href="#SuperTest" class="headerlink" title="SuperTest"></a>SuperTest</h2><p>supertest 주소 <a href="https://github.com/visionmedia/supertest" target="_blank" rel="external">Link</a></p>
-<p>supertest는 <code>통합 테스트로써 API의 기능을 테스트</code>할 수 있다.<br>supertest는 express 통합 테스트용 라이브러리이다.<br>내부적으로 Express Server를 구동시켜 실제 요청을 보낸뒤 결과를 검증한다.  </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//index.js</span></div><div class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</div><div class="line"><span class="keyword">const</span> app = express();</div><div class="line"></div><div class="line"><span class="keyword">const</span> people = [&#123;</div><div class="line">  name: <span class="string">'hook'</span>,</div><div class="line">  age: <span class="number">28</span></div><div class="line">&#125;, &#123;</div><div class="line">  name: <span class="string">'john'</span>,</div><div class="line">  age: <span class="number">52</span></div><div class="line">&#125;];</div><div class="line"></div><div class="line">app.get(<span class="string">'/people'</span>, (req, res) =&gt; &#123;</div><div class="line">  res.json(people);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">app.listen(<span class="number">3000</span>, () =&gt; &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'hello~'</span>)</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = app;</div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//index.spec.js</span></div><div class="line"><span class="keyword">const</span> supertest = <span class="built_in">require</span>(<span class="string">'supertest'</span>);</div><div class="line"><span class="keyword">const</span> should = <span class="built_in">require</span>(<span class="string">'should'</span>);</div><div class="line"><span class="keyword">const</span> app = <span class="built_in">require</span>(<span class="string">'./index'</span>);</div><div class="line"></div><div class="line"></div><div class="line">describe(<span class="string">'GET /people은 '</span>, () =&gt; &#123;</div><div class="line">  it(<span class="string">'People Array로 응답한다.'</span>, (done) =&gt; &#123;</div><div class="line">    supertest(app)</div><div class="line">      .get(<span class="string">'/people'</span>)</div><div class="line">      .end(<span class="function">(<span class="params">err, res</span>) =&gt;</span> &#123;</div><div class="line">        <span class="keyword">const</span> actual = res.body;</div><div class="line">        <span class="keyword">const</span> expected = <span class="built_in">Array</span>;</div><div class="line">        actual.should.be.instanceOf(expected);</div><div class="line">        done();</div><div class="line">      &#125;);</div><div class="line">  &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h2 id="test-명령어-편하게-입력하기"><a href="#test-명령어-편하게-입력하기" class="headerlink" title="test 명령어 편하게 입력하기."></a>test 명령어 편하게 입력하기.</h2><p>기존의 node_modules/.bin/mocha test.spec.js 를 통하여 테스트하기는 번거로움이 있었다.<br>그것을 해결하는 방법이다.  </p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"></div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"test"</span>: <span class="string">"mocha"</span>,</div><div class="line">    <span class="attr">"start"</span>: <span class="string">"node index.js"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"keywords"</span>: [],</div><div class="line">  <span class="attr">"author"</span>: <span class="string">""</span>,</div><div class="line">  <span class="attr">"license"</span>: <span class="string">"ISC"</span>,</div><div class="line">  <span class="attr">"dependencies"</span>: &#123;</div><div class="line">    <span class="attr">"express"</span>: <span class="string">"^4.16.4"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"devDependencies"</span>: &#123;</div><div class="line">    <span class="attr">"mocha"</span>: <span class="string">"^5.2.0"</span>,</div><div class="line">    <span class="attr">"should"</span>: <span class="string">"^13.2.3"</span>,</div><div class="line">    <span class="attr">"supertest"</span>: <span class="string">"^3.3.0"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"description"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>이런식으로 mocha를 명시해두면 자동으로 node_modules/.bin/mocha를 찾는다.<br>이때 사용법은 <code>mocha test index.spec.js</code> 를 입력하면 된다.  </p>
-<h2 id="마치며"><a href="#마치며" class="headerlink" title="마치며"></a>마치며</h2><p>아직 부족한 부분이 많다보니 잘못된부분을 지적해주시면 감사하겠습니다!!<br>TDD를 지속적으로 공부하고 발전해서 믿을 수 있는 코드를 작성하는 개발자가 되어야겠다.  </p>
+</li>
+<li>Should
+<ul>
+<li><code>assertion(검증)</code> 라이브러리이다.</li>
+</ul>
+</li>
+<li>Supertest
+<ul>
+<li>express 통합 테스트용 라이브러리이다.</li>
+</ul>
+</li>
+</ul>
+<h2>Mocha</h2>
+<p>Mocha 공식 사이트 <a href="https://mochajs.org/" target="_blank" rel="external">Link</a></p>
+<p>Mocha는 테스트 코드를 돌려주는 <code>Test Runner</code>이다.<br>
+<code>describe()</code>를 사용하여 모카에서는 테스트 환경을 구현한다.<br>
+<code>it()</code>을 사용하여 테스트 케이스를 작성한다.</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install mocha --save-dev</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>mocha는 개발환경에서만 필요한 라이브러리이기 때문에 -dev에 설치한다.</p>
+</blockquote>
+<p>하나의 예시를 들어보자, 예시는 문자열이 들어오면 전체다 대문자로 바꿔주는 함수이다.</p>
+<p>먼저 TDD 원칙인 Red-Green-Refactor 원칙을 통하여 Red 상태를 만들어본다.</p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//test.js</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">convertToUppercase</span>(<span class="params">str</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> str</div><div class="line">&#125;</div><div class="line"><span class="built_in">module</span>.exports = &#123;convertToUppercase&#125;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>test하고자하는 파일은 spec을 추가해주면 된다.</p>
+</blockquote>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//test.spec.js</span></div><div class="line"><span class="keyword">const</span> assert = <span class="built_in">require</span>(<span class="string">'assert'</span>);</div><div class="line"><span class="keyword">const</span> test = <span class="built_in">require</span>(<span class="string">'./test'</span>);</div><div class="line"></div><div class="line">describe(<span class="string">'convertToUppercase 함수는'</span>, () =&gt; &#123;</div><div class="line">  it(<span class="string">'String을 Int로 변환한다'</span>, (done) =&gt; &#123;</div><div class="line">    <span class="keyword">const</span> actual = test.convertToUppercase(<span class="string">'asd'</span>);</div><div class="line">    <span class="keyword">const</span> expected = <span class="string">'ASD'</span>;</div><div class="line">    assert.equal(actual, expected);</div><div class="line">    done();</div><div class="line">  &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>위의 코드를 실행해보면 'ASD'를 기대했는데 'asd'가 와서 내가 의도한 대로 red가 나왔다.<br>
+이제 green으로 만들어보자.</p>
+<blockquote>
+<p>명령어를 실행하는 방법: node_modules/.bin/mocha test.spec.js</p>
+</blockquote>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//test.js  </span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">convertToUppercase</span>(<span class="params">str</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> str.toUpperCase();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;convertToUppercase&#125;</div></pre></td></tr></table></figure></p>
+<p>String의 str.toUpperCase()를 사용하여 Green상태로 만들었다.<br>
+Refactor의 경우 아래의 should를 사용하여서 해보겠다.</p>
+<h2>Should</h2>
+<p>should 공식 사이트 <a href="https://shouldjs.github.io/" target="_blank" rel="external">Link</a></p>
+<p>should는 <code>assertion(검증)</code> 라이브러리이다.<br>
+Node.js의 공식문서에는 assert를 사용하지말고 서드파티 라이브러리를 사용하라고 개시되어있다.<br>
+가독성 높은 테스트 코드를 만들 수 있다.</p>
+<ul>
+<li>하나의 문장처럼 만들기 때문이다.</li>
+</ul>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//test.spec.js</span></div><div class="line"><span class="keyword">const</span> assert = <span class="built_in">require</span>(<span class="string">'assert'</span>);</div><div class="line"><span class="keyword">const</span> should = <span class="built_in">require</span>(<span class="string">'should'</span>);</div><div class="line"><span class="keyword">const</span> test = <span class="built_in">require</span>(<span class="string">'./test'</span>);</div><div class="line"></div><div class="line">describe(<span class="string">'convertToUppercase 함수는'</span>, () =&gt; &#123;</div><div class="line">  it(<span class="string">'String을 Int로 변환한다'</span>, (done) =&gt; &#123;</div><div class="line">    <span class="keyword">const</span> actual = test.convertToUppercase(<span class="string">'asd'</span>);</div><div class="line">    <span class="keyword">const</span> expected = <span class="string">'ASD'</span>;</div><div class="line">    actual.should.be.equal(expected);</div><div class="line">    done();</div><div class="line">  &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>should를 사용하여서 refactor를 진행하였다.</p>
+<h2>SuperTest</h2>
+<p>supertest 주소 <a href="https://github.com/visionmedia/supertest" target="_blank" rel="external">Link</a></p>
+<p>supertest는 <code>통합 테스트로써 API의 기능을 테스트</code>할 수 있다.<br>
+supertest는 express 통합 테스트용 라이브러리이다.<br>
+내부적으로 Express Server를 구동시켜 실제 요청을 보낸뒤 결과를 검증한다.</p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//index.js</span></div><div class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</div><div class="line"><span class="keyword">const</span> app = express();</div><div class="line"></div><div class="line"><span class="keyword">const</span> people = [&#123;</div><div class="line">  name: <span class="string">'hook'</span>,</div><div class="line">  age: <span class="number">28</span></div><div class="line">&#125;, &#123;</div><div class="line">  name: <span class="string">'john'</span>,</div><div class="line">  age: <span class="number">52</span></div><div class="line">&#125;];</div><div class="line"></div><div class="line">app.get(<span class="string">'/people'</span>, (req, res) =&gt; &#123;</div><div class="line">  res.json(people);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">app.listen(<span class="number">3000</span>, () =&gt; &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'hello~'</span>)</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = app;</div></pre></td></tr></table></figure></p>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//index.spec.js</span></div><div class="line"><span class="keyword">const</span> supertest = <span class="built_in">require</span>(<span class="string">'supertest'</span>);</div><div class="line"><span class="keyword">const</span> should = <span class="built_in">require</span>(<span class="string">'should'</span>);</div><div class="line"><span class="keyword">const</span> app = <span class="built_in">require</span>(<span class="string">'./index'</span>);</div><div class="line"></div><div class="line"></div><div class="line">describe(<span class="string">'GET /people은 '</span>, () =&gt; &#123;</div><div class="line">  it(<span class="string">'People Array로 응답한다.'</span>, (done) =&gt; &#123;</div><div class="line">    supertest(app)</div><div class="line">      .get(<span class="string">'/people'</span>)</div><div class="line">      .end(<span class="function">(<span class="params">err, res</span>) =&gt;</span> &#123;</div><div class="line">        <span class="keyword">const</span> actual = res.body;</div><div class="line">        <span class="keyword">const</span> expected = <span class="built_in">Array</span>;</div><div class="line">        actual.should.be.instanceOf(expected);</div><div class="line">        done();</div><div class="line">      &#125;);</div><div class="line">  &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h2>test 명령어 편하게 입력하기.</h2>
+<p>기존의 node_modules/.bin/mocha test.spec.js 를 통하여 테스트하기는 번거로움이 있었다.<br>
+그것을 해결하는 방법이다.</p>
+<p><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"></div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"test"</span>: <span class="string">"mocha"</span>,</div><div class="line">    <span class="attr">"start"</span>: <span class="string">"node index.js"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"keywords"</span>: [],</div><div class="line">  <span class="attr">"author"</span>: <span class="string">""</span>,</div><div class="line">  <span class="attr">"license"</span>: <span class="string">"ISC"</span>,</div><div class="line">  <span class="attr">"dependencies"</span>: &#123;</div><div class="line">    <span class="attr">"express"</span>: <span class="string">"^4.16.4"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"devDependencies"</span>: &#123;</div><div class="line">    <span class="attr">"mocha"</span>: <span class="string">"^5.2.0"</span>,</div><div class="line">    <span class="attr">"should"</span>: <span class="string">"^13.2.3"</span>,</div><div class="line">    <span class="attr">"supertest"</span>: <span class="string">"^3.3.0"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"description"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>이런식으로 mocha를 명시해두면 자동으로 node_modules/.bin/mocha를 찾는다.<br>
+이때 사용법은 <code>mocha test index.spec.js</code> 를 입력하면 된다.</p>
+<h2>마치며</h2>
+<p>아직 부족한 부분이 많다보니 잘못된부분을 지적해주시면 감사하겠습니다!!<br>
+TDD를 지속적으로 공부하고 발전해서 믿을 수 있는 코드를 작성하는 개발자가 되어야겠다.</p>
 
         </div>
         <footer class="article-footer">
@@ -228,7 +248,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2018/12/02/node-tdd/" data-id="cjpao48mk008qox6faaqyugwn" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2018/12/02/node-tdd/" data-id="cjpaol79z008uy16f5ykgsprc" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

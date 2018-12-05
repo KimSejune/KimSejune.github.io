@@ -183,15 +183,18 @@
 
         <p class="article-excerpt">
             
-Node Single-page ApplicationSPA의 구조
+Node Single-page Application
+SPA의 구조
+
 
 ejs를 사용하여서 웹개발을 하게되면 전체를 다시 새로고침을 해야한다.
 SPA 구조를 사용하면 Ajax를 통하여 부분만 고쳐준다.
 
-SPA 실습Link
+SPA 실습
+Link
 
 data 부분을 node.js module로 빼뒀다.
-npm으로 설치한 module은 경로지정이 없어도 불러와 지지만 직접만든 modul
+npm으로 설치한 module은 경로지정이 없어도 불러와 지지만 직접만든 mo
         </p>
     </div>
 </article>
@@ -204,17 +207,17 @@ npm으로 설치한 module은 경로지정이 없어도 불러와 지지만 직�
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/09/05/node-study-ajax/" class="thumbnail">
+        <a href="/2017/09/05/node-study-jwt/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/ajax.jpg)" alt="Node-Ajax" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/jwt.png)" alt="Node-jwt" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/05/node-study-ajax/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/05/node-study-jwt/">0</span>
     
 </span>
 
@@ -232,17 +235,22 @@ npm으로 설치한 module은 경로지정이 없어도 불러와 지지만 직�
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/09/05/node-study-ajax/">Node-Ajax</a>
+        <a href="/2017/09/05/node-study-jwt/">Node-jwt</a>
         </h1>
     
 
         <p class="article-excerpt">
             
-Node AjaxAjax비동기적인 웹 어플리케이션의 제작을 위한 클라리언트 측 웹 개발 기법요즈음은 의미가 변형되어 웹 브라우저에서 XMLHttpRequest 혹은 fetch를 이용해서 보내는 HTTP 요청을 통칭하기도 함
-Ajax Model
-Ajax의 장점
-화면 전체를 다시 로드하지 않고도 내용을 갱신할 수 있어 더 나은 사용자 경험 제공  
-서버의 응
+Node JWT
+쿠키의 단점
+
+쿠키를 지원하는 클라이언트에서 밖에 사용할 수 없음
+적절히 관리되지 않은 쿠키는 보안에 취약하며, 관리를 하려고 해도 CORS 대응이 복잡함
+
+Token Based Auth
+
+토큰이란, 사용자의 자격증명(아이디, 패스워드 등)을 통해 인증이 이루어진 후, 특정 자원에 대한 자격증명으로서 대신 사용되는 인증 수단
+서버에 요청을
         </p>
     </div>
 </article>
@@ -293,10 +301,12 @@ Ajax의 장점
 
         <p class="article-excerpt">
             
-Node CORS보내는쪽과 받는쪽의 Domain이 다를때 발생하는 문제
+Node CORS
+보내는쪽과 받는쪽의 Domain이 다를때 발생하는 문제
 Some-origin Plicy(동일 출처 정책)
+
 웹페이지에서 리소스를 불러올 때, 리소스의 출처가 웹페이지의 출처와 같으면 안전하다고 보고, 출처가 다르면 해당 리소스는 안전하지 않다고 보는 원칙
-여기서 &#39;출처&#39;란 &#39;프로토콜 + 도메인 + 포트번호&#39;의 결
+여기서 '출처'란 '프로토콜 + 도메인 + 포트번호'의 결합을 가리킴. 즉, 세 개
         </p>
     </div>
 </article>
@@ -305,63 +315,6 @@ Some-origin Plicy(동일 출처 정책)
     
     
     
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/09/05/node-study-jwt/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/jwt.png)" alt="Node-jwt" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/05/node-study-jwt/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a>
-            </div>
-            <div class="date"><time datetime="2017-09-05T03:54:00.000Z" itemprop="datePublished">2017-09-05</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/09/05/node-study-jwt/">Node-jwt</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-Node JWT쿠키의 단점
-쿠키를 지원하는 클라이언트에서 밖에 사용할 수 없음
-적절히 관리되지 않은 쿠키는 보안에 취약하며, 관리를 하려고 해도 CORS 대응이 복잡함
-
-Token Based Auth
-토큰이란, 사용자의 자격증명(아이디, 패스워드 등)을 통해 인증이 이루어진 후, 특정 자원에 대한 자격증명으로서 대신 사용되는 인증 수단
-서버에 요청을 할 
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -400,72 +353,16 @@ Token Based Auth
 
         <p class="article-excerpt">
             
-Node Fetch APIFetch API
-웹 브라우저의 XMLHttpRequest를 대체하기 위해 만들어진 새로운 HTTP client 표준  
-비교적 최근에 도입되어 IE 및 구형 안드로이드 브라우저(4.x)는 지원하지 않음  
-Fetch Polyfill  
-최신기술로써 지원하지 않는 브라우저가 많지만 Fetch Polyfill을 사용하면 사용가능하다
-        </p>
-    </div>
-</article>
-    
+Node Fetch API
+Fetch API
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/09/04/node-study-node-cookie/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/nodejs.png)" alt="Node-Cookie" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/04/node-study-node-cookie/">0</span>
-    
-</span>
+웹 브라우저의 XMLHttpRequest를 대체하기 위해 만들어진 새로운 HTTP client 표준
+비교적 최근에 도입되어 IE 및 구형 안드로이드 브라우저(4.x)는 지원하지 않음
+Fetch Polyfill
+
+최신기술로써 지원하지 않는 브라우저가 많지만 Fetch Polyfill을 사용하면 사용가능하다.
 
 
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a>
-            </div>
-            <div class="date"><time datetime="2017-09-04T03:54:00.000Z" itemprop="datePublished">2017-09-04</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/09/04/node-study-node-cookie/">Node-Cookie</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-Node Cookie쿠키의 필요성
-개별 클라이언트의 여러 요청에 걸친 정보의 유지
-장바구니
-로그인/로그아웃
-방문 기록
-
-
-
-HTTP Cookie
-서버가 응답을 통해 웹 브라우저에 저장하는 이름+값 형태의 정보
-웹 브라우저는 쿠키를 저장하기 위한 저장소를 가지고 있음
-저장소는 자료의 유효기간과 접근 권한에 대한 다양한 옵션을 제공
-
-쿠키 전송 절차
-서버는 
         </p>
     </div>
 </article>
@@ -478,6 +375,62 @@ HTTP Cookie
     
     
         <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/09/05/node-study-ajax/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/ajax.jpg)" alt="Node-Ajax" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/05/node-study-ajax/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a>
+            </div>
+            <div class="date"><time datetime="2017-09-05T03:54:00.000Z" itemprop="datePublished">2017-09-05</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/09/05/node-study-ajax/">Node-Ajax</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            
+Node Ajax
+Ajax
+비동기적인 웹 어플리케이션의 제작을 위한 클라리언트 측 웹 개발 기법
+요즈음은 의미가 변형되어 웹 브라우저에서 XMLHttpRequest 혹은 fetch를 이용해서 보내는 HTTP 요청을 통칭하기도 함
+Ajax Model
+
+Ajax의 장점
+
+화면 전체를 다시 로드하지 않고도 내용을 갱신할 수 있어 더 나은 사용자 경험 제공
+서버
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -516,9 +469,80 @@ HTTP Cookie
 
         <p class="article-excerpt">
             
-Node Express MiddlewareMiddleware?1234567// 미들웨어 = 함수function helloMiddleware(res, req, next) &#123;  console.log('hello')  next()&#125;app.use(helloMiddleware)
+Node Express Middleware
+Middleware?
+1234567// 미들웨어 = 함수function helloMiddleware(res, req, next) &#123;  console.log('hello')  next()&#125;app.use(helloMiddleware)
 
-요청이 발생할 때 마다 console.log(‘hello’)가 나타
+요청이 발생할 때 마다 console.log('hello')가 
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/09/04/node-study-node-cookie/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/nodejs.png)" alt="Node-Cookie" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/09/04/node-study-node-cookie/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a>
+            </div>
+            <div class="date"><time datetime="2017-09-04T03:54:00.000Z" itemprop="datePublished">2017-09-04</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/09/04/node-study-node-cookie/">Node-Cookie</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            
+Node Cookie
+쿠키의 필요성
+
+개별 클라이언트의 여러 요청에 걸친 정보의 유지
+
+장바구니
+로그인/로그아웃
+방문 기록
+
+
+
+HTTP Cookie
+
+서버가 응답을 통해 웹 브라우저에 저장하는 이름+값 형태의 정보
+웹 브라우저는 쿠키를 저장하기 위한 저장소를 가지고 있음
+저장소는 자료의 유효기간과 접근 권한에 대한 다양한 옵션을 제공
+
+쿠키 전송 절차
+
         </p>
     </div>
 </article>
@@ -565,15 +589,23 @@ Node Express MiddlewareMiddleware?1234567// 미들웨어 = 함수function helloM
 
         <p class="article-excerpt">
             
-Node SessionSession사전적 의미
+Node Session
+Session
+사전적 의미
+
 (특정한 활동을 위한) 시간
 (의회 등의)회기; (법정의) 개정 (기간)
 
-실질적 의미시작 조건과 종료조건이 있는 시간, 또는 회기정보 교환이 지속되는 시간, 또는 회기
+실질적 의미
+시작 조건과 종료조건이 있는 시간, 또는 회기
+정보 교환이 지속되는 시간, 또는 회기
 세션의 예
-HTTP session요청 - 응답  
 
-클라이언트가 TCP 연결을 수립합니다(또는 전송 계층이 TCP가 아닌 다른 적당한 연결로
+
+HTTP session
+요청 - 응답
+
+클라이언트가 TCP 연결을 수립합니다(또는 전송 계층이 TCP가 아닌 다른 적
         </p>
     </div>
 </article>
@@ -586,6 +618,75 @@ HTTP session요청 - 응답
     
     
         <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/08/30/node-study-service-develope/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/node-banner.jpg)" alt="Node-Service-Develop" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/30/node-study-service-develope/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a>
+            </div>
+            <div class="date"><time datetime="2017-08-30T03:54:00.000Z" itemprop="datePublished">2017-08-30</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/08/30/node-study-service-develope/">Node-Service-Develop</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            
+Node Service Develop
+URL Shortener
+
+goo.gl
+bit.ly
+urlo.cc
+
+요구사항
+
+긴 URL을 짧은 URL로 변경하는 것은 한 명의 관리자만 만들 수 있음
+짧은 URL은 누구나 이용할 수 있음
+
+시나리오 설계
+화면 설계
+데이터 설계
+프로젝트 세팅
+
+npm init -y
+.gitignore 추가
+
+Express 앱 세팅
+
+
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -624,78 +725,22 @@ HTTP session요청 - 응답
 
         <p class="article-excerpt">
             
-Node Web FormHTML FormHTML form의 기본 동작HTML form을 전송하면, 입력된 정보가 기본적으로 percent encoding 되어 요청됨
-
-GET method  
-
-이름=값 형식으로 간다.12GET /search?query=%EA%B0%9C&amp;sort=latest HTTP/1.1...
-
+Node Web Form
+HTML Form
+HTML form의 기본 동작
+HTML form을 전송하면, 입력된 정보가 기본적으로 percent encoding 되어 요청됨
 
 
-Post method  
+GET method
 
-이름
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/08/30/node-study-service-develope/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/node-banner.jpg)" alt="Node-Service-Develop" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2017/08/30/node-study-service-develope/">0</span>
-    
-</span>
+이름=값 형식으로 간다.
+12GET /search?query=%EA%B0%9C&amp;sort=latest HTTP/1.1...
 
 
-    
-</a>
 
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a>
-            </div>
-            <div class="date"><time datetime="2017-08-30T03:54:00.000Z" itemprop="datePublished">2017-08-30</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/08/30/node-study-service-develope/">Node-Service-Develop</a>
-        </h1>
-    
+Post method
 
-        <p class="article-excerpt">
-              
-Node Service DevelopURL Shortener
-goo.gl
-bit.ly
-urlo.cc
-
-요구사항
-긴 URL을 짧은 URL로 변경하는 것은 한 명의 관리자만 만들 수 있음  
-짧은 URL은 누구나 이용할 수 있음  
-
-시나리오 설계화면 설계데이터 설계프로젝트 세팅
-npm init -y 
-.gitignore 추가
-
-Express 앱 세팅
-n
+이
         </p>
     </div>
 </article>

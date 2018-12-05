@@ -9,18 +9,18 @@
     
         <meta name="keywords" content="swift,LayoutGuide" />
     
-    <meta name="description" content="SafeAreaLayoutGuideAutoLayout을 사용할때 화면에서 벗어나지 않도록 잡아주는 역할을 하는 property가 필요할 때 사용을 한다.    view에서 값을 보여줄때 bar나 다른 Content가 View를 벗어나지 않도록 만들때 safeAreaLayoutGuide를 사용한다.   아래는 safeAreaLayoutGuide의 정의이다.">
+    <meta name="description" content="SafeAreaLayoutGuide AutoLayout을 사용할때 화면에서 벗어나지 않도록 잡아주는 역할을 하는 property가 필요할 때 사용을 한다. view에서 값을 보여줄때 bar나 다른 Content가 View를 벗어나지 않도록 만들때 safeAreaLayoutGuide를 사용한다. 아래는 safeAreaLayoutGuide의 정의이다. 123@">
 <meta name="keywords" content="swift,LayoutGuide">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Swift safeAreaLayoutGuide">
 <meta property="og:url" content="http://yoursite.com/2018/06/26/swift-safeAreaLayoutGuide/index.html">
 <meta property="og:site_name" content="KimSejune Start Study">
-<meta property="og:description" content="SafeAreaLayoutGuideAutoLayout을 사용할때 화면에서 벗어나지 않도록 잡아주는 역할을 하는 property가 필요할 때 사용을 한다.    view에서 값을 보여줄때 bar나 다른 Content가 View를 벗어나지 않도록 만들때 safeAreaLayoutGuide를 사용한다.   아래는 safeAreaLayoutGuide의 정의이다.">
+<meta property="og:description" content="SafeAreaLayoutGuide AutoLayout을 사용할때 화면에서 벗어나지 않도록 잡아주는 역할을 하는 property가 필요할 때 사용을 한다. view에서 값을 보여줄때 bar나 다른 Content가 View를 벗어나지 않도록 만들때 safeAreaLayoutGuide를 사용한다. 아래는 safeAreaLayoutGuide의 정의이다. 123@">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2018-06-28T07:14:17.054Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift safeAreaLayoutGuide">
-<meta name="twitter:description" content="SafeAreaLayoutGuideAutoLayout을 사용할때 화면에서 벗어나지 않도록 잡아주는 역할을 하는 property가 필요할 때 사용을 한다.    view에서 값을 보여줄때 bar나 다른 Content가 View를 벗어나지 않도록 만들때 safeAreaLayoutGuide를 사용한다.   아래는 safeAreaLayoutGuide의 정의이다.">
+<meta name="twitter:description" content="SafeAreaLayoutGuide AutoLayout을 사용할때 화면에서 벗어나지 않도록 잡아주는 역할을 하는 property가 필요할 때 사용을 한다. view에서 값을 보여줄때 bar나 다른 Content가 View를 벗어나지 않도록 만들때 safeAreaLayoutGuide를 사용한다. 아래는 safeAreaLayoutGuide의 정의이다. 123@">
     
 
     
@@ -169,12 +169,14 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="SafeAreaLayoutGuide"><a href="#SafeAreaLayoutGuide" class="headerlink" title="SafeAreaLayoutGuide"></a>SafeAreaLayoutGuide</h1><p>AutoLayout을 사용할때 화면에서 벗어나지 않도록 잡아주는 역할을 하는 property가 필요할 때 사용을 한다.   </p>
-<p>view에서 값을 보여줄때 <code>bar나 다른 Content가 View를 벗어나지 않도록</code> 만들때 safeAreaLayoutGuide를 사용한다.  </p>
-<p>아래는 safeAreaLayoutGuide의 정의이다.  </p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">@available</span>(ios <span class="number">11.0</span>, *)</div><div class="line"><span class="keyword">open</span> <span class="keyword">var</span> safeAreaLayoutGuide: <span class="type">UILayoutGuide</span> &#123; <span class="keyword">get</span> &#125;</div></pre></td></tr></table></figure>
+            <h1>SafeAreaLayoutGuide</h1>
+<p>AutoLayout을 사용할때 화면에서 벗어나지 않도록 잡아주는 역할을 하는 property가 필요할 때 사용을 한다.</p>
+<p>view에서 값을 보여줄때 <code>bar나 다른 Content가 View를 벗어나지 않도록</code> 만들때 safeAreaLayoutGuide를 사용한다.</p>
+<p>아래는 safeAreaLayoutGuide의 정의이다.</p>
+<p><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">@available</span>(ios <span class="number">11.0</span>, *)</div><div class="line"><span class="keyword">open</span> <span class="keyword">var</span> safeAreaLayoutGuide: <span class="type">UILayoutGuide</span> &#123; <span class="keyword">get</span> &#125;</div></pre></td></tr></table></figure></p>
 <p>safeAreaLayoutGuide는 UILayoutGuide를 상속받는데 <code>UILayoutGuide는 Auto Layout과 상호 작용을 할 수 있는 직사각형 영역</code>이다.</p>
-<h2 id="참조링크"><a href="#참조링크" class="headerlink" title="참조링크"></a>참조링크</h2><p><a href="https://developer.apple.com/documentation/uikit/uiview/2891102-safearealayoutguide" target="_blank" rel="external">safeAreaLayoutGuide</a></p>
+<h2>참조링크</h2>
+<p><a href="https://developer.apple.com/documentation/uikit/uiview/2891102-safearealayoutguide" target="_blank" rel="external">safeAreaLayoutGuide</a></p>
 <blockquote>
 <p>UIKit &gt; Views and Controls &gt; UIView &gt; safeAreaLayoutGuide</p>
 </blockquote>
@@ -185,7 +187,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2018/06/26/swift-safeAreaLayoutGuide/" data-id="cjpao48mp0091ox6ftddsfhu1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2018/06/26/swift-safeAreaLayoutGuide/" data-id="cjpaol7a1008zy16f3comwk2g" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
