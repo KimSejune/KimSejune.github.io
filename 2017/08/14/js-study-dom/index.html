@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>JavaScript Dom | KimSejune Start Study</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="JavaScript,Dom" />
+    
+    <meta name="description" content="JavaScript Dom(Document Object Model)1. DOM(Document Object Model) 브라우저는 웹 문서(HTML, XML, SVG)를 로드하고 파싱하여 DOM(문서 객체 모델)을 생성한다.  브라우저 동작 원리   DOM이란?   브라우저의 렌더링 엔진은 웹 문서를 로드하고 파싱하여 웹 문서를 브라우저가 이해할 수 있는">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript Dom">
+<meta property="og:url" content="http://yoursite.com/2017/08/14/js-study-dom/index.html">
+<meta property="og:site_name" content="KimSejune Start Study">
+<meta property="og:description" content="JavaScript Dom(Document Object Model)1. DOM(Document Object Model) 브라우저는 웹 문서(HTML, XML, SVG)를 로드하고 파싱하여 DOM(문서 객체 모델)을 생성한다.  브라우저 동작 원리   DOM이란?   브라우저의 렌더링 엔진은 웹 문서를 로드하고 파싱하여 웹 문서를 브라우저가 이해할 수 있는">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/images/client-server.png">
+<meta property="article:published_time" content="2017-08-14T03:54:00.000Z">
+<meta property="article:modified_time" content="2017-12-27T02:54:42.000Z">
+<meta property="article:author" content="Sejune Kim">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="Dom">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/client-server.png">
+    
+
+    
+
+    
+        <link rel="icon" href="/images/logo.png" />
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/">Algorithm</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/level1/">level1</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/level2/">level2</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Conference/">Conference</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Conference/PlayNode/">PlayNode</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Conference/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Project/">Project</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Project/ReadMe/">ReadMe</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Project/redis/">redis</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/">TIL</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/AWS/">AWS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/CSS/">CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/DataBase/">DataBase</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/ES6/">ES6</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/ElasticSearch/">ElasticSearch</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/Git/">Git</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/GraphQL/">GraphQL</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/JAVA/">JAVA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/Node-js/">Node.js</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/React/">React</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/Spring/">Spring</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/Swift/">Swift</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/Typescript/">Typescript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/jQuery/">jQuery</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" target="_blank" rel="noopener" href="https://github.com/KimSejune">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/TIL/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/TIL/JavaScript/Dom/">Dom</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-js-study-dom" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        JavaScript Dom
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/08/14/js-study-dom/" class="article-date">
+            <time datetime="2017-08-14T03:54:00.000Z" itemprop="datePublished">2017-08-14</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Dom/" rel="tag">Dom</a>, <a class="tag-link-link" href="/tags/JavaScript/" rel="tag">JavaScript</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="JavaScript-Dom-Document-Object-Model"><a href="#JavaScript-Dom-Document-Object-Model" class="headerlink" title="JavaScript Dom(Document Object Model)"></a>JavaScript Dom(Document Object Model)</h1><h2 id="1-DOM-Document-Object-Model"><a href="#1-DOM-Document-Object-Model" class="headerlink" title="1. DOM(Document Object Model)"></a>1. DOM(Document Object Model)</h2><ul>
+<li><p>브라우저는 웹 문서(HTML, XML, SVG)를 로드하고 파싱하여 DOM(문서 객체 모델)을 생성한다.</p>
+<ul>
+<li>브라우저 동작 원리<br><img src="/images/client-server.png" alt="브라우저 동작 원리"></li>
+</ul>
+</li>
+<li><p>DOM이란? </p>
+<ul>
+<li>브라우저의 렌더링 엔진은 웹 문서를 로드하고 파싱하여 웹 문서를 <code>브라우저가 이해할 수 있는 구조로 구성하여 메모리에 적재하는 것을 나타낸다.</code></li>
+<li>모든 요소와 요소의 어트리뷰트, 텍스트를 각각의 객체로 만들고 이들 <code>객체를 부자 관계를 표현할 수 있는 트리 구조로 구성</code>한 것이 DOM이다</li>
+<li>DOM은 자바스크립트를 통해 동적으로 변경할 수 있으며 변경된 DOM은 렌더링에 반영된다.</li>
+</ul>
+</li>
+<li><p>DOM API(Application Programming Interface)이란?</p>
+<ul>
+<li>웹 문서의 동적 변경을 위해 DOM은 프로그래밍 언어가 자신에 접근하고 수정할 수 있는 방법을 제공하는데 일반적으로 프로퍼티와 메소드를 갖는 JavaScript 객체로 제공된다.</li>
+<li>정적인 웹페이지에 접근하여 동적으로 웹페이지를 변경하기 위한 유일한 방법은 메모리 상에 존재하는 DOM을 변경하는 것이고, 이때 필요한 것이 <code>DOM에 접근하고 변경하는 프로퍼티와 메소드의 집합인 DOM API이다.</code></li>
+</ul>
+</li>
+<li><p>DOM의 2가지 기능</p>
+<ul>
+<li><code>HTML 문서에 대한 모델 구성</code> : 브라우저는 HTML 문서를 로드한 후 해당 문서에 대한 모델을 메모리에 생성한다. 이때 모델은 객체의 트리로 구성되는데 이것을 <code>DOM tree</code>라 한다.</li>
+<li><code>HTML 문서 내의 각 요소에 접근 / 수정</code> : DOM은 모델 내의 각 객체에 접근하고 수정할 수 있는 프로퍼티와 메소드를 제공한다. DOM이 수정되면 브라우저를 통해 사용자가 보게 될 내용 또한 변경된다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-DOM-tree"><a href="#2-DOM-tree" class="headerlink" title="2. DOM tree"></a>2. DOM tree</h2><ul>
+<li>DOM tree는 브라우저가 HTML 문서를 로드한 후 생성하는 모델을 의미하는데 객체의 트리로 구조화되어 있기 때문에 DOM tree라 부른다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">      .red  &#123; <span class="attr">color</span>: #ff0000; &#125;</span><br><span class="line">      .blue &#123; color: #0000ff; &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;h1&gt;Cities&lt;/h1&gt;</span><br><span class="line">      &lt;ul&gt;</span><br><span class="line">        &lt;li id=<span class="string">&quot;one&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;red&quot;</span>&gt;Seoul&lt;/li&gt;</span><br><span class="line">        &lt;li id=<span class="string">&quot;two&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;red&quot;</span>&gt;London&lt;/li&gt;</span><br><span class="line">        &lt;li id=<span class="string">&quot;three&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;red&quot;</span>&gt;Newyork&lt;/li&gt;</span><br><span class="line">        &lt;li id=<span class="string">&quot;four&quot;</span>&gt;Tokyo&lt;/li&gt;</span><br><span class="line">      &lt;/ul&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>DOM tree<br><img src="/images/dom-tree.png" alt="DOM tree"></p>
+</li>
+<li><p>DOM에서 모든 요소, 어트리뷰트, 텍스트는 하나의 객체이며 Document 객체의 자식이다.</p>
+</li>
+<li><p>DOM tree의 4가지 노드</p>
+<ul>
+<li><p><code>문서 노드(Document Node)</code> : 트리의 최상위에 존재하며 각각 요소, 어트리뷰트, 텍스트 노드에 접근하려면 문서 노드를 통해야 한다. 즉 DOM tree에 접근하기 위한 <code>시작점(entry point)</code>이다.</p>
+</li>
+<li><p><code>요소 노드(Element Node)</code> : 요소 노드는 <code>HTML</code> 요소를 표현한다. HTML 요소는 중첩에 의해 <code>부자 관계를 가지며</code> 이 부자 관계를 통해 정보를 구조화한다. 따라서 <code>요소 노드는 문서의 구조를 서술한다</code>고 말 할 수 있다. 어트리뷰트, 텍스트 노드에 접근하려면 먼저 요소 노드를 찾아 접근해야 한다. 모든 요소 노드는 요소별 특성을 표현하기 위해 HTMLElement 객체를 상속한 객체로 구성된다. (그림: DOM tree의 세부 구성 참고)</p>
+</li>
+<li><p><code>어트리뷰트 노드(Attribute Node)</code> : 어트리뷰트 노드는 HTML 요소의 어트리뷰트를 표현한다. 어트리뷰트 노드는 해당 어트리뷰트가 지정된 요소의 자식이 아니라 해당 요소의 일부로 표현된다. 따라서 해당 요소 노드를 찾아 접근하면 어트리뷰트를 참조, 수정할 수 있다.</p>
+</li>
+<li><p><code>텍스트 노드(Text Node)</code> : 텍스트 노드는 HTML 요소의 텍스트를 표현한다. 텍스트 노드는 요소 노드의 자식이며 자신의 자식 노드를 가질 수 없다. 즉 <code>텍스트 노드는 DOM tree의 최종단이다.</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>모든 요소는 attribute, text가 올 수 도있고 안올 수 도있다. DOM tree에서 요소노드와 어트리뷰트노드는 형제이며 텍스트노드는 자식이다.</p>
+</blockquote>
+<ul>
+<li><p>DOM tree의 객체 구성<br><img src="/images/HTMLElement.png" alt="DOM tree의 객체 구성"></p>
+</li>
+<li><p>DOM을 통해 웹페이지를 조작(manipulate)하기 위해서는 다음과 같은 수순이 필요하다.</p>
+<ul>
+<li>조작하고자하는 요소를 선택 또는 탐색한다.</li>
+<li>선택된 요소의 콘텐츠 또는 어트리뷰트를 조작한다.</li>
+</ul>
+</li>
+<li><p>JavaScript는 이것에 필요한 수단(API)을 제공한다.</p>
+</li>
+</ul>
+<h2 id="3-DOM-Query-Traversing-요소에의-접근"><a href="#3-DOM-Query-Traversing-요소에의-접근" class="headerlink" title="3. DOM Query / Traversing(요소에의 접근)"></a>3. DOM Query / Traversing(요소에의 접근)</h2><h3 id="3-1-하나의-요소-노드-선택-DOM-Query"><a href="#3-1-하나의-요소-노드-선택-DOM-Query" class="headerlink" title="3.1 하나의 요소 노드 선택(DOM Query)"></a>3.1 하나의 요소 노드 선택(DOM Query)</h3><ul>
+<li><code>document.getElementById(id)</code><ul>
+<li>요소의 id 어트리뷰트 값으로 해당 요소를 선택한다. 복수개가 선택된 경우, 첫번째 요소만 반환한다.</li>
+<li>Return: HTMLElement를 상속받은 객체</li>
+<li>모든 브라우저에서 동작</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// id로 하나의 요소를 선택한다.</span></span><br><span class="line"><span class="keyword">var</span> elem = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;one&#x27;</span>);</span><br><span class="line"><span class="comment">// 클래스 어트리뷰트의 값을 변경한다.</span></span><br><span class="line">elem.className = <span class="string">&#x27;blue&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 그림: DOM tree의 세부 구성 참고</span></span><br><span class="line"><span class="built_in">console</span>.log(elem.__proto__);           <span class="comment">// HTMLLIElement</span></span><br><span class="line"><span class="built_in">console</span>.log(elem.__proto__.__proto__); <span class="comment">// HTMLElement</span></span><br><span class="line"><span class="built_in">console</span>.log(elem.__proto__.__proto__.__proto__);           <span class="comment">// Element</span></span><br><span class="line"><span class="built_in">console</span>.log(elem.__proto__.__proto__.__proto__.__proto__); <span class="comment">// Node</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>onfocus focus가 들어가면 지정한 함수를 한다.</p>
+</blockquote>
+<ul>
+<li><code>document.querySelector(cssSelector)</code><ul>
+<li>CSS 셀렉터를 이용해 요소를 선택한다. 복수개가 선택된 경우, 첫번째 요소만 반환한다.</li>
+<li>Return: HTMLElement를 상속받은 객체</li>
+<li>IE8 이상의 브라우저에서 동작</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// CSS 셀렉터를 이용해 요소를 선택한다</span></span><br><span class="line"><span class="keyword">var</span> elem = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;li.red&#x27;</span>);</span><br><span class="line"><span class="comment">// 클래스 어트리뷰트의 값을 변경한다.</span></span><br><span class="line">elem.className = <span class="string">&#x27;blue&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-여러개의-요소-노드-선택-DOM-Query"><a href="#3-2-여러개의-요소-노드-선택-DOM-Query" class="headerlink" title="3.2 여러개의 요소 노드 선택(DOM Query)"></a>3.2 여러개의 요소 노드 선택(DOM Query)</h3><ul>
+<li><code>document.getElementsByClassName(class)</code><ul>
+<li>지정된 class를 가지는 요소를 모두 선택한다. 공백으로 구분하여 여러개의 class를 지정할 수 있다.</li>
+<li>Return: HTMLCollection (live)</li>
+<li>IE9 이상의 브라우저에서 동작</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HTMLCollection을 반환한다.</span></span><br><span class="line"><span class="keyword">var</span> elems = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&#x27;red&#x27;</span>), i;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; elems.length; i++) &#123;</span><br><span class="line">  <span class="comment">// 클래스 어트리뷰트의 값을 변경한다.</span></span><br><span class="line">  elems[i].className = <span class="string">&#x27;blue&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>위 예제를 실행해 보면 예상대로 동작하지 않는다. (두번째 요소만 클래스 변경이 되지 않는다.)</p>
+</li>
+<li><p>getElementsByClassName 메소드의 반환값은 <code>HTMLCollection</code>이다. 이것은 반환값이 복수인 경우, HTMLElement의 리스트를 담아 반환하기 위한 객체로 배열과 비슷한 사용법을 가지고 있지만 배열은 아닌 <code>유사배열(array-like object)</code>이다. </p>
+</li>
+<li><p>HTMLCollection은 <code>실시간으로 Node의 상태 변경을 반영한다. (live HTMLCollection)</code></p>
+</li>
+<li><p>위 예제가 예상대로 동작하지 않은 이유를 알아보자.</p>
+<ul>
+<li><p>1.i가 0일때, elems의 첫 요소(li#one.red)의 class 어트리뷰트 값이 className 프로퍼티에 의해 red에서 blue로 변경된다. 이때 첫째 요소는 class명이 변경됨으로 제외된다.(실시간으로 Node의 상태 변경을 반영한다.)</p>
+</li>
+<li><p>2.i가 1일때, elems에서 첫째 요소는 제거되었으므로 elems[1]은 3번째 요소(li#three.red)가 된다. li#three.red의 class 어트리뷰트 값이 blue로 변경되고 마찬가지로 HTMLCollection에서 제외된다.</p>
+</li>
+<li><p>3.i가 2일때, HTMLCOllection의 1,3번째 요소가 실시간으로 제거되었으므로 2번째 요소(li#two.red)만 남았다. elems[2]는 undefined이다.</p>
+</li>
+</ul>
+</li>
+<li><p>해결책1. 반복문을 역방향으로 돌린다.</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> elems = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&#x27;red&#x27;</span>), i;</span><br><span class="line"><span class="keyword">for</span> (i = elems.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">  elems[i].className = <span class="string">&#x27;blue&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>해결책2. while 반복문을 사용한다. 이때 elems에 요소가 남아 있지 않을 때까지 무한반복하기 위해 index는 0으로 고정시킨다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> elems = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&#x27;red&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (elems.length &gt; i) &#123; <span class="comment">// elems에 요소가 남아 있지 않을 때까지 무한반복</span></span><br><span class="line">  elems[i].className = <span class="string">&#x27;blue&#x27;</span>;</span><br><span class="line">  <span class="comment">// i++;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>해결책3. <code>HTMLCollection을 배열로 변경한다.</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> elems = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&#x27;red&#x27;</span>), i;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 유사배열을 배열로 변환</span></span><br><span class="line"><span class="keyword">var</span> arr = [].slice.call(elems);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(arr); </span><br><span class="line"><span class="comment">// [li#one.red, li#two.red, li#three.red]</span></span><br><span class="line"><span class="comment">// 각 요소는 HTMLLIElement</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; arr.length &gt; <span class="number">0</span>; i++) &#123;</span><br><span class="line">  arr[i].className = <span class="string">&#x27;blue&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>해결책4. querySelectorAll 메소드를 사용하여 non-live NodeList를 반환하게 한다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Nodelist(non-live)를 반환한다. IE8+</span></span><br><span class="line"><span class="keyword">var</span> elems = <span class="built_in">document</span>.querySelectorAll(<span class="string">&#x27;.red&#x27;</span>), i;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; elems.length; i++) &#123;</span><br><span class="line">  elems[i].className = <span class="string">&#x27;blue&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>해결책5. document.getElementsByTagName(tagName)<ul>
+<li>지정된 태그명을 가지는 요소를 모두 선택한다.</li>
+<li>Return: HTMLCollection (live)</li>
+<li>모든 브라우저에서 동작</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HTMLCollection을 반환한다.</span></span><br><span class="line"><span class="keyword">var</span> elems = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;li&#x27;</span>), i;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; elems.length; i++) &#123;</span><br><span class="line">  elems[i].className = <span class="string">&#x27;blue&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Q. getElementByTagName도 live이면 유사배열 아닌가요?? 에러가나야하지 않나요?<br>A. Tag가 변경될일이 없기때문에 에러가나지 않는다.</p>
+</blockquote>
+<ul>
+<li><code>document.querySelectorAll(selector)</code><ul>
+<li>지정된 CSS 선택자와 일치하는 요소를 모두 선택한다.</li>
+<li>Return: NodeList (non-live)</li>
+<li>IE8 이상의 브라우저에서 동작</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Nodelist를 반환한다.</span></span><br><span class="line"><span class="keyword">var</span> elems = <span class="built_in">document</span>.querySelectorAll(<span class="string">&#x27;li.red&#x27;</span>), i;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; elems.length; i++) &#123;</span><br><span class="line">  elems[i].className = <span class="string">&#x27;blue&#x27;</span>; <span class="comment">// color는 상속이되니 li도 blue를 가진다.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3-DOM-Traversing-탐색"><a href="#3-3-DOM-Traversing-탐색" class="headerlink" title="3.3 DOM Traversing(탐색)"></a>3.3 DOM Traversing(탐색)</h3><p><img src="/images/traversing.png" alt="탐색"></p>
+<ul>
+<li><code>parentNode</code><ul>
+<li>부모 요소를 탐색한다.</li>
+<li>Return: HTMLElement를 상속받은 객체</li>
+<li>모든 브라우저에서 동작</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> elem = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;two&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> parentNode = elem.parentNode;</span><br><span class="line">parentNode.className = <span class="string">&#x27;blue&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>firstChild, lastChild</code><ul>
+<li>자식 요소를 탐색한다.</li>
+<li>Return: HTMLElement를 상속받은 객체</li>
+<li>IE9 이상의 브라우저에서 동작</li>
+<li>권장하지 않는다. <code>공백이나 줄바꿈 문자를 텍스트 노드로 취급하기 때문이다.</code></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> elem = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;ul&#x27;</span>)[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// first Child</span></span><br><span class="line">elem.firstChild.className = <span class="string">&#x27;blue&#x27;</span>;</span><br><span class="line"><span class="comment">// last Child</span></span><br><span class="line">elem.lastChild.className = <span class="string">&#x27;blue&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>위 예제를 실행해 보면 예상대로 동작하지 않는다. 그 이유는 IE를 제외한 대부분의 브라우저들은 요소 사이의 공백 또는 줄바꿈 문자를 텍스트 노드로 취급하기 때문이다. 이것을 회피하기 위해서는 HTML에 공백을 제거하거나 <code>jQuery: .prev</code>()와 <code>jQuery: .next()</code>를 사용한다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;<span class="xml">&lt;li</span></span><br><span class="line"><span class="xml">  id=&#x27;one&#x27; class=&#x27;red&#x27;&gt;Seoul<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><span class="xml">&lt;li</span></span><br><span class="line"><span class="xml">  id=&#x27;two&#x27; class=&#x27;red&#x27;&gt;London<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><span class="xml">&lt;li</span></span><br><span class="line"><span class="xml">  id=&#x27;three&#x27; class=&#x27;red&#x27;&gt;Newyork<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><span class="xml">&lt;li</span></span><br><span class="line"><span class="xml">  id=&#x27;four&#x27;&gt;Tokyo<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span>&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>hasChildNodes()</code></p>
+<ul>
+<li>자식 노드가 있는지 확인하고 Boolean 값을 반환한다.</li>
+<li>Return: Boolean 값</li>
+<li>모든 브라우저에서 동작</li>
+</ul>
+</li>
+<li><p><code>childNodes</code></p>
+<ul>
+<li>자식 노드의 컬렉션을 반환한다.</li>
+<li>Return: NodeList (non-live)</li>
+<li>모든 브라우저에서 동작</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> elem = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;ul&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(elem); <span class="comment">// ul</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (elem.hasChildNodes()) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(elem.childNodes);</span><br><span class="line">  <span class="comment">// [text, li#one.red, text, li#two.red, text, li#three.red, text, li#four, text] text는 공백을 나타낸다.</span></span><br><span class="line">  elem.childNodes[<span class="number">1</span>].className = <span class="string">&#x27;blue&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>previousSibling, nextSibling</code><ul>
+<li>형제 요소를 탐색한다.</li>
+<li>Return: HTMLElement를 상속받은 객체</li>
+<li>IE9 이상의 브라우저에서 동작</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> elem = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;ul&#x27;</span>)[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// first Child</span></span><br><span class="line">elem.firstChild.className = <span class="string">&#x27;blue&#x27;</span>;</span><br><span class="line"><span class="comment">// 2nd Child</span></span><br><span class="line">elem.firstChild.nextSibling.className = <span class="string">&#x27;blue&#x27;</span>;</span><br><span class="line"><span class="comment">// 3rd Child</span></span><br><span class="line">elem.lastChild.previousSibling.className = <span class="string">&#x27;blue&#x27;</span>;</span><br><span class="line"><span class="comment">// last Child</span></span><br><span class="line">elem.lastChild.className = <span class="string">&#x27;blue&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="4-DOM-Manipulation-조작"><a href="#4-DOM-Manipulation-조작" class="headerlink" title="4. DOM Manipulation (조작)"></a>4. DOM Manipulation (조작)</h2><h3 id="4-1-텍스트-노드에의-접근-수정"><a href="#4-1-텍스트-노드에의-접근-수정" class="headerlink" title="4.1 텍스트 노드에의 접근/수정"></a>4.1 텍스트 노드에의 접근/수정</h3><ul>
+<li><p>요소의 텍스트는 텍스트 노드에 저장되어 있다. 텍스트 노드에 접근하려면 아래와 같은 수순이 필요하다.</p>
+<ul>
+<li>1.해당 텍스트 노드의 부모 요소 노드를 선택한다. 텍스트 노드는 요소 노드의 자식이다.</li>
+<li>2.firstChild 프로퍼티를 사용하여 텍스트 노드를 탐색한다.</li>
+<li>3.텍스트 노드의 유일한 프로퍼티(<code>nodeValue</code>)를 이용하여 텍스트를 취득한다.</li>
+<li>4.<code>nodeValue</code>를 이용하여 텍스트를 수정한다.</li>
+</ul>
+</li>
+<li><p><code>nodeValue</code></p>
+<ul>
+<li>노드의 값을 반환한다.</li>
+<li>Return: 문자열</li>
+<li>IE6 이상의 브라우저에서 동작한다.</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 해당 텍스트 노드의 부모 요소 노드를 선택한다.</span></span><br><span class="line"><span class="keyword">var</span> one = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;one&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.dir(one); <span class="comment">// HTMLLIElement: li#one.red</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// firstChild 프로퍼티를 사용하여 텍스트 노드를 탐색한다.</span></span><br><span class="line"><span class="keyword">var</span> textNode = one.firstChild;</span><br><span class="line"></span><br><span class="line"><span class="comment">// nodeValue 프로퍼티를 사용하여 노드의 값을 취득한다.</span></span><br><span class="line"><span class="built_in">console</span>.log(textNode.nodeValue); <span class="comment">// Seoul</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// nodeValue 프로퍼티를 이용하여 텍스트를 수정한다.</span></span><br><span class="line">textNode.nodeValue = <span class="string">&#x27;Pusan&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>nodeName, nodeType을 통해 노드의 정보를 취득할 수 있다.</li>
+</ul>
+<h3 id="4-2-어트리뷰트-노드에의-접근-수정"><a href="#4-2-어트리뷰트-노드에의-접근-수정" class="headerlink" title="4.2 어트리뷰트 노드에의 접근/수정"></a>4.2 어트리뷰트 노드에의 접근/수정</h3><ul>
+<li><code>className</code><ul>
+<li><code>class 어트리뷰트의 값을 취득 또는 변경한다</code>. class 어트리뷰트가 존재하지 않으면 class 어트리뷰트를 생성하고 지정된 값을 설정한다. class 어트리뷰트의 값이 여러개일 경우, 공백으로 구분된 문자열이 반환되므로 String 메소드 <code>split(&#39; &#39;)</code>를 사용하여 배열로 변경하여 사용한다.</li>
+<li>모든 브라우저에서 동작한다.</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> elems = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;li&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = elems.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">  <span class="comment">// class 어트리뷰트의 값을 취득하여 확인</span></span><br><span class="line">  <span class="keyword">if</span> (elems[i].className === <span class="string">&#x27;red&#x27;</span>) &#123;</span><br><span class="line">    <span class="comment">// class 어트리뷰트의 값을 변경한다.</span></span><br><span class="line">    elems[i].className = <span class="string">&#x27;blue&#x27;</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// class 어트리뷰트의 값을 변경한다.</span></span><br><span class="line">    elems[i].className = <span class="string">&#x27;red&#x27;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>id</code><ul>
+<li>id 어트리뷰트의 값을 취득 또는 변경한다. id 어트리뷰트가 존재하지 않으면 id 어트리뷰트를 생성하고 지정된 값을 설정한다.</li>
+<li>모든 브라우저에서 동작한다.</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// h1 태그 요소 중 첫번째 요소를 취득</span></span><br><span class="line"><span class="keyword">var</span> heading = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;h1&#x27;</span>)[<span class="number">0</span>];</span><br><span class="line"><span class="built_in">console</span>.dir(heading); <span class="comment">// HTMLHeadingElement: h1</span></span><br><span class="line"><span class="built_in">console</span>.log(heading.firstChild.nodeValue); <span class="comment">// Cities</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// id 어트리뷰트의 값을 변경</span></span><br><span class="line">heading.id = <span class="string">&#x27;heading&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(heading.id); <span class="comment">// heading</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><code>hasAttribute()</code></p>
+<ul>
+<li>지정한 어트리뷰트를 가지고 있는지 검사한다.</li>
+<li>Return : Boolean</li>
+<li>IE8 이상의 브라우저에서 동작한다.</li>
+</ul>
+</li>
+<li><p><code>getAttribute()</code></p>
+<ul>
+<li>어트리뷰트의 값을 취득한다.</li>
+<li>Return : 문자열</li>
+<li>모든 브라우저에서 동작한다.</li>
+</ul>
+</li>
+<li><p><code>setAttribute()</code></p>
+<ul>
+<li>어트리뷰트와 어트리뷰트의 값을 설정한다.</li>
+<li>Return : undefined</li>
+<li>모든 브라우저에서 동작한다.</li>
+</ul>
+</li>
+<li><p><code>removeAttribute()</code></p>
+<ul>
+<li>지정한 어트리뷰트를 제거한다.</li>
+<li>Return : undefined</li>
+<li>모든 브라우저에서 동작한다.</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> four = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;four&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// four에 class 어트리뷰트가 존재하지 않으면</span></span><br><span class="line"><span class="keyword">if</span> (!four.hasAttribute(<span class="string">&#x27;class&#x27;</span>)) &#123;</span><br><span class="line">  <span class="comment">// four에 name 어트리뷰트를 추가하고 값으로 &#x27;user&#x27;를 설정</span></span><br><span class="line">  four.setAttribute(<span class="string">&#x27;class&#x27;</span>, <span class="string">&#x27;blue&#x27;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123; <span class="comment">// four에 class 어트리뷰트가 존재하면</span></span><br><span class="line">  four.className = <span class="string">&#x27;blue&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// four에 lang 어트리뷰트의 값을 취득</span></span><br><span class="line"><span class="built_in">console</span>.log(four.getAttribute(<span class="string">&#x27;class&#x27;</span>)); <span class="comment">// blue</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// four에서 name 어트리뷰트를 제거</span></span><br><span class="line">four.removeAttribute(<span class="string">&#x27;class&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// inputUser에서 name 어트리뷰트의 존재를 확인</span></span><br><span class="line"><span class="built_in">console</span>.log(four.hasAttribute(<span class="string">&#x27;class&#x27;</span>)); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="4-3-HTML-콘텐츠-조작-Manipulation"><a href="#4-3-HTML-콘텐츠-조작-Manipulation" class="headerlink" title="4.3 HTML 콘텐츠 조작(Manipulation)"></a>4.3 HTML 콘텐츠 조작(Manipulation)</h3><ul>
+<li><p>HTML 콘텐츠를 조작(Manipulation)하기 위해 아래의 프로퍼티 또는 메소드를 사용할 수 있다. </p>
+</li>
+<li><p>마크업이 포함된 콘텐츠를 추가하는 행위는 <code>크로스 스크립팅 공격(XSS: Cross-Site Scripting Attacks)</code>에 취약하므로 주의가 필요하다.</p>
+</li>
+<li><p>content가 문자열로 이루어져있을때만 사용한다.</p>
+</li>
+<li><p><code>textContent</code></p>
+<ul>
+<li>요소의 텍스트 콘텐츠를 취득 또는 변경한다. 이때 마크업은 무시된다. textContent를 통해 요소에 새로운 텍스트를 할당하면 텍스트를 변경할 수 있다. 이때 <code>순수한 텍스트만 지정해야 하며 마크업을 포함시키면 문자열로 인식되어 그대로 출력된다.</code></li>
+<li>IE9 이상의 브라우저에서 동작한다.</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ul = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;ul&#x27;</span>)[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 요소의 텍스트 취득</span></span><br><span class="line"><span class="built_in">console</span>.log(ul.textContent);</span><br><span class="line"><span class="comment">// IE를 제외한 대부분의 브라우저들은 요소 사이의 공백 또는 줄바꿈 문자를 텍스트 노드로 취급한다</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">        Seoul</span></span><br><span class="line"><span class="comment">        London</span></span><br><span class="line"><span class="comment">        Newyork</span></span><br><span class="line"><span class="comment">        Tokyo</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> one = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;one&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 요소의 텍스트 취득</span></span><br><span class="line"><span class="built_in">console</span>.log(one.textContent); <span class="comment">// Seoul</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 요소의 텍스트 변경</span></span><br><span class="line">one.textContent += <span class="string">&#x27;, Korea&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(one.textContent); <span class="comment">// Seoul, Korea</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 요소의 마크업이 포함된 콘텐츠 변경.</span></span><br><span class="line">one.textContent = <span class="string">&#x27;&lt;h1&gt;Heading&lt;/h1&gt;&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 마크업이 문자열로 표시된다.</span></span><br><span class="line"><span class="built_in">console</span>.log(one.textContent); <span class="comment">// &lt;h1&gt;Heading&lt;/h1&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>innerText</code><ul>
+<li>innerText 프로퍼티를 사용하여도 요소의 텍스트 콘텐츠에만 접근할 수 있다. 하지만 아래의 이유로 사용하지 않는 것이 좋다.<ul>
+<li>비표준이다.</li>
+<li>CSS에 순종적이다. 예를 들어 CSS에 의해 비표시(visibility: hidden;)로 지정되어 있다면 텍스트가 반환되지 않는다.</li>
+<li>CSS를 고려해야 하므로 textContent 프로퍼티보다 느리다</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>innerHTML</code><ul>
+<li>innerHTML 프로퍼티를 사용하면 해당 요소의 모든 자식 요소를 포함하는 <code>모든 콘텐츠를 하나의 문자열로 취득할 수 있다. 이 문자열은 마크업을 포함한다.</code></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ul = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;ul&#x27;</span>)[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// innerHTML 프로퍼티는 모든 자식 요소를 포함하는 모든 콘텐츠를 하나의 문자열로 취득할 수 있다. 이 문자열은 마크업을 포함한다.</span></span><br><span class="line"><span class="built_in">console</span>.log(ul.innerHTML);</span><br><span class="line"><span class="comment">// IE를 제외한 대부분의 브라우저들은 요소 사이의 공백 또는 줄바꿈 문자를 텍스트 노드로 취급한다</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">        &lt;li id=&quot;one&quot; class=&quot;red&quot;&gt;Seoul&lt;/li&gt;</span></span><br><span class="line"><span class="comment">        &lt;li id=&quot;two&quot; class=&quot;red&quot;&gt;London&lt;/li&gt;</span></span><br><span class="line"><span class="comment">        &lt;li id=&quot;three&quot; class=&quot;red&quot;&gt;Newyork&lt;/li&gt;</span></span><br><span class="line"><span class="comment">        &lt;li id=&quot;four&quot;&gt;Tokyo&lt;/li&gt;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>innerHTML 프로퍼티를 사용하여 마크업이 포함된 새로운 콘텐츠를 지정하면 새로운 요소를 DOM에 추가할 수 있다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> one = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;one&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 마크업이 포함된 콘텐츠 취득</span></span><br><span class="line"><span class="built_in">console</span>.log(one.innerHTML); <span class="comment">// Seoul</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 마크업이 포함된 콘텐츠 변경</span></span><br><span class="line">one.innerHTML += <span class="string">&#x27;&lt;em class=&quot;blue&quot;&gt;, Korea&lt;/em&gt;&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 마크업이 포함된 콘텐츠 취득</span></span><br><span class="line"><span class="built_in">console</span>.log(one.innerHTML); <span class="comment">// Seoul &lt;em class=&quot;blue&quot;&gt;, Korea&lt;/em&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>위와 같이 마크업이 포함된 콘텐츠를 추가하는 것은 <code>크로스 스크립팅 공격(XSS: Cross-Site Scripting Attacks)에 취약</code>하다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 크로스 스크립팅 공격 사례</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 스크립트 태그를 추가하여 자바스크립트가 실행되도록 한다.</span></span><br><span class="line"><span class="comment">// HTML5에서 innserHTML로 삽입된 &lt;script&gt; 코드는 실행되지 않는다.</span></span><br><span class="line"><span class="comment">// 크롬, 파이어폭스 등의 브라우저나 최신 브라우저 환경에서는 작동하지 않을 수도 있다.</span></span><br><span class="line">elem.innerHTML = <span class="string">&#x27;&lt;script&gt;alert(&quot;XSS!&quot;)&lt;/script&gt;&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 에러 이벤트를 발생시켜 스크립트가 실행되도록 한다.</span></span><br><span class="line">one.innerHTML = <span class="string">&#x27;&lt;img src=&quot;#&quot; onerror=&quot;alert(&#x27;</span>XSS<span class="string">&#x27;)&quot;&gt;&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-4-DOM-조작-방식"><a href="#4-4-DOM-조작-방식" class="headerlink" title="4.4 DOM 조작 방식"></a>4.4 DOM 조작 방식</h3><ul>
+<li><p>innerHTML 프로퍼티를 사용하지 않고 새로운 콘텐츠를 추가할 수 있는 방법은 DOM을 직접 조작하는 것이다. 한개의 요소를 추가하는 경우 사용한다. 이 방법은 다음의 수순에 따라 진행한다.</p>
+<ul>
+<li>1.요소 노드 생성<br>createElement() 메소드를 사용하여 새로운 요소 노드를 생성한다. createElement() 메소드의 인자으로 태그 이름을 전달한다.</li>
+<li>2.텍스트 노드 생성<br>createTextNode() 메소드를 사용하여 새로운 텍스트 노드를 생성한다. 경우에 따라 생략될 수 있지만 생략하는 경우, 콘텐츠가 비어 있는 요소가 된다.</li>
+<li>3.생성된 요소를 DOM에 추가<br>appendChild() 메소드를 사용하여 생성된 노드를 DOM tree에 추가한다. 또는 removeChild() 네서드를 사용하여 DOM tree에서 노드를 삭제할 수도 있다.</li>
+</ul>
+</li>
+<li><p><code>createElement(tagName)</code></p>
+<ul>
+<li>태그이름을 인자로 전달하여 요소를 생성한다.</li>
+<li>Return: HTMLElement를 상속받은 객체</li>
+<li>모든 브라우저에서 동작한다.</li>
+</ul>
+</li>
+<li><p><code>createTextNode(text)</code></p>
+<ul>
+<li>텍스트를 인자로 전달하여 텍스트 노드를 생성한다.</li>
+<li>Return: Text 객체</li>
+<li>모든 브라우저에서 동작한다.</li>
+</ul>
+</li>
+<li><p><code>appendChild(Node)</code></p>
+<ul>
+<li>인자로 전달한 노드를 자식 요소로 DOM 트리에 추가한다.</li>
+<li>Return: 추가한 노드</li>
+<li>모든 브라우저에서 동작한다.</li>
+</ul>
+</li>
+<li><p><code>removeChild(Node)</code></p>
+<ul>
+<li>인자로 전달한 노드를 DOM 트리에 제거한다.</li>
+<li>Return: 추가한 노드</li>
+<li>모든 브라우저에서 동작한다.</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 태그이름을 인자로 전달하여 요소를 생성</span></span><br><span class="line"><span class="keyword">var</span> newElem = <span class="built_in">document</span>.createElement(<span class="string">&#x27;li&#x27;</span>);</span><br><span class="line"><span class="comment">// var newElem = document.createElement(&#x27;&lt;li&gt;test&lt;/li&gt;&#x27;);</span></span><br><span class="line"><span class="comment">// Uncaught DOMException: Failed to execute &#x27;createElement&#x27; on &#x27;Document&#x27;: The tag name provided (&#x27;&lt;li&gt;test&lt;/li&gt;&#x27;) is not a valid name.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 텍스트 노드를 생성</span></span><br><span class="line"><span class="keyword">var</span> newText = <span class="built_in">document</span>.createTextNode(<span class="string">&#x27;Beijing&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 텍스트 노드를 newElem 자식으로 DOM 트리에 추가</span></span><br><span class="line">newElem.appendChild(newText);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> container = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;ul&#x27;</span>)[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// newElem을 container의 자식으로 DOM 트리에 추가</span></span><br><span class="line">container.appendChild(newElem);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> removeElem = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;one&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// container의 자식인 removeElem 요소를 DOM 트리에 제거한다.</span></span><br><span class="line">container.removeChild(removeElem);</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-5-insertAdjacentHTML"><a href="#4-5-insertAdjacentHTML" class="headerlink" title="4.5 insertAdjacentHTML()"></a>4.5 insertAdjacentHTML()</h3><ul>
+<li><code>insertAdjacentHTML()</code><ul>
+<li>인자로 전달한 텍스트를 HTML로 파싱하고 그 결과로 생성된 노드를 DOM 트리의 지정된 위치에 삽입한다. 첫번째 인자는 삽입 위치, 두번째 인자는 삽입할 요소를 표현한 문자열이다. 첫번째 인자로 올 수 있는 값은 아래와 같다.<ul>
+<li>‘beforebegin’</li>
+<li>‘afterbegin’</li>
+<li>‘beforeend’</li>
+<li>‘afterend’</li>
+</ul>
+</li>
+<li>모든 브라우저에서 동작한다.</li>
+</ul>
+<img src="/images/insertAdjacentHTML-position.png" alt="insertAdjacentHTML 메소드의 position 파라미터"></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> one = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;one&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 마크업이 포함된 요소 추가</span></span><br><span class="line">one.insertAdjacentHTML(<span class="string">&#x27;beforeend&#x27;</span>, <span class="string">&#x27;&lt;em class=&quot;blue&quot;&gt;, Korea&lt;/em&gt;&#x27;</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-6-innerHTML-vs-DOM-조작-방식-vs-insertAdjacentHTML"><a href="#4-6-innerHTML-vs-DOM-조작-방식-vs-insertAdjacentHTML" class="headerlink" title="4.6 innerHTML vs. DOM 조작 방식 vs. insertAdjacentHTML()"></a>4.6 innerHTML vs. DOM 조작 방식 vs. insertAdjacentHTML()</h3><ul>
+<li><p><code>innerHTML</code></p>
+<ul>
+<li>장점 <ul>
+<li>DOM 조작 방식에 비해 빠르고 간편하다. </li>
+<li>간편하게 문자열로 정의 여러 요소를 DOM에 추가할 수 있다. 해당 요소의 내용을 덮어 쓴다. 즉 HTML을 로드하고 다시 파싱한다. 이것은 비효율적이다.</li>
+<li>콘텐츠를 취득할 수 있다.</li>
+</ul>
+</li>
+<li>단점<ul>
+<li>XSS공격에 취약점이 있기 때문에 사용자로 부터 입력받은 콘텐츠(untrusted data: 댓글, 사용자 이름등)를 추가할 때 사용해서는 않된다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>DOM 조작 방식</code></p>
+<ul>
+<li>장점 <ul>
+<li>특정 노드 한개(노드, 텍스트, 데이터 등)를 DOM에 추가할 때 적합하다.</li>
+</ul>
+</li>
+<li>단점<ul>
+<li>innerHTML보다 느리고 더 많은 코드가 필요하다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>insertAdjacentHTML()</code></p>
+<ul>
+<li>장점 <ul>
+<li>간편하게 문자열로 정의된 여러 요소를 DOM에 추가할 수 있다.</li>
+<li>삽입되는 위치를 선정할 수 있다.</li>
+</ul>
+</li>
+<li>단점<ul>
+<li>XSS공격에 취약점이 있기 때문에 사용자로 부터 입력받은 콘텐츠(untrusted data: 댓글, 사용자 이름등)를 추가할 때 사용해서는 않된다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>결론</code></p>
+<ul>
+<li>innerHTML과 insertAdjacentHTML()은 크로스 스크립팅 공격(XSS: Cross-Site Scripting Attacks)에 취약하다. 따라서 <code>untrusted data의 경우, 주의하여야 한다. 텍스트를 추가 또는 변경시에는 textContent</code>, <code>새로운 요소의 추가 또는 삭제시에는 DOM 조작 방식을 사용하도록 한다.</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="5-style"><a href="#5-style" class="headerlink" title="5. style"></a>5. style</h2><ul>
+<li>style 프로퍼티를 사용하면 inline 스타일 선언을 생성한다. 특정 요소에 inline 스타일을 지정하는 경우 사용한다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> four = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;four&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// inline 스타일 선언을 생성</span></span><br><span class="line">four.style.color = <span class="string">&#x27;blue&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// font-size와 같이 &#x27;-&#x27;으로 구분되는 프로퍼티는 카멜케이스로 변환하여 사용한다.</span></span><br><span class="line">four.style.fontSize = <span class="string">&#x27;2em&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2017/08/14/js-study-dom/" data-id="cklxjx00u00udcy6ffe1q8pt0" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/tpwns1088@gmail.com" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/KimSejune" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2017/08/14/js-study-restapi/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            JavaScript RestAPI
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2017/08/14/js-study-event/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">JavaScript Event</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2020/02/02/es-study-term-match/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/elasticsearch.png)" alt="ElasticSearch Term vs Match" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/ElasticSearch/">ElasticSearch</a></p>
+                            <p class="item-title"><a href="/2020/02/02/es-study-term-match/" class="title">ElasticSearch Term vs Match</a></p>
+                            <p class="item-date"><time datetime="2020-02-02T10:11:00.000Z" itemprop="datePublished">2020-02-02</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2020/02/01/es-study-info/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/elasticsearch.png)" alt="ElasticSearch Default Information" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/ElasticSearch/">ElasticSearch</a></p>
+                            <p class="item-title"><a href="/2020/02/01/es-study-info/" class="title">ElasticSearch Default Information</a></p>
+                            <p class="item-date"><time datetime="2020-02-01T07:13:00.000Z" itemprop="datePublished">2020-02-01</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/02/27/ts-connect-sequelize/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/tsdir.png)" alt="TypeScript Connect Sequelize" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Typescript/">Typescript</a></p>
+                            <p class="item-title"><a href="/2019/02/27/ts-connect-sequelize/" class="title">TypeScript Connect Sequelize</a></p>
+                            <p class="item-date"><time datetime="2019-02-27T01:54:00.000Z" itemprop="datePublished">2019-02-27</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/12/02/node-tdd/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/nodejs.png)" alt="Node TDD 도구" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a></p>
+                            <p class="item-title"><a href="/2018/12/02/node-tdd/" class="title">Node TDD 도구</a></p>
+                            <p class="item-date"><time datetime="2018-12-02T05:54:00.000Z" itemprop="datePublished">2018-12-02</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/11/22/graphql-study-inRestAPI/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/graphql.png)" alt="GraphQL을 통하여 Rest API를 감싸보자." class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/GraphQL/">GraphQL</a></p>
+                            <p class="item-title"><a href="/2018/11/22/graphql-study-inRestAPI/" class="title">GraphQL을 통하여 Rest API를 감싸보자.</a></p>
+                            <p class="item-date"><time datetime="2018-11-22T05:28:00.000Z" itemprop="datePublished">2018-11-22</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/level1/">level1</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/level2/">level2</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Conference/">Conference</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Conference/PlayNode/">PlayNode</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Conference/TypeScript/">TypeScript</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Project/">Project</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Project/ReadMe/">ReadMe</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Project/redis/">redis</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/">TIL</a><span class="category-list-count">100</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/AWS/">AWS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/CSS/">CSS</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/CSS/Core/">Core</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/CSS/Selector/">Selector</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/CSS/Syntax/">Syntax</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/DataBase/">DataBase</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/DataBase/Syntax/">Syntax</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/">ES6</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Arrow/">Arrow</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Class/">Class</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Data-Structure/">Data Structure</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Destructuring/">Destructuring</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Enhanced-Object-Property/">Enhanced Object Property</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Extended-Parameter-Handling/">Extended Parameter Handling</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Module/">Module</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Promise/">Promise</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Template-Literals/">Template Literals</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/let-const/">let & const</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ElasticSearch/">ElasticSearch</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Git/">Git</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Git/%EB%B0%B0%ED%8F%AC/">배포</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/GraphQL/">GraphQL</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JAVA/">JAVA</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/">JavaScript</a><span class="category-list-count">29</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Ajax/">Ajax</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Array/">Array</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Async/">Async</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Built-In-Object/">Built In Object</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Closure/">Closure</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Control-Flow/">Control Flow</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Data-Type/">Data-Type</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Date/">Date</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Dom/">Dom</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Event/">Event</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Excution-Context/">Excution-Context</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Function/">Function</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Immutability/">Immutability</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Introduction/">Introduction</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/LinkedList-Tree/">LinkedList Tree</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Math/">Math</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Number/">Number</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/OOP/">OOP</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Object/">Object</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Operator/">Operator</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Prototype/">Prototype</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Regexp/">Regexp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/RestAPI/">RestAPI</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Scope/">Scope</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/String/">String</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Syntax/">Syntax</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/This/">This</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/">Node.js</a><span class="category-list-count">34</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Ajax/">Ajax</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/CORS/">CORS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/CSRF/">CSRF</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Cookie/">Cookie</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/DataModeling/">DataModeling</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Database/">Database</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Elasticache/">Elasticache</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Express/">Express</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Express-Middlware/">Express-Middlware</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Fetch/">Fetch</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/GraphQL/">GraphQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Http/">Http</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/JWT/">JWT</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/OAuth/">OAuth</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Passport/">Passport</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Rest-API/">Rest-API</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/SPA/">SPA</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Service-Develop/">Service Develop</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Session/">Session</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/SocketIO/">SocketIO</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Template-Language/">Template Language</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Testablility/">Testablility</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Web-Form/">Web Form</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/http-cache/">http-cache</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/knex/">knex</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/kue/">kue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/mongoDB/">mongoDB</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/React/">React</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/React/Router/">Router</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/React/Syntax/">Syntax</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Spring/">Spring</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Spring/MVC/">MVC</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Spring/UTF-8/">UTF-8</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Swift/">Swift</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Typescript/">Typescript</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Typescript/Sequelize/">Sequelize</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/jQuery/">jQuery</a><span class="category-list-count">2</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">38</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">9</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2016%EB%85%84%EC%9D%98-%EC%9B%90%ED%95%98%EB%8A%94-%EC%9A%94%EC%9D%BC%EA%B5%AC%ED%95%98%EA%B8%B0/" rel="tag">2016년의 원하는 요일구하기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/" rel="tag">AWS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/" rel="tag">Algorithm</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Array/" rel="tag">Array</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arrow/" rel="tag">Arrow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Async/" rel="tag">Async</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Built-In-Object/" rel="tag">Built In Object</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CORS/" rel="tag">CORS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CRUD/" rel="tag">CRUD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSRF/" rel="tag">CSRF</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Class/" rel="tag">Class</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Closure/" rel="tag">Closure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Control-Flow/" rel="tag">Control Flow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cookie/" rel="tag">Cookie</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Structure/" rel="tag">Data Structure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Type/" rel="tag">Data-Type</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataModeling/" rel="tag">DataModeling</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/" rel="tag">Database</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Date/" rel="tag">Date</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Destructuring/" rel="tag">Destructuring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dom/" rel="tag">Dom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/" rel="tag">ES6</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Elasticache/" rel="tag">Elasticache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Enhanced-Object-Property/" rel="tag">Enhanced Object Property</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Event/" rel="tag">Event</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excution-Context/" rel="tag">Excution-Context</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/" rel="tag">Express</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Extended-Parameter-Handling/" rel="tag">Extended Parameter Handling</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fetch/" rel="tag">Fetch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fibonacci/" rel="tag">Fibonacci</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Function/" rel="tag">Function</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GraphQL/" rel="tag">GraphQL</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/" rel="tag">Http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Immutability/" rel="tag">Immutability</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Introduction/" rel="tag">Introduction</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JWT/" rel="tag">JWT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">42</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Knex/" rel="tag">Knex</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LayoutGuide/" rel="tag">LayoutGuide</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LinkedList/" rel="tag">LinkedList</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Middleware/" rel="tag">Middleware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Module/" rel="tag">Module</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mybatis/" rel="tag">Mybatis</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a><span class="tag-list-count">37</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Number/" rel="tag">Number</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OAuth/" rel="tag">OAuth</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OOP/" rel="tag">OOP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Object/" rel="tag">Object</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Operator/" rel="tag">Operator</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Passport/" rel="tag">Passport</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PlayNode/" rel="tag">PlayNode</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Promise/" rel="tag">Promise</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Prototype/" rel="tag">Prototype</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Regexp/" rel="tag">Regexp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RestAPI/" rel="tag">RestAPI</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Router/" rel="tag">Router</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SPA/" rel="tag">SPA</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scope/" rel="tag">Scope</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Selector/" rel="tag">Selector</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sequelize/" rel="tag">Sequelize</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Service-Develop/" rel="tag">Service Develop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Session/" rel="tag">Session</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SocketIO/" rel="tag">SocketIO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/" rel="tag">Spring</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/String/" rel="tag">String</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SumMatrix/" rel="tag">SumMatrix</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Syntax/" rel="tag">Syntax</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TDD/" rel="tag">TDD</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Template-Literals/" rel="tag">Template Literals</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Testablility/" rel="tag">Testablility</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/This/" rel="tag">This</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tree/" rel="tag">Tree</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Type-Casting/" rel="tag">Type Casting</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/" rel="tag">TypeScript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UTF-8/" rel="tag">UTF-8</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web-Form/" rel="tag">Web Form</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array/" rel="tag">array</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/" rel="tag">cache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/const/" rel="tag">const</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/elasticsearch/" rel="tag">elasticsearch</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/getMiddle/" rel="tag">getMiddle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http/" rel="tag">http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kenx/" rel="tag">kenx</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kue/" rel="tag">kue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/let/" rel="tag">let</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/loop/" rel="tag">loop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongoDB/" rel="tag">mongoDB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/multi-dimensional/" rel="tag">multi dimensional</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/" rel="tag">node.js</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oop/" rel="tag">oop</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/" rel="tag">swift</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/switch/" rel="tag">switch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/template-Language/" rel="tag">template Language</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EB%82%98%EB%88%84%EC%96%B4-%EB%96%A8%EC%96%B4%EC%A7%80%EB%8A%94-%EC%88%AB%EC%9E%90-%EB%B0%B0%EC%97%B4/" rel="tag">나누어 떨어지는 숫자 배열</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C%EC%9C%BC%EB%A1%9C-%EB%B0%B0%EC%B9%98%ED%95%98%EA%B8%B0/" rel="tag">문자열 내림차순으로 배치하기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EC%84%9C%EC%9A%B8%EC%97%90%EC%84%9C-%EA%B9%80%EC%84%9C%EB%B0%A9-%EC%B0%BE%EA%B8%B0/" rel="tag">서울에서 김서방 찾기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EC%86%8C%EC%88%98%EC%B0%BE%EA%B8%B0/" rel="tag">소수찾기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EC%A0%95%EC%88%98-%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C%EC%9C%BC%EB%A1%9C-%EB%B0%B0%EC%B9%98%ED%95%98%EA%B8%B0/" rel="tag">정수 내림차순으로 배치하기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EC%B5%9C%EB%8C%80%EA%B0%92-%EC%B5%9C%EC%86%8C%EA%B0%92-%EC%B0%BE%EA%B8%B0/" rel="tag">최대값 최소값 찾기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EC%B5%9C%EB%8C%80%EA%B3%B5%EC%95%BD%EC%88%98-%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98/" rel="tag">최대공약수 최소공배수</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EC%B5%9C%EC%86%8C%EA%B0%92-%EB%A7%8C%EB%93%A4%EA%B8%B0/" rel="tag">최소값 만들기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%ED%95%98%EC%83%A4%EB%93%9C%EC%88%98/" rel="tag">하샤드수</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%ED%96%89%EB%A0%AC%EC%9D%98-%EA%B3%B1%EC%85%88/" rel="tag">행렬의 곱셈</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/2016%EB%85%84%EC%9D%98-%EC%9B%90%ED%95%98%EB%8A%94-%EC%9A%94%EC%9D%BC%EA%B5%AC%ED%95%98%EA%B8%B0/" style="font-size: 10px;">2016년의 원하는 요일구하기</a> <a href="/tags/AWS/" style="font-size: 11.25px;">AWS</a> <a href="/tags/Ajax/" style="font-size: 11.25px;">Ajax</a> <a href="/tags/Algorithm/" style="font-size: 17.5px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 10px;">Array</a> <a href="/tags/Arrow/" style="font-size: 10px;">Arrow</a> <a href="/tags/Async/" style="font-size: 10px;">Async</a> <a href="/tags/Built-In-Object/" style="font-size: 11.25px;">Built In Object</a> <a href="/tags/CORS/" style="font-size: 10px;">CORS</a> <a href="/tags/CRUD/" style="font-size: 10px;">CRUD</a> <a href="/tags/CSRF/" style="font-size: 10px;">CSRF</a> <a href="/tags/CSS/" style="font-size: 12.5px;">CSS</a> <a href="/tags/Class/" style="font-size: 10px;">Class</a> <a href="/tags/Closure/" style="font-size: 10px;">Closure</a> <a href="/tags/Control-Flow/" style="font-size: 10px;">Control Flow</a> <a href="/tags/Cookie/" style="font-size: 10px;">Cookie</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Data-Type/" style="font-size: 10px;">Data-Type</a> <a href="/tags/DataBase/" style="font-size: 10px;">DataBase</a> <a href="/tags/DataModeling/" style="font-size: 10px;">DataModeling</a> <a href="/tags/Database/" style="font-size: 10px;">Database</a> <a href="/tags/Date/" style="font-size: 10px;">Date</a> <a href="/tags/Destructuring/" style="font-size: 10px;">Destructuring</a> <a href="/tags/Dom/" style="font-size: 10px;">Dom</a> <a href="/tags/ES6/" style="font-size: 16.25px;">ES6</a> <a href="/tags/Elasticache/" style="font-size: 10px;">Elasticache</a> <a href="/tags/Enhanced-Object-Property/" style="font-size: 10px;">Enhanced Object Property</a> <a href="/tags/Event/" style="font-size: 10px;">Event</a> <a href="/tags/Excution-Context/" style="font-size: 10px;">Excution-Context</a> <a href="/tags/Express/" style="font-size: 11.25px;">Express</a> <a href="/tags/Extended-Parameter-Handling/" style="font-size: 10px;">Extended Parameter Handling</a> <a href="/tags/Fetch/" style="font-size: 10px;">Fetch</a> <a href="/tags/Fibonacci/" style="font-size: 10px;">Fibonacci</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/GraphQL/" style="font-size: 12.5px;">GraphQL</a> <a href="/tags/Http/" style="font-size: 10px;">Http</a> <a href="/tags/Immutability/" style="font-size: 10px;">Immutability</a> <a href="/tags/Introduction/" style="font-size: 10px;">Introduction</a> <a href="/tags/JWT/" style="font-size: 10px;">JWT</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Knex/" style="font-size: 11.25px;">Knex</a> <a href="/tags/LayoutGuide/" style="font-size: 10px;">LayoutGuide</a> <a href="/tags/LinkedList/" style="font-size: 10px;">LinkedList</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Middleware/" style="font-size: 10px;">Middleware</a> <a href="/tags/Module/" style="font-size: 10px;">Module</a> <a href="/tags/Mybatis/" style="font-size: 11.25px;">Mybatis</a> <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/Node-js/" style="font-size: 18.75px;">Node.js</a> <a href="/tags/Number/" style="font-size: 10px;">Number</a> <a href="/tags/OAuth/" style="font-size: 10px;">OAuth</a> <a href="/tags/OOP/" style="font-size: 10px;">OOP</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Operator/" style="font-size: 10px;">Operator</a> <a href="/tags/Passport/" style="font-size: 10px;">Passport</a> <a href="/tags/PlayNode/" style="font-size: 10px;">PlayNode</a> <a href="/tags/Promise/" style="font-size: 10px;">Promise</a> <a href="/tags/Prototype/" style="font-size: 10px;">Prototype</a> <a href="/tags/React/" style="font-size: 11.25px;">React</a> <a href="/tags/Regexp/" style="font-size: 10px;">Regexp</a> <a href="/tags/RestAPI/" style="font-size: 12.5px;">RestAPI</a> <a href="/tags/Router/" style="font-size: 10px;">Router</a> <a href="/tags/SPA/" style="font-size: 11.25px;">SPA</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/Selector/" style="font-size: 10px;">Selector</a> <a href="/tags/Sequelize/" style="font-size: 10px;">Sequelize</a> <a href="/tags/Service-Develop/" style="font-size: 10px;">Service Develop</a> <a href="/tags/Session/" style="font-size: 10px;">Session</a> <a href="/tags/SocketIO/" style="font-size: 10px;">SocketIO</a> <a href="/tags/Spring/" style="font-size: 11.25px;">Spring</a> <a href="/tags/String/" style="font-size: 10px;">String</a> <a href="/tags/SumMatrix/" style="font-size: 10px;">SumMatrix</a> <a href="/tags/Syntax/" style="font-size: 13.75px;">Syntax</a> <a href="/tags/TDD/" style="font-size: 11.25px;">TDD</a> <a href="/tags/Template-Literals/" style="font-size: 10px;">Template Literals</a> <a href="/tags/Testablility/" style="font-size: 10px;">Testablility</a> <a href="/tags/This/" style="font-size: 10px;">This</a> <a href="/tags/Tree/" style="font-size: 10px;">Tree</a> <a href="/tags/Type-Casting/" style="font-size: 10px;">Type Casting</a> <a href="/tags/TypeScript/" style="font-size: 11.25px;">TypeScript</a> <a href="/tags/UTF-8/" style="font-size: 10px;">UTF-8</a> <a href="/tags/Web-Form/" style="font-size: 10px;">Web Form</a> <a href="/tags/array/" style="font-size: 12.5px;">array</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/const/" style="font-size: 10px;">const</a> <a href="/tags/elasticsearch/" style="font-size: 11.25px;">elasticsearch</a> <a href="/tags/getMiddle/" style="font-size: 10px;">getMiddle</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/java/" style="font-size: 15px;">java</a> <a href="/tags/kenx/" style="font-size: 13.75px;">kenx</a> <a href="/tags/kue/" style="font-size: 10px;">kue</a> <a href="/tags/let/" style="font-size: 10px;">let</a> <a href="/tags/loop/" style="font-size: 10px;">loop</a> <a href="/tags/mongoDB/" style="font-size: 10px;">mongoDB</a> <a href="/tags/multi-dimensional/" style="font-size: 10px;">multi dimensional</a> <a href="/tags/node-js/" style="font-size: 11.25px;">node.js</a> <a href="/tags/oop/" style="font-size: 11.25px;">oop</a> <a href="/tags/swift/" style="font-size: 12.5px;">swift</a> <a href="/tags/switch/" style="font-size: 10px;">switch</a> <a href="/tags/template-Language/" style="font-size: 10px;">template Language</a> <a href="/tags/%EB%82%98%EB%88%84%EC%96%B4-%EB%96%A8%EC%96%B4%EC%A7%80%EB%8A%94-%EC%88%AB%EC%9E%90-%EB%B0%B0%EC%97%B4/" style="font-size: 10px;">나누어 떨어지는 숫자 배열</a> <a href="/tags/%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C%EC%9C%BC%EB%A1%9C-%EB%B0%B0%EC%B9%98%ED%95%98%EA%B8%B0/" style="font-size: 10px;">문자열 내림차순으로 배치하기</a> <a href="/tags/%EC%84%9C%EC%9A%B8%EC%97%90%EC%84%9C-%EA%B9%80%EC%84%9C%EB%B0%A9-%EC%B0%BE%EA%B8%B0/" style="font-size: 10px;">서울에서 김서방 찾기</a> <a href="/tags/%EC%86%8C%EC%88%98%EC%B0%BE%EA%B8%B0/" style="font-size: 10px;">소수찾기</a> <a href="/tags/%EC%A0%95%EC%88%98-%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C%EC%9C%BC%EB%A1%9C-%EB%B0%B0%EC%B9%98%ED%95%98%EA%B8%B0/" style="font-size: 10px;">정수 내림차순으로 배치하기</a> <a href="/tags/%EC%B5%9C%EB%8C%80%EA%B0%92-%EC%B5%9C%EC%86%8C%EA%B0%92-%EC%B0%BE%EA%B8%B0/" style="font-size: 10px;">최대값 최소값 찾기</a> <a href="/tags/%EC%B5%9C%EB%8C%80%EA%B3%B5%EC%95%BD%EC%88%98-%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98/" style="font-size: 10px;">최대공약수 최소공배수</a> <a href="/tags/%EC%B5%9C%EC%86%8C%EA%B0%92-%EB%A7%8C%EB%93%A4%EA%B8%B0/" style="font-size: 10px;">최소값 만들기</a> <a href="/tags/%ED%95%98%EC%83%A4%EB%93%9C%EC%88%98/" style="font-size: 10px;">하샤드수</a> <a href="/tags/%ED%96%89%EB%A0%AC%EC%9D%98-%EA%B3%B1%EC%85%88/" style="font-size: 10px;">행렬의 곱셈</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2021 Sejune Kim</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://yoursite.com/2017/08/14/js-study-dom/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

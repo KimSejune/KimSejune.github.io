@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>TypeScript Connect Sequelize | KimSejune Start Study</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="TypeScript,Sequelize" />
+    
+    <meta name="description" content="Typescript프로젝트를 TypeScript로 만들어보자는 의견을 수렴하여 TypeScript를 시작하게 되었다.이번 프로젝트는 TypeScript와 DB는 mysql를 사용하고 Sequelize ORM를 사용하여서 프로젝트를 구성하였는데 Sequelize의 type을 정의해주는것이 까다로웠는데 아래에서 어떻게 구현했는지 보도록하자.여기서 서버는 exp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TypeScript Connect Sequelize">
+<meta property="og:url" content="http://yoursite.com/2019/02/27/ts-connect-sequelize/index.html">
+<meta property="og:site_name" content="KimSejune Start Study">
+<meta property="og:description" content="Typescript프로젝트를 TypeScript로 만들어보자는 의견을 수렴하여 TypeScript를 시작하게 되었다.이번 프로젝트는 TypeScript와 DB는 mysql를 사용하고 Sequelize ORM를 사용하여서 프로젝트를 구성하였는데 Sequelize의 type을 정의해주는것이 까다로웠는데 아래에서 어떻게 구현했는지 보도록하자.여기서 서버는 exp">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/images/tsdir.png">
+<meta property="article:published_time" content="2019-02-27T01:54:00.000Z">
+<meta property="article:modified_time" content="2019-03-20T04:54:29.341Z">
+<meta property="article:author" content="Sejune Kim">
+<meta property="article:tag" content="TypeScript">
+<meta property="article:tag" content="Sequelize">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/tsdir.png">
+    
+
+    
+
+    
+        <link rel="icon" href="/images/logo.png" />
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/">Algorithm</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/level1/">level1</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/level2/">level2</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Conference/">Conference</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Conference/PlayNode/">PlayNode</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Conference/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Project/">Project</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Project/ReadMe/">ReadMe</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Project/redis/">redis</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/">TIL</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/AWS/">AWS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/CSS/">CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/DataBase/">DataBase</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/ES6/">ES6</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/ElasticSearch/">ElasticSearch</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/Git/">Git</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/GraphQL/">GraphQL</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/JAVA/">JAVA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/Node-js/">Node.js</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/React/">React</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/Spring/">Spring</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/Swift/">Swift</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/Typescript/">Typescript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/jQuery/">jQuery</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" target="_blank" rel="noopener" href="https://github.com/KimSejune">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/TIL/Typescript/">Typescript</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/TIL/Typescript/Sequelize/">Sequelize</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-ts-connect-sequelize" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        TypeScript Connect Sequelize
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/02/27/ts-connect-sequelize/" class="article-date">
+            <time datetime="2019-02-27T01:54:00.000Z" itemprop="datePublished">2019-02-27</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Sequelize/" rel="tag">Sequelize</a>, <a class="tag-link-link" href="/tags/TypeScript/" rel="tag">TypeScript</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="Typescript"><a href="#Typescript" class="headerlink" title="Typescript"></a>Typescript</h1><p>프로젝트를 TypeScript로 만들어보자는 의견을 수렴하여 TypeScript를 시작하게 되었다.<br>이번 프로젝트는 TypeScript와 DB는 mysql를 사용하고 Sequelize ORM를 사용하여서 프로젝트를 구성하였는데 <code>Sequelize의 type</code>을 정의해주는것이 까다로웠는데 아래에서 어떻게 구현했는지 보도록하자.<br>여기서 서버는 <code>express</code>를 사용하였다.  </p>
+<p>여기서 최종 dir구조를 보면 src 폴더안에는 ts file을 만들고 dist 폴더에는 ts file을 변환한 js file들을 넣어줄것이다.  </p>
+<p><img src="/images/tsdir.png" alt="method prototype this"></p>
+<p>우선 프로젝트에 필요한 파일들을 npm으로 설치하였다. </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm install express sequelize sequelize-cli mysql2 nodemon dotenv</span><br><span class="line"></span><br><span class="line"><span class="comment">// 개발용</span></span><br><span class="line">$ npm install --save-dev typescript @types/express @types/mysql @types/sequelize @types/node</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>nodemon은 매번 서버를 껏다키는것을 방지하기 위하여 사용하였다.  </li>
+<li>dotenv는 민감한 정보를 .env에 보관하기위하여 사용하였다.  </li>
+</ul>
+<h2 id="sequelize-기본설정"><a href="#sequelize-기본설정" class="headerlink" title="sequelize 기본설정"></a>sequelize 기본설정</h2><p>sequelize를 mysql로 연결하기위해서는 config파일 및 model 설정이 필요하다.  </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sequelize init:models</span><br><span class="line">$ sequelize init:config</span><br></pre></td></tr></table></figure>
+
+<p>이렇게 하면 위에서 보았듯이 models, config 폴더가 생성된다.<br>config file은 .json형식으로 되어있지만 민감한 정보를 보호하기 위하여 .env를 사용할 것이다.</p>
+<p>config.json =&gt; config.ts로 변경한 파일이다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">DB_HOST&#x3D;127.0.0.1</span><br><span class="line">DB_USER&#x3D;~~</span><br><span class="line">DB_PASS&#x3D;~~</span><br><span class="line">DB_NAME&#x3D;~~</span><br><span class="line">DB_Dialect&#x3D;mysql</span><br></pre></td></tr></table></figure>
+<p>.env에 있는 파일을 받아오기위하여 import를 통하여 가져온다.  </p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dotenv <span class="keyword">from</span> <span class="string">&quot;dotenv&quot;</span>;</span><br><span class="line">dotenv.config();</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="string">&quot;development&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;username&quot;</span>: process.env.DB_USER,</span><br><span class="line">    <span class="string">&quot;password&quot;</span>: process.env.DB_PASS,</span><br><span class="line">    <span class="string">&quot;database&quot;</span>: process.env.DB_NAME,</span><br><span class="line">    <span class="string">&quot;host&quot;</span>: process.env.DB_HOST,</span><br><span class="line">    <span class="string">&quot;dialect&quot;</span>: process.env.DB_Dialect,</span><br><span class="line">    <span class="string">&quot;define&quot;</span>: &#123;</span><br><span class="line">      freezeTableName: <span class="literal">true</span>, <span class="comment">// sequelize는 복수형으로 table을 만드는데 그것을 방지한다. </span></span><br><span class="line">      createdAt: <span class="string">&#x27;created_at&#x27;</span>, </span><br><span class="line">      updatedAt: <span class="string">&#x27;updated_at&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;test&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;username&quot;</span>: process.env.DB_USER,</span><br><span class="line">    <span class="string">&quot;password&quot;</span>: process.env.DB_PASS,</span><br><span class="line">    <span class="string">&quot;database&quot;</span>: process.env.DB_NAME,</span><br><span class="line">    <span class="string">&quot;host&quot;</span>: process.env.DB_HOST,</span><br><span class="line">    <span class="string">&quot;dialect&quot;</span>: process.env.DB_Dialect,</span><br><span class="line">    <span class="string">&quot;define&quot;</span>: &#123;</span><br><span class="line">      freezeTableName: <span class="literal">true</span>,</span><br><span class="line">      createdAt: <span class="string">&#x27;created_at&#x27;</span>,</span><br><span class="line">      updatedAt: <span class="string">&#x27;updated_at&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;production&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;username&quot;</span>: process.env.DB_USER,</span><br><span class="line">    <span class="string">&quot;password&quot;</span>: process.env.DB_PASS,</span><br><span class="line">    <span class="string">&quot;database&quot;</span>: process.env.DB_NAME,</span><br><span class="line">    <span class="string">&quot;host&quot;</span>: process.env.DB_HOST,</span><br><span class="line">    <span class="string">&quot;dialect&quot;</span>: process.env.DB_Dialect,</span><br><span class="line">    <span class="string">&quot;define&quot;</span>: &#123;</span><br><span class="line">      freezeTableName: <span class="literal">true</span>,</span><br><span class="line">      createdAt: <span class="string">&#x27;created_at&#x27;</span>,</span><br><span class="line">      updatedAt: <span class="string">&#x27;updated_at&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>아래는 sequelize를 생성하는 순서이다.  </p>
+<ol>
+<li>TableFactory를 생성한다.  </li>
+</ol>
+<ul>
+<li>TableFactory는 attribute와 instance를 합쳐서 Sequelize Model을 생성한다.  </li>
+</ul>
+<ol start="2">
+<li>sequelizeConfig를 정의한다.    </li>
+<li>config에 들어온 값을 통하여 Sequelize Instance를 생성한다.  </li>
+<li>Sequelize Instance, Sequelize, TableFactory를 사용하여 Sequelize와 Mysql을 연결한다.  </li>
+</ol>
+<h2 id="TableFactory-생성"><a href="#TableFactory-생성" class="headerlink" title="TableFactory 생성"></a>TableFactory 생성</h2><ol>
+<li>UserAtttrbutes를 정의한다.  </li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Sequelize <span class="keyword">from</span> <span class="string">&quot;sequelize&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; SequelizeAttributes &#125; <span class="keyword">from</span> <span class="string">&quot;./index.d&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">enum</span> ApplicantStatus &#123;</span><br><span class="line">  Applicant = <span class="string">&quot;applicant&quot;</span>,</span><br><span class="line">  PaperPass = <span class="string">&quot;paper_pass&quot;</span>,</span><br><span class="line">  InterviewPass= <span class="string">&quot;interview_pass&quot;</span>,</span><br><span class="line">  Fail = <span class="string">&quot;fail&quot;</span>,</span><br><span class="line">  Admin = <span class="string">&quot;admin&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">enum</span> JobType &#123;</span><br><span class="line">  Student = <span class="string">&quot;Student&quot;</span>,</span><br><span class="line">  Prepare = <span class="string">&quot;Prepare&quot;</span>,</span><br><span class="line">  Worker = <span class="string">&quot;Worker&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">enum</span> PositionType &#123;</span><br><span class="line">  Developer = <span class="string">&quot;Developer&quot;</span>,</span><br><span class="line">  Designer = <span class="string">&quot;Designer&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">interface</span> UserAttributes &#123;</span><br><span class="line">  id?: <span class="built_in">number</span>;</span><br><span class="line">  name?: <span class="built_in">string</span>;</span><br><span class="line">  member_provider: <span class="built_in">string</span>;</span><br><span class="line">  member_provider_number: <span class="built_in">string</span>;</span><br><span class="line">  age?: <span class="built_in">number</span>;</span><br><span class="line">  phone_number?: <span class="built_in">string</span>;</span><br><span class="line">  email?: <span class="built_in">string</span>;</span><br><span class="line">  job?: JobType;</span><br><span class="line">  position?: PositionType;</span><br><span class="line">  provide_image?: <span class="built_in">string</span>;</span><br><span class="line">  status?: ApplicantStatus;</span><br><span class="line">  token: <span class="built_in">string</span>;</span><br><span class="line">  created_at?: <span class="built_in">Date</span>;</span><br><span class="line">  updated_at?: <span class="built_in">Date</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>UserInstance를 정의한다.  </li>
+</ol>
+<p>실제 데이터베이스 <code>행에 대한 Sequelize Instance</code>를 나타낸다.  </p>
+<ul>
+<li>ex) User.find({id: 1}) 함수는 <code>User Model의 Instance를 반환</code>한다.<br>.validate, .save, .update 와 같은 Sequelize Instance Method가 추가된다.<br>Instance class를 직접 Instance화 해서는 안되고 <code>Model의 finder, creation Method를 사용</code>해서 Instance Class에 접근한다.  </li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">interface</span> UserInstance <span class="keyword">extends</span> Sequelize.Instance&lt;UserAttributes&gt;, UserAttributes &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<ol start="3">
+<li>SequelizeAttributes<T> 정의한다.  </li>
+</ol>
+<ul>
+<li>SequelizeAttributes<T>를 직접 생성하여서 우리가 <code>UserAttributes에서 지정한 모든 속성</code>에 대하여 정의가 있는 객체를 <code>sequelize.define으로 전달</code>하기 위하여 생성한다.   </li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/models/index.d.ts</span></span><br><span class="line"><span class="keyword">import</span> Sequelize <span class="keyword">from</span> <span class="string">&quot;sequelize&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> SequelizeAttribute = <span class="built_in">string</span> | Sequelize.DataTypeAbstract | Sequelize.DefineAttributeColumnOptions;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">type</span> SequelizeAttributes&lt;T <span class="keyword">extends</span> &#123; [key:<span class="built_in">string</span>]: <span class="built_in">any</span>&#125;&gt; = &#123;</span><br><span class="line">  [p <span class="keyword">in</span> keyof T] : SequelizeAttribute;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>UserFactory 함수를 정의한다.<br>실제로 <code>User Table을 위한 Sequelize Model을 정의할 함수를 생성</code>한다.<br>Model은 이미 정의한 <code>UserAttribute, UserInstance와 type이 일치</code>해야한다.<br>일반적인 Sequelize에서는 Sequelize Instance와 DataType을 통하여 Sequelize 객체를 생성한다.<br>TypeScript에서는 Sequelize Model을 정의하기 위하여 <code>Sequelize.define&lt;TInstance, TAttribute&gt;(&#39;tablesname&#39;, attributes) 함수를 사용</code>한다.<br><code>이 함수는 생성할 열을 지정하는 객체를 사용</code>한다.  </li>
+</ol>
+<ul>
+<li>Sequelize.Model은 db의 table을 나타낸다.  </li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> UserFactory = (sequelize: Sequelize.Sequelize, <span class="attr">DataTypes</span>: Sequelize.DataTypes): Sequelize.Model&lt;UserInstance,UserAttributes&gt; =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> attributes: SequelizeAttributes&lt;UserAttributes&gt; = &#123;</span><br><span class="line">    name: &#123;</span><br><span class="line">      <span class="keyword">type</span>: DataTypes.STRING</span><br><span class="line">    &#125;,</span><br><span class="line">    member_provider: &#123;</span><br><span class="line">      <span class="keyword">type</span>: DataTypes.STRING</span><br><span class="line">    &#125;,</span><br><span class="line">    member_provider_number: &#123;</span><br><span class="line">      <span class="keyword">type</span>: DataTypes.STRING</span><br><span class="line">    &#125;,</span><br><span class="line">    age: &#123;</span><br><span class="line">      <span class="keyword">type</span>: DataTypes.INTEGER</span><br><span class="line">    &#125;,</span><br><span class="line">    phone_number: &#123;</span><br><span class="line">      <span class="keyword">type</span>: DataTypes.STRING</span><br><span class="line">    &#125;,</span><br><span class="line">    email: &#123;</span><br><span class="line">      <span class="keyword">type</span>: DataTypes.STRING</span><br><span class="line">    &#125;,</span><br><span class="line">    job: &#123;</span><br><span class="line">      <span class="keyword">type</span>: DataTypes.ENUM(JobType.Student, JobType.Prepare, JobType.Worker)</span><br><span class="line">    &#125;,</span><br><span class="line">    position: &#123;</span><br><span class="line">      <span class="keyword">type</span>: DataTypes.ENUM(PositionType.Developer, PositionType.Designer)</span><br><span class="line">    &#125;,</span><br><span class="line">    provide_image: &#123;</span><br><span class="line">      <span class="keyword">type</span>: DataTypes.STRING</span><br><span class="line">    &#125;,</span><br><span class="line">    status: &#123;</span><br><span class="line">      <span class="keyword">type</span>: DataTypes.ENUM(ApplicantStatus.Applicant, ApplicantStatus.PaperPass, ApplicantStatus.InterviewPass, ApplicantStatus.Fail, ApplicantStatus.Admin)</span><br><span class="line">    &#125;,</span><br><span class="line">    token: &#123;</span><br><span class="line">      <span class="keyword">type</span>: DataTypes.STRING</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">const</span> User = sequelize.define&lt;UserInstance,UserAttributes&gt;(<span class="string">&#x27;User&#x27;</span>, attributes);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> User;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+<ol start="5">
+<li>createModels Function을 만든다.  </li>
+</ol>
+<p>이 함수는 디렉토리 내의 모든 파일들과 함께 sequelize.import를 호출한다. 이것이 바로 model file이다.<br>이 방식에서 <code>형식검사를 하기위하여 DbInterface를 생성</code>한다.<br>그런 다음 createModels는 <code>Sequelize Model이 붙은 DbInterface Type의 객체 db를 반환</code>한다.  </p>
+<p>중요 : DbInterface에서 정의 된 모델과 각 모델에 어떤 attribute, method가 있는지를 명시적으로 정의한다.<br>그런 다음 db Object를 API route handlers에 전달할 수 있다. 이 handler는 model을 사용하여 Sequelize Query를 만들 수 있다.<br>최종적으로 db안에 들어갈 값들의 interface를 정의한다.    </p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/db/DbInterface/index.d.ts</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> Sequelize <span class="keyword">from</span> <span class="string">&quot;sequelize&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; UserAttributes, UserInstance&#125; <span class="keyword">from</span> <span class="string">&quot;../../models/user&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">interface</span> DbInterface &#123;</span><br><span class="line">  sequelize: Sequelize.Sequelize;</span><br><span class="line">  Sequelize: Sequelize.SequelizeStatic;</span><br><span class="line">  User: Sequelize.Model&lt;UserInstance,UserAttributes&gt;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>DbInterface를 상속받아서 정의한 값들을 넣어주고 최종적으로 db를 return 해준다.  </p>
+<ul>
+<li>추후에 db.User.findOne()이런식으로 값을 사용한다.  </li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/models/index.ts</span></span><br><span class="line"><span class="keyword">import</span> Sequelize <span class="keyword">from</span> <span class="string">&quot;sequelize&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; DbInterface &#125; <span class="keyword">from</span> <span class="string">&quot;../db/DbInterface/index&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; UserFactory &#125; <span class="keyword">from</span> <span class="string">&quot;./user&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> createModels = (sequelizeConfig: <span class="built_in">any</span>): <span class="function"><span class="params">DbInterface</span> =&gt;</span> &#123;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">const</span> &#123; database, username, password, host, dialect, define &#125; = sequelizeConfig;  </span><br><span class="line">  <span class="keyword">const</span> sequelize = <span class="keyword">new</span> Sequelize(database, username, password, &#123;host, dialect, define&#125;)</span><br><span class="line">  <span class="keyword">const</span> db: DbInterface = &#123;</span><br><span class="line">    sequelize,</span><br><span class="line">    Sequelize,</span><br><span class="line">    User: UserFactory(sequelize, Sequelize)</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> db;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="이제-어떻게-사용할까"><a href="#이제-어떻게-사용할까" class="headerlink" title="이제 어떻게 사용할까?"></a>이제 어떻게 사용할까?</h2><p>Q. Factory와 Interface를 정의하였지만 어떻게 DB에 연결할까???<br>A. src/models/index.ts에다 구현할거야! 이 파일은 <code>Sequelize Config</code>를 가져와서 우리가 정의한 Model을 생성 할 함수 <code>createModels</code>를 내보낼것이야!<br>그 다음 app.ts에서 이 함수를 가져와서 sync할 것입니다.</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/app.ts</span></span><br><span class="line"><span class="keyword">import</span> dotenv <span class="keyword">from</span> <span class="string">&quot;dotenv&quot;</span>;</span><br><span class="line">dotenv.config();</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> express <span class="keyword">from</span> <span class="string">&quot;express&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> bodyParser <span class="keyword">from</span> <span class="string">&quot;body-parser&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> swaggerUI <span class="keyword">from</span> <span class="string">&quot;swagger-ui-express&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> user <span class="keyword">from</span> <span class="string">&quot;./api/user/index&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> auth <span class="keyword">from</span> <span class="string">&quot;./api/auth/index&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> mail <span class="keyword">from</span> <span class="string">&quot;./api/mail/index&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> resume <span class="keyword">from</span> <span class="string">&quot;./api/resume/index&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> evaluation <span class="keyword">from</span> <span class="string">&quot;./api/evaluation/index&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> form <span class="keyword">from</span> <span class="string">&quot;./api/form/index&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; createModels &#125; <span class="keyword">from</span> <span class="string">&quot;./models/index&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; swaggerSpec &#125; <span class="keyword">from</span> <span class="string">&quot;./swagger&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> env = process.env.NODE_ENV || <span class="string">&#x27;development&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> config = <span class="built_in">require</span>(<span class="string">&quot;./config/config&quot;</span>)[env];</span><br><span class="line"><span class="keyword">const</span> port = process.env.PORT || <span class="number">3000</span>;</span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> db = createModels(config);</span><br><span class="line"></span><br><span class="line">app.set(<span class="string">&#x27;view engine&#x27;</span>, <span class="string">&#x27;pug&#x27;</span>)</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function">(<span class="params">req: express.Request, res: express.Response</span>) =&gt;</span> &#123;</span><br><span class="line">  res.send(<span class="string">&#x27;success router&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> options = &#123;</span><br><span class="line">  force: process.env.NODE_ENV === <span class="string">&#x27;test&#x27;</span> ? <span class="literal">true</span> : <span class="literal">false</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">db.sequelize.sync(options)</span><br><span class="line">  .then(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;Sequelize Sync Success&#x27;</span>)</span><br><span class="line">    app.listen(&#123;port&#125;, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;port&#125;</span> Sever Start`</span>);</span><br><span class="line">      <span class="built_in">console</span>.log()</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2019/02/27/ts-connect-sequelize/" data-id="cklxjwzwn0095cy6fdozu8btd" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/tpwns1088@gmail.com" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/KimSejune" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2020/02/01/es-study-info/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            ElasticSearch Default Information
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/12/02/node-tdd/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Node TDD 도구</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2020/02/02/es-study-term-match/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/elasticsearch.png)" alt="ElasticSearch Term vs Match" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/ElasticSearch/">ElasticSearch</a></p>
+                            <p class="item-title"><a href="/2020/02/02/es-study-term-match/" class="title">ElasticSearch Term vs Match</a></p>
+                            <p class="item-date"><time datetime="2020-02-02T10:11:00.000Z" itemprop="datePublished">2020-02-02</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2020/02/01/es-study-info/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/elasticsearch.png)" alt="ElasticSearch Default Information" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/ElasticSearch/">ElasticSearch</a></p>
+                            <p class="item-title"><a href="/2020/02/01/es-study-info/" class="title">ElasticSearch Default Information</a></p>
+                            <p class="item-date"><time datetime="2020-02-01T07:13:00.000Z" itemprop="datePublished">2020-02-01</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/02/27/ts-connect-sequelize/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/tsdir.png)" alt="TypeScript Connect Sequelize" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Typescript/">Typescript</a></p>
+                            <p class="item-title"><a href="/2019/02/27/ts-connect-sequelize/" class="title">TypeScript Connect Sequelize</a></p>
+                            <p class="item-date"><time datetime="2019-02-27T01:54:00.000Z" itemprop="datePublished">2019-02-27</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/12/02/node-tdd/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/nodejs.png)" alt="Node TDD 도구" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a></p>
+                            <p class="item-title"><a href="/2018/12/02/node-tdd/" class="title">Node TDD 도구</a></p>
+                            <p class="item-date"><time datetime="2018-12-02T05:54:00.000Z" itemprop="datePublished">2018-12-02</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/11/22/graphql-study-inRestAPI/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/graphql.png)" alt="GraphQL을 통하여 Rest API를 감싸보자." class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/GraphQL/">GraphQL</a></p>
+                            <p class="item-title"><a href="/2018/11/22/graphql-study-inRestAPI/" class="title">GraphQL을 통하여 Rest API를 감싸보자.</a></p>
+                            <p class="item-date"><time datetime="2018-11-22T05:28:00.000Z" itemprop="datePublished">2018-11-22</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/level1/">level1</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/level2/">level2</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Conference/">Conference</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Conference/PlayNode/">PlayNode</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Conference/TypeScript/">TypeScript</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Project/">Project</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Project/ReadMe/">ReadMe</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Project/redis/">redis</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/">TIL</a><span class="category-list-count">100</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/AWS/">AWS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/CSS/">CSS</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/CSS/Core/">Core</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/CSS/Selector/">Selector</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/CSS/Syntax/">Syntax</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/DataBase/">DataBase</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/DataBase/Syntax/">Syntax</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/">ES6</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Arrow/">Arrow</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Class/">Class</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Data-Structure/">Data Structure</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Destructuring/">Destructuring</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Enhanced-Object-Property/">Enhanced Object Property</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Extended-Parameter-Handling/">Extended Parameter Handling</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Module/">Module</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Promise/">Promise</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Template-Literals/">Template Literals</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/let-const/">let & const</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ElasticSearch/">ElasticSearch</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Git/">Git</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Git/%EB%B0%B0%ED%8F%AC/">배포</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/GraphQL/">GraphQL</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JAVA/">JAVA</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/">JavaScript</a><span class="category-list-count">29</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Ajax/">Ajax</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Array/">Array</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Async/">Async</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Built-In-Object/">Built In Object</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Closure/">Closure</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Control-Flow/">Control Flow</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Data-Type/">Data-Type</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Date/">Date</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Dom/">Dom</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Event/">Event</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Excution-Context/">Excution-Context</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Function/">Function</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Immutability/">Immutability</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Introduction/">Introduction</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/LinkedList-Tree/">LinkedList Tree</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Math/">Math</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Number/">Number</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/OOP/">OOP</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Object/">Object</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Operator/">Operator</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Prototype/">Prototype</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Regexp/">Regexp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/RestAPI/">RestAPI</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Scope/">Scope</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/String/">String</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Syntax/">Syntax</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/This/">This</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/">Node.js</a><span class="category-list-count">34</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Ajax/">Ajax</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/CORS/">CORS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/CSRF/">CSRF</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Cookie/">Cookie</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/DataModeling/">DataModeling</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Database/">Database</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Elasticache/">Elasticache</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Express/">Express</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Express-Middlware/">Express-Middlware</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Fetch/">Fetch</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/GraphQL/">GraphQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Http/">Http</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/JWT/">JWT</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/OAuth/">OAuth</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Passport/">Passport</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Rest-API/">Rest-API</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/SPA/">SPA</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Service-Develop/">Service Develop</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Session/">Session</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/SocketIO/">SocketIO</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Template-Language/">Template Language</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Testablility/">Testablility</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Web-Form/">Web Form</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/http-cache/">http-cache</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/knex/">knex</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/kue/">kue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/mongoDB/">mongoDB</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/React/">React</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/React/Router/">Router</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/React/Syntax/">Syntax</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Spring/">Spring</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Spring/MVC/">MVC</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Spring/UTF-8/">UTF-8</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Swift/">Swift</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Typescript/">Typescript</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Typescript/Sequelize/">Sequelize</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/jQuery/">jQuery</a><span class="category-list-count">2</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">38</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">9</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2016%EB%85%84%EC%9D%98-%EC%9B%90%ED%95%98%EB%8A%94-%EC%9A%94%EC%9D%BC%EA%B5%AC%ED%95%98%EA%B8%B0/" rel="tag">2016년의 원하는 요일구하기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/" rel="tag">AWS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/" rel="tag">Algorithm</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Array/" rel="tag">Array</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arrow/" rel="tag">Arrow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Async/" rel="tag">Async</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Built-In-Object/" rel="tag">Built In Object</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CORS/" rel="tag">CORS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CRUD/" rel="tag">CRUD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSRF/" rel="tag">CSRF</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Class/" rel="tag">Class</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Closure/" rel="tag">Closure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Control-Flow/" rel="tag">Control Flow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cookie/" rel="tag">Cookie</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Structure/" rel="tag">Data Structure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Type/" rel="tag">Data-Type</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataModeling/" rel="tag">DataModeling</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/" rel="tag">Database</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Date/" rel="tag">Date</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Destructuring/" rel="tag">Destructuring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dom/" rel="tag">Dom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/" rel="tag">ES6</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Elasticache/" rel="tag">Elasticache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Enhanced-Object-Property/" rel="tag">Enhanced Object Property</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Event/" rel="tag">Event</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excution-Context/" rel="tag">Excution-Context</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/" rel="tag">Express</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Extended-Parameter-Handling/" rel="tag">Extended Parameter Handling</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fetch/" rel="tag">Fetch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fibonacci/" rel="tag">Fibonacci</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Function/" rel="tag">Function</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GraphQL/" rel="tag">GraphQL</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/" rel="tag">Http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Immutability/" rel="tag">Immutability</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Introduction/" rel="tag">Introduction</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JWT/" rel="tag">JWT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">42</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Knex/" rel="tag">Knex</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LayoutGuide/" rel="tag">LayoutGuide</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LinkedList/" rel="tag">LinkedList</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Middleware/" rel="tag">Middleware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Module/" rel="tag">Module</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mybatis/" rel="tag">Mybatis</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a><span class="tag-list-count">37</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Number/" rel="tag">Number</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OAuth/" rel="tag">OAuth</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OOP/" rel="tag">OOP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Object/" rel="tag">Object</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Operator/" rel="tag">Operator</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Passport/" rel="tag">Passport</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PlayNode/" rel="tag">PlayNode</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Promise/" rel="tag">Promise</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Prototype/" rel="tag">Prototype</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Regexp/" rel="tag">Regexp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RestAPI/" rel="tag">RestAPI</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Router/" rel="tag">Router</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SPA/" rel="tag">SPA</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scope/" rel="tag">Scope</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Selector/" rel="tag">Selector</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sequelize/" rel="tag">Sequelize</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Service-Develop/" rel="tag">Service Develop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Session/" rel="tag">Session</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SocketIO/" rel="tag">SocketIO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/" rel="tag">Spring</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/String/" rel="tag">String</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SumMatrix/" rel="tag">SumMatrix</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Syntax/" rel="tag">Syntax</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TDD/" rel="tag">TDD</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Template-Literals/" rel="tag">Template Literals</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Testablility/" rel="tag">Testablility</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/This/" rel="tag">This</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tree/" rel="tag">Tree</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Type-Casting/" rel="tag">Type Casting</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/" rel="tag">TypeScript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UTF-8/" rel="tag">UTF-8</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web-Form/" rel="tag">Web Form</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array/" rel="tag">array</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/" rel="tag">cache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/const/" rel="tag">const</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/elasticsearch/" rel="tag">elasticsearch</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/getMiddle/" rel="tag">getMiddle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http/" rel="tag">http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kenx/" rel="tag">kenx</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kue/" rel="tag">kue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/let/" rel="tag">let</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/loop/" rel="tag">loop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongoDB/" rel="tag">mongoDB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/multi-dimensional/" rel="tag">multi dimensional</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/" rel="tag">node.js</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oop/" rel="tag">oop</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/" rel="tag">swift</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/switch/" rel="tag">switch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/template-Language/" rel="tag">template Language</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EB%82%98%EB%88%84%EC%96%B4-%EB%96%A8%EC%96%B4%EC%A7%80%EB%8A%94-%EC%88%AB%EC%9E%90-%EB%B0%B0%EC%97%B4/" rel="tag">나누어 떨어지는 숫자 배열</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C%EC%9C%BC%EB%A1%9C-%EB%B0%B0%EC%B9%98%ED%95%98%EA%B8%B0/" rel="tag">문자열 내림차순으로 배치하기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EC%84%9C%EC%9A%B8%EC%97%90%EC%84%9C-%EA%B9%80%EC%84%9C%EB%B0%A9-%EC%B0%BE%EA%B8%B0/" rel="tag">서울에서 김서방 찾기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EC%86%8C%EC%88%98%EC%B0%BE%EA%B8%B0/" rel="tag">소수찾기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EC%A0%95%EC%88%98-%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C%EC%9C%BC%EB%A1%9C-%EB%B0%B0%EC%B9%98%ED%95%98%EA%B8%B0/" rel="tag">정수 내림차순으로 배치하기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EC%B5%9C%EB%8C%80%EA%B0%92-%EC%B5%9C%EC%86%8C%EA%B0%92-%EC%B0%BE%EA%B8%B0/" rel="tag">최대값 최소값 찾기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EC%B5%9C%EB%8C%80%EA%B3%B5%EC%95%BD%EC%88%98-%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98/" rel="tag">최대공약수 최소공배수</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EC%B5%9C%EC%86%8C%EA%B0%92-%EB%A7%8C%EB%93%A4%EA%B8%B0/" rel="tag">최소값 만들기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%ED%95%98%EC%83%A4%EB%93%9C%EC%88%98/" rel="tag">하샤드수</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%ED%96%89%EB%A0%AC%EC%9D%98-%EA%B3%B1%EC%85%88/" rel="tag">행렬의 곱셈</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/2016%EB%85%84%EC%9D%98-%EC%9B%90%ED%95%98%EB%8A%94-%EC%9A%94%EC%9D%BC%EA%B5%AC%ED%95%98%EA%B8%B0/" style="font-size: 10px;">2016년의 원하는 요일구하기</a> <a href="/tags/AWS/" style="font-size: 11.25px;">AWS</a> <a href="/tags/Ajax/" style="font-size: 11.25px;">Ajax</a> <a href="/tags/Algorithm/" style="font-size: 17.5px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 10px;">Array</a> <a href="/tags/Arrow/" style="font-size: 10px;">Arrow</a> <a href="/tags/Async/" style="font-size: 10px;">Async</a> <a href="/tags/Built-In-Object/" style="font-size: 11.25px;">Built In Object</a> <a href="/tags/CORS/" style="font-size: 10px;">CORS</a> <a href="/tags/CRUD/" style="font-size: 10px;">CRUD</a> <a href="/tags/CSRF/" style="font-size: 10px;">CSRF</a> <a href="/tags/CSS/" style="font-size: 12.5px;">CSS</a> <a href="/tags/Class/" style="font-size: 10px;">Class</a> <a href="/tags/Closure/" style="font-size: 10px;">Closure</a> <a href="/tags/Control-Flow/" style="font-size: 10px;">Control Flow</a> <a href="/tags/Cookie/" style="font-size: 10px;">Cookie</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Data-Type/" style="font-size: 10px;">Data-Type</a> <a href="/tags/DataBase/" style="font-size: 10px;">DataBase</a> <a href="/tags/DataModeling/" style="font-size: 10px;">DataModeling</a> <a href="/tags/Database/" style="font-size: 10px;">Database</a> <a href="/tags/Date/" style="font-size: 10px;">Date</a> <a href="/tags/Destructuring/" style="font-size: 10px;">Destructuring</a> <a href="/tags/Dom/" style="font-size: 10px;">Dom</a> <a href="/tags/ES6/" style="font-size: 16.25px;">ES6</a> <a href="/tags/Elasticache/" style="font-size: 10px;">Elasticache</a> <a href="/tags/Enhanced-Object-Property/" style="font-size: 10px;">Enhanced Object Property</a> <a href="/tags/Event/" style="font-size: 10px;">Event</a> <a href="/tags/Excution-Context/" style="font-size: 10px;">Excution-Context</a> <a href="/tags/Express/" style="font-size: 11.25px;">Express</a> <a href="/tags/Extended-Parameter-Handling/" style="font-size: 10px;">Extended Parameter Handling</a> <a href="/tags/Fetch/" style="font-size: 10px;">Fetch</a> <a href="/tags/Fibonacci/" style="font-size: 10px;">Fibonacci</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/GraphQL/" style="font-size: 12.5px;">GraphQL</a> <a href="/tags/Http/" style="font-size: 10px;">Http</a> <a href="/tags/Immutability/" style="font-size: 10px;">Immutability</a> <a href="/tags/Introduction/" style="font-size: 10px;">Introduction</a> <a href="/tags/JWT/" style="font-size: 10px;">JWT</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Knex/" style="font-size: 11.25px;">Knex</a> <a href="/tags/LayoutGuide/" style="font-size: 10px;">LayoutGuide</a> <a href="/tags/LinkedList/" style="font-size: 10px;">LinkedList</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Middleware/" style="font-size: 10px;">Middleware</a> <a href="/tags/Module/" style="font-size: 10px;">Module</a> <a href="/tags/Mybatis/" style="font-size: 11.25px;">Mybatis</a> <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/Node-js/" style="font-size: 18.75px;">Node.js</a> <a href="/tags/Number/" style="font-size: 10px;">Number</a> <a href="/tags/OAuth/" style="font-size: 10px;">OAuth</a> <a href="/tags/OOP/" style="font-size: 10px;">OOP</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Operator/" style="font-size: 10px;">Operator</a> <a href="/tags/Passport/" style="font-size: 10px;">Passport</a> <a href="/tags/PlayNode/" style="font-size: 10px;">PlayNode</a> <a href="/tags/Promise/" style="font-size: 10px;">Promise</a> <a href="/tags/Prototype/" style="font-size: 10px;">Prototype</a> <a href="/tags/React/" style="font-size: 11.25px;">React</a> <a href="/tags/Regexp/" style="font-size: 10px;">Regexp</a> <a href="/tags/RestAPI/" style="font-size: 12.5px;">RestAPI</a> <a href="/tags/Router/" style="font-size: 10px;">Router</a> <a href="/tags/SPA/" style="font-size: 11.25px;">SPA</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/Selector/" style="font-size: 10px;">Selector</a> <a href="/tags/Sequelize/" style="font-size: 10px;">Sequelize</a> <a href="/tags/Service-Develop/" style="font-size: 10px;">Service Develop</a> <a href="/tags/Session/" style="font-size: 10px;">Session</a> <a href="/tags/SocketIO/" style="font-size: 10px;">SocketIO</a> <a href="/tags/Spring/" style="font-size: 11.25px;">Spring</a> <a href="/tags/String/" style="font-size: 10px;">String</a> <a href="/tags/SumMatrix/" style="font-size: 10px;">SumMatrix</a> <a href="/tags/Syntax/" style="font-size: 13.75px;">Syntax</a> <a href="/tags/TDD/" style="font-size: 11.25px;">TDD</a> <a href="/tags/Template-Literals/" style="font-size: 10px;">Template Literals</a> <a href="/tags/Testablility/" style="font-size: 10px;">Testablility</a> <a href="/tags/This/" style="font-size: 10px;">This</a> <a href="/tags/Tree/" style="font-size: 10px;">Tree</a> <a href="/tags/Type-Casting/" style="font-size: 10px;">Type Casting</a> <a href="/tags/TypeScript/" style="font-size: 11.25px;">TypeScript</a> <a href="/tags/UTF-8/" style="font-size: 10px;">UTF-8</a> <a href="/tags/Web-Form/" style="font-size: 10px;">Web Form</a> <a href="/tags/array/" style="font-size: 12.5px;">array</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/const/" style="font-size: 10px;">const</a> <a href="/tags/elasticsearch/" style="font-size: 11.25px;">elasticsearch</a> <a href="/tags/getMiddle/" style="font-size: 10px;">getMiddle</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/java/" style="font-size: 15px;">java</a> <a href="/tags/kenx/" style="font-size: 13.75px;">kenx</a> <a href="/tags/kue/" style="font-size: 10px;">kue</a> <a href="/tags/let/" style="font-size: 10px;">let</a> <a href="/tags/loop/" style="font-size: 10px;">loop</a> <a href="/tags/mongoDB/" style="font-size: 10px;">mongoDB</a> <a href="/tags/multi-dimensional/" style="font-size: 10px;">multi dimensional</a> <a href="/tags/node-js/" style="font-size: 11.25px;">node.js</a> <a href="/tags/oop/" style="font-size: 11.25px;">oop</a> <a href="/tags/swift/" style="font-size: 12.5px;">swift</a> <a href="/tags/switch/" style="font-size: 10px;">switch</a> <a href="/tags/template-Language/" style="font-size: 10px;">template Language</a> <a href="/tags/%EB%82%98%EB%88%84%EC%96%B4-%EB%96%A8%EC%96%B4%EC%A7%80%EB%8A%94-%EC%88%AB%EC%9E%90-%EB%B0%B0%EC%97%B4/" style="font-size: 10px;">나누어 떨어지는 숫자 배열</a> <a href="/tags/%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C%EC%9C%BC%EB%A1%9C-%EB%B0%B0%EC%B9%98%ED%95%98%EA%B8%B0/" style="font-size: 10px;">문자열 내림차순으로 배치하기</a> <a href="/tags/%EC%84%9C%EC%9A%B8%EC%97%90%EC%84%9C-%EA%B9%80%EC%84%9C%EB%B0%A9-%EC%B0%BE%EA%B8%B0/" style="font-size: 10px;">서울에서 김서방 찾기</a> <a href="/tags/%EC%86%8C%EC%88%98%EC%B0%BE%EA%B8%B0/" style="font-size: 10px;">소수찾기</a> <a href="/tags/%EC%A0%95%EC%88%98-%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C%EC%9C%BC%EB%A1%9C-%EB%B0%B0%EC%B9%98%ED%95%98%EA%B8%B0/" style="font-size: 10px;">정수 내림차순으로 배치하기</a> <a href="/tags/%EC%B5%9C%EB%8C%80%EA%B0%92-%EC%B5%9C%EC%86%8C%EA%B0%92-%EC%B0%BE%EA%B8%B0/" style="font-size: 10px;">최대값 최소값 찾기</a> <a href="/tags/%EC%B5%9C%EB%8C%80%EA%B3%B5%EC%95%BD%EC%88%98-%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98/" style="font-size: 10px;">최대공약수 최소공배수</a> <a href="/tags/%EC%B5%9C%EC%86%8C%EA%B0%92-%EB%A7%8C%EB%93%A4%EA%B8%B0/" style="font-size: 10px;">최소값 만들기</a> <a href="/tags/%ED%95%98%EC%83%A4%EB%93%9C%EC%88%98/" style="font-size: 10px;">하샤드수</a> <a href="/tags/%ED%96%89%EB%A0%AC%EC%9D%98-%EA%B3%B1%EC%85%88/" style="font-size: 10px;">행렬의 곱셈</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2021 Sejune Kim</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://yoursite.com/2019/02/27/ts-connect-sequelize/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

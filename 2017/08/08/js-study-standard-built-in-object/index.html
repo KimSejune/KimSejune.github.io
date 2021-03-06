@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>JavaScript Standard Built In Object | KimSejune Start Study</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="JavaScript,Built In Object" />
+    
+    <meta name="description" content="JavaScript Standard Built In Object 1. Global Object 전역 객체(Global Object)는 모든 객체의 유일한 최상위 객체를 의미하며 일반적으로 Browser-side에서는 window, Server-side(Node.js)에서는 global 객체를 의미한다.  123456&#x2F;&#x2F; in browser consoleth">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript Standard Built In Object">
+<meta property="og:url" content="http://yoursite.com/2017/08/08/js-study-standard-built-in-object/index.html">
+<meta property="og:site_name" content="KimSejune Start Study">
+<meta property="og:description" content="JavaScript Standard Built In Object 1. Global Object 전역 객체(Global Object)는 모든 객체의 유일한 최상위 객체를 의미하며 일반적으로 Browser-side에서는 window, Server-side(Node.js)에서는 global 객체를 의미한다.  123456&#x2F;&#x2F; in browser consoleth">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/images/js.jpeg">
+<meta property="article:published_time" content="2017-08-08T03:54:00.000Z">
+<meta property="article:modified_time" content="2017-12-27T02:57:41.000Z">
+<meta property="article:author" content="Sejune Kim">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="Built In Object">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/js.jpeg">
+    
+
+    
+
+    
+        <link rel="icon" href="/images/logo.png" />
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/">Algorithm</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/level1/">level1</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/level2/">level2</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Conference/">Conference</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Conference/PlayNode/">PlayNode</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Conference/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Project/">Project</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Project/ReadMe/">ReadMe</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Project/redis/">redis</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/">TIL</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/AWS/">AWS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/CSS/">CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/DataBase/">DataBase</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/ES6/">ES6</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/ElasticSearch/">ElasticSearch</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/Git/">Git</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/GraphQL/">GraphQL</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/JAVA/">JAVA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/Node-js/">Node.js</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/React/">React</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/Spring/">Spring</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/Swift/">Swift</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/Typescript/">Typescript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/jQuery/">jQuery</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" target="_blank" rel="noopener" href="https://github.com/KimSejune">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/TIL/JavaScript/">JavaScript</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/TIL/JavaScript/Built-In-Object/">Built In Object</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-js-study-standard-built-in-object" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        JavaScript Standard Built In Object
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/08/08/js-study-standard-built-in-object/" class="article-date">
+            <time datetime="2017-08-08T03:54:00.000Z" itemprop="datePublished">2017-08-08</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Built-In-Object/" rel="tag">Built In Object</a>, <a class="tag-link-link" href="/tags/JavaScript/" rel="tag">JavaScript</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="JavaScript-Standard-Built-In-Object"><a href="#JavaScript-Standard-Built-In-Object" class="headerlink" title="JavaScript Standard Built In Object"></a>JavaScript Standard Built In Object</h1><p><img src="/images/js.jpeg" alt="js"></p>
+<h2 id="1-Global-Object"><a href="#1-Global-Object" class="headerlink" title="1. Global Object"></a>1. Global Object</h2><ul>
+<li>전역 객체(Global Object)는 모든 객체의 유일한 최상위 객체를 의미하며 일반적으로 Browser-side에서는 window, Server-side(Node.js)에서는 global 객체를 의미한다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// in browser console</span></span><br><span class="line"><span class="built_in">this</span> === <span class="built_in">window</span> <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// in Terminal</span></span><br><span class="line">node</span><br><span class="line"><span class="built_in">this</span> === <span class="built_in">global</span> <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>전역 객체는 실행 컨텍스트에 컨트롤이 들어가기 이전에 생성이 되며 constructor가 없기 때문에 new 연산자를 이용하여 새롭게 생성할 수 없다. 즉, 개발자가 전역 객체를 생성하는 것은 불가능하다.</li>
+<li>전역 객체는 전역 스코프(Global Scope)를 갖게 된다.</li>
+<li>전역 객체의 자식 객체를 사용할 때 전역 객체의 기술은 생략할 수 있다. 예를 들어 document 객체는 전역 객체 window의 자식 객체로서 window.document…와 같이 기술하여도 좋으나 일반적으로 전역 객체의 기술은 생략한다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;foo&#x27;</span>).style.display = <span class="string">&#x27;none&#x27;</span>;</span><br><span class="line"><span class="comment">// window.document.getElementById(&#x27;foo&#x27;).style.display = &#x27;none&#x27;;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>그러나 사용자가 정의한 변수와 전역 객체의 자식 객체 이름이 충돌할 때 명확히 명확히 전역 객체를 기술하여 혼동을 방지할 수 있다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">moveTo</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> location = &#123;<span class="string">&#x27;href&#x27;</span>:<span class="string">&#x27;move to &#x27;</span>&#125;;</span><br><span class="line">  alert(location.href + url);</span><br><span class="line">  <span class="comment">// location.href = url;</span></span><br><span class="line">  <span class="built_in">window</span>.location.href = url;  <span class="comment">// BOM에 들어 있는 location이다.</span></span><br><span class="line">&#125;</span><br><span class="line">moveTo(<span class="string">&#x27;http://www.google.com&#x27;</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>전역 객체는 전역 변수(Global variable)를 프로퍼티로 가지게 된다.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ga = <span class="string">&#x27;Global variable&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(ga);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.ga);</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>글로벌 영역에 선언한 함수도 전역 객체의 프로퍼티로 접근할 수 있다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;invoked!&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">window</span>.foo();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Standard Built-in Objects(표준 빌트인 객체)도 역시 전역 객체의 자식 객체이다. 전역 객체의 자식 객체를 사용할 때 전역 객체의 기술은 생략할 수 있으므로 표준 빌트인 객체도 전역 객체의 기술을 생략할 수 있다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// window.alert(&#x27;Hello world!&#x27;);;</span></span><br><span class="line">alert(<span class="string">&#x27;Hello world!&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-1-Global-property-전역-프로퍼티"><a href="#1-1-Global-property-전역-프로퍼티" class="headerlink" title="1.1 Global property (전역 프로퍼티)"></a>1.1 Global property (전역 프로퍼티)</h3><h4 id="1-1-1-Infinity"><a href="#1-1-1-Infinity" class="headerlink" title="1.1.1 Infinity"></a>1.1.1 Infinity</h4><ul>
+<li>양/음의 무한대를 나타내는 숫자값이다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">3</span>/<span class="number">0</span>);  <span class="comment">// Infinity</span></span><br><span class="line"><span class="built_in">console</span>.log(-<span class="number">3</span>/<span class="number">0</span>); <span class="comment">// -Infinity</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>.MAX_VALUE * <span class="number">2</span>); <span class="comment">// 1.7976931348623157e+308 * 2 // Infinity로 나온다.</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="literal">Infinity</span>); <span class="comment">// number</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="1-1-2-NaN"><a href="#1-1-2-NaN" class="headerlink" title="1.1.2 NaN"></a>1.1.2 NaN</h4><ul>
+<li>숫자가 아님(Not-a-Number)을 나타내는 숫자값이다. 전역개체의 NaN 프로퍼티는 Number.NaN 프로퍼티와 같다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>(<span class="string">&#x27;xyz&#x27;</span>)); <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">1</span> * <span class="string">&#x27;string&#x27;</span>);  <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="literal">NaN</span>);    <span class="comment">// number</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="1-1-3-undefined"><a href="#1-1-3-undefined" class="headerlink" title="1.1.3 undefined"></a>1.1.3 undefined</h4><ul>
+<li>변수에 값이 대입되지 않았음을 나타내는 값이다. 초기값은 기본 자료형(primitive data type) undefined이다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo;</span><br><span class="line"><span class="built_in">console</span>.log(foo); <span class="comment">// undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="literal">undefined</span>); <span class="comment">// undefined</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2-Global-function-전역-함수"><a href="#1-2-Global-function-전역-함수" class="headerlink" title="1.2 Global function (전역 함수)"></a>1.2 Global function (전역 함수)</h3><ul>
+<li>Global function(전역 함수)는 전역에서 호출할 수 있으며 호출한 곳(caller)으로 결과값을 반환한다.</li>
+<li>Global function(전역 함수)는 모두 Global Object(전역 객체)의 함수 프로퍼티이다.</li>
+</ul>
+<h4 id="1-2-1-eval"><a href="#1-2-1-eval" class="headerlink" title="1.2.1 eval()"></a>1.2.1 eval()</h4><ul>
+<li>사용자로 부터 입력받은 Contents(untrusted data)를 eval()로 실행하는 것은 <code>보안에 매우 취약하다.</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">eval</span>(string)</span><br><span class="line"><span class="comment">// string: code 또는 표현식을 나타내는 문자열. 표현식은 존재하는 객체들의 프로퍼티들과 변수들을 포함할 수 있다.</span></span><br><span class="line"><span class="keyword">var</span> foo = <span class="built_in">eval</span>(<span class="string">&#x27;2 + 2&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> x = <span class="number">5</span>,</span><br><span class="line">    y = <span class="number">4</span>;</span><br><span class="line"><span class="built_in">console</span>.log(foo); <span class="comment">// 4</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">eval</span>(<span class="string">&#x27;x * y&#x27;</span>)); <span class="comment">// 20</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="1-2-2-isFinite"><a href="#1-2-2-isFinite" class="headerlink" title="1.2.2 isFinite()"></a>1.2.2 isFinite()</h4><ul>
+<li>매개변수(parameter)로 전달된 값이 유한수인지, 정상적인 수인지를 검사하여 그 결과를 Boolean으로 반환한다. </li>
+<li>매개변수가 숫자가 아닌 경우, 숫자로 변환한 후 검사를 수행한다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">isFinite</span>(testValue)</span><br><span class="line"><span class="comment">// testValue: 검사 대상 값</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">isFinite</span>(<span class="literal">Infinity</span>));  <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">isFinite</span>(<span class="literal">NaN</span>));       <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">isFinite</span>(<span class="string">&#x27;Hello&#x27;</span>));   <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">isFinite</span>(<span class="string">&#x27;2005/12/12&#x27;</span>));   <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">isFinite</span>(<span class="number">0</span>));         <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">isFinite</span>(<span class="number">2e64</span>));      <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">isFinite</span>(<span class="literal">null</span>));      <span class="comment">// true: null-&gt;0</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Number</span>(<span class="literal">null</span>)  <span class="comment">// 0 null을 Number로 형변환 시도</span></span><br><span class="line"><span class="built_in">Boolean</span>(<span class="literal">null</span>) <span class="comment">// false null을 Boolean로 형변환 시도</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>숫자가 아닌놈이 오면 무조건 false이다.</li>
+<li>상태를 알려주는 녀석은 is를 사용한다.</li>
+</ul>
+<h4 id="1-2-3-isNaN"><a href="#1-2-3-isNaN" class="headerlink" title="1.2.3 isNaN()"></a>1.2.3 isNaN()</h4><ul>
+<li>NaN이 들어오면 true, 아니면 false이다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">isNaN</span>(testValue)</span><br><span class="line"><span class="comment">// testValue: 검사 대상 값</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="literal">NaN</span>)       <span class="comment">// true</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="literal">undefined</span>) <span class="comment">// true: undefined -&gt; NaN</span></span><br><span class="line"><span class="built_in">isNaN</span>(&#123;&#125;)        <span class="comment">// true: &#123;&#125; -&gt; NaN</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="string">&#x27;blabla&#x27;</span>)  <span class="comment">// true: &#x27;blabla&#x27; -&gt; NaN</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="literal">true</span>)      <span class="comment">// false: true -&gt; 1</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="literal">null</span>)      <span class="comment">// false: null -&gt; 0</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="number">37</span>)        <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// strings</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="string">&#x27;37&#x27;</span>)      <span class="comment">// false: &#x27;37&#x27; -&gt; 37</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="string">&#x27;37.37&#x27;</span>)   <span class="comment">// false: &#x27;37.37&#x27; -&gt; 37.37</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="string">&#x27;&#x27;</span>)        <span class="comment">// false: &#x27;&#x27; -&gt; 0</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="string">&#x27; &#x27;</span>)       <span class="comment">// false: &#x27; &#x27; -&gt; 0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// dates</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="keyword">new</span> <span class="built_in">Date</span>())             <span class="comment">// false: new Date() -&gt; Number</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="keyword">new</span> <span class="built_in">Date</span>().toString())  <span class="comment">// true:  String -&gt; NaN</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>두수를 비교를 할 때 수인지 아닌지 isNaN으로 비교해준다.</li>
+</ul>
+<h4 id="1-2-4-parseFloat"><a href="#1-2-4-parseFloat" class="headerlink" title="1.2.4 parseFloat()"></a>1.2.4 parseFloat()</h4><ul>
+<li>매개변수(parameter)로 전달된 문자열을 부동소수점숫자(floating point number)로 변환하여 반환한다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseFloat</span>(string)</span><br><span class="line"><span class="comment">// string: 변환 대상 문자열</span></span><br><span class="line"><span class="built_in">parseFloat</span>(<span class="string">&#x27;3.14&#x27;</span>);     <span class="comment">// 3.14</span></span><br><span class="line"><span class="built_in">parseFloat</span>(<span class="string">&#x27;10.00&#x27;</span>);    <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">parseFloat</span>(<span class="string">&#x27;34 45 66&#x27;</span>); <span class="comment">// 34</span></span><br><span class="line"><span class="built_in">parseFloat</span>(<span class="string">&#x27; 60 &#x27;</span>);     <span class="comment">// 60</span></span><br><span class="line"><span class="built_in">parseFloat</span>(<span class="string">&#x27;40 years&#x27;</span>); <span class="comment">// 40</span></span><br><span class="line"><span class="built_in">parseFloat</span>(<span class="string">&#x27;He was 40&#x27;</span>) <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>매개변수 문자열의 첫 숫자만 반환되며 전후 공백은 무시된다. 그리고 첫문자를 숫자로 변환할 수 없다면 NaN을 반환한다.</li>
+</ul>
+<h4 id="1-2-5-parseInt"><a href="#1-2-5-parseInt" class="headerlink" title="1.2.5 parseInt()"></a>1.2.5 parseInt()</h4><ul>
+<li>매개변수(parameter)로 전달된 문자열을 정수형 숫자(Integer)로 변환하여 반환한다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(string, radix);</span><br><span class="line"><span class="comment">// string: 변환 대상 문자열</span></span><br><span class="line"><span class="comment">// radix: 진법을 나타내는 기수(2 ~ 36, 기본값 10)</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">&#x27;10&#x27;</span>);       <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">&#x27;10.33&#x27;</span>);    <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">&#x27;34 45 66&#x27;</span>); <span class="comment">// 34</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">&#x27; 60 &#x27;</span>);     <span class="comment">// 60</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">&#x27;40 years&#x27;</span>); <span class="comment">// 40</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">&#x27;He was 40&#x27;</span>) <span class="comment">// NaN</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">&#x27;0x20&#x27;</span>);     <span class="comment">// 32</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">&#x27;10&#x27;</span>, <span class="number">16</span>);   <span class="comment">// 16 </span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">&#x27;10&#x27;</span>, <span class="number">8</span>);    <span class="comment">// 8 </span></span><br></pre></td></tr></table></figure>
+
+<h4 id="1-2-6-encodeURI-decodeURI"><a href="#1-2-6-encodeURI-decodeURI" class="headerlink" title="1.2.6 encodeURI() / decodeURI()"></a>1.2.6 encodeURI() / decodeURI()</h4><ul>
+<li>encodeURI()은 매개변수로 전달된 URI(Uniform Resource Identifier)를 인코딩한다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">encodeURI</span>(URI)</span><br><span class="line"><span class="comment">// URI: 완전한 URI</span></span><br><span class="line"><span class="built_in">decodeURI</span>(encodedURI)</span><br><span class="line"><span class="comment">// encodedURI: 인코딩된 완전한 URI</span></span><br><span class="line"><span class="keyword">var</span> uri = <span class="string">&#x27;http://www.test.com/자바스크립트/test.php?who=나&amp;target=너#전역 객체&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> enc = <span class="built_in">encodeURI</span>(uri);</span><br><span class="line"><span class="keyword">var</span> dec = <span class="built_in">decodeURI</span>(enc);</span><br><span class="line"><span class="built_in">console</span>.log(enc);</span><br><span class="line"><span class="comment">// http://www.test.com/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/test.php?who=%EB%82%98&amp;target=%EB%84%88#%EC%A0%84%EC%97%AD%20%EA%B0%9D%EC%B2%B4</span></span><br><span class="line"><span class="built_in">console</span>.log(dec);</span><br><span class="line"><span class="comment">// http://www.test.com/자바스크립트/test.php?who=나&amp;target=너#전역 객체</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="1-2-7-encodeURIComponent-decodeURIComponent"><a href="#1-2-7-encodeURIComponent-decodeURIComponent" class="headerlink" title="1.2.7 encodeURIComponent() / decodeURIComponent()"></a>1.2.7 encodeURIComponent() / decodeURIComponent()</h4><ul>
+<li>encodeURIComponent()은 매개변수로 전달된 URI(Uniform Resource Identifier) component(구성 요소)를 인코딩한다.</li>
+<li>일부분만 띄어서 encode한다.</li>
+<li>단 아래의 문자는 이스케이프 처리에서 제외된다.<ul>
+<li>알파벳, 0~9의 숫자, - _ . ! ~ * ‘ ( )</li>
+</ul>
+</li>
+<li>encodeURIComponent()는 인수를 쿼리스트링의 일부라고 간주한다. 따라서 <code>=, ?, &amp;</code>를 인코딩한다. 반면 encodeURI()는 인수를 URI 전체라고 간주하며 파라미터 구분자인 =, ?, &amp;를 인코딩하지 않는다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">encodeURIComponent</span>(URI)</span><br><span class="line"><span class="comment">// URI: URI component(구성 요소)</span></span><br><span class="line"><span class="built_in">decodeURIComponent</span>(encodedURI)</span><br><span class="line"><span class="comment">// encodedURI: 인코딩된 URI component(구성 요소)</span></span><br><span class="line"><span class="keyword">var</span> uriComp = <span class="string">&#x27;who=나&amp;target=너#전역 객체&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> enc = <span class="built_in">encodeURIComponent</span>(uriComp);</span><br><span class="line"><span class="keyword">var</span> dec = <span class="built_in">decodeURIComponent</span>(enc);</span><br><span class="line"><span class="built_in">console</span>.log(enc);</span><br><span class="line"><span class="comment">// who=%EB%82%98&amp;target=%EB%84%88#%EC%A0%84%EC%97%AD%20%EA%B0%9D%EC%B2%B4</span></span><br><span class="line"><span class="built_in">console</span>.log(dec);</span><br><span class="line"><span class="comment">// who=나&amp;target=너#전역 객체</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-Standard-Built-in-Objects-Global-objects"><a href="#2-Standard-Built-in-Objects-Global-objects" class="headerlink" title="2. Standard Built-in Objects (Global objects)"></a>2. Standard Built-in Objects (Global objects)</h2><ul>
+<li>Javascript는 프로그램 전체의 영역에서 <code>공통적으로 필요한 기능</code>을 사용자 각자가 일일히 작성하는 수고를 줄이기 위해 <code>Standard Built-in Objects(표준 빌트인 객체)</code>를 제공한다.</li>
+</ul>
+<h3 id="2-1-Object"><a href="#2-1-Object" class="headerlink" title="2.1 Object"></a>2.1 Object</h3><ul>
+<li>객체 생성자(Object constructor)는 레퍼(wrapper) 객체를 생성한다. 만약 생성자 인수값이 null이거나 undefined이면 빈 객체를 반환한다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 변수 o에 빈 객체를 저장한다</span></span><br><span class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> o + <span class="string">&#x27;: &#x27;</span>, o);</span><br><span class="line"></span><br><span class="line">o = <span class="keyword">new</span> <span class="built_in">Object</span>(<span class="literal">undefined</span>);  <span class="comment">//  빈객체 생성</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> o + <span class="string">&#x27;: &#x27;</span>, o);</span><br><span class="line"></span><br><span class="line">o = <span class="keyword">new</span> <span class="built_in">Object</span>(<span class="literal">null</span>);       <span class="comment">// 빈객체 생성</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> o + <span class="string">&#x27;: &#x27;</span>, o);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>생성자 함수의 인수값에 따라 강제 형변환된 객체가 반환된다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// String 객체를 반환한다</span></span><br><span class="line"><span class="comment">// var o = new String(&#x27;String&#x27;);과 동치이다</span></span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>(<span class="string">&#x27;String&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> obj + <span class="string">&#x27;: &#x27;</span>, obj);</span><br><span class="line"><span class="built_in">console</span>.dir(obj);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> strObj = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">&#x27;String&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> strObj + <span class="string">&#x27;: &#x27;</span>, strObj);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Number 객체를 반환한다</span></span><br><span class="line"><span class="comment">// var o = new Number(123);과 동치이다</span></span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>(<span class="number">123</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> obj + <span class="string">&#x27;: &#x27;</span>, obj);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> numObj = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">123</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> numObj + <span class="string">&#x27;: &#x27;</span>, numObj);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Boolean 객체를 반환한다.</span></span><br><span class="line"><span class="comment">// var o = new Boolean(true);과 동치이다</span></span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>(<span class="literal">true</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> obj + <span class="string">&#x27;: &#x27;</span>, obj);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> boolObj = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="number">123</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> boolObj + <span class="string">&#x27;: &#x27;</span>, boolObj);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>객체를 생성할 경우 특수한 상황이 아니라면 <code>객체리터럴 방식을 사용하는 것이 일반적이다</code>.<ul>
+<li><code>var o = &#123;&#125;;</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-Function"><a href="#2-2-Function" class="headerlink" title="2.2 Function"></a>2.2 Function</h3><ul>
+<li>자바스크립트의 모든 함수는 Function 객체이다. 다른 모든 객체들처럼 Function 객체는 new 연산자을 사용해 생성할 수 있다.</li>
+</ul>
+<h3 id="2-3-Boolean"><a href="#2-3-Boolean" class="headerlink" title="2.3 Boolean"></a>2.3 Boolean</h3><ul>
+<li>Boolean 객체는 기본자료형 boolean을 위한 레퍼(wrapper) 객체이다. Boolean 생성자 함수로 Boolean 객체를 생성할 수 있다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">false</span>);</span><br><span class="line"><span class="keyword">if</span> (x) &#123; <span class="comment">// x는 객체로서 존재한다. 따라서 참으로 간주된다.</span></span><br><span class="line">  <span class="comment">// . . . 이 코드는 실행된다.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>x자체가 false라는 값을 가지는 객체가 생성되기에 코드가 실행된다.</li>
+</ul>
+<h3 id="2-4-Number"><a href="#2-4-Number" class="headerlink" title="2.4 Number"></a>2.4 Number</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://poiemaweb.com/js-number">Number</a></li>
+</ul>
+<h3 id="2-5-Math"><a href="#2-5-Math" class="headerlink" title="2.5 Math"></a>2.5 Math</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://poiemaweb.com/js-math">Math</a></li>
+</ul>
+<h3 id="2-6-Date"><a href="#2-6-Date" class="headerlink" title="2.6 Date"></a>2.6 Date</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://poiemaweb.com/js-date">Date</a></li>
+</ul>
+<h3 id="2-7-String"><a href="#2-7-String" class="headerlink" title="2.7 String"></a>2.7 String</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://poiemaweb.com/js-string">String</a></li>
+</ul>
+<h3 id="2-8-RegExp"><a href="#2-8-RegExp" class="headerlink" title="2.8 RegExp"></a>2.8 RegExp</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://poiemaweb.com/js-regexp">RegExp</a></li>
+</ul>
+<h3 id="2-9-Array"><a href="#2-9-Array" class="headerlink" title="2.9 Array"></a>2.9 Array</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://poiemaweb.com/js-array">Array</a></li>
+</ul>
+<h3 id="2-10-Error"><a href="#2-10-Error" class="headerlink" title="2.10 Error"></a>2.10 Error</h3><ul>
+<li>Error 생성자는 error 객체를 생성한다. error 객체의 인스턴스는 런타임 에러가 발생하였을 때 throw된다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  <span class="comment">// foo();</span></span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;Whoops!&#x27;</span>);</span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(e.name + <span class="string">&#x27;: &#x27;</span> + e.message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>요청의 실패할경우 에러메세지를 사전에 약속을 해둬야한다.</li>
+<li>Error 이외에 Error에 관련한 객체는 아래와 같다.<ul>
+<li>EvalError</li>
+<li>InternalError</li>
+<li>RangeError</li>
+<li>ReferenceError</li>
+<li>SyntaxError</li>
+<li>TypeError</li>
+<li>URIError</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-11-Symbol"><a href="#2-11-Symbol" class="headerlink" title="2.11 Symbol"></a>2.11 Symbol</h3><ul>
+<li>Symbol은 ECMAScript 6(Javascript 2015) 에서 추가된 <code>유일하고 변경 불가능한(immutable) 기본자료형</code>으로 Symbol 객체는 기본자료형 Symbol을 위한 <code>레퍼(wrapper) 객체를 생성한다.</code></li>
+</ul>
+<h2 id="3-기본자료형과-래퍼객체-Wrapper-Object"><a href="#3-기본자료형과-래퍼객체-Wrapper-Object" class="headerlink" title="3. 기본자료형과 래퍼객체 (Wrapper Object)"></a>3. 기본자료형과 래퍼객체 (Wrapper Object)</h2><ul>
+<li>Standard Built-in Object는 각자의 프로퍼티와 메소드를 가진다.</li>
+<li>정적(static) 프로퍼티, 메소드는 해당 인스턴스를 생성하지 않아도 사용할 수 있고 prototype에 속해있는 메소드는 해당 prototype을 상속받은 인스턴스가 있어야만 사용할 수 있다. 그런데 기본자료형의 값에 대해 Standard Built-in Object의 메소드를 호출하면 정상적으로 작동한다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;Hello world!&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> res = str.toUpperCase();</span><br><span class="line"><span class="built_in">console</span>.log(res); <span class="comment">// &#x27;HELLO WORLD!&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num = <span class="number">1.5</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num.toFixed()); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>기본자료형의 값에 대해 Standard Built-in Object의 메소드를 호출할 때, <code>기본자료형의 값은 연관된 객체(Wrapper 객체)로 일시 변환</code> 되기 때문에 가능한 것이다. </li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2017/08/08/js-study-standard-built-in-object/" data-id="cklxjwzv80059cy6f23y3d3in" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/tpwns1088@gmail.com" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/KimSejune" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2017/08/08/js-study-built-in-object/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            JavaScript Built In Object
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2017/08/07/js-study-closure/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">JavaScript Closure</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2020/02/02/es-study-term-match/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/elasticsearch.png)" alt="ElasticSearch Term vs Match" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/ElasticSearch/">ElasticSearch</a></p>
+                            <p class="item-title"><a href="/2020/02/02/es-study-term-match/" class="title">ElasticSearch Term vs Match</a></p>
+                            <p class="item-date"><time datetime="2020-02-02T10:11:00.000Z" itemprop="datePublished">2020-02-02</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2020/02/01/es-study-info/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/elasticsearch.png)" alt="ElasticSearch Default Information" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/ElasticSearch/">ElasticSearch</a></p>
+                            <p class="item-title"><a href="/2020/02/01/es-study-info/" class="title">ElasticSearch Default Information</a></p>
+                            <p class="item-date"><time datetime="2020-02-01T07:13:00.000Z" itemprop="datePublished">2020-02-01</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/02/27/ts-connect-sequelize/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/tsdir.png)" alt="TypeScript Connect Sequelize" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Typescript/">Typescript</a></p>
+                            <p class="item-title"><a href="/2019/02/27/ts-connect-sequelize/" class="title">TypeScript Connect Sequelize</a></p>
+                            <p class="item-date"><time datetime="2019-02-27T01:54:00.000Z" itemprop="datePublished">2019-02-27</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/12/02/node-tdd/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/nodejs.png)" alt="Node TDD 도구" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/Node-js/">Node.js</a></p>
+                            <p class="item-title"><a href="/2018/12/02/node-tdd/" class="title">Node TDD 도구</a></p>
+                            <p class="item-date"><time datetime="2018-12-02T05:54:00.000Z" itemprop="datePublished">2018-12-02</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/11/22/graphql-study-inRestAPI/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/graphql.png)" alt="GraphQL을 통하여 Rest API를 감싸보자." class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/TIL/GraphQL/">GraphQL</a></p>
+                            <p class="item-title"><a href="/2018/11/22/graphql-study-inRestAPI/" class="title">GraphQL을 통하여 Rest API를 감싸보자.</a></p>
+                            <p class="item-date"><time datetime="2018-11-22T05:28:00.000Z" itemprop="datePublished">2018-11-22</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/level1/">level1</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/level2/">level2</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Conference/">Conference</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Conference/PlayNode/">PlayNode</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Conference/TypeScript/">TypeScript</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Project/">Project</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Project/ReadMe/">ReadMe</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Project/redis/">redis</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/">TIL</a><span class="category-list-count">100</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/AWS/">AWS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/CSS/">CSS</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/CSS/Core/">Core</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/CSS/Selector/">Selector</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/CSS/Syntax/">Syntax</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/DataBase/">DataBase</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/DataBase/Syntax/">Syntax</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/">ES6</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Arrow/">Arrow</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Class/">Class</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Data-Structure/">Data Structure</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Destructuring/">Destructuring</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Enhanced-Object-Property/">Enhanced Object Property</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Extended-Parameter-Handling/">Extended Parameter Handling</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Module/">Module</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Promise/">Promise</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/Template-Literals/">Template Literals</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ES6/let-const/">let & const</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/ElasticSearch/">ElasticSearch</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Git/">Git</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Git/%EB%B0%B0%ED%8F%AC/">배포</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/GraphQL/">GraphQL</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JAVA/">JAVA</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/">JavaScript</a><span class="category-list-count">29</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Ajax/">Ajax</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Array/">Array</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Async/">Async</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Built-In-Object/">Built In Object</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Closure/">Closure</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Control-Flow/">Control Flow</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Data-Type/">Data-Type</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Date/">Date</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Dom/">Dom</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Event/">Event</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Excution-Context/">Excution-Context</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Function/">Function</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Immutability/">Immutability</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Introduction/">Introduction</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/LinkedList-Tree/">LinkedList Tree</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Math/">Math</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Number/">Number</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/OOP/">OOP</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Object/">Object</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Operator/">Operator</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Prototype/">Prototype</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Regexp/">Regexp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/RestAPI/">RestAPI</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Scope/">Scope</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/String/">String</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/Syntax/">Syntax</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/JavaScript/This/">This</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/">Node.js</a><span class="category-list-count">34</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Ajax/">Ajax</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/CORS/">CORS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/CSRF/">CSRF</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Cookie/">Cookie</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/DataModeling/">DataModeling</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Database/">Database</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Elasticache/">Elasticache</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Express/">Express</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Express-Middlware/">Express-Middlware</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Fetch/">Fetch</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/GraphQL/">GraphQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Http/">Http</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/JWT/">JWT</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/OAuth/">OAuth</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Passport/">Passport</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Rest-API/">Rest-API</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/SPA/">SPA</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Service-Develop/">Service Develop</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Session/">Session</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/SocketIO/">SocketIO</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Template-Language/">Template Language</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Testablility/">Testablility</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/Web-Form/">Web Form</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/http-cache/">http-cache</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/knex/">knex</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/kue/">kue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Node-js/mongoDB/">mongoDB</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/React/">React</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/React/Router/">Router</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/React/Syntax/">Syntax</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Spring/">Spring</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Spring/MVC/">MVC</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Spring/UTF-8/">UTF-8</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Swift/">Swift</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Typescript/">Typescript</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/Typescript/Sequelize/">Sequelize</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/jQuery/">jQuery</a><span class="category-list-count">2</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">38</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">9</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2016%EB%85%84%EC%9D%98-%EC%9B%90%ED%95%98%EB%8A%94-%EC%9A%94%EC%9D%BC%EA%B5%AC%ED%95%98%EA%B8%B0/" rel="tag">2016년의 원하는 요일구하기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/" rel="tag">AWS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/" rel="tag">Algorithm</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Array/" rel="tag">Array</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arrow/" rel="tag">Arrow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Async/" rel="tag">Async</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Built-In-Object/" rel="tag">Built In Object</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CORS/" rel="tag">CORS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CRUD/" rel="tag">CRUD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSRF/" rel="tag">CSRF</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Class/" rel="tag">Class</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Closure/" rel="tag">Closure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Control-Flow/" rel="tag">Control Flow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cookie/" rel="tag">Cookie</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Structure/" rel="tag">Data Structure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Type/" rel="tag">Data-Type</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataModeling/" rel="tag">DataModeling</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/" rel="tag">Database</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Date/" rel="tag">Date</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Destructuring/" rel="tag">Destructuring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dom/" rel="tag">Dom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/" rel="tag">ES6</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Elasticache/" rel="tag">Elasticache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Enhanced-Object-Property/" rel="tag">Enhanced Object Property</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Event/" rel="tag">Event</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excution-Context/" rel="tag">Excution-Context</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/" rel="tag">Express</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Extended-Parameter-Handling/" rel="tag">Extended Parameter Handling</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fetch/" rel="tag">Fetch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fibonacci/" rel="tag">Fibonacci</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Function/" rel="tag">Function</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GraphQL/" rel="tag">GraphQL</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/" rel="tag">Http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Immutability/" rel="tag">Immutability</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Introduction/" rel="tag">Introduction</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JWT/" rel="tag">JWT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">42</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Knex/" rel="tag">Knex</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LayoutGuide/" rel="tag">LayoutGuide</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LinkedList/" rel="tag">LinkedList</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Middleware/" rel="tag">Middleware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Module/" rel="tag">Module</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mybatis/" rel="tag">Mybatis</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a><span class="tag-list-count">37</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Number/" rel="tag">Number</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OAuth/" rel="tag">OAuth</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OOP/" rel="tag">OOP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Object/" rel="tag">Object</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Operator/" rel="tag">Operator</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Passport/" rel="tag">Passport</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PlayNode/" rel="tag">PlayNode</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Promise/" rel="tag">Promise</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Prototype/" rel="tag">Prototype</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Regexp/" rel="tag">Regexp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RestAPI/" rel="tag">RestAPI</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Router/" rel="tag">Router</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SPA/" rel="tag">SPA</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scope/" rel="tag">Scope</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Selector/" rel="tag">Selector</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sequelize/" rel="tag">Sequelize</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Service-Develop/" rel="tag">Service Develop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Session/" rel="tag">Session</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SocketIO/" rel="tag">SocketIO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/" rel="tag">Spring</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/String/" rel="tag">String</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SumMatrix/" rel="tag">SumMatrix</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Syntax/" rel="tag">Syntax</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TDD/" rel="tag">TDD</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Template-Literals/" rel="tag">Template Literals</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Testablility/" rel="tag">Testablility</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/This/" rel="tag">This</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tree/" rel="tag">Tree</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Type-Casting/" rel="tag">Type Casting</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/" rel="tag">TypeScript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UTF-8/" rel="tag">UTF-8</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web-Form/" rel="tag">Web Form</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array/" rel="tag">array</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/" rel="tag">cache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/const/" rel="tag">const</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/elasticsearch/" rel="tag">elasticsearch</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/getMiddle/" rel="tag">getMiddle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http/" rel="tag">http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kenx/" rel="tag">kenx</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kue/" rel="tag">kue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/let/" rel="tag">let</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/loop/" rel="tag">loop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongoDB/" rel="tag">mongoDB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/multi-dimensional/" rel="tag">multi dimensional</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/" rel="tag">node.js</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oop/" rel="tag">oop</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/" rel="tag">swift</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/switch/" rel="tag">switch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/template-Language/" rel="tag">template Language</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EB%82%98%EB%88%84%EC%96%B4-%EB%96%A8%EC%96%B4%EC%A7%80%EB%8A%94-%EC%88%AB%EC%9E%90-%EB%B0%B0%EC%97%B4/" rel="tag">나누어 떨어지는 숫자 배열</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C%EC%9C%BC%EB%A1%9C-%EB%B0%B0%EC%B9%98%ED%95%98%EA%B8%B0/" rel="tag">문자열 내림차순으로 배치하기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EC%84%9C%EC%9A%B8%EC%97%90%EC%84%9C-%EA%B9%80%EC%84%9C%EB%B0%A9-%EC%B0%BE%EA%B8%B0/" rel="tag">서울에서 김서방 찾기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EC%86%8C%EC%88%98%EC%B0%BE%EA%B8%B0/" rel="tag">소수찾기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EC%A0%95%EC%88%98-%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C%EC%9C%BC%EB%A1%9C-%EB%B0%B0%EC%B9%98%ED%95%98%EA%B8%B0/" rel="tag">정수 내림차순으로 배치하기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EC%B5%9C%EB%8C%80%EA%B0%92-%EC%B5%9C%EC%86%8C%EA%B0%92-%EC%B0%BE%EA%B8%B0/" rel="tag">최대값 최소값 찾기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EC%B5%9C%EB%8C%80%EA%B3%B5%EC%95%BD%EC%88%98-%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98/" rel="tag">최대공약수 최소공배수</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EC%B5%9C%EC%86%8C%EA%B0%92-%EB%A7%8C%EB%93%A4%EA%B8%B0/" rel="tag">최소값 만들기</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%ED%95%98%EC%83%A4%EB%93%9C%EC%88%98/" rel="tag">하샤드수</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%ED%96%89%EB%A0%AC%EC%9D%98-%EA%B3%B1%EC%85%88/" rel="tag">행렬의 곱셈</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/2016%EB%85%84%EC%9D%98-%EC%9B%90%ED%95%98%EB%8A%94-%EC%9A%94%EC%9D%BC%EA%B5%AC%ED%95%98%EA%B8%B0/" style="font-size: 10px;">2016년의 원하는 요일구하기</a> <a href="/tags/AWS/" style="font-size: 11.25px;">AWS</a> <a href="/tags/Ajax/" style="font-size: 11.25px;">Ajax</a> <a href="/tags/Algorithm/" style="font-size: 17.5px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 10px;">Array</a> <a href="/tags/Arrow/" style="font-size: 10px;">Arrow</a> <a href="/tags/Async/" style="font-size: 10px;">Async</a> <a href="/tags/Built-In-Object/" style="font-size: 11.25px;">Built In Object</a> <a href="/tags/CORS/" style="font-size: 10px;">CORS</a> <a href="/tags/CRUD/" style="font-size: 10px;">CRUD</a> <a href="/tags/CSRF/" style="font-size: 10px;">CSRF</a> <a href="/tags/CSS/" style="font-size: 12.5px;">CSS</a> <a href="/tags/Class/" style="font-size: 10px;">Class</a> <a href="/tags/Closure/" style="font-size: 10px;">Closure</a> <a href="/tags/Control-Flow/" style="font-size: 10px;">Control Flow</a> <a href="/tags/Cookie/" style="font-size: 10px;">Cookie</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Data-Type/" style="font-size: 10px;">Data-Type</a> <a href="/tags/DataBase/" style="font-size: 10px;">DataBase</a> <a href="/tags/DataModeling/" style="font-size: 10px;">DataModeling</a> <a href="/tags/Database/" style="font-size: 10px;">Database</a> <a href="/tags/Date/" style="font-size: 10px;">Date</a> <a href="/tags/Destructuring/" style="font-size: 10px;">Destructuring</a> <a href="/tags/Dom/" style="font-size: 10px;">Dom</a> <a href="/tags/ES6/" style="font-size: 16.25px;">ES6</a> <a href="/tags/Elasticache/" style="font-size: 10px;">Elasticache</a> <a href="/tags/Enhanced-Object-Property/" style="font-size: 10px;">Enhanced Object Property</a> <a href="/tags/Event/" style="font-size: 10px;">Event</a> <a href="/tags/Excution-Context/" style="font-size: 10px;">Excution-Context</a> <a href="/tags/Express/" style="font-size: 11.25px;">Express</a> <a href="/tags/Extended-Parameter-Handling/" style="font-size: 10px;">Extended Parameter Handling</a> <a href="/tags/Fetch/" style="font-size: 10px;">Fetch</a> <a href="/tags/Fibonacci/" style="font-size: 10px;">Fibonacci</a> <a href="/tags/Function/" style="font-size: 10px;">Function</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/GraphQL/" style="font-size: 12.5px;">GraphQL</a> <a href="/tags/Http/" style="font-size: 10px;">Http</a> <a href="/tags/Immutability/" style="font-size: 10px;">Immutability</a> <a href="/tags/Introduction/" style="font-size: 10px;">Introduction</a> <a href="/tags/JWT/" style="font-size: 10px;">JWT</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Knex/" style="font-size: 11.25px;">Knex</a> <a href="/tags/LayoutGuide/" style="font-size: 10px;">LayoutGuide</a> <a href="/tags/LinkedList/" style="font-size: 10px;">LinkedList</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Middleware/" style="font-size: 10px;">Middleware</a> <a href="/tags/Module/" style="font-size: 10px;">Module</a> <a href="/tags/Mybatis/" style="font-size: 11.25px;">Mybatis</a> <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/Node-js/" style="font-size: 18.75px;">Node.js</a> <a href="/tags/Number/" style="font-size: 10px;">Number</a> <a href="/tags/OAuth/" style="font-size: 10px;">OAuth</a> <a href="/tags/OOP/" style="font-size: 10px;">OOP</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/Operator/" style="font-size: 10px;">Operator</a> <a href="/tags/Passport/" style="font-size: 10px;">Passport</a> <a href="/tags/PlayNode/" style="font-size: 10px;">PlayNode</a> <a href="/tags/Promise/" style="font-size: 10px;">Promise</a> <a href="/tags/Prototype/" style="font-size: 10px;">Prototype</a> <a href="/tags/React/" style="font-size: 11.25px;">React</a> <a href="/tags/Regexp/" style="font-size: 10px;">Regexp</a> <a href="/tags/RestAPI/" style="font-size: 12.5px;">RestAPI</a> <a href="/tags/Router/" style="font-size: 10px;">Router</a> <a href="/tags/SPA/" style="font-size: 11.25px;">SPA</a> <a href="/tags/Scope/" style="font-size: 10px;">Scope</a> <a href="/tags/Selector/" style="font-size: 10px;">Selector</a> <a href="/tags/Sequelize/" style="font-size: 10px;">Sequelize</a> <a href="/tags/Service-Develop/" style="font-size: 10px;">Service Develop</a> <a href="/tags/Session/" style="font-size: 10px;">Session</a> <a href="/tags/SocketIO/" style="font-size: 10px;">SocketIO</a> <a href="/tags/Spring/" style="font-size: 11.25px;">Spring</a> <a href="/tags/String/" style="font-size: 10px;">String</a> <a href="/tags/SumMatrix/" style="font-size: 10px;">SumMatrix</a> <a href="/tags/Syntax/" style="font-size: 13.75px;">Syntax</a> <a href="/tags/TDD/" style="font-size: 11.25px;">TDD</a> <a href="/tags/Template-Literals/" style="font-size: 10px;">Template Literals</a> <a href="/tags/Testablility/" style="font-size: 10px;">Testablility</a> <a href="/tags/This/" style="font-size: 10px;">This</a> <a href="/tags/Tree/" style="font-size: 10px;">Tree</a> <a href="/tags/Type-Casting/" style="font-size: 10px;">Type Casting</a> <a href="/tags/TypeScript/" style="font-size: 11.25px;">TypeScript</a> <a href="/tags/UTF-8/" style="font-size: 10px;">UTF-8</a> <a href="/tags/Web-Form/" style="font-size: 10px;">Web Form</a> <a href="/tags/array/" style="font-size: 12.5px;">array</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/const/" style="font-size: 10px;">const</a> <a href="/tags/elasticsearch/" style="font-size: 11.25px;">elasticsearch</a> <a href="/tags/getMiddle/" style="font-size: 10px;">getMiddle</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/java/" style="font-size: 15px;">java</a> <a href="/tags/kenx/" style="font-size: 13.75px;">kenx</a> <a href="/tags/kue/" style="font-size: 10px;">kue</a> <a href="/tags/let/" style="font-size: 10px;">let</a> <a href="/tags/loop/" style="font-size: 10px;">loop</a> <a href="/tags/mongoDB/" style="font-size: 10px;">mongoDB</a> <a href="/tags/multi-dimensional/" style="font-size: 10px;">multi dimensional</a> <a href="/tags/node-js/" style="font-size: 11.25px;">node.js</a> <a href="/tags/oop/" style="font-size: 11.25px;">oop</a> <a href="/tags/swift/" style="font-size: 12.5px;">swift</a> <a href="/tags/switch/" style="font-size: 10px;">switch</a> <a href="/tags/template-Language/" style="font-size: 10px;">template Language</a> <a href="/tags/%EB%82%98%EB%88%84%EC%96%B4-%EB%96%A8%EC%96%B4%EC%A7%80%EB%8A%94-%EC%88%AB%EC%9E%90-%EB%B0%B0%EC%97%B4/" style="font-size: 10px;">나누어 떨어지는 숫자 배열</a> <a href="/tags/%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C%EC%9C%BC%EB%A1%9C-%EB%B0%B0%EC%B9%98%ED%95%98%EA%B8%B0/" style="font-size: 10px;">문자열 내림차순으로 배치하기</a> <a href="/tags/%EC%84%9C%EC%9A%B8%EC%97%90%EC%84%9C-%EA%B9%80%EC%84%9C%EB%B0%A9-%EC%B0%BE%EA%B8%B0/" style="font-size: 10px;">서울에서 김서방 찾기</a> <a href="/tags/%EC%86%8C%EC%88%98%EC%B0%BE%EA%B8%B0/" style="font-size: 10px;">소수찾기</a> <a href="/tags/%EC%A0%95%EC%88%98-%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C%EC%9C%BC%EB%A1%9C-%EB%B0%B0%EC%B9%98%ED%95%98%EA%B8%B0/" style="font-size: 10px;">정수 내림차순으로 배치하기</a> <a href="/tags/%EC%B5%9C%EB%8C%80%EA%B0%92-%EC%B5%9C%EC%86%8C%EA%B0%92-%EC%B0%BE%EA%B8%B0/" style="font-size: 10px;">최대값 최소값 찾기</a> <a href="/tags/%EC%B5%9C%EB%8C%80%EA%B3%B5%EC%95%BD%EC%88%98-%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98/" style="font-size: 10px;">최대공약수 최소공배수</a> <a href="/tags/%EC%B5%9C%EC%86%8C%EA%B0%92-%EB%A7%8C%EB%93%A4%EA%B8%B0/" style="font-size: 10px;">최소값 만들기</a> <a href="/tags/%ED%95%98%EC%83%A4%EB%93%9C%EC%88%98/" style="font-size: 10px;">하샤드수</a> <a href="/tags/%ED%96%89%EB%A0%AC%EC%9D%98-%EA%B3%B1%EC%85%88/" style="font-size: 10px;">행렬의 곱셈</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2021 Sejune Kim</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://yoursite.com/2017/08/08/js-study-standard-built-in-object/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>
